@@ -1,0 +1,867 @@
+import os
+import pandas as pd
+from datetime import datetime
+import re
+import glob
+from dateutil import parser
+from itertools import combinations
+
+# schedule_dict
+schedule_dict = {
+    # Playback trials
+    ('Playback', '1'): ('11.03', '12.03'),
+    ('Playback', '2'): ('23.03', '24.03'),
+    ('Playback', '3'): ('03.04', '04.04'),
+    ('Playback', '4'): ('21.04', '22.04'),
+    ('Playback', '5'): ('26.04', '27.04'),
+    ('Playback', '6'): ('14.05', '15.05'),
+    ('Playback', '7'): ('30.05', '31.05'),
+
+    # Control (Crow) trials
+    ('Crow', '1'): ('14.03', '15.03'),
+    ('Crow', '2'): ('19.03', '20.03'),
+    ('Crow', '3'): ('08.04', '09.04'),
+    ('Crow', '4'): ('16.04', '17.04'),
+    ('Crow', '5'): ('30.04', '01.05'),
+    ('Crow', '6'): ('04.05', '05.05'),
+    ('Crow', '7'): ('19.05', '20.05'),
+
+    # Baseline
+    ('Baseline', '1'): ('29.03',),
+    ('Baseline', '2'): ('06.03',)
+}
+
+Cage_Compositions = {
+    'A': {
+        '1': ['TK', 'NR', 'NY', 'MN', 'LN'],
+        '2': ['NY', 'ST', 'SR', 'TK', 'TN'],
+        '3': ['TN', 'TK', 'SR', 'ST']
+    },
+    'B': {
+        '1': ['NH', 'ST', 'MS'],
+        '2': ['NR', 'NH', 'MN', 'LN'],
+        '3': ['MS', 'NH', 'NY', 'MN']
+    },
+    'C': {
+        '1': ['GG', 'SB', 'TN', 'MZ', 'SR'],
+        '2': ['MS', 'SB', 'GG', 'MZ'],
+        '3': ['GG', 'LN', 'MZ', 'NR', 'SB']
+    }
+}
+
+Cage_Comp_Dates = {
+    '1': ['11.03', '12.03', '19.03', '20.03', '08.04', '09.04', '21.04', '22.04'],
+    '2': ['23.03', '24.03', '26.04', '27.04', '04.05', '05.05', '19.05', '20.05', '30.05', '31.05'],
+    '3': ['03.04', '04.04', '16.04', '17.04', '30.04', '01.05', '14.05', '15.05'],
+}
+
+
+def get_phase_from_time(time_value):
+    if pd.isna(time_value) or time_value == '':
+        return None
+    try:
+        time_str = str(time_value).strip()
+        # Try with seconds first
+        try:
+            time_obj = datetime.strptime(time_str, '%H:%M:%S').time()
+        except ValueError:
+            # Fallback to no seconds
+            time_obj = datetime.strptime(time_str, '%H:%M').time()
+
+        minutes = time_obj.hour * 60 + time_obj.minute
+
+        if 570 <= minutes <= 630:  # 09:30 to 10:30
+            return 'morn1'
+        elif 645 <= minutes <= 705:  # 10:45 to 11:45
+            return 'morn2'
+        elif minutes >= 720:  # After 12:00
+            return 'enrich'
+        else:
+            return 'extra'
+
+    except Exception as e:
+        print(f"Failed to parse time value '{time_value}': {e}")
+        return None
+
+
+def get_exact_matching_cage_phase(behave_dict, cage_compositions):
+    behavior_values = set(behave_dict.values())
+
+    for cage, phases in cage_compositions.items():
+        for phase, individuals in phases.items():
+            if behavior_values.issubset(set(individuals)):
+                return f"{cage}{phase}"
+
+    return None
+
+
+def get_condition_and_trial(date_str, schedule_dict):
+    if pd.isna(date_str) or date_str == '':
+        return None, None, None
+    try:
+        day_month = datetime.strptime(date_str, '%d-%m-%Y').strftime('%d.%m')
+    except Exception as e:
+        print(f"Invalid date format: {date_str} -> {e}")
+        return None, None, None
+
+    for (condition, trial), dates in schedule_dict.items():
+        if day_month in dates:
+            first_day = (day_month == dates[0])
+            return condition, trial, first_day
+
+    return None, None, None
+
+
+def get_behavior_code_dict(df):
+    behavior_code_dict = {}
+    pattern = re.compile(r'\d+_(\w{2})_Behavior')
+
+    for col in df.columns:
+        match = pattern.match(col)
+        if match:
+            behavior_code_dict[col] = match.group(1)
+
+    return behavior_code_dict
+
+
+def format_date(date_input):
+    """
+    Parses a date string and returns a dictionary with both:
+    - 'euro_format': 'DD.MM.YYYY'
+    - 'iso_z_format': 'YYYY-MM-DDTHH:MM:SS.000Z'
+    Returns None if the input is invalid.
+    """
+    if pd.isna(date_input) or str(date_input).strip() == '':
+        return None
+
+    date_str = str(date_input).strip()
+
+    try:
+        # ISO input with time (e.g., 2025-03-11T00:00:00Z)
+        if 'T' in date_str:
+            dt = datetime.fromisoformat(date_str.replace('Z', ''))
+
+        # Dot-separated (e.g., 04.04.2025)
+        elif '.' in date_str:
+            dt = datetime.strptime(date_str, '%d.%m.%Y')
+
+        # All other formats (e.g., 04/04/2025 or 4-4-25)
+        else:
+            dt = parser.parse(date_str, dayfirst=True)
+
+        return {
+            'euro_format': dt.strftime('%d.%m.%Y'),
+            'iso_z_format': dt.strftime('%Y-%m-%dT%H:%M:%S.000Z')
+        }
+
+    except Exception as e:
+        print(f"Invalid date input: {date_str} -> {e}")
+        return None
+
+
+def minutes_since_midnight(time_str):
+    try:
+        # Try parsing with seconds first
+        time_obj = pd.to_datetime(time_str, format='%H:%M:%S', errors='coerce')
+        if pd.isna(time_obj):
+            # Fallback: try without seconds
+            time_obj = pd.to_datetime(time_str, format='%H:%M', errors='coerce')
+            if pd.isna(time_obj):
+                return None
+        return time_obj.hour * 60 + time_obj.minute
+    except Exception:
+        return None
+
+
+def get_group_from_date(date_str, cage_dates_dict, behave_dict):
+    # Convert input date to "DD.MM" format, allowing flexible input
+    try:
+        date_obj = parser.parse(date_str, dayfirst=True)
+        short_date = date_obj.strftime("%d.%m")
+    except (ValueError, TypeError):
+        return ''  # Invalid date format
+
+    # First, find the group the date belongs to
+    matched_group = None
+    for group, dates in cage_dates_dict.items():
+        if short_date in dates:
+            matched_group = group
+            break
+
+    # If the date is not found in any group, return empty
+    if not matched_group:
+        return ''
+
+    # Define sets for each prefix group
+    group_A_ids = {'TN', 'TK', 'LN', 'NR', 'NY', 'ST', 'MN', 'SR'}
+    group_B_ids = {'MN', 'MS', 'NH', 'LN', 'NR', 'NY', 'ST'}
+    group_C_ids = {'MZ', 'SB', 'GG', 'LN', 'NR', 'MS'}
+
+    values = set(behave_dict.values())
+
+    # Determine prefix based on behavior codes
+    if 'GG' in values or 'SB' in values:
+        prefix = 'C'
+    elif values & group_A_ids:
+        prefix = 'A'
+    elif values & group_B_ids:
+        prefix = 'B'
+    elif values & group_C_ids:
+        prefix = 'C'
+    else:
+        prefix = 'No data for that day'
+
+    group_str = f"{prefix}{matched_group}" if prefix else matched_group
+    return f"*{group_str}"
+
+
+def block_ID(row):
+    ID = ""
+
+    # Phase
+    phase = str(row.get('phase', '')).lower()
+    if phase in ["morn1", "morn2", "enrich"]:
+        ID += phase
+
+    # Group
+    group = row.get('group')
+    if group:
+        ID += f"_{group}"
+
+    # Trial
+    trial = row.get('trial')
+    if pd.notnull(trial):
+        ID += f"_trial{trial}"
+
+    # First day
+    first_day = row.get('first_day')
+    if first_day is True:
+        ID += "_first"
+    elif first_day is False:
+        ID += "_sec"
+
+    # Condition
+    condition = str(row.get('condition', '')).lower()
+    if condition == 'playback':
+        ID += "_play"
+    elif condition == 'crow':
+        ID += "_cont"
+    elif condition == 'baseline':
+        ID += "_base"
+
+    return ID
+
+
+def make_fill_columns(schedule_dict, behave_dict, Cage_Compositions):
+    def fill_columns(row):
+        try:
+            row['msm'] = minutes_since_midnight(row.get('1_TIme'))
+
+            formatted_date = format_date(row.get('created_at'))
+            if formatted_date:
+                # Store the ISO format string date for downstream usage
+                row['date'] = formatted_date['iso_z_format']
+            else:
+                row['date'] = None
+
+            row['phase'] = get_phase_from_time(row.get('1_TIme'))
+
+            condition, trial, first_day = get_condition_and_trial(row['date'], schedule_dict)
+            row['condition'] = condition
+            row['trial'] = trial
+            row['first_day'] = first_day
+
+            row['group'] = get_exact_matching_cage_phase(behave_dict, Cage_Compositions)
+            if row['group'] is None:
+                row['group'] = get_group_from_date(row['date'], Cage_Comp_Dates, behave_dict)
+            row['block_ID'] = block_ID(row)
+        except Exception as e:
+            print(f"Error in fill_columns: {e}")
+        return row
+
+    return fill_columns
+
+
+def reshape_behavior_data(df, schedule_dict, Cage_Compositions):
+    working_df = df.copy()
+
+    # Define and add expected columns if not already present
+    new_columns = ['msm', 'date', 'phase', 'group', 'trial', 'first_day', 'block_ID']
+    for col in new_columns:
+        if col not in working_df.columns:
+            working_df[col] = None
+
+    # Get behavior dictionary
+    behave_dict = get_behavior_code_dict(working_df)
+
+    fill_fn = make_fill_columns(schedule_dict, behave_dict, Cage_Compositions)
+    new_df = working_df.apply(fill_fn, axis=1)
+
+    return new_df, behave_dict
+
+
+def flatten_dict_of_lists(dol):
+    # Step 1: Check if 'distance' key exists in the dictionary
+    if 'distance' not in dol:
+        print("Key 'distance' not found in the dictionary.")
+        return []
+
+    # Step 2: Get the values associated with 'distance' key
+    distance_values = dol['distance']
+
+    # Step 3: Ensure 'distance' contains a valid list (non-empty)
+    if not isinstance(distance_values, list) or len(distance_values) == 0:
+        print("Invalid or empty list for 'distance'.")
+        return []
+
+    # Step 4: Find the length of the shortest list to avoid IndexError (if there are other keys, just skip them)
+    min_len = len(distance_values)
+
+    # Step 5: Flatten into a list of row dictionaries (only using 'distance' values)
+    combined_rows = [{'distance': distance_values[i]} for i in range(min_len)]
+
+    return combined_rows
+
+
+def remove_double_dyad_from_list(rows):
+    seen_dyads = set()
+    filtered = []
+
+    pattern = re.compile(r'\*')
+
+    for entry in rows:
+        row = entry.get('distance')
+        if not row:
+            print("Skipping invalid row (missing 'distance'):", entry)
+            continue
+
+        ind1 = row.get('Ind1')
+        ind2 = row.get('partner')
+        ec5_uuid = row.get('ec5_uuid')
+        group = row.get('group', '')
+        msm = row.get('msm')
+
+        if isinstance(group, str) and pattern.search(group):
+            print(f"Skipping due to group pattern (* found): {group}")
+            continue
+
+        if not (isinstance(ind1, str) and isinstance(ind2, str) and isinstance(ec5_uuid, str)):
+            print(f"Skipping due to invalid types: Ind1={ind1}, partner={ind2}, ec5_uuid={ec5_uuid}")
+            continue
+
+        if msm is None:
+            print(f"Skipping due to missing msm for dyad {ind1}-{ind2} and UUID {ec5_uuid}")
+            continue
+
+        normalized_dyad = '-'.join(sorted([ind1, ind2]))
+        key = (ec5_uuid, normalized_dyad, msm)
+
+        if key in seen_dyads:
+            print(f"Duplicate dyad found for {normalized_dyad} with msm {msm} in UUID {ec5_uuid} — skipping duplicate.")
+            continue
+
+        seen_dyads.add(key)
+        row['dyad'] = normalized_dyad
+        filtered.append(row)
+
+    return filtered
+
+
+def clean_dict_of_lists(dol):
+    # Flatten the dict of lists into a single list of row dictionaries
+    flattened_rows = flatten_dict_of_lists(dol)
+
+    # Remove duplicate dyads
+    cleaned_rows = remove_double_dyad_from_list(flattened_rows)
+
+    return cleaned_rows
+
+
+"""
+def reshape_row_to_multiple(row):
+    behaviour_lists = {
+        'behaviour': [],
+        'all_occurence': [],
+    }
+    distance_list = []
+
+    # Metadata
+    metadata = {
+        'ec5_uuid': row.get('ec5_uuid'),
+        'condition': row.get('condition'),
+        'date': row.get('date'),
+        'msm': row.get('msm'),
+        'group': row.get('group'),
+        'trial': row.get('trial'),
+        'phase': row.get('phase'),
+        'block_ID': row.get('block_ID')
+    }
+    notes = row.get('notes')
+
+    # Extract & sort relevant columns
+    behav_cols = [col for col in row.index if re.match(r'^\d+_', col)]
+    behav_cols_sorted = sorted(behav_cols, key=lambda i: int(i.split('_')[0]))
+    behavior_row = row[behav_cols_sorted]
+    int1_col = 'Ind1'
+    partner_col = 'partner'
+    dyad_col = 'dyad'
+    distance_col = 'distance'
+    behaviour_col = 'behaviour'
+    qualifier_col = 'qualifier'
+    eating_col = 'eating'
+    playing_col = 'playing'
+    resting_col = 'resting'
+    self_direct_col = 'self_direct'
+    grooming_col = 'grooming'
+    sitting_col = 'sitting'
+    moving_col = 'moving'
+    aggression_col = 'aggression'
+    notes_col = 'notes'
+    for i in range(0, len(behavior_row), 4):
+        block = behavior_row.iloc[i:i + 4]
+        if block.empty or len(block) < 4:
+            continue
+        int1 = block.index[0].split('_')[1] if len(block.index[0].split('_')) > 1 else 'UNKNOWN'
+        behaviour, contact, arr, three_met = block.iloc[0], block.iloc[1], block.iloc[2], block.iloc[3]
+        behaviour = str(behaviour).strip() if pd.notna(behaviour) else None
+
+        # Determine group target names
+        targets = contact if pd.notna(contact) else arr
+
+        # Define the default behavior dictionary with all zeros
+        default_behaviour_flags = {
+            eating_col: 0,
+            playing_col: 0,
+            moving_col: 0,
+            resting_col: 0,
+            sitting_col: 0,
+            self_direct_col: 0,
+            grooming_col: 0,
+        }
+
+        default_behav_alloc_flags = {
+            playing_col: 0,
+            aggression_col: 0
+        }
+
+        # Handle group/dyadic behaviors
+        if behaviour in {'PL', 'Pl'}:
+            behaviour_lists['all_occurence'].append({
+                **metadata,
+                int1_col: int1,
+                behaviour_col: behaviour,
+                qualifier_col: '',
+                partner_col: targets,
+                notes_col: notes,
+                **{**default_behav_alloc_flags, playing_col: 1},
+            })
+
+        elif behaviour in {'AG', 'DS', 'AR'}:
+            if len(behaviour) == 2:
+                behaviour_lists['all_occurence'].append({
+                    **metadata,
+                    int1_col: int1,
+                    behaviour_col: behaviour[0],
+                    qualifier_col: behaviour[1],
+                    partner_col: targets,
+                    notes_col: notes,
+                    **{**default_behav_alloc_flags, aggression_col: 1},
+                })
+
+        # Grooming behaviours (qualifier matters)
+        elif behaviour in {'GG', 'GR', 'GM'}:
+            if len(behaviour) == 2:
+                main_behaviour = behaviour[0]  # 'G'
+                qualifier = behaviour[1]
+                behaviour_lists['behaviour'].append({
+                    **metadata,
+                    int1_col: int1,
+                    behaviour_col: main_behaviour,
+                    qualifier_col: qualifier,
+                    partner_col: targets,
+                    **{**default_behaviour_flags, grooming_col: 1},
+                })
+
+        # Solo behaviours
+        else:
+            behaviour_flags = default_behaviour_flags.copy()
+            solo_behaviour = True
+
+            if behaviour == 'E':
+                behaviour_flags[eating_col] = 1
+            elif behaviour == 'RS':
+                if len(behaviour) == 2:
+                    main_behaviour = behaviour[0]
+                    qualifier = behaviour[1]
+                    behaviour_flags[resting_col] = 1
+                    behaviour_flags[sitting_col] = 1
+                    behaviour_lists['behaviour'].append({
+                        **metadata,
+                        int1_col: int1,
+                        behaviour_col: main_behaviour,
+                        qualifier_col: qualifier,
+                        partner_col: None,
+                        **behaviour_flags,
+                    })
+                    continue  # skip default append
+
+            elif behaviour == 'RL':
+                if len(behaviour) == 2:
+                    main_behaviour = behaviour[0]
+                    qualifier = behaviour[1]
+                    behaviour_flags[resting_col] = 1
+                    behaviour_lists['behaviour'].append({
+                        **metadata,
+                        int1_col: int1,
+                        behaviour_col: main_behaviour,
+                        qualifier_col: qualifier,
+                        partner_col: None,
+                        **behaviour_flags,
+                    })
+                    continue
+
+                behaviour_flags[resting_col] = 1
+            elif behaviour == 'M':
+                behaviour_flags[moving_col] = 1
+            elif behaviour == 'SD':
+                behaviour_flags[self_direct_col] = 1
+            else:
+                solo_behaviour = False  # Unknown or unhandled behavior
+
+            if solo_behaviour:
+                behaviour_lists['behaviour'].append({
+                    **metadata,
+                    int1_col: int1,
+                    behaviour_col: behaviour,
+                    qualifier_col: None,
+                    partner_col: None,
+                    **behaviour_flags,
+                })
+
+        # Handle distances
+        # Skip if int1 is unknown, but record missing data advice
+        if int1 == 'UNKNOWN':
+            distance_list.append({
+                **metadata,
+                int1_col: int1,
+                partner_col: None,
+                dyad_col: None,
+                distance_col: None,
+                'note': 'Missing int1 ID - data disregarded'
+            })
+            continue  # skip processing this block
+        group_individuals = behave_dict.values()
+        # Collect all individuals involved
+        all_individuals = set()
+
+        distance_map = {}
+
+        # Process distance levels with contact, arr, three_met
+        distance_levels = [(contact, 1), (arr, 2), (three_met, 3)]
+
+        for group_value, dist in distance_levels:
+            if pd.notna(group_value):
+                partners = [p.strip() for p in group_value.split(',') if p.strip()]
+                all_individuals.update(partners)
+                all_individuals.add(int1)  # Ensure initiator included
+
+                for partner in partners:
+                    if partner == int1:
+                        continue
+                    dyad = '-'.join(sorted([int1, partner]))
+                    if dyad not in distance_map or dist < distance_map[dyad]:
+                        distance_map[dyad] = dist
+
+        # If no individuals found in this block, fallback to group members if possible
+        if len(all_individuals) == 0:
+            # If you have group_individuals list, use it here instead:
+            all_individuals = set(group_individuals)
+            # For now, just add int1 to avoid empty
+            all_individuals.add(int1)
+        print(distance_map)
+
+        # Fill in distance 4 for missing dyads (all pairs in all_individuals)
+        for ind1, ind2 in combinations(sorted(all_individuals), 2):
+            dyad = f"{ind1}-{ind2}"
+            if dyad not in distance_map:
+                distance_map[dyad] = 4
+
+        # Build final distance list
+        for dyad, dist in distance_map.items():
+            ind1_, ind2_ = dyad.split('-')
+            distance_list.append({
+                **metadata,
+                int1_col: ind1_,
+                partner_col: ind2_,
+                dyad_col: dyad,
+                distance_col: dist
+            })
+    return {
+        'distance': distance_list,
+        'behaviour': behaviour_lists['behaviour'],
+        'occurrence': behaviour_lists['all_occurence']
+    }
+
+"""
+
+
+def reshape_row_to_multiple(row, beha_dict):
+
+    behaviour_lists = {
+        'behaviour': [],
+        'all_occurence': [],
+    }
+    distance_list = []
+
+    # Metadata
+    metadata = {
+        'ec5_uuid': row.get('ec5_uuid'),
+        'condition': row.get('condition'),
+        'date': row.get('date'),
+        'msm': row.get('msm'),
+        'group': row.get('group'),
+        'trial': row.get('trial'),
+        'phase': row.get('phase'),
+        'block_ID': row.get('block_ID')
+    }
+    notes = row.get('notes')
+
+    # Extract & sort relevant columns
+    behav_cols = [col for col in row.index if re.match(r'^\d+_', col)]
+    behav_cols_sorted = sorted(behav_cols, key=lambda i: int(i.split('_')[0]))
+    behavior_row = row[behav_cols_sorted]
+
+    int1_col = 'Ind1'
+    partner_col = 'partner'
+    dyad_col = 'dyad'
+    distance_col = 'distance'
+    behaviour_col = 'behaviour'
+    qualifier_col = 'qualifier'
+    eating_col = 'eating'
+    playing_col = 'playing'
+    resting_col = 'resting'
+    self_direct_col = 'self_direct'
+    grooming_col = 'grooming'
+    sitting_col = 'sitting'
+    moving_col = 'moving'
+    aggression_col = 'aggression'
+    notes_col = 'notes'
+    for i in range(0, len(behavior_row), 4):
+        block = behavior_row.iloc[i:i + 4]
+        if block.empty or len(block) < 4:
+            continue
+        int1 = block.index[0].split('_')[1] if len(block.index[0].split('_')) > 1 else 'UNKNOWN'
+        behaviour, contact, arr, three_met = block.iloc[0], block.iloc[1], block.iloc[2], block.iloc[3]
+        behaviour = str(behaviour).strip() if pd.notna(behaviour) else None
+
+        # Determine group target names
+        targets = contact if pd.notna(contact) else arr
+
+        # Define the default behavior dictionary with all zeros
+        default_behaviour_flags = {
+            eating_col: 0,
+            playing_col: 0,
+            moving_col: 0,
+            resting_col: 0,
+            sitting_col: 0,
+            self_direct_col: 0,
+            grooming_col: 0,
+        }
+
+        default_behav_alloc_flags = {
+            playing_col: 0,
+            aggression_col: 0
+        }
+
+        # Handle group/dyadic behaviors
+        if behaviour in {'PL', 'Pl'}:
+            behaviour_lists['all_occurence'].append({
+                **metadata,
+                int1_col: int1,
+                behaviour_col: behaviour,
+                qualifier_col: '',
+                partner_col: targets,
+                notes_col: notes,
+                **{**default_behav_alloc_flags, playing_col: 1},
+            })
+
+        elif behaviour in {'AG', 'DS', 'AR'}:
+            if len(behaviour) == 2:
+                behaviour_lists['all_occurence'].append({
+                    **metadata,
+                    int1_col: int1,
+                    behaviour_col: behaviour[0],
+                    qualifier_col: behaviour[1],
+                    partner_col: targets,
+                    notes_col: notes,
+                    **{**default_behav_alloc_flags, aggression_col: 1},
+                })
+
+        # Grooming behaviours (qualifier matters)
+        elif behaviour in {'GG', 'GR', 'GM'}:
+            if len(behaviour) == 2:
+                main_behaviour = behaviour[0]  # 'G'
+                qualifier = behaviour[1]
+                behaviour_lists['behaviour'].append({
+                    **metadata,
+                    int1_col: int1,
+                    behaviour_col: main_behaviour,
+                    qualifier_col: qualifier,
+                    partner_col: targets,
+                    **{**default_behaviour_flags, grooming_col: 1},
+                })
+
+        # Solo behaviours
+        else:
+            behaviour_flags = default_behaviour_flags.copy()
+            solo_behaviour = True
+
+            if behaviour == 'E':
+                behaviour_flags[eating_col] = 1
+            elif behaviour == 'RS':
+                if len(behaviour) == 2:
+                    main_behaviour = behaviour[0]
+                    qualifier = behaviour[1]
+                    behaviour_flags[resting_col] = 1
+                    behaviour_flags[sitting_col] = 1
+                    behaviour_lists['behaviour'].append({
+                        **metadata,
+                        int1_col: int1,
+                        behaviour_col: main_behaviour,
+                        qualifier_col: qualifier,
+                        partner_col: None,
+                        **behaviour_flags,
+                    })
+                    continue  # skip default append
+
+            elif behaviour == 'RL':
+                if len(behaviour) == 2:
+                    main_behaviour = behaviour[0]
+                    qualifier = behaviour[1]
+                    behaviour_flags[resting_col] = 1
+                    behaviour_lists['behaviour'].append({
+                        **metadata,
+                        int1_col: int1,
+                        behaviour_col: main_behaviour,
+                        qualifier_col: qualifier,
+                        partner_col: None,
+                        **behaviour_flags,
+                    })
+                    continue
+
+                behaviour_flags[resting_col] = 1
+            elif behaviour == 'M':
+                behaviour_flags[moving_col] = 1
+            elif behaviour == 'SD':
+                behaviour_flags[self_direct_col] = 1
+            else:
+                solo_behaviour = False  # Unknown or unhandled behavior
+
+            if solo_behaviour:
+                behaviour_lists['behaviour'].append({
+                    **metadata,
+                    int1_col: int1,
+                    behaviour_col: behaviour,
+                    qualifier_col: None,
+                    partner_col: None,
+                    **behaviour_flags,
+                })
+
+        # Handle distance logic
+        if pd.isna(contact) and pd.isna(arr) and pd.isna(three_met):
+            for other in beha_dict.values():
+                if other != int1:
+                    distance_list.append({
+                        **metadata,
+                        int1_col: int1,
+                        partner_col: other,
+                        dyad_col: f"{int1}-{other}",
+                        distance_col: 4
+                    })
+        else:
+            levels = [(contact, 1), (arr, 2), (three_met, 3)]
+            for group_value, dist in levels:
+                if pd.notna(group_value):
+                    for ind2 in group_value.split(','):
+                        distance_list.append({
+                            **metadata,
+                            int1_col: int1,
+                            partner_col: ind2.strip(),
+                            dyad_col: f"{int1}-{ind2.strip()}",
+                            distance_col: dist
+                        })
+
+    return {
+        'distance': distance_list,
+        'behaviour': behaviour_lists['behaviour'],
+        'occurrence': behaviour_lists['all_occurence']
+    }
+
+def reshape_and_combine_all(df, beh_dict):
+    combined_dict_of_lists = {}
+    print('beh_dict: ' + str(beh_dict))
+    for _, row in df.iterrows():
+        row_dict_of_lists = reshape_row_to_multiple(row, beh_dict)
+
+        for key, value_list in row_dict_of_lists.items():
+            if key not in combined_dict_of_lists:
+                combined_dict_of_lists[key] = []
+            combined_dict_of_lists[key].extend(value_list)
+
+    # Clean "distance" field if exists
+    if 'distance' in combined_dict_of_lists:
+        combined_dict_of_lists['distance'] = clean_dict_of_lists(combined_dict_of_lists)
+
+    return combined_dict_of_lists
+
+
+# --- Main processing pipeline ---
+
+input_dir = "C:/Users/Nic/Desktop/Stat_PL/input"
+output_dir = "C:/Users/Nic/Desktop/Stat_PL"
+os.makedirs(output_dir, exist_ok=True)
+
+# Collect all Excel and CSV files
+data_files = glob.glob(os.path.join(input_dir, "*.csv")) + glob.glob(os.path.join(input_dir, "*.xlsx"))
+
+# Prepare combined storage
+all_data = {}
+
+for input_file_path in data_files:
+    print(f"Processing: {input_file_path}")
+
+    if input_file_path.endswith(".csv"):
+        df_raw = pd.read_csv(input_file_path, sep=';')
+    else:
+        df_raw = pd.read_excel(input_file_path)
+
+    behave_dict = get_behavior_code_dict(df_raw)  # Your function to get behavior dict
+
+    # Step 1: Reshape data
+    rs_df, _ = reshape_behavior_data(df_raw, schedule_dict, Cage_Compositions)
+
+    # Step 2: Rebuild fresh behavior dict from reshaped data
+    behave_dict = get_behavior_code_dict(rs_df)
+
+    # Pick only needed columns (example based on your original code)
+    target_cols = [col for col in rs_df.columns if any(k in col for k in ['Contact', 'AR', '3M'])]
+    selected_columns = ['ec5_uuid', 'condition', 'date', 'msm', 'group', 'trial', 'phase', 'block_ID'] + target_cols + list(behave_dict.keys())
+    df_subset = rs_df[selected_columns]
+
+    # Combine data for this file
+    combined = reshape_and_combine_all(df_subset, behave_dict)
+
+    # Aggregate combined data globally
+    for key, data_list in combined.items():
+        if key not in all_data:
+            all_data[key] = []
+        all_data[key].extend(data_list)
+
+# After processing all files, save combined CSV files
+for key, data_list in all_data.items():
+    df = pd.DataFrame(data_list)
+    output_file = os.path.join(output_dir, f"all_{key}.csv")
+    print(f"Saving combined data to: {output_file}")
+    df.to_csv(output_file, index=False)
+
+print("All files processed and combined CSVs saved.")
