@@ -1,10 +1,9 @@
 import os
 import pandas as pd
-from datetime import datetime
+from datetime import datetime, timedelta
 import re
 import glob
 from dateutil import parser
-from itertools import combinations
 
 # schedule_dict
 schedule_dict = {
@@ -113,15 +112,12 @@ def get_condition_and_trial(date_str, schedule_dict):
 
 
 def get_behavior_code_dict(df):
-    behavior_code_dict = {}
     pattern = re.compile(r'\d+_(\w{2})_Behavior')
-
-    for col in df.columns:
-        match = pattern.match(col)
-        if match:
-            behavior_code_dict[col] = match.group(1)
-
-    return behavior_code_dict
+    return {
+        col: match.group(1)
+        for col in df.columns
+        if (match := pattern.match(col))
+    }
 
 
 def format_date(date_input):
@@ -215,43 +211,27 @@ def get_group_from_date(date_str, cage_dates_dict, behave_dict):
     return f"*{group_str}"
 
 
-def block_ID(row):
-    ID = ""
+def generate_block_ID(df):
+    # Start with lowercase phase (empty string where NaN)
+    ID = df['phase'].fillna('').str.lower()
+    ID = ID.where(ID.isin(['morn1', 'morn2', 'enrich']), '')
 
-    # Phase
-    phase = str(row.get('phase', '')).lower()
-    if phase in ["morn1", "morn2", "enrich"]:
-        ID += phase
+    # Append group
+    ID += '_' + df['group'].fillna('')
 
-    # Group
-    group = row.get('group')
-    if group:
-        ID += f"_{group}"
+    # Append trial
+    ID += df['trial'].apply(lambda x: f"_trial{int(x)}" if pd.notnull(x) else '')
 
-    # Trial
-    trial = row.get('trial')
-    if pd.notnull(trial):
-        ID += f"_trial{trial}"
+    # Append first_day
+    ID += df['first_day'].apply(lambda x: '_first' if x is True else ('_sec' if x is False else ''))
 
-    # First day
-    first_day = row.get('first_day')
-    if first_day is True:
-        ID += "_first"
-    elif first_day is False:
-        ID += "_sec"
-
-    # Condition
-    condition = str(row.get('condition', '')).lower()
-    if condition == 'playback':
-        ID += "_play"
-    elif condition == 'crow':
-        ID += "_cont"
-    elif condition == 'baseline':
-        ID += "_base"
+    # Append condition
+    condition_map = {'playback': '_play', 'crow': '_cont', 'baseline': '_base'}
+    ID += df['condition'].fillna('').str.lower().map(condition_map).fillna('')
 
     return ID
 
-
+"""
 def make_fill_columns(schedule_dict, behave_dict, Cage_Compositions):
     def fill_columns(row):
         try:
@@ -280,24 +260,97 @@ def make_fill_columns(schedule_dict, behave_dict, Cage_Compositions):
         return row
 
     return fill_columns
+"""
+
+
+def get_group_from_date_column(dates_series, cage_dates_dict, behave_dict):
+    # Step 1: Build a reverse lookup from DD.MM to group
+    date_to_group = {}
+    for group, dates in cage_dates_dict.items():
+        for d in dates:
+            date_to_group[d] = group
+
+    # Step 2: Determine shared prefix once (not per row)
+    values = set(behave_dict.values())
+
+    if 'GG' in values or 'SB' in values:
+        prefix = 'C'
+    elif values & {'TN', 'TK', 'LN', 'NR', 'NY', 'ST', 'MN', 'SR'}:
+        prefix = 'A'
+    elif values & {'MN', 'MS', 'NH', 'LN', 'NR', 'NY', 'ST'}:
+        prefix = 'B'
+    elif values & {'MZ', 'SB', 'GG', 'LN', 'NR', 'MS'}:
+        prefix = 'C'
+    else:
+        prefix = None
+
+    # Step 3: Vectorized transformation
+    def map_func(date_str):
+        try:
+            date_obj = parser.parse(date_str, dayfirst=True)
+            short_date = date_obj.strftime("%d.%m")
+        except (ValueError, TypeError):
+            return ''
+
+        matched_group = date_to_group.get(short_date)
+        if not matched_group:
+            return ''
+
+        group_str = f"{prefix}{matched_group}" if prefix else matched_group
+        return f"*{group_str}"
+
+    return dates_series.apply(map_func)
 
 
 def reshape_behavior_data(df, schedule_dict, Cage_Compositions):
     working_df = df.copy()
 
-    # Define and add expected columns if not already present
-    new_columns = ['msm', 'date', 'phase', 'group', 'trial', 'first_day', 'block_ID']
-    for col in new_columns:
+    # Ensure required columns exist
+    for col in ['msm', 'date', 'phase', 'group', 'trial', 'first_day', 'block_ID']:
         if col not in working_df.columns:
             working_df[col] = None
 
-    # Get behavior dictionary
+    # Vectorized: minutes since midnight
+    if '1_TIme' in working_df.columns:
+        working_df['msm'] = working_df['1_TIme'].apply(minutes_since_midnight)
+
+    # Vectorized: format date
+    if 'created_at' in working_df.columns:
+        working_df['date'] = working_df['created_at'].apply(
+            lambda x: format_date(x)['iso_z_format'] if format_date(x) else None
+        )
+
+    # Vectorized: get phase
+    if '1_TIme' in working_df.columns:
+        working_df['phase'] = working_df['1_TIme'].apply(get_phase_from_time)
+
+    # Vectorized: condition, trial, first_day
+    def get_schedule_info(date):
+        condition, trial, first_day = get_condition_and_trial(date, schedule_dict)
+        return pd.Series([condition, trial, first_day])
+
+    working_df[['condition', 'trial', 'first_day']] = working_df['date'].apply(get_schedule_info)
+
+    # Vectorized group detection fallback (still partially row-wise due to logic complexity)
+    def get_group_vectorized(row):
+        group = get_exact_matching_cage_phase(behave_dict, Cage_Compositions)
+        if group is None:
+            return get_group_from_date(row['date'], Cage_Comp_Dates, behave_dict)
+        return group
+
+    # WARNING: this still involves per-row computation for complex logic
     behave_dict = get_behavior_code_dict(working_df)
 
-    fill_fn = make_fill_columns(schedule_dict, behave_dict, Cage_Compositions)
-    new_df = working_df.apply(fill_fn, axis=1)
+    working_df['group'] = get_group_from_date_column(
+        working_df['date'],
+        Cage_Comp_Dates,
+        behave_dict
+    )
 
-    return new_df, behave_dict
+    # Vectorized block ID assignment
+    working_df['block_ID'] = generate_block_ID(working_df)
+
+    return working_df, behave_dict
 
 
 def flatten_dict_of_lists(dol):
@@ -375,234 +428,6 @@ def clean_dict_of_lists(dol):
     cleaned_rows = remove_double_dyad_from_list(flattened_rows)
 
     return cleaned_rows
-
-
-"""
-def reshape_row_to_multiple(row):
-    behaviour_lists = {
-        'behaviour': [],
-        'all_occurence': [],
-    }
-    distance_list = []
-
-    # Metadata
-    metadata = {
-        'ec5_uuid': row.get('ec5_uuid'),
-        'condition': row.get('condition'),
-        'date': row.get('date'),
-        'msm': row.get('msm'),
-        'group': row.get('group'),
-        'trial': row.get('trial'),
-        'phase': row.get('phase'),
-        'block_ID': row.get('block_ID')
-    }
-    notes = row.get('notes')
-
-    # Extract & sort relevant columns
-    behav_cols = [col for col in row.index if re.match(r'^\d+_', col)]
-    behav_cols_sorted = sorted(behav_cols, key=lambda i: int(i.split('_')[0]))
-    behavior_row = row[behav_cols_sorted]
-    int1_col = 'Ind1'
-    partner_col = 'partner'
-    dyad_col = 'dyad'
-    distance_col = 'distance'
-    behaviour_col = 'behaviour'
-    qualifier_col = 'qualifier'
-    eating_col = 'eating'
-    playing_col = 'playing'
-    resting_col = 'resting'
-    self_direct_col = 'self_direct'
-    grooming_col = 'grooming'
-    sitting_col = 'sitting'
-    moving_col = 'moving'
-    aggression_col = 'aggression'
-    notes_col = 'notes'
-    for i in range(0, len(behavior_row), 4):
-        block = behavior_row.iloc[i:i + 4]
-        if block.empty or len(block) < 4:
-            continue
-        int1 = block.index[0].split('_')[1] if len(block.index[0].split('_')) > 1 else 'UNKNOWN'
-        behaviour, contact, arr, three_met = block.iloc[0], block.iloc[1], block.iloc[2], block.iloc[3]
-        behaviour = str(behaviour).strip() if pd.notna(behaviour) else None
-
-        # Determine group target names
-        targets = contact if pd.notna(contact) else arr
-
-        # Define the default behavior dictionary with all zeros
-        default_behaviour_flags = {
-            eating_col: 0,
-            playing_col: 0,
-            moving_col: 0,
-            resting_col: 0,
-            sitting_col: 0,
-            self_direct_col: 0,
-            grooming_col: 0,
-        }
-
-        default_behav_alloc_flags = {
-            playing_col: 0,
-            aggression_col: 0
-        }
-
-        # Handle group/dyadic behaviors
-        if behaviour in {'PL', 'Pl'}:
-            behaviour_lists['all_occurence'].append({
-                **metadata,
-                int1_col: int1,
-                behaviour_col: behaviour,
-                qualifier_col: '',
-                partner_col: targets,
-                notes_col: notes,
-                **{**default_behav_alloc_flags, playing_col: 1},
-            })
-
-        elif behaviour in {'AG', 'DS', 'AR'}:
-            if len(behaviour) == 2:
-                behaviour_lists['all_occurence'].append({
-                    **metadata,
-                    int1_col: int1,
-                    behaviour_col: behaviour[0],
-                    qualifier_col: behaviour[1],
-                    partner_col: targets,
-                    notes_col: notes,
-                    **{**default_behav_alloc_flags, aggression_col: 1},
-                })
-
-        # Grooming behaviours (qualifier matters)
-        elif behaviour in {'GG', 'GR', 'GM'}:
-            if len(behaviour) == 2:
-                main_behaviour = behaviour[0]  # 'G'
-                qualifier = behaviour[1]
-                behaviour_lists['behaviour'].append({
-                    **metadata,
-                    int1_col: int1,
-                    behaviour_col: main_behaviour,
-                    qualifier_col: qualifier,
-                    partner_col: targets,
-                    **{**default_behaviour_flags, grooming_col: 1},
-                })
-
-        # Solo behaviours
-        else:
-            behaviour_flags = default_behaviour_flags.copy()
-            solo_behaviour = True
-
-            if behaviour == 'E':
-                behaviour_flags[eating_col] = 1
-            elif behaviour == 'RS':
-                if len(behaviour) == 2:
-                    main_behaviour = behaviour[0]
-                    qualifier = behaviour[1]
-                    behaviour_flags[resting_col] = 1
-                    behaviour_flags[sitting_col] = 1
-                    behaviour_lists['behaviour'].append({
-                        **metadata,
-                        int1_col: int1,
-                        behaviour_col: main_behaviour,
-                        qualifier_col: qualifier,
-                        partner_col: None,
-                        **behaviour_flags,
-                    })
-                    continue  # skip default append
-
-            elif behaviour == 'RL':
-                if len(behaviour) == 2:
-                    main_behaviour = behaviour[0]
-                    qualifier = behaviour[1]
-                    behaviour_flags[resting_col] = 1
-                    behaviour_lists['behaviour'].append({
-                        **metadata,
-                        int1_col: int1,
-                        behaviour_col: main_behaviour,
-                        qualifier_col: qualifier,
-                        partner_col: None,
-                        **behaviour_flags,
-                    })
-                    continue
-
-                behaviour_flags[resting_col] = 1
-            elif behaviour == 'M':
-                behaviour_flags[moving_col] = 1
-            elif behaviour == 'SD':
-                behaviour_flags[self_direct_col] = 1
-            else:
-                solo_behaviour = False  # Unknown or unhandled behavior
-
-            if solo_behaviour:
-                behaviour_lists['behaviour'].append({
-                    **metadata,
-                    int1_col: int1,
-                    behaviour_col: behaviour,
-                    qualifier_col: None,
-                    partner_col: None,
-                    **behaviour_flags,
-                })
-
-        # Handle distances
-        # Skip if int1 is unknown, but record missing data advice
-        if int1 == 'UNKNOWN':
-            distance_list.append({
-                **metadata,
-                int1_col: int1,
-                partner_col: None,
-                dyad_col: None,
-                distance_col: None,
-                'note': 'Missing int1 ID - data disregarded'
-            })
-            continue  # skip processing this block
-        group_individuals = behave_dict.values()
-        # Collect all individuals involved
-        all_individuals = set()
-
-        distance_map = {}
-
-        # Process distance levels with contact, arr, three_met
-        distance_levels = [(contact, 1), (arr, 2), (three_met, 3)]
-
-        for group_value, dist in distance_levels:
-            if pd.notna(group_value):
-                partners = [p.strip() for p in group_value.split(',') if p.strip()]
-                all_individuals.update(partners)
-                all_individuals.add(int1)  # Ensure initiator included
-
-                for partner in partners:
-                    if partner == int1:
-                        continue
-                    dyad = '-'.join(sorted([int1, partner]))
-                    if dyad not in distance_map or dist < distance_map[dyad]:
-                        distance_map[dyad] = dist
-
-        # If no individuals found in this block, fallback to group members if possible
-        if len(all_individuals) == 0:
-            # If you have group_individuals list, use it here instead:
-            all_individuals = set(group_individuals)
-            # For now, just add int1 to avoid empty
-            all_individuals.add(int1)
-        print(distance_map)
-
-        # Fill in distance 4 for missing dyads (all pairs in all_individuals)
-        for ind1, ind2 in combinations(sorted(all_individuals), 2):
-            dyad = f"{ind1}-{ind2}"
-            if dyad not in distance_map:
-                distance_map[dyad] = 4
-
-        # Build final distance list
-        for dyad, dist in distance_map.items():
-            ind1_, ind2_ = dyad.split('-')
-            distance_list.append({
-                **metadata,
-                int1_col: ind1_,
-                partner_col: ind2_,
-                dyad_col: dyad,
-                distance_col: dist
-            })
-    return {
-        'distance': distance_list,
-        'behaviour': behaviour_lists['behaviour'],
-        'occurrence': behaviour_lists['all_occurence']
-    }
-
-"""
 
 
 def reshape_row_to_multiple(row, beha_dict):
@@ -797,12 +622,12 @@ def reshape_row_to_multiple(row, beha_dict):
         'occurrence': behaviour_lists['all_occurence']
     }
 
+
 def reshape_and_combine_all(df, beh_dict):
     combined_dict_of_lists = {}
-    print('beh_dict: ' + str(beh_dict))
+    #print('beh_dict: ' + str(beh_dict))
     for _, row in df.iterrows():
         row_dict_of_lists = reshape_row_to_multiple(row, beh_dict)
-
         for key, value_list in row_dict_of_lists.items():
             if key not in combined_dict_of_lists:
                 combined_dict_of_lists[key] = []
@@ -813,6 +638,48 @@ def reshape_and_combine_all(df, beh_dict):
         combined_dict_of_lists['distance'] = clean_dict_of_lists(combined_dict_of_lists)
 
     return combined_dict_of_lists
+
+
+def empty_dataframe(schedule_dict):
+
+    # Define the columns
+    columns = ['ec5_uuid', 'condition', 'date', 'msm', 'group', 'trial', 'phase',
+               'block_ID', 'Ind1', 'partner', 'dyad', 'distance']
+
+    # Define time ranges in 2-minute intervals
+    def generate_timepoints():
+        times = []
+        # Morning session
+        t = datetime.strptime("09:30", "%H:%M")
+        end = datetime.strptime("11:45", "%H:%M")
+        while t <= end:
+            times.append(t.strftime("%H:%M"))
+            t += timedelta(minutes=2)
+
+        # Afternoon session
+        t = datetime.strptime("13:15", "%H:%M")
+        end = datetime.strptime("14:45", "%H:%M")
+        while t <= end:
+            times.append(t.strftime("%H:%M"))
+            t += timedelta(minutes=2)
+
+        return times
+
+    timepoints = generate_timepoints()
+
+    # Build a MultiIndex from dyads and timepoints
+    index = pd.MultiIndex.from_product(
+        [schedule_dict.keys(), timepoints],
+        names=["dyad", "time"]
+    )
+
+    # Create the empty DataFrame
+    empty_df = pd.DataFrame(index=index, columns=columns)
+    print(empty_df)
+    # Optional: reset index if you don't want MultiIndex
+    # df = df.reset_index()
+
+    return empty_df
 
 
 # --- Main processing pipeline ---
@@ -835,18 +702,31 @@ for input_file_path in data_files:
     else:
         df_raw = pd.read_excel(input_file_path)
 
-    behave_dict = get_behavior_code_dict(df_raw)  # Your function to get behavior dict
+    behave_dict = get_behavior_code_dict(df_raw)
+
+    # Empty dataframe
+    empty_df = empty_dataframe(schedule_dict)
 
     # Step 1: Reshape data
     rs_df, _ = reshape_behavior_data(df_raw, schedule_dict, Cage_Compositions)
 
     # Step 2: Rebuild fresh behavior dict from reshaped data
-    behave_dict = get_behavior_code_dict(rs_df)
+    #behave_dict = get_behavior_code_dict(rs_df)
 
     # Pick only needed columns (example based on your original code)
     target_cols = [col for col in rs_df.columns if any(k in col for k in ['Contact', 'AR', '3M'])]
     selected_columns = ['ec5_uuid', 'condition', 'date', 'msm', 'group', 'trial', 'phase', 'block_ID'] + target_cols + list(behave_dict.keys())
     df_subset = rs_df[selected_columns]
+    print(df_subset)
+
+
+    #schedule_dict number of keys
+    # ('Playback', '1'): ('11.03', '12.03'),
+    # ('Crow', '1'): ('14.03', '15.03'),
+    #time: 09:30 + 2 min 11:45 13:15 + 2 min 14:45
+    #ec5_uuid,condition,date,msm,group,trial,phase,block_ID,Ind1,partner,dyad,distance
+    #ec5_uuid,condition,date,msm,group,trial,phase,block_ID,Ind1,behaviour,qualifier,partner,notes,playing,aggression
+    #ec5_uuid,condition,date,msm,group,trial,phase,block_ID,Ind1,behaviour,qualifier,partner,eating,playing,moving,resting,sitting,self_direct,grooming
 
     # Combine data for this file
     combined = reshape_and_combine_all(df_subset, behave_dict)
