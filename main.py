@@ -1,6 +1,6 @@
 import os
 import pandas as pd
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, date
 import re
 import glob
 from dateutil import parser
@@ -54,61 +54,75 @@ Cage_Comp_Dates = {
     '3': ['03.04', '04.04', '16.04', '17.04', '30.04', '01.05', '14.05', '15.05'],
 }
 
+def compare_df(raw_df: pd.DataFrame, empty_df: pd.DataFrame,
+               time_col_raw="1_TIme", time_col_empty="time", tolerance="2min"):
+    """
+    Align raw_df to empty_df by nearest time points, filling empty_df with raw_df data.
 
-def get_phase_from_time(time_value):
-    if pd.isna(time_value) or time_value == '':
-        return None
-    try:
-        time_str = str(time_value).strip()
-        # Try with seconds first
-        try:
-            time_obj = datetime.strptime(time_str, '%H:%M:%S').time()
-        except ValueError:
-            # Fallback to no seconds
-            time_obj = datetime.strptime(time_str, '%H:%M').time()
+    Handles MultiIndex in empty_df and duplicate columns from merge_asof.
+    """
 
-        minutes = time_obj.hour * 60 + time_obj.minute
+    # --- Copy to avoid modifying original data ---
+    raw_df = raw_df.copy()
+    empty_df = empty_df.copy()
 
-        if 570 <= minutes <= 630:  # 09:30 to 10:30
-            return 'morn1'
-        elif 645 <= minutes <= 705:  # 10:45 to 11:45
-            return 'morn2'
-        elif minutes >= 720:  # After 12:00
-            return 'enrich'
+    # --- Handle MultiIndex in empty_df ---
+    if time_col_empty not in empty_df.columns:
+        if time_col_empty in empty_df.index.names:
+            empty_df = empty_df.reset_index(level=time_col_empty)
         else:
-            return 'extra'
+            raise KeyError(f"'{time_col_empty}' not found in columns or index of empty_df")
 
-    except Exception as e:
-        print(f"Failed to parse time value '{time_value}': {e}")
-        return None
+    print("Raw columns:", raw_df.columns)
+    print("Empty columns:", empty_df.columns)
+
+    # --- Convert time columns to datetime ---
+    raw_df[time_col_raw] = pd.to_datetime(raw_df[time_col_raw], format="%H:%M", errors='coerce')
+    empty_df[time_col_empty] = pd.to_datetime(empty_df[time_col_empty], format="%H:%M", errors='coerce')
+
+    # --- Sort by time ---
+    raw_df = raw_df.sort_values(time_col_raw).reset_index(drop=True)
+    empty_df = empty_df.sort_values(time_col_empty).reset_index(drop=True)
+
+    # --- Merge using nearest time ---
+    merged = pd.merge_asof(
+        empty_df,
+        raw_df,
+        left_on=time_col_empty,
+        right_on=time_col_raw,
+        direction="nearest",
+        tolerance=pd.Timedelta(tolerance)
+    )
+
+    # --- Handle duplicate columns from merge (suffixes _x/_y) ---
+    for col in raw_df.columns:
+        if col in empty_df.columns:
+            col_x = f"{col}_x"
+            col_y = f"{col}_y"
+            if col_x in merged.columns and col_y in merged.columns:
+                # Prefer raw_df (_y) value, fallback to empty_df (_x) if missing
+                merged[col] = merged[col_y].combine_first(merged[col_x])
+                merged = merged.drop(columns=[col_x, col_y])
+
+    # --- Fill 'date' from 'created_at' if exists ---
+    if "created_at" in merged.columns:
+        merged["date"] = pd.to_datetime(merged["created_at"], errors='coerce').dt.date
+
+    # --- Identify unused raw times ---
+    if time_col_raw in merged.columns:
+        used_times = merged[time_col_raw].dropna().unique()
+        unused_df = raw_df[~raw_df[time_col_raw].isin(used_times)]
+        if not unused_df.empty:
+            print("⚠️ Unused time points from raw_df:")
+            print(unused_df[["ec5_uuid", "created_at", time_col_raw]])
+
+    return merged
 
 
-def get_exact_matching_cage_phase(behave_dict, cage_compositions):
-    behavior_values = set(behave_dict.values())
-
-    for cage, phases in cage_compositions.items():
-        for phase, individuals in phases.items():
-            if behavior_values.issubset(set(individuals)):
-                return f"{cage}{phase}"
-
-    return None
 
 
-def get_condition_and_trial(date_str, schedule_dict):
-    if pd.isna(date_str) or date_str == '':
-        return None, None, None
-    try:
-        day_month = datetime.strptime(date_str, '%d-%m-%Y').strftime('%d.%m')
-    except Exception as e:
-        print(f"Invalid date format: {date_str} -> {e}")
-        return None, None, None
 
-    for (condition, trial), dates in schedule_dict.items():
-        if day_month in dates:
-            first_day = (day_month == dates[0])
-            return condition, trial, first_day
 
-    return None, None, None
 
 
 def get_behavior_code_dict(df):
@@ -169,67 +183,7 @@ def minutes_since_midnight(time_str):
         return None
 
 
-def get_group_from_date(date_str, cage_dates_dict, behave_dict):
-    # Convert input date to "DD.MM" format, allowing flexible input
-    try:
-        date_obj = parser.parse(date_str, dayfirst=True)
-        short_date = date_obj.strftime("%d.%m")
-    except (ValueError, TypeError):
-        return ''  # Invalid date format
 
-    # First, find the group the date belongs to
-    matched_group = None
-    for group, dates in cage_dates_dict.items():
-        if short_date in dates:
-            matched_group = group
-            break
-
-    # If the date is not found in any group, return empty
-    if not matched_group:
-        return ''
-
-    # Define sets for each prefix group
-    group_A_ids = {'TN', 'TK', 'LN', 'NR', 'NY', 'ST', 'MN', 'SR'}
-    group_B_ids = {'MN', 'MS', 'NH', 'LN', 'NR', 'NY', 'ST'}
-    group_C_ids = {'MZ', 'SB', 'GG', 'LN', 'NR', 'MS'}
-
-    values = set(behave_dict.values())
-
-    # Determine prefix based on behavior codes
-    if 'GG' in values or 'SB' in values:
-        prefix = 'C'
-    elif values & group_A_ids:
-        prefix = 'A'
-    elif values & group_B_ids:
-        prefix = 'B'
-    elif values & group_C_ids:
-        prefix = 'C'
-    else:
-        prefix = 'No data for that day'
-
-    group_str = f"{prefix}{matched_group}" if prefix else matched_group
-    return f"*{group_str}"
-
-
-def generate_block_ID(df):
-    # Start with lowercase phase (empty string where NaN)
-    ID = df['phase'].fillna('').str.lower()
-    ID = ID.where(ID.isin(['morn1', 'morn2', 'enrich']), '')
-
-    # Append group
-    ID += '_' + df['group'].fillna('')
-
-    # Append trial
-    ID += df['trial'].apply(lambda x: f"_trial{int(x)}" if pd.notnull(x) else '')
-
-    # Append first_day
-    ID += df['first_day'].apply(lambda x: '_first' if x is True else ('_sec' if x is False else ''))
-
-    # Append condition
-    condition_map = {'playback': '_play', 'crow': '_cont', 'baseline': '_base'}
-    ID += df['condition'].fillna('').str.lower().map(condition_map).fillna('')
-
-    return ID
 
 """
 def make_fill_columns(schedule_dict, behave_dict, Cage_Compositions):
@@ -263,94 +217,8 @@ def make_fill_columns(schedule_dict, behave_dict, Cage_Compositions):
 """
 
 
-def get_group_from_date_column(dates_series, cage_dates_dict, behave_dict):
-    # Step 1: Build a reverse lookup from DD.MM to group
-    date_to_group = {}
-    for group, dates in cage_dates_dict.items():
-        for d in dates:
-            date_to_group[d] = group
-
-    # Step 2: Determine shared prefix once (not per row)
-    values = set(behave_dict.values())
-
-    if 'GG' in values or 'SB' in values:
-        prefix = 'C'
-    elif values & {'TN', 'TK', 'LN', 'NR', 'NY', 'ST', 'MN', 'SR'}:
-        prefix = 'A'
-    elif values & {'MN', 'MS', 'NH', 'LN', 'NR', 'NY', 'ST'}:
-        prefix = 'B'
-    elif values & {'MZ', 'SB', 'GG', 'LN', 'NR', 'MS'}:
-        prefix = 'C'
-    else:
-        prefix = None
-
-    # Step 3: Vectorized transformation
-    def map_func(date_str):
-        try:
-            date_obj = parser.parse(date_str, dayfirst=True)
-            short_date = date_obj.strftime("%d.%m")
-        except (ValueError, TypeError):
-            return ''
-
-        matched_group = date_to_group.get(short_date)
-        if not matched_group:
-            return ''
-
-        group_str = f"{prefix}{matched_group}" if prefix else matched_group
-        return f"*{group_str}"
-
-    return dates_series.apply(map_func)
 
 
-def reshape_behavior_data(df, schedule_dict, Cage_Compositions):
-    working_df = df.copy()
-
-    # Ensure required columns exist
-    for col in ['msm', 'date', 'phase', 'group', 'trial', 'first_day', 'block_ID']:
-        if col not in working_df.columns:
-            working_df[col] = None
-
-    # Vectorized: minutes since midnight
-    if '1_TIme' in working_df.columns:
-        working_df['msm'] = working_df['1_TIme'].apply(minutes_since_midnight)
-
-    # Vectorized: format date
-    if 'created_at' in working_df.columns:
-        working_df['date'] = working_df['created_at'].apply(
-            lambda x: format_date(x)['iso_z_format'] if format_date(x) else None
-        )
-
-    # Vectorized: get phase
-    if '1_TIme' in working_df.columns:
-        working_df['phase'] = working_df['1_TIme'].apply(get_phase_from_time)
-
-    # Vectorized: condition, trial, first_day
-    def get_schedule_info(date):
-        condition, trial, first_day = get_condition_and_trial(date, schedule_dict)
-        return pd.Series([condition, trial, first_day])
-
-    working_df[['condition', 'trial', 'first_day']] = working_df['date'].apply(get_schedule_info)
-
-    # Vectorized group detection fallback (still partially row-wise due to logic complexity)
-    def get_group_vectorized(row):
-        group = get_exact_matching_cage_phase(behave_dict, Cage_Compositions)
-        if group is None:
-            return get_group_from_date(row['date'], Cage_Comp_Dates, behave_dict)
-        return group
-
-    # WARNING: this still involves per-row computation for complex logic
-    behave_dict = get_behavior_code_dict(working_df)
-
-    working_df['group'] = get_group_from_date_column(
-        working_df['date'],
-        Cage_Comp_Dates,
-        behave_dict
-    )
-
-    # Vectorized block ID assignment
-    working_df['block_ID'] = generate_block_ID(working_df)
-
-    return working_df, behave_dict
 
 
 def flatten_dict_of_lists(dol):
@@ -643,8 +511,7 @@ def reshape_and_combine_all(df, beh_dict):
 def empty_dataframe(schedule_dict):
 
     # Define the columns
-    columns = ['ec5_uuid', 'condition', 'date', 'msm', 'group', 'trial', 'phase',
-               'block_ID', 'Ind1', 'partner', 'dyad', 'distance']
+    columns = ['ec5_uuid', 'condition', 'date', 'msm']
 
     # Define time ranges in 2-minute intervals
     def generate_timepoints():
@@ -675,9 +542,9 @@ def empty_dataframe(schedule_dict):
 
     # Create the empty DataFrame
     empty_df = pd.DataFrame(index=index, columns=columns)
-    print(empty_df)
     # Optional: reset index if you don't want MultiIndex
     # df = df.reset_index()
+    print(empty_df)
 
     return empty_df
 
@@ -707,35 +574,29 @@ for input_file_path in data_files:
     # Empty dataframe
     empty_df = empty_dataframe(schedule_dict)
 
+    # Check if all timeslots are filled
+    checked_times_df = compare_df(df_raw, empty_df)
+
     # Step 1: Reshape data
-    rs_df, _ = reshape_behavior_data(df_raw, schedule_dict, Cage_Compositions)
+    #rs_df, _ = reshape_behavior_data(df_raw, schedule_dict, Cage_Compositions)
 
     # Step 2: Rebuild fresh behavior dict from reshaped data
     #behave_dict = get_behavior_code_dict(rs_df)
 
     # Pick only needed columns (example based on your original code)
-    target_cols = [col for col in rs_df.columns if any(k in col for k in ['Contact', 'AR', '3M'])]
-    selected_columns = ['ec5_uuid', 'condition', 'date', 'msm', 'group', 'trial', 'phase', 'block_ID'] + target_cols + list(behave_dict.keys())
-    df_subset = rs_df[selected_columns]
-    print(df_subset)
-
-
-    #schedule_dict number of keys
-    # ('Playback', '1'): ('11.03', '12.03'),
-    # ('Crow', '1'): ('14.03', '15.03'),
-    #time: 09:30 + 2 min 11:45 13:15 + 2 min 14:45
-    #ec5_uuid,condition,date,msm,group,trial,phase,block_ID,Ind1,partner,dyad,distance
-    #ec5_uuid,condition,date,msm,group,trial,phase,block_ID,Ind1,behaviour,qualifier,partner,notes,playing,aggression
-    #ec5_uuid,condition,date,msm,group,trial,phase,block_ID,Ind1,behaviour,qualifier,partner,eating,playing,moving,resting,sitting,self_direct,grooming
+    #target_cols = [col for col in rs_df.columns if any(k in col for k in ['Contact', 'AR', '3M'])]
+    #selected_columns = ['ec5_uuid', 'condition', 'date', 'msm', 'group', 'trial', 'phase', 'block_ID'] + target_cols + list(behave_dict.keys())
+    #df_subset = rs_df[selected_columns]
+    #print(df_subset)
 
     # Combine data for this file
-    combined = reshape_and_combine_all(df_subset, behave_dict)
+    #combined = reshape_and_combine_all(df_subset, behave_dict)
 
     # Aggregate combined data globally
-    for key, data_list in combined.items():
-        if key not in all_data:
-            all_data[key] = []
-        all_data[key].extend(data_list)
+    #for key, data_list in combined.items():
+    #    if key not in all_data:
+    #        all_data[key] = []
+    #    all_data[key].extend(data_list)
 
 # After processing all files, save combined CSV files
 for key, data_list in all_data.items():
