@@ -1,13 +1,10 @@
+import os
 import re
 from datetime import datetime, timedelta
 from typing import Dict, List
 import numpy as np
 import pandas as pd
-from collections import defaultdict
-from typing import Optional, Sequence
-import matplotlib.pyplot as plt
-import math
-
+from scipy.optimize import linear_sum_assignment
 
 pd.set_option('display.max_columns', None)   # show all columns
 pd.set_option('display.width', None)         # don't wrap columns
@@ -66,15 +63,96 @@ Cage_Comp_Dates = {
 ########################################################################################################################
 ########################################################################################################################
 
+# loop through raw data time:
+# calculate difference in timestep and see if it is 2 min or less/more
+# show in Histogram good/bad data and where it occurs
+# Glättungsalgorythmus für die schlechten datenpunkten
+# füllen in soll tabelle_empty
 
-def compare_df_msm_aware(
+
+def is_excluded(msm):
+    """Checks if a given msm value falls within the excluded break periods."""
+    # 10:30 - 10:45 (630 to 645 msm)
+    if 630 <= msm <= 645:
+        return True
+
+    # 11:45 - 13:15 (705 to 795 msm)
+    if 705 <= msm <= 795:
+        return True
+
+    # Later than 14:46 (886+ msm)
+    if msm > 886:
+        return True
+
+    return False
+
+
+print("\n--- FILTERED MISSING TIMESLOTS ---")
+filtered_gaps = []
+
+
+def analyze_time_gaps(
+        df,
+        start_time: float = 570,
+        end_time: float = 885
+                      ):
+    # 1. Preparation: Ensure we are working with standard float numpy arrays
+    # This prevents broadcasting issues with Pandas Nullable Int64 types
+    df = df.sort_values("msm").reset_index(drop=True)
+    observed = df["msm"].to_numpy(dtype=float)
+
+    # 2. Generate Ideal Grid (2-minute intervals)
+    #start_time = np.floor(observed.min())
+    #end_time = np.ceil(observed.max())
+    ideal_slots = np.arange(start_time, end_time + 2, 2)
+
+    # 3. Vectorized Cost Matrix (Broadcasting)
+    # observed (N, 1) vs ideal_slots (1, M)
+    diff_matrix = np.abs(observed[:, np.newaxis] - ideal_slots)
+    BIG = 1e6
+    cost_matrix = np.where(diff_matrix <= 1.0, diff_matrix, BIG)
+
+    # 4. Global Optimization (Hungarian Algorithm)
+    row_ind, col_ind = linear_sum_assignment(cost_matrix)
+
+    # 5. Identifying valid matches
+    actual_costs = cost_matrix[row_ind, col_ind]
+    valid_mask = actual_costs < BIG
+
+    matched_row_indices = row_ind[valid_mask]  # Indices of the original rows
+    matched_slot_indices = col_ind[valid_mask]  # Indices of the ideal slots
+    values_to_assign = ideal_slots[matched_slot_indices]
+
+    # 6. Safe Assignment (The Fix)
+    # Pre-allocate a full column of NaNs using Numpy
+    corrected_values = np.full(len(df), np.nan)
+
+    # Use standard integer indexing to place values exactly where they belong
+    if len(matched_row_indices) > 0:
+        corrected_values[matched_row_indices] = values_to_assign
+
+    # Assign the completed array back to the DataFrame in one go
+    df["corrected_msm"] = corrected_values
+
+    # 7. Identify Missing Slots (Holes in the timeline)
+    all_slot_indices = np.arange(len(ideal_slots))
+    missing_indices = np.setdiff1d(all_slot_indices, matched_slot_indices)
+    missing_slots = ideal_slots[missing_indices]
+
+    print(f"File processed: {len(df)} rows.")
+    print(f"  - Matches found: {len(matched_row_indices)}")
+
+    return df, missing_slots
+
+
+def adjust_msm_in_raw_empty(
     raw_df: pd.DataFrame,
     empty_df: pd.DataFrame,
     file_type: str,
-    ind: int = 0,
+    output_dir: str,
     time_col_raw: str = "1_TIme",
     time_col_empty: str = "time",
-) -> pd.DataFrame:
+) -> tuple[pd.DataFrame, pd.DataFrame]:
 
     # --- Copy inputs to avoid mutation ---
     raw_df = raw_df.copy()
@@ -136,539 +214,41 @@ def compare_df_msm_aware(
     raw_df = raw_df.sort_values(["date", "msm"]).reset_index(drop=True)
     valid_empty_df = valid_empty_df.sort_values(["date", "msm"]).reset_index(drop=True)
 
-    # ------------------------------------------------------------------
-    # NEW SECTION: Maximum bipartite matching per date (±2 min tolerance)
-    # ------------------------------------------------------------------
-
-    print('raw_df: ', raw_df)
+    #print('raw_df: ', raw_df)
     print('valid_empty_df: ', valid_empty_df)
 
-    result_rows = []
-
-    for current_date in valid_empty_df[date_col].unique():
-        tdf = (valid_empty_df[valid_empty_df[date_col] == current_date]
-               .sort_values(by="msm")
-               .reset_index())
-        rdf = (raw_df[raw_df[date_col] == current_date]
-               .sort_values(by="msm")
-               .reset_index())
-
-        print('tdf: ', tdf)
-        print('rdf: ', rdf)
-        if len(tdf) == 0 or len(rdf) == 0:
-            result_rows.append(tdf.assign(match_raw_idx=pd.NA))
-            continue
-
-        t = tdf["msm"].to_numpy()
-        d = rdf["msm"].to_numpy()
-
-        print('t: ', t)
-        print('d: ', d)
-
-        # Build adjacency list: template index -> data indices compatible within ±2 minutes
-        edges = defaultdict(list)
-        for i, t_i in enumerate(t):
-            left = np.searchsorted(d, t_i - 2, side="left")
-            right = np.searchsorted(d, t_i + 2, side="right")
-            for j in range(left, right):
-                edges[i].append(j)
-
-        # Kuhn algorithm for maximum bipartite matching
-        match_to_template = [-1] * len(d)
-
-        def try_kuhn(v, visited):
-            for u in edges[v]:
-                if visited[u]:
-                    continue
-                visited[u] = True
-
-                if match_to_template[u] == -1 or try_kuhn(match_to_template[u], visited):
-                    match_to_template[u] = v
-                    return True
-            return False
-
-        for v in range(len(t)):
-            visited = [False] * len(d)
-            try_kuhn(v, visited)
-
-        # Build match result: template idx -> raw idx (or NaN)
-        template_to_raw = {v: None for v in range(len(t))}
-        for raw_idx, tmpl_idx in enumerate(match_to_template):
-            if tmpl_idx != -1:
-                template_to_raw[tmpl_idx] = raw_idx
-#######################################################################################################################
-        #TODO: some mistake in the following sorting step!!!!!!!!
-        matched = []
-        for tmpl_idx, raw_idx in template_to_raw.items():
-            if raw_idx is None:
-                matched.append({
-                    **tdf.loc[tmpl_idx].to_dict(),
-                    "match_raw_idx": pd.NA
-                })
-            else:
-                row = {
-                    **tdf.loc[tmpl_idx].to_dict(),
-                    "match_raw_idx": rdf.loc[raw_idx, "index"],
-                }
-                matched.append(row)
-
-        result_rows.append(pd.DataFrame(matched))
-    print('result_rows: ', result_rows)
-
-    # Combine all results
-    matched_template = pd.concat(result_rows, ignore_index=True)
-    # Sort the final result by date and msm (or just msm if date_col is preserved)
-    matched_template = matched_template.sort_values(by=[date_col, 'msm']).reset_index(drop=True)
-
-    print(matched_template)
-    # ------------------------------------------------------------------
-    # Join matched template rows with raw_df rows
-    # ------------------------------------------------------------------
-
-    matched_template = matched_template.merge(
-        raw_df.add_prefix("raw_"),
-        left_on="match_raw_idx",
-        right_on="raw_index",
-        how="left"
-    )
-
-    # Add rows from template that had invalid time/date
-    final = pd.concat([matched_template, invalid_empty_df], ignore_index=True)
-    print('final: ', final)
-
-    return final
-
-
-def _calc_msm(series: pd.Series) -> pd.Series:
-    """
-    Return minutes-since-midnight as float (can include fractional minutes).
-    Accepts a pd.Series of dtype datetime64[ns].
-    """
-    td = series - series.dt.normalize()
-    return td.dt.total_seconds() / 60.0
-
-# New method, test after fixing old one!
-def match_templates_to_raw_multi_day(
-    raw_df: pd.DataFrame,
-    template_df: pd.DataFrame,
-    file_type: str,
-    time_col_raw: str = "1_TIme",
-    time_col_template: str = "time",
-    date_col_raw: str = "date",
-    date_col_template: str = "date",
-    tolerance_minutes: float = 2.0,
-    raw_time_formats: Optional[dict] = None,
-) -> pd.DataFrame:
-    """
-    Match template rows (template_df) to raw rows (raw_df) across multiple dates.
-    - Each template can match at most one raw row.
-    - Each raw row can be used at most once.
-    - Matching is allowed when |msm_template - msm_raw| <= tolerance_minutes.
-    - Uses maximum cardinality bipartite matching per date (Kuhn/DFS).
-    - Returns a combined DataFrame: template columns suffixed with "_tpl" and
-      matched raw columns suffixed with "_raw". Unmatched raw fields are NaN.
-    """
-    # ---- Copy to avoid mutating inputs ----
-    raw = raw_df.copy()
-    tpl = template_df.copy()
-
-    # ---- Date parsing (keep your formats) ----
-    # If user didn't pass custom formats, use heuristics like your old function:
-    if raw_time_formats is None:
-        raw_time_formats = {}
-    # Date parsing: attempt common formats used previously
-    raw[date_col_raw] = pd.to_datetime(raw[date_col_raw], errors="coerce", utc=False)
-    tpl[date_col_template] = pd.to_datetime(tpl[date_col_template], errors="coerce", utc=False)
-
-    # Ensure time column exists in template (if in index, reset)
-    if time_col_template not in tpl.columns and time_col_template in tpl.index.names:
-        tpl = tpl.reset_index(level=time_col_template)
-
-    # Decide raw time parsing based on file_type if time is not already datetime
-    if not np.issubdtype(raw[time_col_raw].dtype, np.datetime64):
-        if file_type == "A":
-            raw_time_format = raw_time_formats.get("A", "%H:%M")
-        elif file_type in ("B",):
-            raw_time_format = raw_time_formats.get("B", "%H:%M:%S")
-        elif file_type in ("C",):
-            raw_time_format = raw_time_formats.get("C", "%H:%M:%S")
-        else:
-            raw_time_format = raw_time_formats.get("default", "%H:%M:%S")
-        raw[time_col_raw] = pd.to_datetime(raw[time_col_raw], format=raw_time_format, errors="coerce")
-
-    if not np.issubdtype(tpl[time_col_template].dtype, np.datetime64):
-        tpl[time_col_template] = pd.to_datetime(tpl[time_col_template], format="%H:%M", errors="coerce")
-
-    # ---- Compute msm as float minutes (preserves seconds) ----
-    raw["_msm"] = _calc_msm(raw[time_col_raw])
-    tpl["_msm"] = _calc_msm(tpl[time_col_template])
-
-    # ---- Normalize dates (so matching is done per-calendar-day) ----
-    raw["_day"] = pd.to_datetime(raw[date_col_raw]).dt.normalize()
-    tpl["_day"] = pd.to_datetime(tpl[date_col_template]).dt.normalize()
-
-    # ---- Drop invalid rows from template; keep them to append later ----
-    tpl_valid = tpl.dropna(subset=["_msm", "_day"]).copy().reset_index(drop=True)
-    tpl_invalid = tpl[tpl["_msm"].isna() | tpl["_day"].isna()].copy().reset_index(drop=True)
-
-    # Raw drop rows without valid msm/day since they cannot be matched
-    raw_valid = raw.dropna(subset=["_msm", "_day"]).copy().reset_index(drop=True)
-
-    # ---- Prepare output storage ----
-    matched_rows = []
-
-    # iterate over all days present in template (only need to match dates in template)
-    for current_day in tpl_valid["_day"].unique():
-        tpl_day = tpl_valid[tpl_valid["_day"] == current_day].reset_index(drop=True)
-        raw_day = raw_valid[raw_valid["_day"] == current_day].reset_index(drop=True)
-
-        if tpl_day.shape[0] == 0:
-            continue
-
-        if raw_day.shape[0] == 0:
-            # All templates unmatched for this day
-            for i in range(len(tpl_day)):
-                row_tpl = tpl_day.iloc[i].to_dict()
-                # mark as unmatched: raw columns will be NaN after construction
-                matched_rows.append({**{f"{k}_tpl": v for k, v in row_tpl.items()}, **{"_matched_raw_idx": pd.NA}})
-            continue
-
-        # Numeric arrays for fast search
-        t_arr = tpl_day["_msm"].to_numpy()
-        d_arr = raw_day["_msm"].to_numpy()
-
-        # Build adjacency: template_idx -> list of raw_idx where abs diff <= tol
-        edges = defaultdict(list)
-        # d_arr sorted? ensure sorted for searchsorted. We'll sort raw_day and keep permutation map.
-        order = np.argsort(d_arr)
-        d_sorted = d_arr[order]
-        # We must also remember mapping from sorted index -> raw_day index
-        sorted_to_raw_idx = {s_idx: int(orig_idx) for s_idx, orig_idx in enumerate(order)}
-
-        for ti, tval in enumerate(t_arr):
-            left = np.searchsorted(d_sorted, tval - tolerance_minutes, side="left")
-            right = np.searchsorted(d_sorted, tval + tolerance_minutes, side="right")
-            for s_idx in range(left, right):
-                raw_idx = sorted_to_raw_idx[s_idx]  # index in raw_day
-                edges[ti].append(raw_idx)
-
-        # Kuhn algorithm
-        match_to_template = [-1] * len(raw_day)  # raw_idx -> template_idx or -1
-
-        def _try_kuhn(v: int, visited: Sequence[bool]) -> bool:
-            for raw_idx in edges.get(v, ()):
-                if visited[raw_idx]:
-                    continue
-                visited[raw_idx] = True
-                if match_to_template[raw_idx] == -1 or _try_kuhn(match_to_template[raw_idx], visited):
-                    match_to_template[raw_idx] = v
-                    return True
-            return False
-
-        # Run Kuhn for every template vertex
-        for v in range(len(t_arr)):
-            visited = [False] * len(raw_day)
-            _try_kuhn(v, visited)
-
-        # Invert match_to_template => template_idx -> raw_idx (or None)
-        template_to_raw = {v: None for v in range(len(t_arr))}
-        for r_idx, t_idx in enumerate(match_to_template):
-            if t_idx != -1:
-                template_to_raw[t_idx] = r_idx
-
-        # Build matched_rows list of dicts
-        for tpl_idx in range(len(t_arr)):
-            tpl_row = tpl_day.iloc[tpl_idx].to_dict()
-            matched_raw_idx = template_to_raw[tpl_idx]
-            if matched_raw_idx is None:
-                matched_rows.append({**{f"{k}_tpl": v for k, v in tpl_row.items()}, **{"_matched_raw_idx": pd.NA}})
-            else:
-                raw_row = raw_day.iloc[matched_raw_idx].to_dict()
-                # prefix columns
-                tpl_prefixed = {f"{k}_tpl": v for k, v in tpl_row.items()}
-                raw_prefixed = {f"{k}_raw": v for k, v in raw_row.items()}
-                # Also include matched raw index pointer (index in original raw_valid)
-                raw_prefixed["_raw_matched_index"] = raw_day.index[matched_raw_idx]
-                matched_rows.append({**tpl_prefixed, **raw_prefixed, "_matched_raw_idx": raw_day.index[matched_raw_idx]})
-
-    # ---- Create DataFrame from matched_rows ----
-    if len(matched_rows) > 0:
-        matched_df = pd.DataFrame(matched_rows)
-    else:
-        matched_df = pd.DataFrame(columns=[*(f"{c}_tpl" for c in tpl_valid.columns), "_matched_raw_idx"])
-
-    # ---- Attach unmatched fields for raw columns if they are missing ----
-    # Ensure all raw columns with suffix _raw exist
-    raw_cols = list(raw.columns)
-    for c in raw_cols:
-        pref = f"{c}_raw"
-        if pref not in matched_df.columns:
-            matched_df[pref] = pd.NA
-
-    # ---- Append invalid template rows at the end (keep original columns with _tpl suffix) ----
-    if not tpl_invalid.empty:
-        tpl_invalid_prefixed = {f"{k}_tpl": tpl_invalid[k] for k in tpl_invalid.columns}
-        invalid_rows = pd.DataFrame([{k: v for k, v in tpl_invalid_prefixed.items()}])
-        # ensure same columns
-        for col in matched_df.columns:
-            if col not in invalid_rows.columns:
-                invalid_rows[col] = pd.NA
-        matched_df = pd.concat([matched_df, invalid_rows[matched_df.columns]], ignore_index=True, sort=False)
-
-    # ---- Optional: compute difference column if both msm available ----
-    # template msm column name:
-    if "_msm_tpl" not in matched_df.columns and "_msm" in tpl_valid.columns:
-        # If original added _msm with tpl suffix earlier it will be there; otherwise compute from tpl times
-        pass
-
-    # normalize column order a bit
-    col_order = [c for c in matched_df.columns if c.endswith("_tpl")] + [c for c in matched_df.columns if c.endswith("_raw")] + [c for c in matched_df.columns if not (c.endswith("_tpl") or c.endswith("_raw"))]
-    matched_df = matched_df.loc[:, col_order]
-
-    return matched_df
-
-
-def plot_matches_by_day(
-    matched_df: pd.DataFrame,
-    time_col_tpl: str = "_msm_tpl",
-    time_col_raw: str = "_msm_raw",
-    date_col_tpl: str = "date_tpl",
-    figsize_per_plot: tuple = (8, 3),
-    max_cols: int = 3,
-    show_unmatched_raw: bool = True,
-):
-    """
-    Create one subplot per date (template date) showing:
-      - template times on y=1 (x = minutes since midnight)
-      - raw times on y=0   (x = minutes since midnight)
-      - lines between matched pairs
-    matched_df should be the output of match_templates_to_raw_multi_day (it uses *_tpl and *_raw columns).
-    If your dataframe uses different column names for msm columns, pass their names in time_col_tpl/time_col_raw.
-    """
-    # Determine dates present
-    if date_col_tpl not in matched_df.columns:
-        # try to find any column that looks like date_tpl
-        possible = [c for c in matched_df.columns if c.endswith("_tpl") and "date" in c]
-        if possible:
-            date_col_tpl = possible[0]
-        else:
-            raise ValueError("Could not find a template date column in matched_df. Expected 'date_tpl' or similar.")
-
-    # Build a column for the day normalized (if values are datetime)
-    days = pd.to_datetime(matched_df[date_col_tpl]).dt.normalize()
-    matched_df["_plot_day"] = days
-
-    unique_days = matched_df["_plot_day"].dropna().unique()
-    unique_days = np.sort(unique_days)
-
-    if len(unique_days) == 0:
-        raise ValueError("No valid dates found for plotting.")
-
-    n_plots = len(unique_days)
-    n_cols = min(max_cols, n_plots)
-    n_rows = math.ceil(n_plots / n_cols)
-    fig, axes = plt.subplots(n_rows, n_cols, figsize=(figsize_per_plot[0] * n_cols, figsize_per_plot[1] * n_rows), squeeze=False)
-    axes = axes.flatten()
-
-    for ax_idx, day in enumerate(unique_days):
-        ax = axes[ax_idx]
-        sub = matched_df[matched_df["_plot_day"] == day]
-
-        # Template x (msm)
-        if time_col_tpl not in sub.columns:
-            # attempt to compute from template time column if present
-            tpl_time_cols = [c for c in sub.columns if c.endswith("_tpl") and ("time" in c or "_msm" in c)]
-            if len(tpl_time_cols) == 0:
-                raise ValueError("Can't find template msm column for plotting.")
-            time_col_tpl = tpl_time_cols[0]
-
-        if time_col_raw not in sub.columns:
-            # attempt to find a raw msm column
-            raw_time_cols = [c for c in sub.columns if c.endswith("_raw") and ("time" in c or "_msm" in c)]
-            if len(raw_time_cols) > 0:
-                time_col_raw = raw_time_cols[0]
-
-        x_tpl = sub[time_col_tpl].to_numpy(dtype=float)
-        x_raw = sub[time_col_raw].to_numpy(dtype=float)
-
-        # y positions
-        y_tpl = np.ones_like(x_tpl) * 1.0
-        y_raw = np.ones_like(x_raw) * 0.0
-
-        # Scatter unmatched/matched differently:
-        matched_mask = ~sub[time_col_raw].isna()
-        unmatched_mask = sub[time_col_raw].isna()
-
-        # Plot raw points at y=0 (colored by matched/unmatched)
-        if show_unmatched_raw:
-            # plot matched raw points
-            ax.scatter(x_raw[matched_mask], y_raw[matched_mask], marker="o", label="raw (matched)", zorder=3)
-            ax.scatter(x_raw[unmatched_mask], y_raw[unmatched_mask], marker="x", label="raw (unmatched)", alpha=0.4, zorder=2)
-        else:
-            ax.scatter(x_raw, y_raw, marker="o", label="raw", zorder=3)
-
-        # Plot template points at y=1
-        ax.scatter(x_tpl[matched_mask], y_tpl[matched_mask], marker="o", label="template (matched)", zorder=4)
-        ax.scatter(x_tpl[unmatched_mask], y_tpl[unmatched_mask], marker="x", label="template (unmatched)", color="C3", zorder=2)
-
-        # Draw lines for matched pairs
-        for _, row in sub.iterrows():
-            if pd.isna(row.get(time_col_raw)) or pd.isna(row.get(time_col_tpl)):
-                continue
-            xt = float(row[time_col_tpl])
-            xr = float(row[time_col_raw])
-            ax.plot([xt, xr], [1.0, 0.0], linewidth=0.8, alpha=0.7)
-
-        ax.set_title(str(pd.to_datetime(day).date()))
-        ax.set_ylim(-0.25, 1.25)
-        ax.set_yticks([0, 1])
-        ax.set_yticklabels(["raw", "template"])
-        ax.set_xlabel("Minutes since midnight (msm)")
-        ax.grid(axis="x", linestyle="--", linewidth=0.4)
-        ax.legend(loc="upper right", fontsize="small")
-
-    # hide any extra axes
-    for i in range(len(unique_days), len(axes)):
-        fig.delaxes(axes[i])
-
-    plt.tight_layout()
-    plt.show()
-
-
-
-'''
-def compare_df_msm_aware(
-    raw_df: pd.DataFrame,
-    empty_df: pd.DataFrame,
-    file_type: str,
-    ind: int = 0,
-    time_col_raw: str = "1_TIme",
-    time_col_empty: str = "time",
-) -> pd.DataFrame:
-    """
-    Align raw_df to empty_df by nearest time points (within tolerance),
-    using 'minutes since midnight' (msm) for alignment.
-
-    Handles:
-      - Timezone mismatches
-      - Unsorted merge keys
-      - Empty merge subsets
-      - German month abbreviations in date column
-    """
-
-    # --- Copy inputs to avoid mutation ---
-    raw_df: pd.DataFrame = raw_df.copy()
-    empty_df: pd.DataFrame = empty_df.copy()
-    raw_df = raw_df.rename(columns={"created_at": "date"})
-
-    #print('raw_df:', raw_df.head(10))
-    #print('empty_df:', empty_df.head(10))
-
-    date_col: str = "date"
-
-    raw_df[date_col]: pd.Series = pd.to_datetime(
-        raw_df[date_col], format="%Y-%m-%dT%H:%M:%S.%fZ", errors="coerce"
-    )
-    empty_df[date_col]: pd.Series = pd.to_datetime(
-        empty_df[date_col], format="%d.%m.%Y", errors="coerce"
-    )
-
-    # --- Ensure time_col_empty exists ---
-    if time_col_empty not in empty_df.columns:
-        if time_col_empty in empty_df.index.names:
-            empty_df: pd.DataFrame = empty_df.reset_index(level=time_col_empty)
-        else:
-            raise KeyError(f"'{time_col_empty}' not found in columns or index of empty_df")
-
-    # --- Parse times ---
-    if file_type == 'A':
-        # Type A needs %H:%M (based on the screenshot)
-        raw_time_format = "%H:%M"
-
-    elif file_type == 'B':
-        # You'll need to check the raw data for Type B,
-        # but let's assume it's like C for now.
-        raw_time_format = "%H:%M:%S"
-
-    elif file_type == 'C':
-        # Type C needs %H:%M:%S (based on previous success)
-        raw_time_format = "%H:%M:%S"
-
-    else:
-        # Handle unexpected types or default
-        raw_time_format = "%H:%M:%S"
-        print(f"Warning: Unknown file type '{file_type}', defaulting to %H:%M:%S.")
-
-    # --- Parse times ---
-    raw_df[time_col_raw]: pd.Series = pd.to_datetime(
-        raw_df[time_col_raw], format=raw_time_format, errors="coerce"  # Use the variable here
-    )
-    empty_df[time_col_empty]: pd.Series = pd.to_datetime(
-        empty_df[time_col_empty], format="%H:%M", errors="coerce"
-    )
-
-    def msm(df: pd.DataFrame, col: str) -> pd.Series:
-        """
-        Calculate minutes since midnight for each timestamp in df[col].
-        """
-        td = df[col] - df[col].dt.normalize()  # timedelta since midnight
-        return (td.dt.total_seconds() / 60)#.astype(int)
-
-    raw_df["msm"]: pd.Series = msm(raw_df, time_col_raw)
-    empty_df["msm"]: pd.Series = msm(empty_df, time_col_empty)
-
-    raw_df["msm"]: pd.Series = raw_df["msm"].astype("Int64")
-    empty_df["msm"]: pd.Series = empty_df["msm"].astype("Int64")
-
-    # --- Filter valid rows ---
-    valid_empty_df: pd.DataFrame = empty_df.dropna(subset=["msm", date_col]).copy()
-    invalid_empty_df: pd.DataFrame = empty_df[empty_df["msm"].isna() | empty_df[date_col].isna()].copy()
-    raw_df: pd.DataFrame = raw_df.dropna(subset=["msm", date_col]).copy()
-    #print('raw_df:', raw_df.head(5))
-    #print('invalid_empty_df: \n', invalid_empty_df.head(5))
-
-    raw_df[date_col]: pd.Series = pd.to_datetime(raw_df[date_col]).dt.normalize()
-    valid_empty_df[date_col]: pd.Series = pd.to_datetime(valid_empty_df[date_col]).dt.normalize()
-
-    # --- Sort for merge_asof ---
-    raw_df: pd.DataFrame = raw_df.sort_values("msm").reset_index(drop=True)
-    valid_empty_df: pd.DataFrame = valid_empty_df.sort_values("msm").reset_index(drop=True)
-
-    raw_df.columns = [
-        col if col in ['msm', 'date'] else f"{col}_{ind}"
-        for col in raw_df.columns
-    ]
-
-    # --- Merge ---
-    merged_valid: pd.DataFrame = pd.merge_asof(
-        valid_empty_df,
-        raw_df,
-        on="msm",
-        by=date_col,
-        tolerance=2,
-        direction="nearest"
-    )
-
-    # --- Resolve duplicates ---
-    cols_to_skip: set[str] = {time_col_empty, time_col_raw, "msm", "merge_date", date_col, date_col}
-    common_cols: set[str] = set(raw_df.columns) & set(valid_empty_df.columns)
-
-    for col in common_cols:
-        if col not in cols_to_skip:
-            col_x, col_y = f"{col}_x", f"{col}_y"
-            if col_x in merged_valid.columns and col_y in merged_valid.columns:
-                merged_valid[col]: pd.Series = merged_valid[col_y].combine_first(merged_valid[col_x])
-                merged_valid.drop(columns=[col_x, col_y], inplace=True)
-
-    merged_valid.drop(columns=["merge_date"], errors="ignore", inplace=True)
-
-    final_merged: pd.DataFrame = pd.concat(
-        [merged_valid, invalid_empty_df.drop(columns=["merge_date"], errors="ignore")],
-        ignore_index=True,
-    )
-
-    return final_merged
-'''
+    # Ensure date column is date-only
+    raw_df['date'] = pd.to_datetime(raw_df['date']).dt.date
+
+    os.makedirs(output_dir, exist_ok=True)
+
+    for date, time_sorted_df in raw_df.groupby('date'):
+        adjusted_df, gaps = analyze_time_gaps(time_sorted_df)
+        for g in gaps:
+            if not is_excluded(g):
+                h, m = divmod(int(g), 60)
+                print(f"MISSING DATA AT: {h:02d}:{m:02d}")
+                filtered_gaps.append(g)
+
+        if not filtered_gaps:
+            print("No unexpected gaps found (all gaps occurred during excluded periods).")
+
+        suffix = f"_{file_type}_{date}"
+
+        output_file_path: str = os.path.join(
+            output_dir,
+            f"sorted_data{suffix}.csv"
+        )
+
+        # Save merged DataFrame
+        adjusted_df.to_csv(
+            output_file_path,
+            index=False,
+            sep=';'
+        )
+        print('adjusted_df: ', adjusted_df)
+
+    return raw_df, valid_empty_df
 
 
 def empty_dataframe(schedule_dict):

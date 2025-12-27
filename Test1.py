@@ -91,14 +91,12 @@ for file_type, list_of_raw_dfs in all_raw_dfs.items():
     for idx, raw_df in enumerate(list_of_raw_dfs):
         try:
             # Fill in empty time points
-            time_sorted_df: pd.DataFrame = Methods.compare_df_msm_aware(
-                raw_df=raw_df,
-                empty_df=time_sorted_df,
-                file_type=file_type,
-                ind=idx + 1,
-                time_col_raw="1_TIme",
-                time_col_empty="time",
-            )
+            time_sorted_df_raw, time_sorted_df_empty = Methods.adjust_msm_in_raw_empty(raw_df=raw_df,
+                                                                                       empty_df=time_sorted_df,
+                                                                                       file_type=file_type,
+                                                                                       output_dir=output_dir,
+                                                                                       time_col_raw="1_TIme",
+                                                                                       time_col_empty="time")
 
             # Construct output file path for each raw file
             suffix = f"_{file_type}_merged_{idx+1}"
@@ -128,7 +126,6 @@ for file_type, list_of_raw_dfs in all_raw_dfs.items():
 
     # Check empty_df data for missing data points, use vector operations
     # suggest with print() which possible data points from the left over points from raw_df can fill the missing spots
-    Methods.find_missing_data(time_sorted_df)
 
     # new Method
     # ggf. redo/fill missing data with left over points from raw_df
