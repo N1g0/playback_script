@@ -1,6 +1,6 @@
 import os
 import pandas as pd
-from datetime import datetime, timedelta, date
+from datetime import datetime, timedelta
 import re
 import glob
 from dateutil import parser
@@ -53,6 +53,7 @@ Cage_Comp_Dates = {
     '2': ['23.03', '24.03', '26.04', '27.04', '04.05', '05.05', '19.05', '20.05', '30.05', '31.05'],
     '3': ['03.04', '04.04', '16.04', '17.04', '30.04', '01.05', '14.05', '15.05'],
 }
+
 
 def compare_df(raw_df: pd.DataFrame, empty_df: pd.DataFrame,
                time_col_raw="1_TIme", time_col_empty="time", tolerance="2min"):
@@ -119,12 +120,6 @@ def compare_df(raw_df: pd.DataFrame, empty_df: pd.DataFrame,
     return merged
 
 
-
-
-
-
-
-
 def get_behavior_code_dict(df):
     pattern = re.compile(r'\d+_(\w{2})_Behavior')
     return {
@@ -169,22 +164,6 @@ def format_date(date_input):
         return None
 
 
-def minutes_since_midnight(time_str):
-    try:
-        # Try parsing with seconds first
-        time_obj = pd.to_datetime(time_str, format='%H:%M:%S', errors='coerce')
-        if pd.isna(time_obj):
-            # Fallback: try without seconds
-            time_obj = pd.to_datetime(time_str, format='%H:%M', errors='coerce')
-            if pd.isna(time_obj):
-                return None
-        return time_obj.hour * 60 + time_obj.minute
-    except Exception:
-        return None
-
-
-
-
 """
 def make_fill_columns(schedule_dict, behave_dict, Cage_Compositions):
     def fill_columns(row):
@@ -215,10 +194,6 @@ def make_fill_columns(schedule_dict, behave_dict, Cage_Compositions):
 
     return fill_columns
 """
-
-
-
-
 
 
 def flatten_dict_of_lists(dol):

@@ -1,14 +1,15 @@
 import os
 import re
 from datetime import datetime, timedelta
-from typing import Dict, List
 import numpy as np
 import pandas as pd
 from scipy.optimize import linear_sum_assignment
+from typing import Dict, List, Tuple, Any
 
 pd.set_option('display.max_columns', None)   # show all columns
 pd.set_option('display.width', None)         # don't wrap columns
 pd.set_option('display.max_colwidth', None)  # show full column content
+
 # Dictionary with Background data
 
 # schedule_dict
@@ -61,13 +62,8 @@ Cage_Comp_Dates = {
 }
 
 ########################################################################################################################
+# Adjusting Timestamps and finding data gaps
 ########################################################################################################################
-
-# loop through raw data time:
-# calculate difference in timestep and see if it is 2 min or less/more
-# show in Histogram good/bad data and where it occurs
-# Glättungsalgorythmus für die schlechten datenpunkten
-# füllen in soll tabelle_empty
 
 
 def is_excluded(msm):
@@ -87,57 +83,70 @@ def is_excluded(msm):
     return False
 
 
-print("\n--- FILTERED MISSING TIMESLOTS ---")
 filtered_gaps = []
 
 
+def time_to_msm(t_str: str) -> int:
+    """Converts 'HH:MM' string to integer minutes since midnight."""
+    t = datetime.strptime(t_str, "%H:%M")
+    return t.hour * 60 + t.minute
+
+
+def calculate_df_msm(df: pd.DataFrame, col: str) -> pd.Series:
+    """Vectorized calculation of msm for a datetime column."""
+    # Ensure the column is actually datetime objects
+    dt_col = pd.to_datetime(df[col])
+    td = dt_col - dt_col.dt.normalize()
+    return (td.dt.total_seconds() / 60).astype("Int64")
+
+
 def analyze_time_gaps(
-        df,
-        start_time: float = 570,
-        end_time: float = 885
-                      ):
+    df: pd.DataFrame,
+    start_time: float = 570.0,
+    end_time: float = 885.0
+) -> Tuple[pd.DataFrame, np.ndarray]:
+
     # 1. Preparation: Ensure we are working with standard float numpy arrays
-    # This prevents broadcasting issues with Pandas Nullable Int64 types
-    df = df.sort_values("msm").reset_index(drop=True)
-    observed = df["msm"].to_numpy(dtype=float)
+    df: pd.DataFrame = df.sort_values("msm").reset_index(drop=True)
+    observed: np.ndarray = df["msm"].to_numpy(dtype=float)
 
     # 2. Generate Ideal Grid (2-minute intervals)
-    #start_time = np.floor(observed.min())
-    #end_time = np.ceil(observed.max())
-    ideal_slots = np.arange(start_time, end_time + 2, 2)
+    ideal_slots = np.array([time_to_msm(t) for t in generate_timepoints()])
+    #print('ideal_slots:', ideal_slots)
+
+    #ideal_slots_2: np.ndarray = np.arange(start_time, end_time + 2, 2)
+    #print('ideal_slots_2:', ideal_slots_2)
 
     # 3. Vectorized Cost Matrix (Broadcasting)
-    # observed (N, 1) vs ideal_slots (1, M)
-    diff_matrix = np.abs(observed[:, np.newaxis] - ideal_slots)
-    BIG = 1e6
-    cost_matrix = np.where(diff_matrix <= 1.0, diff_matrix, BIG)
+    diff_matrix: np.ndarray = np.abs(observed[:, np.newaxis] - ideal_slots)
+    BIG: float = 1e6
+    cost_matrix: np.ndarray = np.where(diff_matrix <= 1.0, diff_matrix, BIG)
 
     # 4. Global Optimization (Hungarian Algorithm)
+    row_ind: np.ndarray
+    col_ind: np.ndarray
     row_ind, col_ind = linear_sum_assignment(cost_matrix)
 
     # 5. Identifying valid matches
-    actual_costs = cost_matrix[row_ind, col_ind]
-    valid_mask = actual_costs < BIG
+    actual_costs: np.ndarray = cost_matrix[row_ind, col_ind]
+    valid_mask: np.ndarray = actual_costs < BIG
 
-    matched_row_indices = row_ind[valid_mask]  # Indices of the original rows
-    matched_slot_indices = col_ind[valid_mask]  # Indices of the ideal slots
-    values_to_assign = ideal_slots[matched_slot_indices]
+    matched_row_indices: np.ndarray = row_ind[valid_mask]
+    matched_slot_indices: np.ndarray = col_ind[valid_mask]
+    values_to_assign: np.ndarray = ideal_slots[matched_slot_indices]
 
-    # 6. Safe Assignment (The Fix)
-    # Pre-allocate a full column of NaNs using Numpy
-    corrected_values = np.full(len(df), np.nan)
+    # 6. Safe Assignment
+    corrected_values: np.ndarray = np.full(len(df), np.nan)
 
-    # Use standard integer indexing to place values exactly where they belong
     if len(matched_row_indices) > 0:
         corrected_values[matched_row_indices] = values_to_assign
 
-    # Assign the completed array back to the DataFrame in one go
     df["corrected_msm"] = corrected_values
 
     # 7. Identify Missing Slots (Holes in the timeline)
-    all_slot_indices = np.arange(len(ideal_slots))
-    missing_indices = np.setdiff1d(all_slot_indices, matched_slot_indices)
-    missing_slots = ideal_slots[missing_indices]
+    all_slot_indices: np.ndarray = np.arange(len(ideal_slots))
+    missing_indices: np.ndarray = np.setdiff1d(all_slot_indices, matched_slot_indices)
+    missing_slots: np.ndarray = ideal_slots[missing_indices]
 
     print(f"File processed: {len(df)} rows.")
     print(f"  - Matches found: {len(matched_row_indices)}")
@@ -145,9 +154,29 @@ def analyze_time_gaps(
     return df, missing_slots
 
 
+def save_missing_data(all_missing, output_dir, file_type):
+    """
+    all_missing: list of dicts
+    output_dir: folder to save CSV
+    """
+
+    if not all_missing:
+        print("No missing data to save.")
+        return
+
+    df = pd.DataFrame(all_missing)
+
+    filename = f"missing_data_{file_type}.csv"
+
+    output_path = os.path.join(output_dir, filename)
+
+    df.to_csv(output_path, index=False, sep=";")
+
+    print(f"Missing data saved to: {output_path}")
+
+
 def adjust_msm_in_raw_empty(
     raw_df: pd.DataFrame,
-    empty_df: pd.DataFrame,
     file_type: str,
     output_dir: str,
     time_col_raw: str = "1_TIme",
@@ -156,7 +185,7 @@ def adjust_msm_in_raw_empty(
 
     # --- Copy inputs to avoid mutation ---
     raw_df = raw_df.copy()
-    empty_df = empty_df.copy()
+    empty_df = empty_dataframe(schedule_dict)
     raw_df = raw_df.rename(columns={"created_at": "date"})
 
     date_col = "date"
@@ -193,13 +222,8 @@ def adjust_msm_in_raw_empty(
         empty_df[time_col_empty], format="%H:%M", errors="coerce"
     )
 
-    # --- Minutes-since-midnight helper ---
-    def msm(df, col):
-        td = df[col] - df[col].dt.normalize()
-        return (td.dt.total_seconds() / 60).astype("Int64")
-
-    raw_df["msm"] = msm(raw_df, time_col_raw)
-    empty_df["msm"] = msm(empty_df, time_col_empty)
+    raw_df["msm"] = calculate_df_msm(raw_df, time_col_raw)
+    empty_df["msm"] = calculate_df_msm(empty_df, time_col_empty)
 
     # --- Drop invalid rows ---
     valid_empty_df = empty_df.dropna(subset=["msm", date_col]).copy()
@@ -215,19 +239,29 @@ def adjust_msm_in_raw_empty(
     valid_empty_df = valid_empty_df.sort_values(["date", "msm"]).reset_index(drop=True)
 
     #print('raw_df: ', raw_df)
-    print('valid_empty_df: ', valid_empty_df)
+    #print('valid_empty_df: ', valid_empty_df)
 
     # Ensure date column is date-only
     raw_df['date'] = pd.to_datetime(raw_df['date']).dt.date
 
     os.makedirs(output_dir, exist_ok=True)
 
+    all_missing = []
     for date, time_sorted_df in raw_df.groupby('date'):
         adjusted_df, gaps = analyze_time_gaps(time_sorted_df)
         for g in gaps:
             if not is_excluded(g):
                 h, m = divmod(int(g), 60)
-                print(f"MISSING DATA AT: {h:02d}:{m:02d}")
+
+                print(f"MISSING DATA in {file_type} / {date.strftime('%Y-%m-%d')} AT: {h:02d}:{m:02d}")
+
+                all_missing.append({
+                    "file_type": file_type,
+                    "date": date.strftime("%Y-%m-%d"),
+                    "time": f"{h:02d}:{m:02d}",
+                    "gap_minutes": g
+                })
+
                 filtered_gaps.append(g)
 
         if not filtered_gaps:
@@ -246,83 +280,95 @@ def adjust_msm_in_raw_empty(
             index=False,
             sep=';'
         )
-        print('adjusted_df: ', adjusted_df)
+        #print('adjusted_df: ', adjusted_df)
+
+    save_missing_data(all_missing, output_dir, file_type)
 
     return raw_df, valid_empty_df
 
 
-def empty_dataframe(schedule_dict):
+def generate_timepoints() -> List[str]:
+    times: List[str] = []
+
+    # Morning session
+    t: datetime = datetime.strptime("09:30", "%H:%M")
+    end: datetime = datetime.strptime("10:30", "%H:%M")
+    while t <= end:
+        times.append(t.strftime("%H:%M"))
+        t += timedelta(minutes=2)
+
+    # Playback break
+    t: datetime = datetime.strptime("10:45", "%H:%M")
+    end: datetime = datetime.strptime("11:45", "%H:%M")
+    while t <= end:
+        times.append(t.strftime("%H:%M"))
+        t += timedelta(minutes=2)
+
+    # Afternoon session
+    t: datetime = datetime.strptime("13:15", "%H:%M")
+    end: datetime = datetime.strptime("14:45", "%H:%M")
+    while t <= end:
+        times.append(t.strftime("%H:%M"))
+        t += timedelta(minutes=2)
+
+    return times
+
+
+def empty_dataframe(
+    schedule_dict: Dict[Tuple[Any, Any], List[str]]
+) -> pd.DataFrame:
 
     # Define the columns
-    columns = ['condition', 'date', 'msm']
+    columns: List[str] = ['condition', 'date', 'msm']
 
     # Define time ranges in 2-minute intervals
-    def generate_timepoints():
-        times = []
-        # Morning session
-        t = datetime.strptime("09:30", "%H:%M")
-        end = datetime.strptime("11:45", "%H:%M")
-        while t <= end:
-            times.append(t.strftime("%H:%M"))
-            t += timedelta(minutes=2)
 
-        # Afternoon session
-        t = datetime.strptime("13:15", "%H:%M")
-        end = datetime.strptime("14:45", "%H:%M")
-        while t <= end:
-            times.append(t.strftime("%H:%M"))
-            t += timedelta(minutes=2)
-
-        return times
-
-    timepoints = generate_timepoints()
+    timepoints: List[str] = generate_timepoints()
 
     # Build a MultiIndex from dyads and timepoints
-    index = pd.MultiIndex.from_product(
+    index: pd.MultiIndex = pd.MultiIndex.from_product(
         [schedule_dict.keys(), timepoints],
         names=["dyad", "time"]
     )
 
     # Create the empty DataFrame
-    empty_df = pd.DataFrame(index=index, columns=columns)
+    empty_df: pd.DataFrame = pd.DataFrame(index=index, columns=columns)
 
     # Reset index for easier manipulation
-    empty_df = empty_df.reset_index()
+    empty_df: pd.DataFrame = empty_df.reset_index()
 
     # Extract condition (Playback, Crow, Baseline) and ID
-    empty_df['condition'] = empty_df['dyad'].apply(lambda x: x[0])
-    empty_df['id'] = empty_df['dyad'].apply(lambda x: x[1])
+    empty_df['condition']: pd.Series = empty_df['dyad'].apply(lambda x: x[0])
+    empty_df['id']: pd.Series = empty_df['dyad'].apply(lambda x: x[1])
 
     # Map dates from schedule_dict
-    def get_date_mapping(dyad):
-        dates = schedule_dict[dyad]
+    def get_date_mapping(
+        dyad: Tuple[Any, Any]
+    ) -> Dict[str, str]:
+        dates: List[str] = schedule_dict[dyad]
         if len(dates) == 2:
             return {"morning": dates[0], "afternoon": dates[1]}
         else:
             return {"morning": dates[0], "afternoon": dates[0]}
 
     # Assign correct date depending on time (morning vs afternoon)
-    empty_df['date'] = empty_df.apply(
+    empty_df['date']: pd.Series = empty_df.apply(
         lambda row: get_date_mapping(row['dyad'])['morning']
         if row['time'] < '12:00'
         else get_date_mapping(row['dyad'])['afternoon'],
         axis=1
     )
 
-    # --- Add "minutes since midnight" (msm) ---
-    def time_to_msm(t_str):
-        t = datetime.strptime(t_str, "%H:%M")
-        return t.hour * 60 + t.minute
-
-    empty_df['msm'] = empty_df['time'].apply(time_to_msm)
+    empty_df['msm']: pd.Series = empty_df['time'].apply(time_to_msm)
 
     # Drop helper columns
-    empty_df = empty_df.drop(columns=['dyad', 'id'])
+    empty_df: pd.DataFrame = empty_df.drop(columns=['dyad', 'id'])
 
     return empty_df
 
+
 #######################################################################################################################
-# OLD CODE
+# Adding and Adjusting Columns
 #######################################################################################################################
 
 
@@ -330,52 +376,42 @@ from dateutil import parser
 
 
 def detect_ind(raw_df: pd.DataFrame) -> pd.DataFrame:
-    """
-    Detect dynamic individuals, merge columns with important information for later processing and
-    return a DataFrame with columns ready for merging.
-    """
-    raw_df: pd.DataFrame = raw_df.copy()
+    df = raw_df.copy()
 
-    # --- Detect dynamic individuals ---
-    behavior_pattern: re.Pattern = re.compile(r"^\d+_([A-Za-z]+)_Behavior$", re.IGNORECASE)
-    column_groups: Dict[str, List[str]] = {}
+    # Base columns
+    base_cols = ["ec5_uuid", "date", "1_TIme", "msm", "corrected_msm"]
+    base_cols = [c for c in base_cols if c in df.columns]
 
-    for col in raw_df.columns:
-        match: re.Match | None = behavior_pattern.match(col)
-        if match:
-            identifier: str = match.group(1)
-            related_cols: List[str] = [
-                c for c in raw_df.columns
-                if re.match(fr"^\d+_{identifier}(_Behavior|_Contact|_AR|_3M|_Notes)?$", c, re.IGNORECASE)
-            ]
-            column_groups[identifier] = related_cols
+    # Find behavior columns like: 4_MZ_Behavior
+    pattern = re.compile(r"^(\d+)_([A-Za-z]+)_Behavior$", re.IGNORECASE)
 
-    # --- Insert label columns next to Behavior columns ---
-    for identifier, cols in column_groups.items():
-        behavior_col: str | None = next((c for c in cols if c.lower().endswith("_behavior")), None)
-        if behavior_col:
-            label_col: str = identifier
-            if label_col not in raw_df.columns:
-                raw_df.insert(raw_df.columns.get_loc(behavior_col), label_col, identifier)
+    matches = []
+    for col in df.columns:
+        m = pattern.match(col)
+        if m:
+            order = int(m.group(1))
+            ident = m.group(2)
+            matches.append((order, ident, col))
 
-    # --- Columns to keep for final merge ---
-    base_cols: List[str] = ["ec5_uuid", "1_TIme", "highlight", "msm", "merge_date"]
-    dynamic_cols: List[str] = []
-    for identifier, cols in column_groups.items():
-        dynamic_cols.append(identifier)  # Label column
-        dynamic_cols.extend(cols)  # Behavior, Contact, AR, 3M, Notes
+    # Sort by numeric prefix
+    matches.sort(key=lambda x: x[0])
 
-    # Remove duplicates while keeping order
-    seen = set()
-    cols_to_keep: List[str] = []
-    for c in base_cols + dynamic_cols:
-        if c not in seen and c in raw_df.columns:
-            seen.add(c)
-            cols_to_keep.append(c)
+    out_cols = base_cols.copy()
 
-    # --- Return subset DataFrame ready to merge ---
-    final_df: pd.DataFrame = raw_df[cols_to_keep].copy()
-    return final_df
+    # Build Ind_1 ... Ind_N
+    for idx, (_, ident, behavior_col) in enumerate(matches, start=1):
+        ind_col = f"Ind_{idx}"
+        beh_col = f"Ind_{idx}_Behavior"
+
+        # Insert label column
+        df[ind_col] = ident
+
+        # Rename behavior column
+        df.rename(columns={behavior_col: beh_col}, inplace=True)
+
+        out_cols.extend([ind_col, beh_col])
+
+    return df[out_cols].copy()
 
 
 def get_exact_matching_cage_phase(behave_dict, cage_compositions):
@@ -406,6 +442,7 @@ def get_condition_and_trial(date_str, schedule_dict):
     return None, None, None
 
 
+# not used
 def get_group_from_date(date_str, cage_dates_dict, behave_dict):
     # Convert input date to "DD.MM" format, allowing flexible input
     try:
@@ -476,16 +513,62 @@ def get_phase_from_time(time_value):
         return None
 
 
+def get_group_vectorized(dates_series, cage_dates_dict, behave_dict):
+    # --- STEP 1: PRE-CALCULATE PREFIX (Do this once, not per row) ---
+    values = set(behave_dict.values())
+
+    # Define your logic sets
+    group_A_ids = {'TN', 'TK', 'LN', 'NR', 'NY', 'ST', 'MN', 'SR'}
+    group_B_ids = {'MN', 'MS', 'NH', 'LN', 'NR', 'NY', 'ST'}
+    group_C_ids = {'MZ', 'SB', 'GG', 'LN', 'NR', 'MS'}
+
+    if 'GG' in values or 'SB' in values:
+        prefix = 'C'
+    elif values & group_A_ids:
+        prefix = 'A'
+    elif values & group_B_ids:
+        prefix = 'B'
+    elif values & group_C_ids:
+        prefix = 'C'
+    else:
+        prefix = ''  # Or 'No data' if you prefer
+
+    # --- STEP 2: BUILD REVERSE LOOKUP DICT ---
+    # Turns {Group: [Dates]} into {Date: Group} for instant O(1) access
+    date_to_group = {d: group for group, dates in cage_dates_dict.items() for d in dates}
+
+    # --- STEP 3: VECTORIZED DATA PROCESSING ---
+    # 1. Convert all dates at once (C-speed)
+    temp_dates = pd.to_datetime(dates_series, dayfirst=True, errors='coerce')
+
+    # 2. Format to "DD.MM" string for all rows at once
+    short_dates = temp_dates.dt.strftime("%d.%m")
+
+    # 3. Map the groups (Instant lookup)
+    matched_groups = short_dates.map(date_to_group)
+
+    # 4. Construct final string using vectorized addition
+    # Only act on rows where a group was found
+    mask = matched_groups.notna()
+    result = pd.Series('', index=dates_series.index)
+
+    prefix_str = f"*{prefix}" if prefix else "*"
+    result[mask] = prefix_str + matched_groups[mask].astype(str)
+
+    return result
+
+
+# not used
 def get_group_from_date_column(dates_series, cage_dates_dict, behave_dict):
-    # Step 1: Build a reverse lookup from DD.MM to group
+    # 1. Reverse lookup (Keep this, it's small and fast)
     date_to_group = {}
     for group, dates in cage_dates_dict.items():
         for d in dates:
             date_to_group[d] = group
 
-    # Step 2: Determine shared prefix once (not per row)
+    # 2. Determine prefix (Keep this, it's constant time)
     values = set(behave_dict.values())
-
+    prefix = None
     if 'GG' in values or 'SB' in values:
         prefix = 'C'
     elif values & {'TN', 'TK', 'LN', 'NR', 'NY', 'ST', 'MN', 'SR'}:
@@ -494,93 +577,122 @@ def get_group_from_date_column(dates_series, cage_dates_dict, behave_dict):
         prefix = 'B'
     elif values & {'MZ', 'SB', 'GG', 'LN', 'NR', 'MS'}:
         prefix = 'C'
-    else:
-        prefix = None
 
-    # Step 3: Vectorized transformation
-    def map_func(date_str):
-        try:
-            date_obj = parser.parse(date_str, dayfirst=True)
-            short_date = date_obj.strftime("%d.%m")
-        except (ValueError, TypeError):
-            return ''
+    # 3. VECTORIZED DATE CONVERSION
+    # Convert the entire series to datetime objects at once using C-speed
+    temp_dates = pd.to_datetime(dates_series, dayfirst=True, errors='coerce')
 
-        matched_group = date_to_group.get(short_date)
-        if not matched_group:
-            return ''
+    # Format the entire series to "DD.MM" strings at once
+    short_dates = temp_dates.dt.strftime("%d.%m")
 
-        group_str = f"{prefix}{matched_group}" if prefix else matched_group
-        return f"*{group_str}"
+    # 4. VECTORIZED MAPPING
+    # Map the group names from your dictionary
+    matched_groups = short_dates.map(date_to_group)
 
-    return dates_series.apply(map_func)
+    # 5. VECTORIZED STRING CONSTRUCTION
+    # Use fillna to handle missing dates and then format the strings
+    mask = matched_groups.notna()
+    result = pd.Series('', index=dates_series.index)
+
+    final_prefix = f"*{prefix}" if prefix else "*"
+    result[mask] = final_prefix + matched_groups[mask].astype(str)
+
+    return result
 
 
 def generate_block_ID(df):
-    # Start with lowercase phase (empty string where NaN)
-    ID = df['phase'].fillna('').str.lower()
-    ID = ID.where(ID.isin(['morn1', 'morn2', 'enrich']), '')
+    # 1. Handle Phase: Vectorized filtering
+    phase = df['phase'].fillna('').str.lower()
+    phase = phase.where(phase.isin(['morn1', 'morn2', 'enrich']), '')
 
-    # Append group
-    ID += '_' + df['group'].fillna('')
+    # 2. Handle Group: Simple string addition
+    group = '_' + df['group'].fillna('')
 
-    # Append trial
-    ID += df['trial'].apply(lambda x: f"_trial{int(x)}" if pd.notnull(x) else '')
-
-    # Append first_day
-    ID += df['first_day'].apply(lambda x: '_first' if x is True else ('_sec' if x is False else ''))
-
-    # Append condition
-    condition_map = {'playback': '_play', 'crow': '_cont', 'baseline': '_base'}
-    ID += df['condition'].fillna('').str.lower().map(condition_map).fillna('')
-
-    return ID
-
-
-def reshape_behavior_data(df, schedule_dict, Cage_Compositions):
-    working_df = df.copy()
-    # TODO: properly implementing the behave_dict
-    behave_dict = df['ID']
-
-    # Ensure required columns exist
-    for col in ['msm', 'date', 'phase', 'group', 'trial', 'first_day', 'block_ID']:
-        if col not in working_df.columns:
-            working_df[col] = None
-    """
-    # Vectorized: minutes since midnight
-    if '1_TIme' in working_df.columns:
-        working_df['msm'] = working_df['1_TIme'].apply(minutes_since_midnight)
-
-    # Vectorized: format date
-    if 'created_at' in working_df.columns:
-        working_df['date'] = working_df['created_at'].apply(
-            lambda x: format_date(x)['iso_z_format'] if format_date(x) else None
-        )
-    """
-
-    # Vectorized: get phase
-    if '1_TIme' in working_df.columns:
-        working_df['phase'] = working_df['1_TIme'].apply(get_phase_from_time)
-
-    # Vectorized: condition, trial, first_day
-    def get_schedule_info(date):
-        condition, trial, first_day = get_condition_and_trial(date, schedule_dict)
-        return pd.Series([condition, trial, first_day])
-
-    working_df[['condition', 'trial', 'first_day']] = working_df['date'].apply(get_schedule_info)
-
-    # Vectorized group detection fallback (still partially row-wise due to logic complexity)
-    def get_group_vectorized(row):
-        group = get_exact_matching_cage_phase(behave_dict, Cage_Compositions)
-        if group is None:
-            return get_group_from_date(row['date'], Cage_Comp_Dates, behave_dict)
-
-    working_df['group'] = get_group_from_date_column(
-        working_df['date'],
-        Cage_Comp_Dates,
-        behave_dict
+    # 3. Handle Trial: Use np.select instead of lambda
+    # This avoids the slow "if pd.notnull" check per row
+    trial_num = pd.to_numeric(df['trial'], errors='coerce')
+    trial_str = np.select(
+        [trial_num.notnull()],
+        ['_trial' + trial_num.fillna(0).astype(int).astype(str)],
+        default=''
     )
 
-    # Vectorized block ID assignment
+    # 4. Handle First Day: Vectorized mapping
+    # Using a list of conditions (masks) and choices
+    day_str = np.select(
+        [df['first_day'] == True, df['first_day'] == False],
+        ['_first', '_sec'],
+        default=''
+    )
+
+    # 5. Handle Condition: Vectorized .map()
+    condition_map = {'playback': '_play', 'crow': '_cont', 'baseline': '_base'}
+    cond_str = df['condition'].fillna('').str.lower().map(condition_map).fillna('')
+
+    # Final concatenation happens all at once
+    return phase + group + trial_str + day_str + cond_str
+
+
+def get_behavior_code_dict(df):
+    pattern = re.compile(r"^Ind_(\d+)$")
+
+    behave = []
+
+    for col in df.columns:
+        m = pattern.match(col)
+        if m:
+            behave.append((int(m.group(1)), col))
+
+    behave.sort()
+
+    behave_dict = {}
+    for _, col in behave:
+        val = df[col].dropna()
+        if not val.empty:
+            behave_dict[col] = val.iloc[0]
+
+    return behave_dict
+
+
+def reshape_behavior_data(df, behave_dict, schedule_dict, Cage_Compositions):
+    working_df = df.copy()
+
+    # 1. Phase mapping
+    if '1_TIme' in working_df.columns:
+        unique_times = working_df['1_TIme'].unique()
+        phase_map = {t: get_phase_from_time(t) for t in unique_times}
+        working_df['phase'] = working_df['1_TIme'].map(phase_map)
+    print('working_df phase changed: \n', working_df)
+
+    # 2. Schedule info via Merge
+    sched_df = pd.DataFrame(schedule_dict).T.reset_index() # Adjust based on dict structure
+    sched_df.columns = ['date', 'condition', 'trial', 'first_day']
+    working_df = working_df.merge(sched_df, on='date', how='left')
+    print('working_df shedule update: \n', working_df)
+
+    # 3. Block ID
     working_df['block_ID'] = generate_block_ID(working_df)
+    print('working_df Block ID added: \n', working_df)
+
+    # 4. TODO: not properly implemented jet
+    results = get_group_vectorized(working_df[''], Cage_Compositions, behave_dict)
+    print('working_df group added: \n', working_df)
 
     return working_df, behave_dict
+
+
+def process_sorted_data(sorted_df: pd.DataFrame, schedule_dict: dict, Cage_Compositions: dict):
+    df_dec_ind: pd.DataFrame = detect_ind(sorted_df)
+    print('df_dec_ind: \n', df_dec_ind)
+    # Fix date column
+    df_dec_ind["date"] = pd.to_datetime(df_dec_ind["date"]).dt.strftime("%d-%m-%Y")
+    # Fix time column
+    df_dec_ind["1_TIme"] = pd.to_datetime(df_dec_ind["1_TIme"]).dt.strftime("%H:%M")
+    print('df_dec_ind date changed: \n', df_dec_ind)
+    behave_dict: dict = get_behavior_code_dict(df_dec_ind)
+    print('behave_dict: ', behave_dict)
+    print(isinstance(df_dec_ind, type))
+
+    resh_df: pd.DataFrame = reshape_behavior_data(df_dec_ind, behave_dict, schedule_dict, Cage_Compositions)
+
+    # run follow up code to sort the data
