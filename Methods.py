@@ -1,10 +1,11 @@
 import os
 import re
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, time
 import numpy as np
 import pandas as pd
 from scipy.optimize import linear_sum_assignment
-from typing import Dict, List, Tuple, Any
+from typing import Dict, List, Tuple, Any, Match, Pattern, Optional, Union, Set
+from dateutil import parser
 
 pd.set_option('display.max_columns', None)   # show all columns
 pd.set_option('display.width', None)         # don't wrap columns
@@ -371,18 +372,14 @@ def empty_dataframe(
 # Adding and Adjusting Columns
 #######################################################################################################################
 
-
-from dateutil import parser
-
-
 def detect_ind(raw_df: pd.DataFrame) -> pd.DataFrame:
     df = raw_df.copy()
 
-    # Base columns
+    # 1. Base columns
     base_cols = ["ec5_uuid", "date", "1_TIme", "msm", "corrected_msm"]
     base_cols = [c for c in base_cols if c in df.columns]
 
-    # Find behavior columns like: 4_MZ_Behavior
+    # 2. Find behavior columns (e.g., 4_MZ_Behavior)
     pattern = re.compile(r"^(\d+)_([A-Za-z]+)_Behavior$", re.IGNORECASE)
 
     matches = []
@@ -393,25 +390,45 @@ def detect_ind(raw_df: pd.DataFrame) -> pd.DataFrame:
             ident = m.group(2)
             matches.append((order, ident, col))
 
-    # Sort by numeric prefix
+    # Sort by the numeric prefix (4, 11, 18, etc.)
     matches.sort(key=lambda x: x[0])
 
     out_cols = base_cols.copy()
 
-    # Build Ind_1 ... Ind_N
-    for idx, (_, ident, behavior_col) in enumerate(matches, start=1):
+    # 3. Dynamic mapping of associated data
+    for idx, (order, ident, behavior_col) in enumerate(matches, start=1):
+        # New Column Names
         ind_col = f"Ind_{idx}"
         beh_col = f"Ind_{idx}_Behavior"
+        con_col = f"Ind_{idx}_Contact"
+        prox_col = f"Ind_{idx}_AR"
+        dist_col = f"Ind_{idx}_3M"
+        note_col = f"Ind_{idx}_Notes"
 
-        # Insert label column
+        # Assign Animal ID (MZ, SB, etc.)
         df[ind_col] = ident
 
-        # Rename behavior column
-        df.rename(columns={behavior_col: beh_col}, inplace=True)
+        # Rename the columns by looking for the expected numeric index
+        # MZ is 4, so Contact is 5, AR is 6, 3M is 7...
+        rename_map = {
+            behavior_col: beh_col,
+            f"{order + 1}_Contact": con_col,
+            f"{order + 2}_AR": prox_col,
+            f"{order + 3}_3M": dist_col,
+            f"{order + 5}_Notes": note_col
+        }
 
-        out_cols.extend([ind_col, beh_col])
+        # Only rename if the column actually exists in raw data
+        actual_rename = {k: v for k, v in rename_map.items() if k in df.columns}
+        df.rename(columns=actual_rename, inplace=True)
 
-    return df[out_cols].copy()
+        # Add all successfully renamed columns to our final output list
+        out_cols.extend([ind_col])
+        out_cols.extend(list(actual_rename.values()))
+
+    # Ensure we don't crash if out_cols contains something missing
+    final_cols = [c for c in out_cols if c in df.columns]
+    return df[final_cols].copy()
 
 
 def get_exact_matching_cage_phase(behave_dict, cage_compositions):
@@ -485,74 +502,106 @@ def get_group_from_date(date_str, cage_dates_dict, behave_dict):
     return f"*{group_str}"
 
 
-def get_phase_from_time(time_value):
+def get_phase_from_time(time_value: Union[str, time, pd.Timestamp]) -> Optional[str]:
+    """
+    Categorizes a time value into experimental phases (morn1, morn2, enrich, extra).
+
+    Args:
+        time_value: The time entry (string 'HH:M', datetime object, or Timestamp).
+
+    Returns:
+        String representing the phase or None if parsing fails.
+    """
     if pd.isna(time_value) or time_value == '':
         return None
+
     try:
-        time_str = str(time_value).strip()
-        # Try with seconds first
-        try:
-            time_obj = datetime.strptime(time_str, '%H:%M:%S').time()
-        except ValueError:
-            # Fallback to no seconds
-            time_obj = datetime.strptime(time_str, '%H:%M').time()
+        # 1. Handle cases where time_value is already a time-like object
+        if isinstance(time_value, (time, pd.Timestamp)):
+            time_obj = time_value
+        else:
+            # 2. Parse string values
+            time_str: str = str(time_value).strip()
+            try:
+                time_obj = datetime.strptime(time_str, '%H:%M:%S').time()
+            except ValueError:
+                time_obj = datetime.strptime(time_str, '%H:%M').time()
 
-        minutes = time_obj.hour * 60 + time_obj.minute
+        # 3. Convert to total minutes for easier comparison
+        total_minutes: int = time_obj.hour * 60 + time_obj.minute
 
-        if 570 <= minutes <= 630:  # 09:30 to 10:30
+        # 4. Logic Gates for Phases
+        if 570 <= total_minutes <= 630:  # 09:30 - 10:30
             return 'morn1'
-        elif 645 <= minutes <= 705:  # 10:45 to 11:45
+        elif 645 <= total_minutes <= 705:  # 10:45 - 11:45
             return 'morn2'
-        elif minutes >= 720:  # After 12:00
+        elif total_minutes >= 720:  # 12:00 onwards
             return 'enrich'
         else:
             return 'extra'
 
     except Exception as e:
-        print(f"Failed to parse time value '{time_value}': {e}")
+        print(f"🛑 Failed to parse time value '{time_value}': {e}")
         return None
 
 
-def get_group_vectorized(dates_series, cage_dates_dict, behave_dict):
-    # --- STEP 1: PRE-CALCULATE PREFIX (Do this once, not per row) ---
-    values = set(behave_dict.values())
+def get_group_vectorized(
+        dates_series: pd.Series,
+        cage_dates_dict: Dict[str, List[str]],
+        behave_dict: Dict[str, str]
+) -> pd.Series:
+    """
+    Vectorized mapping of dates to groups with a behavior-based group prefix.
 
-    # Define your logic sets
-    group_A_ids = {'TN', 'TK', 'LN', 'NR', 'NY', 'ST', 'MN', 'SR'}
-    group_B_ids = {'MN', 'MS', 'NH', 'LN', 'NR', 'NY', 'ST'}
-    group_C_ids = {'MZ', 'SB', 'GG', 'LN', 'NR', 'MS'}
+    Args:
+        dates_series: Column containing date strings (e.g., '03-04-2025').
+        cage_dates_dict: Mapping of Cage names to lists of dates ['DD.MM'].
+        behave_dict: Dictionary of {animal_id: behavior_code}.
 
-    if 'GG' in values or 'SB' in values:
-        prefix = 'C'
-    elif values & group_A_ids:
-        prefix = 'A'
-    elif values & group_B_ids:
-        prefix = 'B'
-    elif values & group_C_ids:
-        prefix = 'C'
+    Returns:
+        pd.Series: A series of formatted group strings like '*C_Cage1'.
+    """
+    # --- STEP 1: PRE-CALCULATE PREFIX ---
+    # We look at the set of animal IDs found in the current file
+    animal_ids: Set[str] = set(behave_dict.keys())
+
+    group_A_ids: set = {'TN', 'TK', 'LN', 'NR', 'NY', 'ST', 'MN', 'SR'}
+    group_B_ids: set = {'MN', 'MS', 'NH', 'LN', 'NR', 'NY', 'ST'}
+    group_C_ids: set = {'MZ', 'SB', 'GG', 'LN', 'NR', 'MS'}
+
+    # Determine prefix based on priority
+    if 'GG' in animal_ids or 'SB' in animal_ids:
+        prefix: str = 'C'
+    elif animal_ids & group_A_ids:
+        prefix: str = 'A'
+    elif animal_ids & group_B_ids:
+        prefix: str = 'B'
+    elif animal_ids & group_C_ids:
+        prefix: str = 'C'
     else:
-        prefix = ''  # Or 'No data' if you prefer
+        prefix: str = ''
 
     # --- STEP 2: BUILD REVERSE LOOKUP DICT ---
-    # Turns {Group: [Dates]} into {Date: Group} for instant O(1) access
-    date_to_group = {d: group for group, dates in cage_dates_dict.items() for d in dates}
+    # Converts {Group: [Dates]} -> {Date: Group}
+    date_to_group: Dict[str, str] = {
+        d: str(group) for group, dates in cage_dates_dict.items() for d in dates
+    }
 
     # --- STEP 3: VECTORIZED DATA PROCESSING ---
-    # 1. Convert all dates at once (C-speed)
+    # Ensure dates are datetime objects for formatting
     temp_dates = pd.to_datetime(dates_series, dayfirst=True, errors='coerce')
 
-    # 2. Format to "DD.MM" string for all rows at once
+    # Format to "DD.MM" to match cage_dates_dict keys
     short_dates = temp_dates.dt.strftime("%d.%m")
 
-    # 3. Map the groups (Instant lookup)
+    # Map the groups via the dictionary
     matched_groups = short_dates.map(date_to_group)
 
-    # 4. Construct final string using vectorized addition
-    # Only act on rows where a group was found
+    # Construct final result
     mask = matched_groups.notna()
     result = pd.Series('', index=dates_series.index)
 
-    prefix_str = f"*{prefix}" if prefix else "*"
+    prefix_str = f"{prefix}_" if prefix else "*"
     result[mask] = prefix_str + matched_groups[mask].astype(str)
 
     return result
@@ -600,99 +649,330 @@ def get_group_from_date_column(dates_series, cage_dates_dict, behave_dict):
     return result
 
 
-def generate_block_ID(df):
-    # 1. Handle Phase: Vectorized filtering
-    phase = df['phase'].fillna('').str.lower()
+def generate_block_ID(df: pd.DataFrame) -> pd.Series:
+    """
+    Concatenates experimental metadata into a unique string identifier.
+    Example output: 'morn1_GroupA_trial1_first_play'
+    """
+    # 1. Phase: morn1, morn2, etc.
+    phase: pd.Series = df['phase'].fillna('').str.lower()
     phase = phase.where(phase.isin(['morn1', 'morn2', 'enrich']), '')
 
-    # 2. Handle Group: Simple string addition
-    group = '_' + df['group'].fillna('')
+    # 2. Group: Needs to be handled carefully if empty
+    group: pd.Series = '_' + df['group'].fillna('Unknown').astype(str)
 
-    # 3. Handle Trial: Use np.select instead of lambda
-    # This avoids the slow "if pd.notnull" check per row
+    # 3. Trial: Extracting numeric trial ID
     trial_num = pd.to_numeric(df['trial'], errors='coerce')
-    trial_str = np.select(
+    trial_str: np.ndarray = np.select(
         [trial_num.notnull()],
         ['_trial' + trial_num.fillna(0).astype(int).astype(str)],
         default=''
     )
 
-    # 4. Handle First Day: Vectorized mapping
-    # Using a list of conditions (masks) and choices
-    day_str = np.select(
+    # 4. First Day vs Second Day
+    day_str: np.ndarray = np.select(
         [df['first_day'] == True, df['first_day'] == False],
         ['_first', '_sec'],
         default=''
     )
 
-    # 5. Handle Condition: Vectorized .map()
-    condition_map = {'playback': '_play', 'crow': '_cont', 'baseline': '_base'}
-    cond_str = df['condition'].fillna('').str.lower().map(condition_map).fillna('')
+    # 5. Condition Mapping
+    condition_map: Dict[str, str] = {'playback': '_play', 'crow': '_cont', 'baseline': '_base'}
+    cond_str: pd.Series = df['condition'].fillna('').str.lower().map(condition_map).fillna('')
 
-    # Final concatenation happens all at once
+    # Final result is a Series of concatenated strings
     return phase + group + trial_str + day_str + cond_str
 
 
-def get_behavior_code_dict(df):
-    pattern = re.compile(r"^Ind_(\d+)$")
+def get_behavior_code_dict(df: pd.DataFrame) -> Dict[str, str]:
+    """
+    Creates a mapping between individual codes (e.g., 'MZ') and their
+    corresponding behavior values (e.g., 'E') from the first row of the DataFrame.
 
-    behave = []
+    Args:
+        df: A pandas DataFrame containing 'Ind_N' and 'Ind_N_Behavior' columns.
+
+    Returns:
+        A dictionary where keys are individual codes and values are behaviors.
+    """
+    # Type hint for the compiled regex pattern
+    pattern: Pattern[str] = re.compile(r"^Ind_(\d+)$")
+    behave_dict: Dict[str, str] = {}
 
     for col in df.columns:
-        m = pattern.match(col)
+        m: Optional[Match[str]] = pattern.match(col)
+
         if m:
-            behave.append((int(m.group(1)), col))
+            num: str = m.group(1)
+            behavior_col: str = f"Ind_{num}_Behavior"
 
-    behave.sort()
+            # Check if the paired behavior column exists in the DataFrame
+            if behavior_col in df.columns:
+                code_key = df[col].iloc[0]
+                behavior_val = df[behavior_col].iloc[0]
 
-    behave_dict = {}
-    for _, col in behave:
-        val = df[col].dropna()
-        if not val.empty:
-            behave_dict[col] = val.iloc[0]
+                # Ensure the key is valid (not NaN) before adding to dictionary
+                if pd.notna(code_key) and pd.notna(behavior_val):
+                    behave_dict[str(code_key)] = str(behavior_val)
 
     return behave_dict
 
 
-def reshape_behavior_data(df, behave_dict, schedule_dict, Cage_Compositions):
+def reshape_behavior_data(df: pd.DataFrame) -> pd.DataFrame:
     working_df = df.copy()
+    behave_mapping = get_behavior_code_dict(working_df)
 
-    # 1. Phase mapping
-    if '1_TIme' in working_df.columns:
-        unique_times = working_df['1_TIme'].unique()
-        phase_map = {t: get_phase_from_time(t) for t in unique_times}
-        working_df['phase'] = working_df['1_TIme'].map(phase_map)
-    print('working_df phase changed: \n', working_df)
+    # 1. Schedule & Trial Info (MUST come before block_ID)
+    rows = []
+    for (cond, trial), dates in schedule_dict.items():
+        for d in dates:
+            clean_date = d.replace('.', '-')
+            # Note: We include trial and first_day logic here
+            is_first_day = (d == dates[0])
+            rows.append({
+                'condition': cond,
+                'trial': trial,
+                'date': clean_date,
+                'first_day': is_first_day
+            })
 
-    # 2. Schedule info via Merge
-    sched_df = pd.DataFrame(schedule_dict).T.reset_index() # Adjust based on dict structure
-    sched_df.columns = ['date', 'condition', 'trial', 'first_day']
+    sched_df = pd.DataFrame(rows)
     working_df = working_df.merge(sched_df, on='date', how='left')
-    print('working_df shedule update: \n', working_df)
 
-    # 3. Block ID
+    # 2. Phase mapping (Required for block_ID)
+    if '1_TIme' in working_df.columns:
+        working_df['phase'] = working_df['1_TIme'].apply(get_phase_from_time)
+
+    # 3. Group Mapping (Required for block_ID)
+    working_df['group'] = get_group_vectorized(
+        working_df['date'],
+        Cage_Comp_Dates,
+        behave_mapping
+    )
+    #print('working_df group added: \n', working_df.head())
+    # 4. Now generate Block ID (Now that phase, group, trial, etc. all exist)
     working_df['block_ID'] = generate_block_ID(working_df)
-    print('working_df Block ID added: \n', working_df)
 
-    # 4. TODO: not properly implemented jet
-    results = get_group_vectorized(working_df[''], Cage_Compositions, behave_dict)
-    print('working_df group added: \n', working_df)
+    #print('working_df Block ID added: \n', working_df[['date', 'block_ID']].head())
 
-    return working_df, behave_dict
+    return working_df
 
 
-def process_sorted_data(sorted_df: pd.DataFrame, schedule_dict: dict, Cage_Compositions: dict):
+def process_sort_event(sorted_df: pd.DataFrame):
     df_dec_ind: pd.DataFrame = detect_ind(sorted_df)
-    print('df_dec_ind: \n', df_dec_ind)
+    #print('df_dec_ind: \n', df_dec_ind)
     # Fix date column
     df_dec_ind["date"] = pd.to_datetime(df_dec_ind["date"]).dt.strftime("%d-%m-%Y")
     # Fix time column
     df_dec_ind["1_TIme"] = pd.to_datetime(df_dec_ind["1_TIme"]).dt.strftime("%H:%M")
-    print('df_dec_ind date changed: \n', df_dec_ind)
-    behave_dict: dict = get_behavior_code_dict(df_dec_ind)
-    print('behave_dict: ', behave_dict)
-    print(isinstance(df_dec_ind, type))
+    #print('df_dec_ind date changed: \n', df_dec_ind)
 
-    resh_df: pd.DataFrame = reshape_behavior_data(df_dec_ind, behave_dict, schedule_dict, Cage_Compositions)
+    resh_df: pd.DataFrame = reshape_behavior_data(df_dec_ind)
+    #print('resh_df: \n', resh_df)
 
-    # run follow up code to sort the data
+    return resh_df
+
+
+# --- HELPER: METADATA ---
+def extract_metadata(row: pd.Series) -> Dict[str, Any]:
+    return {
+        'ec5_uuid': row.get('ec5_uuid'),
+        'condition': row.get('condition'),
+        'date': row.get('date'),
+        'msm': row.get('msm'),
+        'group': row.get('group'),
+        'trial': row.get('trial'),
+        'phase': row.get('phase'),
+        'block_ID': row.get('block_ID'),
+        'notes': row.get('notes')  # Global notes
+    }
+
+
+# --- HELPER: SOCIAL DISTANCES ---
+def process_social_distances(int1: str, row: pd.Series, idx: int, beha_dict: dict, metadata: dict) -> List[Dict]:
+    distances = []
+    # Access renamed columns from detect_ind
+    contact = row.get(f'Ind_{idx}_Contact')
+    arr = row.get(f'Ind_{idx}_AR')
+    three_met = row.get(f'Ind_{idx}_3M')
+
+    if pd.isna(contact) and pd.isna(arr) and pd.isna(three_met):
+        # Default distance 4 for all cage mates
+        for other in beha_dict.values():
+            if other != int1:
+                distances.append({
+                    **metadata, 'Ind1': int1, 'partner': other,
+                    'dyad': f"{int1}-{other}", 'distance': 4
+                })
+    else:
+        levels = [(contact, 1), (arr, 2), (three_met, 3)]
+        for val, dist in levels:
+            if pd.notna(val):
+                for p in str(val).split(','):
+                    p_clean = p.strip()
+                    distances.append({
+                        **metadata, 'Ind1': int1, 'partner': p_clean,
+                        'dyad': f"{int1}-{p_clean}", 'distance': dist
+                    })
+    return distances
+
+
+# --- HELPER: BEHAVIOR CLASSIFICATION ---
+def classify_behavior(int1: str, behaviour: str, targets: Any, metadata: dict, ind_notes: Any) -> Dict:
+    res = {'behaviour': [], 'occurrence': []}
+    if not behaviour: return res
+
+    behaviour = str(behaviour).strip()
+    # Logic for qualifiers (second char of code)
+    main_beh = behaviour[0] if len(behaviour) > 1 else behaviour
+    qualifier = behaviour[1] if len(behaviour) > 1 else None
+
+    # Binary Flag Templates
+    solo_flags = {k: 0 for k in ['eating', 'playing', 'moving', 'resting', 'sitting', 'self_direct', 'grooming']}
+    occ_flags = {'playing': 0, 'aggression': 0}
+
+    # Occurrence: Play (PL) or Aggression (AG, DS, AR)
+    if behaviour.upper().startswith('PL'):
+        res['occurrence'].append(
+            {**metadata, 'Ind1': int1, 'behaviour': 'PL', 'partner': targets, 'notes': ind_notes, **occ_flags,
+             'playing': 1})
+    elif behaviour.upper() in {'AG', 'DS', 'AR'}:
+        res['occurrence'].append(
+            {**metadata, 'Ind1': int1, 'behaviour': main_beh, 'qualifier': qualifier, 'partner': targets,
+             'notes': ind_notes, **occ_flags, 'aggression': 1})
+
+    # States: Grooming (GG, GR, GM)
+    elif behaviour.upper() in {'GG', 'GR', 'GM'}:
+        res['behaviour'].append(
+            {**metadata, 'Ind1': int1, 'behaviour': main_beh, 'qualifier': qualifier, 'partner': targets, **solo_flags,
+             'grooming': 1})
+
+    # States: Solo
+    else:
+        current_flags = solo_flags.copy()
+        if behaviour == 'E':
+            current_flags['eating'] = 1
+        elif behaviour == 'M':
+            current_flags['moving'] = 1
+        elif behaviour == 'SD':
+            current_flags['self_direct'] = 1
+        elif behaviour == 'RS':
+            current_flags['resting'] = 1
+            current_flags['sitting'] = 1
+        elif behaviour == 'RL':
+            current_flags['resting'] = 1
+
+        res['behaviour'].append(
+            {**metadata, 'Ind1': int1, 'behaviour': behaviour, 'qualifier': None, 'partner': None, **current_flags})
+
+    return res
+
+
+def reshape_behavior_data_to_tables(df: pd.DataFrame, beha_dict: Dict[str, str]):
+    """
+    MANAGER FUNCTION: Takes the full DataFrame, processes each row,
+    and returns three separate DataFrames.
+    """
+    all_distances = []
+    all_behaviours = []
+    all_occurrences = []
+
+    # Iterate through every row in your input DataFrame
+    for _, row in df.iterrows():
+        # Call the worker function for this specific row
+        row_results = reshape_row_to_multiple(row, beha_dict)
+
+        # Collect the lists returned by the worker
+        all_distances.extend(row_results['distance'])
+        all_behaviours.extend(row_results['behaviour'])
+        all_occurrences.extend(row_results['occurrence'])
+
+    # Convert the lists of dictionaries into tidy DataFrames
+    return {
+        "df_distance": pd.DataFrame(all_distances),
+        "df_behaviour": pd.DataFrame(all_behaviours),
+        "df_occurrence": pd.DataFrame(all_occurrences)
+    }
+
+
+def reshape_row_to_multiple(row: pd.Series, beha_dict: Dict[str, str]) -> Dict[str, List[Any]]:
+    """
+    WORKER FUNCTION: Processes one row and handles the 'NaN' string errors.
+    """
+    final_output = {'distance': [], 'behaviour': [], 'occurrence': []}
+
+    # 1. Extract Metadata (Context for every new row generated)
+    metadata = {
+        'ec5_uuid': row.get('ec5_uuid'),
+        'condition': row.get('condition'),
+        'date': row.get('date'),
+        'msm': row.get('msm'),
+        'group': row.get('group'),
+        'trial': row.get('trial'),
+        'phase': row.get('phase'),
+        'block_ID': row.get('block_ID')
+    }
+
+    # 2. Loop through the 5 animals (Ind_1 to Ind_5)
+    for i in range(1, 6):
+        int1 = row.get(f'Ind_{i}')
+        if pd.isna(int1):
+            continue  # Skip empty animal slots
+
+        # SAFETY: Convert to string and handle NaN to prevent regex/strip errors
+        behaviour = str(row.get(f'Ind_{i}_Behavior', '')).strip()
+        contact = row.get(f'Ind_{i}_Contact')
+        arr = row.get(f'Ind_{i}_AR')
+        three_met = row.get(f'Ind_{i}_3M')
+        ind_notes = row.get(f'Ind_{i}_Notes')
+
+        # --- PART A: SOCIAL DISTANCES ---
+        # Logic: If no specific proximity is noted, assume distance 4 (Far)
+        if pd.isna(contact) and pd.isna(arr) and pd.isna(three_met):
+            for other_id in beha_dict.keys():
+                if other_id != int1:
+                    final_output['distance'].append({
+                        **metadata, 'Ind1': int1, 'partner': other_id,
+                        'dyad': f"{int1}-{other_id}", 'distance': 4
+                    })
+        else:
+            # Map levels: 1=Contact, 2=AR, 3=3M
+            for val, dist_score in [(contact, 1), (arr, 2), (three_met, 3)]:
+                if pd.notna(val):
+                    # Handle multiple partners like 'LN, NR'
+                    for p in str(val).split(','):
+                        p_clean = p.strip()
+                        if p_clean:
+                            final_output['distance'].append({
+                                **metadata, 'Ind1': int1, 'partner': p_clean,
+                                'dyad': f"{int1}-{p_clean}", 'distance': dist_score
+                            })
+
+        # --- PART B: BEHAVIOR CLASSIFICATION ---
+        # We only process if there is a behavior code (e.g., 'E', 'PL', 'GG')
+        if behaviour and behaviour.lower() != 'nan' and behaviour != '':
+            # Determine target for social behaviors
+            targets = contact if pd.notna(contact) else (arr if pd.notna(arr) else None)
+
+            # Use classify_behavior helper (modular logic)
+            beh_data = classify_behavior(int1, behaviour, targets, metadata, ind_notes)
+            final_output['behaviour'].extend(beh_data['behaviour'])
+            final_output['occurrence'].extend(beh_data['occurrence'])
+
+    return final_output
+
+
+def process_sort_beh_dist(df):
+    behave_mapping = get_behavior_code_dict(df)
+
+    # Reshape everything into the 3 target tables
+    tables = reshape_behavior_data_to_tables(df, behave_mapping)
+
+    # Access your final DataFrames
+    df_dist = tables['df_distance']
+    df_beh = tables['df_behaviour']
+    df_occ = tables['df_occurrence']
+
+    print(f"Processed {len(df_dist)} distance records and {len(df_beh)} behavior states.")
+
+    return df_beh, df_dist, df_occ

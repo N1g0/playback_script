@@ -1,0 +1,108 @@
+ec5_uuid;date;1_TIme;2_NC;4_MZ_Behavior;5_Contact;6_AR;7_3M;8_Occurence;9_Notes;11_SB_Behavior;12_Contact;13_AR;14_3M;15_Occurence;16_Notes;18_GG_Behavior;19_Contact;20_AR;21_3M;22_Occurence;23_Notes;25_LN_Behavior;26_Contact;27_AR;28_3M;29_Occurence;30_Notes;32_NR_Behavior;33_Contact;34_AR;35_3M;36_Occurence;37_Notes;highlight;msm;corrected_msm
+b5de2eb3-69c4-4bf0-8bc8-3cf1f7cd5ce0;2025-04-04;1900-01-01 09:31:00;NO;E;;NR;;;;E;;;;;;E;;LN;;;;E;;GG;;;;E;;MZ;;;;;571;570.0
+a05148e2-1ae1-41dd-81f6-076719003269;2025-04-04;1900-01-01 09:33:00;NO;E;;;;;;E;;NR;;;;E;;LN;;;;E;;GG;;;;E;;SB;;;;red;573;572.0
+9df8c7f1-16a8-4471-b340-fcf9cdb726b8;2025-04-04;1900-01-01 09:35:00;Yes;E;;;;;;E;;NR;;;;E;;LN;;;;E;;GG;;;;E;;SB;;;;green;575;574.0
+c3c27feb-af14-4a0a-bb9d-981d0415e58d;2025-04-04;1900-01-01 09:37:00;Yes;E;;;;;;E;;NR;;;;E;;LN;;;;E;;GG;;;;E;;SB;;;;green;577;576.0
+9d57c2f9-26dd-46da-b2ec-03d25e4c6b47;2025-04-04;1900-01-01 09:39:00;NO;E;;NR;;;;E;;;;;;E;;;LN;;;M;;;GG;;;E;;MZ;;;;;579;578.0
+b8f00a7d-dda4-47eb-bb5f-fb2be966a02f;2025-04-04;1900-01-01 09:41:00;NO;M;;;;;;E;;LN;;;;E;;;;;;E;;SB;;;;E;;;;;;;581;580.0
+7608d70c-2ca4-4d53-b933-4017f0115df8;2025-04-04;1900-01-01 09:43:00;NO;E;;;;;;E;;;;;;E;;LN, NR;;;;E;;NR, GG;;;;E;;LN, GG;;;;;583;582.0
+436613e7-28a1-4e43-b1c7-28402ab9a6d0;2025-04-04;1900-01-01 09:45:00;NO;E;;GG, LN, NR;;;;M;;;;;;E;;LN, MZ, NR;;;;E;;MZ, GG, NR;;;;E;;MZ, LN, GG;;;;;585;584.0
+19bc046f-743a-447c-90aa-cb9a60ccf8e7;2025-04-04;1900-01-01 09:47:00;NO;RS;;GG, LN, NR;;;;E;;;;;;E;;LN, MZ, NR;;;;RS;;MZ, GG, NR;;;;E;;MZ, GG, LN;;;;red;587;586.0
+f567bfa7-38eb-4837-9a47-80b0b26ac165;2025-04-04;1900-01-01 09:49:00;Yes;RS;;GG, LN, NR;;;;E;;;;;;E;;LN, MZ, NR;;;;RS;;MZ, GG, NR;;;;E;;MZ, GG, LN;;;;green;589;588.0
+94fa509c-5017-483c-8954-5c3d08e6d081;2025-04-04;1900-01-01 09:51:00;NO;GG;LN;NR, GG;;;;E;;;;;;E;;LN, MZ, NR;;;;GR;MZ;GG, NR;;;;E;;MZ, GG, LN;;;;;591;590.0
+f2f8fad1-9fcb-4e51-b3a3-002198269767;2025-04-04;1900-01-01 09:53:00;NO;GG;LN;GG;;;;E;;;;;;E;;LN, MZ;;;;GR;MZ;GG;;;;M;;;;;;;593;592.0
+9b6ab414-df80-4a85-aeaa-ac02db16a1ed;2025-04-04;1900-01-01 09:55:00;NO;GG;LN;;;;;E;;;;;;M;;;;;;GR;MZ;;;;;E;;;;;;;595;594.0
+a7a3e574-957e-4403-9e52-ae699577998a;2025-04-04;1900-01-01 09:57:00;NO;RS;;GG, LN;;;;E;;;;;;E;;LN, MZ;;;;RS;;MZ, GG;;;;E;;;;;;;597;596.0
+4fe3b9ab-daa8-4c20-9621-5cf8e0637b9b;2025-04-04;1900-01-01 09:59:00;NO;GG;NR;;;;;RS;;;GG;;;E;;LN;SB;;;RS;;GG;;;;GR;MZ;;;;;red;599;598.0
+e9454e9f-35b4-4dc7-94bb-f14cda078a21;2025-04-04;1900-01-01 10:01:00;Yes;GG;NR;;;;;RS;;;GG;;;E;;LN;SB;;;RS;;GG;;;;GR;MZ;;;;;green;601;600.0
+e0b500a2-c5ab-46b5-848e-f40a4a48a87d;2025-04-04;1900-01-01 10:03:00;Yes;GG;NR;;;;;RS;;;GG;;;E;;LN;SB;;;RS;;GG;;;;GR;MZ;;;;;green;603;602.0
+2b0606b2-274a-4c3d-9481-22fa54f8ab22;2025-04-04;1900-01-01 10:05:00;NO;E;;;;;;RS;;;GG;;;E;;LN;SB;;;RS;;GG;NR;;;RL;;;LN;;;red;605;604.0
+ed0cea54-a365-478d-9435-b6f30e5caf57;2025-04-04;1900-01-01 10:07:00;Yes;E;;;;;;RS;;;GG;;;E;;LN;SB;;;RS;;GG;NR;;;RL;;;LN;;;green;607;606.0
+dd1179cb-afca-4d27-906f-18b4e5f3c098;2025-04-04;1900-01-01 10:09:00;Yes;E;;;;;;RS;;;GG;;;E;;LN;SB;;;RS;;GG;NR;;;RL;;;LN;;;green;609;608.0
+b474e497-67a5-4263-9f60-86d7e7718c2c;2025-04-04;1900-01-01 10:11:00;NO;RL;;;;;;RL;;;GG;;;E;;LN;SB;;;RS;;GG;NR;;;RL;;;LN;;;red;611;610.0
+cc28a191-48e1-4f31-9dab-3d92b0425e72;2025-04-04;1900-01-01 10:13:00;Yes;RL;;;;;;RL;;;GG;;;E;;LN;SB;;;RS;;GG;NR;;;RL;;;LN;;;green;613;612.0
+d626e534-2966-4aa2-8ed7-8bce52888f12;2025-04-04;1900-01-01 10:15:00;Yes;RL;;;;;;RL;;;GG;;;E;;LN;SB;;;RS;;GG;NR;;;RL;;;LN;;;green;615;614.0
+3804cfa5-722a-45ee-97db-9fe791f8c78b;2025-04-04;1900-01-01 10:17:00;NO;RS;;;;;;RL;;;GG;;;RS;;LN;SB;;;RS;;GG;NR;;;RL;;;LN;;;;617;616.0
+ef3e0a01-b8a0-465d-b63e-4b212f313ee0;2025-04-04;1900-01-01 10:19:00;NO;RL;;;;;;RL;;;GG;;;RS;;LN;SB;;;RS;;GG;NR;;;RL;;;LN;;;red;619;618.0
+d5bdd626-fd28-4945-9602-d05deb8b3e67;2025-04-04;1900-01-01 10:21:00;Yes;RL;;;;;;RL;;;GG;;;RS;;LN;SB;;;RS;;GG;NR;;;RL;;;LN;;;green;621;620.0
+305bba98-d8c5-40c6-acd2-2e69dfcf7833;2025-04-04;1900-01-01 10:23:00;Yes;RL;;;;;;RL;;;GG;;;RS;;LN;SB;;;RS;;GG;NR;;;RL;;;LN;;;green;623;622.0
+8d892b8a-a00e-4b52-9c11-221d5610ef3d;2025-04-04;1900-01-01 10:25:00;Yes;RL;;;;;;RL;;;GG;;;RS;;LN;SB;;;RS;;GG;NR;;;RL;;;LN;;;green;625;624.0
+75567f56-b497-493e-ae19-cd47434e2d52;2025-04-04;1900-01-01 10:27:00;Yes;RL;;;;;;RL;;;GG;;;RS;;LN;SB;;;RS;;GG;NR;;;RL;;;LN;;;green;627;626.0
+62831afb-89c7-425a-b278-acd623c5b94b;2025-04-04;1900-01-01 10:29:00;Yes;RL;;;;;;RL;;;GG;;;RS;;LN;SB;;;RS;;GG;NR;;;RL;;;LN;;;green;629;628.0
+efc41f5a-c484-405f-a946-d81d4085e57a;2025-04-04;1900-01-01 10:32:00;NO;SD;;;;;;RS;;;GG, LN;;;RS;;LN;SB;;;RS;;GG;SB;;;RL;;;;;;;632;
+90ae135a-cacb-416a-bd24-ce7b151c4875;2025-04-04;1900-01-01 10:45:00;NO;RL;;;;;;RL;;;GG, LN, NR;;;RS;;LN, NR;SB;;;RS;;NR, GG;SB;;;RL;;GG, LN;SB;;;red;645;645.0
+4ad3d2a7-0275-438d-afc1-89372f3b851f;2025-04-04;1900-01-01 10:47:00;Yes;RL;;;;;;RL;;;GG, LN, NR;;;RS;;LN, NR;SB;;;RS;;NR, GG;SB;;;RL;;GG, LN;SB;;;green;647;647.0
+7e3b65ae-935f-4dd2-a7b6-c3a933848858;2025-04-04;1900-01-01 10:49:00;Yes;RL;;;;;;RL;;;GG, LN, NR;;;RS;;LN, NR;SB;;;RS;;NR, GG;SB;;;RL;;GG, LN;SB;;;green;649;649.0
+3f52144c-330f-4ece-a913-5a40cad8c368;2025-04-04;1900-01-01 10:51:00;Yes;RL;;;;;;RL;;;GG, LN, NR;;;RS;;LN, NR;SB;;;RS;;NR, GG;SB;;;RL;;GG, LN;SB;;;green;651;651.0
+05f37d2d-a281-4716-8433-63d82948412a;2025-04-04;1900-01-01 10:53:00;NO;M;;;;;;RS;;;GG, LN, NR;;;RS;;LN, NR;SB;;;RL;;GG, NR;SB;;;RS;;LN, GG;SB;;;;653;653.0
+ec274bc4-314e-4ff9-ab94-2f72d93e3ea2;2025-04-04;1900-01-01 10:55:00;NO;RS;;;;;;RS;;;GG, NR, LN;;;RS;;LN, NR;SB;;;RL;;GG, NR;SB;;;RS;;LN, GG;SB;;;red;655;655.0
+91625a74-91da-48ad-b049-8beeef5f93b6;2025-04-04;1900-01-01 10:57:00;Yes;RS;;;;;;RS;;;GG, NR, LN;;;RS;;LN, NR;SB;;;RL;;GG, NR;SB;;;RS;;LN, GG;SB;;;green;657;657.0
+9f54c1ef-f86f-4cbe-8927-8ceb03f68c4b;2025-04-04;1900-01-01 10:59:00;NO;RS;;;;;;RS;;;GG, NR, LN;;;RL;;LN, NR;SB;;;RS;;GG, NR;SB;;;RS;;GG, LN;SB;;;red;659;659.0
+c573d442-4765-43c3-8030-02bce5ee6d04;2025-04-04;1900-01-01 11:01:00;Yes;RS;;;;;;RS;;;GG, NR, LN;;;RL;;LN, NR;SB;;;RS;;GG, NR;SB;;;RS;;GG, LN;SB;;;green;661;661.0
+7f26c44b-36bb-4d03-bf9b-48feb82b5387;2025-04-04;1900-01-01 11:03:00;Yes;RS;;;;;;RS;;;GG, NR, LN;;;RL;;LN, NR;SB;;;RS;;GG, NR;SB;;;RS;;GG, LN;SB;;;green;663;663.0
+454d808b-4d50-489e-ae3a-dd2b3e07fa86;2025-04-04;1900-01-01 11:05:00;Yes;RS;;;;;;RS;;;GG, NR, LN;;;RL;;LN, NR;SB;;;RS;;GG, NR;SB;;;RS;;GG, LN;SB;;;green;665;665.0
+6621e789-f595-4dfe-b77e-6aa598ac5cb3;2025-04-04;1900-01-01 11:07:00;Yes;RS;;;;;;RS;;;GG, NR, LN;;;RL;;LN, NR;SB;;;RS;;GG, NR;SB;;;RS;;GG, LN;SB;;;green;667;667.0
+8384a064-ed0e-4d34-913b-61beb77ceb06;2025-04-04;1900-01-01 11:09:00;NO;RS;;;;;;RL;;;GG, LN, NR;;;RL;;NR, LN;SB;;;RS;;GG, NR;SB;;;RL;;GG, LN;SB;;;red;669;669.0
+f7db225d-bdd5-4bfe-908f-cd277779f6f5;2025-04-04;1900-01-01 11:11:00;Yes;RS;;;;;;RL;;;GG, LN, NR;;;RL;;NR, LN;SB;;;RS;;GG, NR;SB;;;RL;;GG, LN;SB;;;green;671;671.0
+9ed5a1e6-f1f8-4971-b3a2-3d75c5fa71a7;2025-04-04;1900-01-01 11:13:00;Yes;RS;;;;;;RL;;;GG, LN, NR;;;RL;;NR, LN;SB;;;RS;;GG, NR;SB;;;RL;;GG, LN;SB;;;green;673;673.0
+0dd8ec1a-7c0b-4124-bcb7-52ee40c47690;2025-04-04;1900-01-01 11:15:00;NO;RS;;;;;;RL;;;GG, LN, NR;;;RL;;LN, NR;SB;;;RL;;GG, NR;SB;;;RL;;GG, LN;SB;;;red;675;675.0
+b80e9db4-c3e1-4ce6-87e7-fbb5d8725434;2025-04-04;1900-01-01 11:17:00;Yes;RS;;;;;;RL;;;GG, LN, NR;;;RL;;LN, NR;SB;;;RL;;GG, NR;SB;;;RL;;GG, LN;SB;;;green;677;677.0
+0080e52b-4dbb-4bf0-8878-b40aa195b69c;2025-04-04;1900-01-01 11:19:00;Yes;RS;;;;;;RL;;;GG, LN, NR;;;RL;;LN, NR;SB;;;RL;;GG, NR;SB;;;RL;;GG, LN;SB;;;green;679;679.0
+ea688178-1e1d-4cee-bb1e-d5e16940ee35;2025-04-04;1900-01-01 11:21:00;Yes;RS;;;;;;RL;;;GG, LN, NR;;;RL;;LN, NR;SB;;;RL;;GG, NR;SB;;;RL;;GG, LN;SB;;;green;681;681.0
+0ab79a15-8172-40ea-9cc5-bc35594d4ebf;2025-04-04;1900-01-01 11:23:00;NO;M;;;;;;RS;;;LN, GG;;;GG;;LN;SB;;;RS;;GG;SB;;;M;;;;;Banging on the fence of the naibour cage;red;683;683.0
+ed40c3cb-1880-4b19-aba2-5a6711a54048;2025-04-04;1900-01-01 11:25:00;Yes;M;;;;;;RS;;;LN, GG;;;GG;;LN;SB;;;RS;;GG;SB;;;M;;;;;Banging on the fence of the naibour cage;green;685;685.0
+954492ca-1553-45ea-a109-50c9adce65aa;2025-04-04;1900-01-01 11:27:00;NO;M;;;;;Calling;RS;;;GG, LN;;;RS;;LN;SB;;;RS;;GG;SB;;;M;;;;;Displaing;;687;687.0
+5281e1ee-e9be-4c12-8de1-245179b0bafd;2025-04-04;1900-01-01 11:29:00;NO;M;;;;;Charging;RS;;;GG, LN;;;RS;;LN;SB;;;RS;;GG;SB;;;M;;;;;Displaying;red;689;689.0
+2231b58b-fb10-4a89-9c06-c9cd31e78c93;2025-04-04;1900-01-01 11:31:00;Yes;M;;;;;Charging;RS;;;GG, LN;;;RS;;LN;SB;;;RS;;GG;SB;;;M;;;;;Displaying;green;691;691.0
+d3991c58-5c27-46e9-97c7-f21353189ebe;2025-04-04;1900-01-01 11:33:00;NO;GG;SB;;LN, GG;;;GR;MZ;;LN, GG;;;E;;LN;SB, MZ;;;RS;;GG;SB, MZ;;;M;;;;;Charging and displaying;red;693;693.0
+1b38d355-7448-485a-b1ee-80b9faffe9cc;2025-04-04;1900-01-01 11:35:00;Yes;GG;SB;;LN, GG;;;GR;MZ;;LN, GG;;;E;;LN;SB, MZ;;;RS;;GG;SB, MZ;;;M;;;;;Charging and displaying;green;695;695.0
+963f9db0-45f6-44ad-8c3b-16958d610ac6;2025-04-04;1900-01-01 11:37:00;Yes;GG;SB;;LN, GG;;;GR;MZ;;LN, GG;;;E;;LN;SB, MZ;;;RS;;GG;SB, MZ;;;M;;;;;Charging and displaying;green;697;697.0
+df28a9af-e70b-4104-9dca-67cd82570f0c;2025-04-04;1900-01-01 11:39:00;NO;M;;SB, GG;LN;;;M;;GG, MZ;LN;;;M;;MZ, SB;LN;;;RS;;GG;SB, MZ;;;M;;;;;Charging displaying;red;699;699.0
+005113c1-9628-41ed-add0-0b2f0bf383b8;2025-04-04;1900-01-01 11:41:00;Yes;M;;SB, GG;LN;;;M;;GG, MZ;LN;;;M;;MZ, SB;LN;;;RS;;GG;SB, MZ;;;M;;;;;Charging displaying;green;701;701.0
+dc528e35-37e0-450f-a271-31be3c0b4913;2025-04-04;1900-01-01 11:43:00;Yes;M;;SB, GG;LN;;;M;;GG, MZ;LN;;;M;;MZ, SB;LN;;;RS;;GG;SB, MZ;;;M;;;;;Charging displaying;green;703;703.0
+11a22ea1-6708-4eba-807a-1b2d6e4642c1;2025-04-04;1900-01-01 11:45:00;NO;E;;;;;Playing with NR;RS;;;LN, GG;;;RS;;LN;SB;;;RL;;GG;SB;;;M;;;;;Playing with MZ;;705;705.0
+4816907d-7b91-4c8c-9804-4b450d52f561;2025-04-04;1900-01-01 13:16:00;NO;M;;;;;;M;;;GG, LN;;;E;;LN;SB;;;E;;GG;SB;;;E;;;;;;;796;795.0
+aa35315c-0f5d-4a10-94ca-9e106181c5b5;2025-04-04;1900-01-01 13:18:00;NO;E;;NR;;;;E;;LN, GG;;;;E;;LN, SB;;;;E;;GG, SB;;;;E;;MZ;;;;;798;797.0
+c5d61cd0-1d79-43ac-9516-f52f35712898;2025-04-04;1900-01-01 13:20:00;NO;M;;;;;;E;;GG, LN;;;;E;;LN, SB;;;;E;;GG, SB;;;;E;;;;;;;800;799.0
+89b10cee-2ed5-4d0f-b73d-d8d5bcfa76f5;2025-04-04;1900-01-01 13:22:00;NO;E;;;;;;E;;GG, LN;;;;E;;LN, SB;;;;E;;SB, GG;;;;E;;;;;;red;802;801.0
+9f88c4b5-1ae4-434c-8e43-732b1216deb4;2025-04-04;1900-01-01 13:24:00;Yes;E;;;;;;E;;GG, LN;;;;E;;LN, SB;;;;E;;SB, GG;;;;E;;;;;;green;804;803.0
+64dd9b87-7daa-4258-a373-9b39e958ca86;2025-04-04;1900-01-01 13:26:00;Yes;E;;;;;;E;;GG, LN;;;;E;;LN, SB;;;;E;;SB, GG;;;;E;;;;;;green;806;805.0
+f1076e17-19aa-4406-b8bd-2f95f63df2c2;2025-04-04;1900-01-01 13:28:00;Yes;E;;;;;;E;;GG, LN;;;;E;;LN, SB;;;;E;;SB, GG;;;;E;;;;;;green;808;807.0
+99b82b73-53b6-4528-a926-670581f22cf4;2025-04-04;1900-01-01 13:31:00;Yes;E;;;;;;E;;GG, LN;;;;E;;LN, SB;;;;E;;SB, GG;;;;E;;;;;;green;811;811.0
+fa2e1623-bb43-47fc-a181-c879bdb4ebec;2025-04-04;1900-01-01 13:32:00;Yes;E;;;;;;E;;GG, LN;;;;E;;LN, SB;;;;E;;SB, GG;;;;E;;;;;;green;812;813.0
+59d6ccd7-5a06-4580-a472-901ed1b60c55;2025-04-04;1900-01-01 13:34:00;Yes;E;;;;;;E;;GG, LN;;;;E;;LN, SB;;;;E;;SB, GG;;;;E;;;;;;green;814;815.0
+ae19704b-c5d8-48b9-b0c4-524522a18c47;2025-04-04;1900-01-01 13:36:00;Yes;E;;;;;;E;;GG, LN;;;;E;;LN, SB;;;;E;;SB, GG;;;;E;;;;;;green;816;817.0
+d8bc9296-6d4d-4cdf-acea-34e0494498fd;2025-04-04;1900-01-01 13:38:00;Yes;E;;;;;;E;;GG, LN;;;;E;;LN, SB;;;;E;;SB, GG;;;;E;;;;;;green;818;819.0
+3858916b-9367-4bc6-84ea-b754cd2dfdf1;2025-04-04;1900-01-01 13:40:00;NO;RS;;;;;;E;;LN, GG;;;;E;;SB, LN;;;;RS;;SB, GG;;;;E;;;;;;red;820;821.0
+dc57521e-004c-472b-82d7-00fa0112043f;2025-04-04;1900-01-01 13:42:00;Yes;RS;;;;;;E;;LN, GG;;;;E;;SB, LN;;;;RS;;SB, GG;;;;E;;;;;;green;822;823.0
+c2b19665-2f5d-4a55-a7e8-10a32597c66f;2025-04-04;1900-01-01 13:44:00;Yes;RS;;;;;;E;;LN, GG;;;;E;;SB, LN;;;;RS;;SB, GG;;;;E;;;;;;green;824;825.0
+a97fbc94-2b9a-46a9-8700-6963d48be17e;2025-04-04;1900-01-01 13:46:00;Yes;RS;;;;;;E;;LN, GG;;;;E;;SB, LN;;;;RS;;SB, GG;;;;E;;;;;;green;826;827.0
+bea6df34-1168-45ff-8ceb-9dda37efac74;2025-04-04;1900-01-01 13:48:00;Yes;RS;;;;;;E;;LN, GG;;;;E;;SB, LN;;;;RS;;SB, GG;;;;E;;;;;;green;828;829.0
+b3e03d8f-20b8-4a89-98a5-7fc5f6ad1b1c;2025-04-04;1900-01-01 13:50:00;NO;M;;;;;;M;;;GG, LN;;;E;;LN;SB;;;E;;GG;SB;;;E;;;;;;;830;831.0
+0db454f1-4743-4268-a166-3f8521441d0a;2025-04-04;1900-01-01 13:52:00;NO;E;;GG, LN;SB;;;RS;;;GG, MZ, LN;;;E;;LN, MZ;SB;;;RS;;GG, MZ;SB;;;E;;;;;;red;832;833.0
+c2fc71dd-ae32-4fce-bbc3-5c6fc671dee9;2025-04-04;1900-01-01 13:54:00;Yes;E;;GG, LN;SB;;;RS;;;GG, MZ, LN;;;E;;LN, MZ;SB;;;RS;;GG, MZ;SB;;;E;;;;;;green;834;835.0
+b256cc13-8651-4d26-962e-17b36da2469e;2025-04-04;1900-01-01 13:56:00;Yes;E;;GG, LN;SB;;;RS;;;GG, MZ, LN;;;E;;LN, MZ;SB;;;RS;;GG, MZ;SB;;;E;;;;;;green;836;837.0
+f96c7f84-116e-45f7-9b34-a25f235cc6e6;2025-04-04;1900-01-01 13:58:00;Yes;E;;GG, LN;SB;;;RS;;;GG, MZ, LN;;;E;;LN, MZ;SB;;;RS;;GG, MZ;SB;;;E;;;;;;green;838;839.0
+8b73e719-324c-4e3a-8865-4b5e0c6a3068;2025-04-04;1900-01-01 14:00:00;Yes;E;;GG, LN;SB;;;RS;;;GG, MZ, LN;;;E;;LN, MZ;SB;;;RS;;GG, MZ;SB;;;E;;;;;;green;840;841.0
+332c36b6-e6bf-4659-9bc9-9dcd7d4899e8;2025-04-04;1900-01-01 14:02:00;NO;E;;LN;SB;;;RS;;GG;MZ, LN;;;RS;;SB;;;;RS;;GG;SB;;;E;;;;;;red;842;843.0
+b9e6c0cf-7c21-4584-8cb4-cca6b8b6fddc;2025-04-04;1900-01-01 14:04:00;Yes;E;;LN;SB;;;RS;;GG;MZ, LN;;;RS;;SB;;;;RS;;GG;SB;;;E;;;;;;green;844;845.0
+dfedcb71-bbc5-484f-865c-78339721d5ae;2025-04-04;1900-01-01 14:06:00;Yes;E;;LN;SB;;;RS;;GG;MZ, LN;;;RS;;SB;;;;RS;;GG;SB;;;E;;;;;;green;846;847.0
+a7a125ad-95ed-4629-b87f-0fc8acad5917;2025-04-04;1900-01-01 14:08:00;NO;M;;;GG, SB;;;RS;;;GG, MZ, LN;;;E;;LN;MZ, SB;;;RS;;GG;SB;;;E;;;;;;;848;849.0
+69ea717f-bc9f-470a-b216-381ffa2c156e;2025-04-04;1900-01-01 14:11:00;NO;RS;;SB;;;;RS;;MZ;GG, LN;;;E;;;SB, LN;;;RS;;;SB, GG;;;E;;;;;;;851;851.0
+d39a1d58-f5df-4baa-bd70-2ee5b1ee1c92;2025-04-04;1900-01-01 14:12:00;NO;RS;;;;;Calling to neighbor cage;RS;;;LN, GG;;;RS;;LN;SB;;;RL;;GG;SB;;;E;;;;;;red;852;853.0
+b47b6642-3664-49ec-9577-91a85d38226a;2025-04-04;1900-01-01 14:14:00;Yes;RS;;;;;Calling to neighbor cage;RS;;;LN, GG;;;RS;;LN;SB;;;RL;;GG;SB;;;E;;;;;;green;854;855.0
+dc4baf5e-795f-408a-a5fb-eaba7a743519;2025-04-04;1900-01-01 14:16:00;NO;RS;;;;;;RS;;;;;;E;;LN;;;;RS;;GG;;;;E;;;;;;;856;857.0
+9de3eeb8-2dd0-48c9-9314-e3575bc3159f;2025-04-04;1900-01-01 14:18:00;NO;RS;;;;;;E;;GG;;;;RS;;SB;LN;;;RS;;;GG;;;E;;;;;;red;858;859.0
+4e4b16bb-0666-404b-98d0-d4f946c070f3;2025-04-04;1900-01-01 14:20:00;Yes;RS;;;;;;E;;GG;;;;RS;;SB;LN;;;RS;;;GG;;;E;;;;;;green;860;861.0
+cc5b2656-358f-42cf-a65c-b8cd40fbde95;2025-04-04;1900-01-01 14:22:00;Yes;RS;;;;;;E;;GG;;;;RS;;SB;LN;;;RS;;;GG;;;E;;;;;;green;862;863.0
+ced15ca1-bdd2-467a-9212-07b6f7c4c6be;2025-04-04;1900-01-01 14:24:00;NO;RS;;;;;;E;;;;;;M;;;;;;RL;;;;;;M;;;;;Display as reaction to calls from neighbors cage;;864;865.0
+44b950b6-ba50-4647-95d8-0216062e55d2;2025-04-04;1900-01-01 14:26:00;NO;E;;GG, SB;;;;E;;GG, MZ;;;;RS;;MZ, SB;;;;RL;;;;;;E;;;;;;red;866;867.0
+d1e492ce-73ea-4aff-a21a-bc95b32d89f3;2025-04-04;1900-01-01 14:28:00;Yes;E;;GG, SB;;;;E;;GG, MZ;;;;RS;;MZ, SB;;;;RL;;;;;;E;;;;;;green;868;869.0
+7bc94e66-3b97-459e-aef9-5d7e98448fde;2025-04-04;1900-01-01 14:30:00;Yes;E;;GG, SB;;;;E;;GG, MZ;;;;RS;;MZ, SB;;;;RL;;;;;;E;;;;;;green;870;871.0
+288a33d5-9dc6-465f-8d5a-4f3bacd0a500;2025-04-04;1900-01-01 14:32:00;Yes;E;;GG, SB;;;;E;;GG, MZ;;;;RS;;MZ, SB;;;;RL;;;;;;E;;;;;;green;872;873.0
+77534d7e-b431-4a97-b16a-4386020b4ed7;2025-04-04;1900-01-01 14:34:00;NO;GG;GG;SB;;;;RS;;GG, MZ;;;;GR;MZ;SB;;;;RL;;;;;;E;;;;;;;874;875.0
+107d6d74-9528-4aaa-ad80-39c39d0a5fa7;2025-04-04;1900-01-01 14:37:00;NO;RS;;GG, SB;;;;RS;;GG, MZ;;;;RS;;MZ, SB;;;;RL;;;;;;E;;;;;;;877;877.0
+19deb70a-432e-437e-af56-25c438d1e63f;2025-04-04;1900-01-01 14:38:00;NO;PL;;NR;;;;RS;;GG;;;;RS;;SB;;;;RL;;;;;;PL;;;;;;;878;879.0
+51231596-dfb1-423f-ab35-f640822ddd00;2025-04-04;1900-01-01 14:40:00;NO;PL;;GG, SB, NR;;;;PL;;GG, MZ, NR;;;;PL;;MZ, SB, NR;;;;RL;;;;;;PL;;MZ, SB, GG;;;;red;880;881.0
+08315f4f-0411-467a-8ac9-acec3a4e65be;2025-04-04;1900-01-01 14:42:00;Yes;PL;;GG, SB, NR;;;;PL;;GG, MZ, NR;;;;PL;;MZ, SB, NR;;;;RL;;;;;;PL;;MZ, SB, GG;;;;green;882;883.0
+46aa059f-8dc8-43f8-9320-6e93e516b659;2025-04-04;1900-01-01 14:44:00;Yes;PL;;GG, SB, NR;;;;PL;;GG, MZ, NR;;;;PL;;MZ, SB, NR;;;;RL;;;;;;PL;;MZ, SB, GG;;;;green;884;885.0

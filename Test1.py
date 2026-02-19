@@ -62,16 +62,25 @@ for input_file_path in data_files:
 # --------------------------------------------------------------------------
 #                     PHASE 2: Process Each Raw DataFrame
 # --------------------------------------------------------------------------
-final_merged_dfs: dict[str, pd.DataFrame] = {}
+#TODO: Implement All Occurence data into processing pipeline
+# Fact-check data if data processing was successful and no data are missing
+# Build data search function?
+
+# Define subfolders for organization
+steps_dir = os.path.join(output_dir, "intermediate_steps")
+os.makedirs(steps_dir, exist_ok=True)
+
+# Global lists to store all data across all file types and chunks
+all_behave_data = []
+all_dist_data = []
+all_occ_data = []
 
 for file_type, list_of_raw_dfs in all_raw_dfs.items():
     print(f"\nProcessing files for Type {file_type}...")
 
-    processed_chunks = []
-
     for idx, raw_df in enumerate(list_of_raw_dfs):
         try:
-            # Your method aligns the raw data to the fixed template timepoints
+            # Step 1: Time Adjustment
             time_sorted_df_raw, _ = Methods.adjust_msm_in_raw_empty(
                 raw_df=raw_df,
                 file_type=file_type,
@@ -79,19 +88,45 @@ for file_type, list_of_raw_dfs in all_raw_dfs.items():
                 time_col_raw="1_TIme",
                 time_col_empty="time"
             )
-            print('time_sorted_df_raw: \n', time_sorted_df_raw)
+            # Save Step 1
+            time_sorted_df_raw.to_csv(os.path.join(steps_dir, f"type{file_type}_file{idx}_step1_time.csv"), index=False)
 
-            df_dec_ind: pd.DataFrame = Methods.detect_ind(time_sorted_df_raw)
-            print('df_dec_ind: \n', df_dec_ind)
-            # Fix date column
-            df_dec_ind["date"] = pd.to_datetime(df_dec_ind["date"]).dt.strftime("%d-%m-%Y")
-            # Fix time column
-            df_dec_ind["1_TIme"] = pd.to_datetime(df_dec_ind["1_TIme"]).dt.strftime("%H:%M")
+            # Step 2: Detection and Renaming (event_sorted_df)
+            event_sorted_df = Methods.process_sort_event(time_sorted_df_raw)
+            # Save Step 2
+            event_sorted_df.to_csv(os.path.join(steps_dir, f"type{file_type}_file{idx}_step2_event.csv"), index=False)
 
+            # Step 3: Reshaping (The 3 tables)
+            behave_df, dist_df, occ_df = Methods.process_sort_beh_dist(event_sorted_df)
 
+            # Save Step 3 (Individual file outputs)
+            behave_df.to_csv(os.path.join(steps_dir, f"type{file_type}_file{idx}_step3_behave.csv"), index=False)
+            dist_df.to_csv(os.path.join(steps_dir, f"type{file_type}_file{idx}_step3_dist.csv"), index=False)
 
-            processed_chunks.append(time_sorted_df_raw)
+            # Add to global lists for the final combined files
+            all_behave_data.append(behave_df)
+            all_dist_data.append(dist_df)
+            all_occ_data.append(occ_df)
+
+            print(f"✅ Finished file #{idx + 1}")
 
         except Exception as e:
             print(f"🛑 Error processing Type {file_type} (file #{idx + 1}): {e}")
 
+# --- FINAL COMBINATION STEP ---
+print("\nCombining all files into final outputs...")
+
+if all_behave_data:
+    final_behave = pd.concat(all_behave_data, ignore_index=True)
+    final_behave.to_csv(os.path.join(output_dir, "final_combined_behaviour.csv"), index=False)
+    print(f"📁 Saved final_combined_behaviour.csv ({len(final_behave)} rows)")
+
+if all_dist_data:
+    final_dist = pd.concat(all_dist_data, ignore_index=True)
+    final_dist.to_csv(os.path.join(output_dir, "final_combined_distance.csv"), index=False)
+    print(f"📁 Saved final_combined_distance.csv ({len(final_dist)} rows)")
+
+if all_occ_data:
+    final_occ = pd.concat(all_occ_data, ignore_index=True)
+    final_occ.to_csv(os.path.join(output_dir, "final_combined_occurrence.csv"), index=False)
+    print(f"📁 Saved final_combined_occurrence.csv ({len(final_occ)} rows)")
