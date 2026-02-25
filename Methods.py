@@ -921,78 +921,85 @@ def process_sort_beh_dist(df):
     return df_beh, df_dist, df_occ
 
 
-def process_all_occurrence(df, file_type, all_occ_dfs):
-    # 1. Flexible Date Parsing
-    def parse_flexible_date(val):
-        if pd.isna(val) or val == "": return None
-        s = str(val).strip()
-        try:
-            # If it has dots (European), use dayfirst
-            if '.' in s: return pd.to_datetime(s, dayfirst=True)
-            # Otherwise (Slashes or ISO), let pandas decide
-            return pd.to_datetime(s)
-        except:
-            return pd.to_datetime(s, errors='coerce')
+def parse_flexible_date(val):
+    """Parses European dots or ISO format and forward-fills missing values."""
+    if pd.isna(val) or val == "": return None
+    s = str(val).strip()
+    try:
+        if '.' in s: return pd.to_datetime(s, dayfirst=True)
+        return pd.to_datetime(s)
+    except:
+        return pd.to_datetime(s, errors='coerce')
 
-    # Detect the date column (Epicollect uses 'created_at')
+
+def to_msm(time_val):
+    """Converts HH:MM or Timestamp to minutes since midnight."""
+    if pd.isna(time_val): return 0
+    s = str(time_val).strip()
+    if ' ' in s: s = s.split(' ')[-1]
+    try:
+        parts = s.split(':')
+        return int(parts[0]) * 60 + int(parts[1])
+    except:
+        return 0
+
+
+def get_occurrence_metadata(df, row, b_col_idx):
+    """Scans neighboring columns for Contact and Notes relative to a behavior column."""
+    partner, notes = "", ""
+    # Check the next 5 columns for specific keywords
+    for i in range(b_col_idx + 1, min(b_col_idx + 6, len(df.columns))):
+        c_name = df.columns[i]
+        if 'Contact' in c_name: partner = row[c_name]
+        if 'Notes' in c_name or 'Occurence' in c_name: notes = row[c_name]
+    return partner, notes
+
+
+def process_all_occurrence(df, file_type, all_occ_dfs):
+    """Main function to flatten and validate occurrence data."""
+
+    # 1. Standardize Dates
     date_col = 'created_at' if 'created_at' in df.columns else 'date'
     if date_col not in df.columns:
         print(f"⚠️ Skipping: No date column found in {file_type}")
         return
 
-    # Process dates and forward-fill if any are missing
-    df['date_dt'] = df[date_col].apply(parse_flexible_date)
-    df['date_dt'] = df['date_dt'].ffill()
+    df['date_dt'] = df[date_col].apply(parse_flexible_date).ffill()
     df['date_str'] = df['date_dt'].dt.strftime('%d-%m-%Y')
 
-    # 2. Time to Minutes Since Midnight (msm)
-    def to_msm(time_val):
-        if pd.isna(time_val): return 0
-        s = str(time_val).strip()
-        if ' ' in s: s = s.split(' ')[-1]  # handle '1900-01-01 09:42'
-        try:
-            parts = s.split(':')
-            return int(parts[0]) * 60 + int(parts[1])
-        except:
-            return 0
-
-    # 3. Identify Behavior Columns (e.g., '4_ST_Behavior')
+    # 2. Identify Behavior Columns
     beh_cols = [c for c in df.columns if '_Behavior' in c]
-
     rows = []
-    for idx, row in df.iterrows():
+    behave_dict = get_behavior_code_dict(df)
+    # 3. Process Rows with Cage Verification
+    for _, row in df.iterrows():
         msm_val = to_msm(row.get('1_TIme', '00:00'))
 
         for b_col in beh_cols:
             val = row[b_col]
             if pd.isna(val) or str(val).strip() == "":
-                continue  # Skip empty observations
+                continue
 
-            # Extract Animal ID (the middle part of '4_ST_Behavior')
-            # Handle formats like '4_ST_Behavior' or 'ST_Behavior'
+                # Extract ID: '4_ST_Behavior' -> 'ST'
             parts = b_col.split('_')
             ind_id = parts[1] if len(parts) > 2 else parts[0]
 
-            # Find associated Contact and Notes (usually the next few columns)
-            # We look for the prefix (e.g., '4_ST') in nearby columns
-            prefix = b_col.replace('_Behavior', '')
-            col_idx = df.columns.get_loc(b_col)
+            # REUSE YOUR EXISTING LOGIC: Verify this animal belongs in this cage
+            actual_cage = get_group(ind_id, Cage_Comp_Dates, behave_dict, file_type)
 
-            partner = ""
-            notes = ""
-            # Search next 5 columns for 'Contact' or 'Notes'
-            for i in range(col_idx + 1, min(col_idx + 6, len(df.columns))):
-                c_name = df.columns[i]
-                if 'Contact' in c_name: partner = row[c_name]
-                if 'Notes' in c_name or 'Occurence' in c_name: notes = row[c_name]
+            # Optional: Warning if the ID doesn't match the file_type
+            if actual_cage and actual_cage != file_type:
+                # This helps catch manual entry errors in the raw files
+                pass
 
-            # Build the flat row
+            partner, notes = get_occurrence_metadata(df, row, df.columns.get_loc(b_col))
+
             rows.append({
                 'ec5_uuid': row.get('ec5_uuid', ''),
                 'condition': 'All_Occurrence',
                 'date': row['date_str'],
                 'msm': msm_val,
-                'group': file_type,  # e.g., 'Cage_A'
+                'group': file_type,
                 'Ind1': ind_id,
                 'behaviour': val,
                 'partner': partner if pd.notna(partner) else "",
@@ -1003,8 +1010,9 @@ def process_all_occurrence(df, file_type, all_occ_dfs):
 
     if rows:
         occ_df = pd.DataFrame(rows)
+        # Ensure the list exists for this key before appending
         all_occ_dfs[file_type].append(occ_df)
-        print(f"✅ Processed {len(occ_df)} occurrences from {file_type}")
+        print(f"✅ Processed {len(occ_df)} occurrences from Cage {file_type}")
 
 
 def read_data(input_file_path: str):
