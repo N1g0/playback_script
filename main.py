@@ -16,6 +16,12 @@ print(data_files)
 
 # --- Prepare storage ---
 all_raw_dfs: dict[str, list[pd.DataFrame]] = defaultdict(list)
+all_occ_dfs: dict[str, list[pd.DataFrame]] = defaultdict(list)
+
+# Global lists to store all data across all file types and chunks
+all_behave_data: list = []
+all_dist_data: list = []
+all_occ_data: list = []
 
 # --------------------------------------------------------------------------
 #                          PHASE 1: Read and Store
@@ -26,38 +32,13 @@ for input_file_path in data_files:
 
     # --- Skip All_Occurence files ---
     if "all_occurence" in input_file_path.lower():
-        print(f"Skipping special file: {input_file_path}")
+        df_occ: pd.DataFrame = Methods.read_data(input_file_path)
+        all_occ_data, file_type = Methods.file_name(input_file_path, df_occ, all_occ_dfs)
+        Methods.process_all_occurrence(df_occ, file_type, all_occ_dfs)
         continue
 
-    # --- Read CSV or Excel ---
-    try:
-        if input_file_path.endswith(".csv"):
-            df_raw: pd.DataFrame = pd.read_csv(input_file_path, sep=';')
-        else:
-            df_raw: pd.DataFrame = pd.read_excel(input_file_path)
-    except Exception as e:
-        print(f"🛑 Error reading file {input_file_path}: {e}")
-        continue
-
-    # --- Determine file type ---
-    file_name = os.path.basename(input_file_path).lower()
-    file_type: str | None = None
-
-    if "_a_" in file_name:
-        file_type = "A"
-    elif "_b_" in file_name:
-        file_type = "B"
-    elif "_c_" in file_name:
-        file_type = "C"
-
-    if file_type:
-        print(f"→ Detected {file_type} file: {input_file_path}")
-
-        # Store raw_df for processing
-        all_raw_dfs[file_type].append(df_raw)
-
-    else:
-        print(f"⚠️ Could not detect file type (A, B, or C) for: {input_file_path}. Skipping.")
+    df_raw: pd.DataFrame = Methods.read_data(input_file_path)
+    all_raw_dfs, file_type = Methods.file_name(input_file_path, df_raw, all_raw_dfs)
 
 # --------------------------------------------------------------------------
 #                     PHASE 2: Process Each Raw DataFrame
@@ -65,16 +46,10 @@ for input_file_path in data_files:
 #TODO: Implement All Occurence data into processing pipeline
 # Fact-check data if data processing was successful and no data are missing
 # Build data search function?
-# CHeck why B is not in the final data collection
 
 # Define subfolders for organization
 steps_dir = os.path.join(output_dir, "intermediate_steps")
 os.makedirs(steps_dir, exist_ok=True)
-
-# Global lists to store all data across all file types and chunks
-all_behave_data = []
-all_dist_data = []
-all_occ_data = []
 
 for file_type, list_of_raw_dfs in all_raw_dfs.items():
     print(f"\nProcessing files for Type {file_type}...")
@@ -107,7 +82,7 @@ for file_type, list_of_raw_dfs in all_raw_dfs.items():
             # Add to global lists for the final combined files
             all_behave_data.append(behave_df)
             all_dist_data.append(dist_df)
-            all_occ_data.append(occ_df)
+            all_occ_dfs[file_type].append(occ_df)
 
             print(f"✅ Finished file #{idx + 1}")
 
@@ -127,7 +102,20 @@ if all_dist_data:
     final_dist.to_csv(os.path.join(output_dir, "final_combined_distance.csv"), index=False)
     print(f"📁 Saved final_combined_distance.csv ({len(final_dist)} rows)")
 
-if all_occ_data:
-    final_occ = pd.concat(all_occ_data, ignore_index=True)
-    final_occ.to_csv(os.path.join(output_dir, "final_combined_occurrence.csv"), index=False)
+#TODO: Sorting all the columns to the propper columns names and dates
+all_dfs_list = []
+for cage_type in all_occ_dfs:
+    all_dfs_list.extend(all_occ_dfs[cage_type])
+
+# 2. Check if the flattened list has any data
+if all_dfs_list:
+    # Concatenate all dataframes into one long "final" dataframe
+    final_occ = pd.concat(all_dfs_list, ignore_index=True)
+
+    # Save to CSV
+    output_path = os.path.join(output_dir, "final_combined_occurrence.csv")
+    final_occ.to_csv(output_path, index=False)
+
     print(f"📁 Saved final_combined_occurrence.csv ({len(final_occ)} rows)")
+else:
+    print("⚠️ No data was found to concatenate.")

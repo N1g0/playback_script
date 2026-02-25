@@ -1,6 +1,7 @@
 import os
 import re
 from datetime import datetime, timedelta, time
+
 import numpy as np
 import pandas as pd
 from scipy.optimize import linear_sum_assignment
@@ -918,3 +919,131 @@ def process_sort_beh_dist(df):
     print(f"Processed {len(df_dist)} distance records and {len(df_beh)} behavior states.")
 
     return df_beh, df_dist, df_occ
+
+
+def process_all_occurrence(df, file_type, all_occ_dfs):
+    # 1. Flexible Date Parsing
+    def parse_flexible_date(val):
+        if pd.isna(val) or val == "": return None
+        s = str(val).strip()
+        try:
+            # If it has dots (European), use dayfirst
+            if '.' in s: return pd.to_datetime(s, dayfirst=True)
+            # Otherwise (Slashes or ISO), let pandas decide
+            return pd.to_datetime(s)
+        except:
+            return pd.to_datetime(s, errors='coerce')
+
+    # Detect the date column (Epicollect uses 'created_at')
+    date_col = 'created_at' if 'created_at' in df.columns else 'date'
+    if date_col not in df.columns:
+        print(f"⚠️ Skipping: No date column found in {file_type}")
+        return
+
+    # Process dates and forward-fill if any are missing
+    df['date_dt'] = df[date_col].apply(parse_flexible_date)
+    df['date_dt'] = df['date_dt'].ffill()
+    df['date_str'] = df['date_dt'].dt.strftime('%d-%m-%Y')
+
+    # 2. Time to Minutes Since Midnight (msm)
+    def to_msm(time_val):
+        if pd.isna(time_val): return 0
+        s = str(time_val).strip()
+        if ' ' in s: s = s.split(' ')[-1]  # handle '1900-01-01 09:42'
+        try:
+            parts = s.split(':')
+            return int(parts[0]) * 60 + int(parts[1])
+        except:
+            return 0
+
+    # 3. Identify Behavior Columns (e.g., '4_ST_Behavior')
+    beh_cols = [c for c in df.columns if '_Behavior' in c]
+
+    rows = []
+    for idx, row in df.iterrows():
+        msm_val = to_msm(row.get('1_TIme', '00:00'))
+
+        for b_col in beh_cols:
+            val = row[b_col]
+            if pd.isna(val) or str(val).strip() == "":
+                continue  # Skip empty observations
+
+            # Extract Animal ID (the middle part of '4_ST_Behavior')
+            # Handle formats like '4_ST_Behavior' or 'ST_Behavior'
+            parts = b_col.split('_')
+            ind_id = parts[1] if len(parts) > 2 else parts[0]
+
+            # Find associated Contact and Notes (usually the next few columns)
+            # We look for the prefix (e.g., '4_ST') in nearby columns
+            prefix = b_col.replace('_Behavior', '')
+            col_idx = df.columns.get_loc(b_col)
+
+            partner = ""
+            notes = ""
+            # Search next 5 columns for 'Contact' or 'Notes'
+            for i in range(col_idx + 1, min(col_idx + 6, len(df.columns))):
+                c_name = df.columns[i]
+                if 'Contact' in c_name: partner = row[c_name]
+                if 'Notes' in c_name or 'Occurence' in c_name: notes = row[c_name]
+
+            # Build the flat row
+            rows.append({
+                'ec5_uuid': row.get('ec5_uuid', ''),
+                'condition': 'All_Occurrence',
+                'date': row['date_str'],
+                'msm': msm_val,
+                'group': file_type,  # e.g., 'Cage_A'
+                'Ind1': ind_id,
+                'behaviour': val,
+                'partner': partner if pd.notna(partner) else "",
+                'notes': notes if pd.notna(notes) else "",
+                'playing': 1 if val == 'PL' else 0,
+                'aggression': 1 if val == 'AG' else 0
+            })
+
+    if rows:
+        occ_df = pd.DataFrame(rows)
+        all_occ_dfs[file_type].append(occ_df)
+        print(f"✅ Processed {len(occ_df)} occurrences from {file_type}")
+
+
+def read_data(input_file_path: str):
+    """
+    Read CSV or Excel
+    :param input_file_path:
+    :return: Pandas Dataframe
+    """
+    try:
+        if input_file_path.endswith(".csv"):
+            df_raw: pd.DataFrame = pd.read_csv(input_file_path, sep=None, engine='python')
+        else:
+            df_raw: pd.DataFrame = pd.read_excel(input_file_path)
+        return df_raw
+
+    except Exception as e:
+        print(f"🛑 Error reading file {input_file_path}: {e}")
+        return None
+
+
+def file_name(input_file_path, df_raw, all_raw_dfs):
+    # --- Determine file type ---
+    file_name: str = os.path.basename(input_file_path).lower()
+    file_type: str | None = None
+
+    if "_a_" in file_name:
+        file_type = "A"
+    elif "_b_" in file_name:
+        file_type = "B"
+    elif "_c_" in file_name:
+        file_type = "C"
+
+    if file_type:
+        print(f"→ Detected {file_type} file: {input_file_path}")
+
+        all_raw_dfs[file_type].append(df_raw)
+
+        return all_raw_dfs, file_type
+
+    else:
+        print(f"⚠️ Could not detect file type (A, B, or C) for: {input_file_path}. Skipping.")
+        return None
