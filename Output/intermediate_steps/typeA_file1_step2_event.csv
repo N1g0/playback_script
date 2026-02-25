@@ -1,107 +1,107 @@
 ec5_uuid,date,1_TIme,msm,Ind_1,Ind_1_Behavior,Ind_1_Contact,Ind_1_AR,Ind_1_3M,Ind_2,Ind_2_Behavior,Ind_2_Contact,Ind_2_AR,Ind_2_3M,Ind_3,Ind_3_Behavior,Ind_3_Contact,Ind_3_AR,Ind_3_3M,Ind_4,Ind_4_Behavior,Ind_4_Contact,Ind_4_AR,Ind_4_3M,Ind_5,Ind_5_Behavior,Ind_5_Contact,Ind_5_AR,Ind_5_3M,condition,trial,first_day,phase,group,block_ID
-f8c5c365-6a21-465b-8fe3-f7f0883d55a6,14-03-2025,09:34,574,ST,RS,,,,NY,E,,,,SR,RS,,,,TK,RS,,,,TN,RS,,,,Crow,1,True,morn1,,morn1__trial1_first_cont
-1843b240-cbac-4efd-837f-4cdc6c3e2b57,14-03-2025,09:36,576,ST,RS,,,,NY,E,,,,SR,RS,,,,TK,RS,,,,TN,M,,,,Crow,1,True,morn1,,morn1__trial1_first_cont
-5cb29631-aa3f-4178-8b2f-e27aed83a63a,14-03-2025,09:38,578,ST,RS,,NY,TN,NY,RS,,ST,TN,SR,M,,,,TK,RS,,,,TN,M,,,"ST, NY",Crow,1,True,morn1,,morn1__trial1_first_cont
-c81df9c3-55e4-48b9-83e5-58976f59f8f0,14-03-2025,09:40,580,ST,RS,,,,NY,RS,,,,SR,RS,,,,TK,RS,,,,TN,RS,,,,Crow,1,True,morn1,,morn1__trial1_first_cont
-c9832f0e-a51e-4407-9e02-b9b0b2d4e309,14-03-2025,09:42,582,ST,RS,,,NY,NY,M,,,ST,SR,RS,,,,TK,RS,,,,TN,RS,,,,Crow,1,True,morn1,,morn1__trial1_first_cont
-e66533d7-c0e0-4a2b-9dbe-9b0027f51b42,14-03-2025,09:44,584,ST,M,,,"TN, NY",NY,M,,,"TN, ST",SR,RS,,,,TK,RS,,,,TN,DS,,,"ST, NY",Crow,1,True,morn1,,morn1__trial1_first_cont
-46915bde-b509-4275-94e1-3af66441e021,14-03-2025,09:46,586,ST,RS,,,SR,NY,RS,,,,SR,M,,,ST,TK,RS,,,,TN,RS,,,,Crow,1,True,morn1,,morn1__trial1_first_cont
-a082c725-ac1a-4398-8731-31d5296cb83b,14-03-2025,09:48,588,ST,GR,TN,,"SR, NY",NY,M,,,"SR, ST, TN",SR,M,,,"TN, ST, NY",TK,RS,,,,TN,GG,ST,,"NY, SR",Crow,1,True,morn1,,morn1__trial1_first_cont
-c90d4d07-ca68-4d39-8f86-a31d68516511,14-03-2025,09:50,590,ST,RS,,TN,,NY,PL,,SR,,SR,PL,,NY,,TK,RS,,,,TN,RS,,ST,,Crow,1,True,morn1,,morn1__trial1_first_cont
-250703f2-3799-42c5-84a1-581560f4566b,14-03-2025,09:52,592,ST,RS,,TN,SR,NY,RS,,,,SR,M,,,"TN, ST",TK,RS,,,,TN,RS,,ST,SR,Crow,1,True,morn1,,morn1__trial1_first_cont
-92e77fea-795e-44c9-94b4-2e2343478c1c,14-03-2025,09:54,594,ST,RS,,,TN,NY,RS,,,,SR,M,,,,TK,RS,,,,TN,M,,,ST,Crow,1,True,morn1,,morn1__trial1_first_cont
-85cee0ac-df54-40ea-bb96-92628af6fbc3,14-03-2025,09:56,596,ST,RS,,,"SR, TN",NY,M,,,,SR,M,,,"TN, ST",TK,RS,,,,TN,M,,,"ST, SR",Crow,1,True,morn1,,morn1__trial1_first_cont
-58361727-bc67-450e-9e1b-02255720d6a4,14-03-2025,09:58,598,ST,RS,,,NY,NY,RS,,,ST,SR,PL,TK,,TN,TK,PL,SR,,TN,TN,RS,,,"SR, ST",Crow,1,True,morn1,,morn1__trial1_first_cont
-3f2413d1-6ccf-4445-9645-46eb684420fc,14-03-2025,10:00,600,ST,RS,,"TN, TK",,NY,RS,,,,SR,RS,,,,TK,PL,TN,ST,,TN,PL,SR,ST,,Crow,1,True,morn1,,morn1__trial1_first_cont
-1558914b-679a-4994-8591-47ec11545bbb,14-03-2025,10:02,602,ST,RS,,"TK, TN",,NY,RS,,,,SR,M,,,,TK,PL,TN,ST,,TN,PL,TK,ST,,Crow,1,True,morn1,,morn1__trial1_first_cont
-44ce43a8-fc0e-4e7c-b2bd-36ff5ee554c8,14-03-2025,10:04,604,ST,RS,,,,NY,RS,,,,SR,M,,,,TK,RS,,,,TN,RS,,,,Crow,1,True,morn1,,morn1__trial1_first_cont
-c98294c3-5a9e-4329-be14-3a0ebb3b47ff,14-03-2025,10:06,606,ST,RS,TK,,,NY,RS,,,,SR,DS,,,,TK,RS,ST,,,TN,RS,,,,Crow,1,True,morn1,,morn1__trial1_first_cont
-6637ff12-ff95-4616-ab18-61af38c79b16,14-03-2025,10:08,608,ST,RS,,,TN,NY,RS,,,,SR,RS,,,TK,TK,M,,,"SR, TN",TN,E,,,"ST, TK",Crow,1,True,morn1,,morn1__trial1_first_cont
-d5d4e59d-a6a7-49d1-9608-cd83f2aaf17c,14-03-2025,10:10,610,ST,RS,,,"SR, TK, NY",NY,RS,,,"ST, TK, SR, TN",SR,RS,,,"TN, NY, ST, TK",TK,RS,,,"ST, NY, SR",TN,RS,,,"SR, NY",Crow,1,True,morn1,,morn1__trial1_first_cont
-8aa9fa0c-a078-4d3f-b6f8-df8b80fb6621,14-03-2025,10:12,612,ST,RS,,NY,,NY,RS,,ST,,SR,RS,,,"TN, TK",TK,RS,,,SR,TN,RS,,,SR,Crow,1,True,morn1,,morn1__trial1_first_cont
-6c95e98d-4edd-42a9-8204-46c5c5e7b2c2,14-03-2025,10:14,614,ST,SD,,NY,,NY,RS,,ST,,SR,RS,,,"TN, TK",TK,RS,,,SR,TN,E,,,SR,Crow,1,True,morn1,,morn1__trial1_first_cont
-0ac4aa00-7ee2-4c32-9ead-15f2a0f7d7a9,14-03-2025,10:16,616,ST,RS,,,NY,NY,RS,,,ST,SR,RS,,,"TN, TK",TK,RS,,,SR,TN,RS,,,SR,Crow,1,True,morn1,,morn1__trial1_first_cont
-aa0399b5-2bb7-4274-ae80-ce58c9a8982d,14-03-2025,10:18,618,ST,M,,,,NY,M,,,SR,SR,M,,,NY,TK,RS,,,,TN,M,,,,Crow,1,True,morn1,,morn1__trial1_first_cont
-928060f4-f8d8-4b2a-8322-da501545c599,14-03-2025,10:20,620,ST,M,,,,NY,RS,,,SR,SR,RS,,,NY,TK,RS,,,,TN,E,,,,Crow,1,True,morn1,,morn1__trial1_first_cont
-a5fe4062-5f89-44e9-b99c-8366c76e6202,14-03-2025,10:22,622,ST,RS,,,,NY,RS,,,,SR,RS,,,,TK,RS,,,,TN,RS,,,,Crow,1,True,morn1,,morn1__trial1_first_cont
-0abd71a9-d0e5-4d1c-b6a6-3773874b9540,14-03-2025,10:24,624,ST,RS,,,,NY,RS,,,,SR,RS,,,,TK,RS,,,,TN,RS,,,,Crow,1,True,morn1,,morn1__trial1_first_cont
-7a1ecefc-e294-44d2-bf56-3d23bff371a6,14-03-2025,10:26,626,ST,E,,,TN,NY,RS,,,SR,SR,RS,,,NY,TK,RS,,,,TN,RS,,,ST,Crow,1,True,morn1,,morn1__trial1_first_cont
-b31eb160-dcf0-4d3c-bef0-177c7cf61c4d,14-03-2025,10:28,628,ST,E,,,TN,NY,RS,,,SR,SR,RS,,,NY,TK,RS,,,,TN,RS,,,ST,Crow,1,True,morn1,,morn1__trial1_first_cont
-be93d708-97cb-4990-a931-c659c8aed506,14-03-2025,10:30,630,ST,E,,,TN,NY,RS,,,SR,SR,RS,,,NY,TK,RS,,,,TN,RS,,,ST,Crow,1,True,morn1,,morn1__trial1_first_cont
-fd52ff6b-7a51-4911-a919-eb816fb5b41f,14-03-2025,10:46,646,ST,RS,,,,NY,RS,,,,SR,RS,,,"TN, TK",TK,RS,,,"TN, SR",TN,RS,,,"SR, TK",Crow,1,True,morn2,,morn2__trial1_first_cont
-d782fe2c-7055-46b6-82e9-352eed2b1b0f,14-03-2025,10:48,648,ST,RS,,NY,,NY,RS,,ST,,SR,RS,,TN,,TK,RS,,,,TN,RS,,SR,,Crow,1,True,morn2,,morn2__trial1_first_cont
-1de4908c-4908-4f6f-8d6c-f6fea6703a1e,14-03-2025,10:50,650,ST,RS,,,,NY,RS,,,,SR,RS,,TN,,TK,RS,,,,TN,RS,,SR,,Crow,1,True,morn2,,morn2__trial1_first_cont
-a040875d-23a2-435f-9831-5aa21b0da979,14-03-2025,10:52,652,ST,RS,,,,NY,RS,,,TK,SR,RS,,TN,,TK,RS,,,NY,TN,RS,,SR,,Crow,1,True,morn2,,morn2__trial1_first_cont
-fc26ab95-e89f-494c-a407-9296702c8ccc,14-03-2025,10:54,654,ST,RS,,,,NY,RS,,,TK,SR,RS,,TN,,TK,RS,,,NY,TN,RS,,SR,,Crow,1,True,morn2,,morn2__trial1_first_cont
-7ae64dd9-e573-4c1d-b543-ceab61224d68,14-03-2025,10:56,656,ST,RS,,,,NY,RS,,,,SR,RS,,"TN, TK",,TK,RS,,"TN, SR",,TN,RS,,"SR, TK",,Crow,1,True,morn2,,morn2__trial1_first_cont
-98481693-27f4-454f-8c8e-c4333911a183,14-03-2025,10:58,658,ST,RS,,,,NY,RS,,,,SR,RS,,"TN, TK",,TK,RS,,"TN, SR",,TN,RS,,"SR, TK",,Crow,1,True,morn2,,morn2__trial1_first_cont
-27bf9b55-1b7d-4743-88b2-ba172b857cc4,14-03-2025,11:00,660,ST,RS,,,,NY,RS,,,,SR,RS,,"TN, TK",,TK,RS,,"TN, SR",,TN,RS,,"SR, TK",,Crow,1,True,morn2,,morn2__trial1_first_cont
-e9296d6d-a090-42b2-8722-d5e83b82905b,14-03-2025,11:02,662,ST,RS,,,,NY,RS,,,,SR,RS,,"TK, TN",,TK,RS,,"TN, SR",,TN,RL,,"TK, SR",,Crow,1,True,morn2,,morn2__trial1_first_cont
-d33a6efe-2073-4091-adf1-8e2d29abd8d3,14-03-2025,11:04,664,ST,RS,,,,NY,RS,,,,SR,RS,,"TK, TN",,TK,RS,,"TN, SR",,TN,RL,,"TK, SR",,Crow,1,True,morn2,,morn2__trial1_first_cont
-1a23a382-bd49-45c1-9adb-e5293ae76d40,14-03-2025,11:06,666,ST,RS,,,,NY,RS,,,,SR,RS,,"TK, TN",,TK,RS,,"TN, SR",,TN,RL,,"TK, SR",,Crow,1,True,morn2,,morn2__trial1_first_cont
-1555b00c-74df-4ffd-a350-2e41deb7ef2a,14-03-2025,11:08,668,ST,RS,,,,NY,RS,,,,SR,RS,,"TK, TN",,TK,RS,,"TN, SR",,TN,RL,,"TK, SR",,Crow,1,True,morn2,,morn2__trial1_first_cont
-e61fcf92-74dc-4d6f-b13f-2209e9047fa1,14-03-2025,11:10,670,ST,RS,,,,NY,RS,,,,SR,RS,,"TK, TN",,TK,RS,,"TN, SR",,TN,RL,,"TK, SR",,Crow,1,True,morn2,,morn2__trial1_first_cont
-ddd4ea5b-1878-4074-bc45-5ebb79f69acd,14-03-2025,11:12,672,ST,RS,,,,NY,RS,,,,SR,RS,,"TK, TN",,TK,RS,,"TN, SR",,TN,RL,,"TK, SR",,Crow,1,True,morn2,,morn2__trial1_first_cont
-41d53f15-caa0-4049-b90c-6b0ddeaeba71,14-03-2025,11:14,674,ST,RS,,,,NY,RS,,,,SR,RS,,"TK, TN",,TK,RS,,"TN, SR",,TN,RL,,"TK, SR",,Crow,1,True,morn2,,morn2__trial1_first_cont
-1ade8301-bab0-4207-a8ad-26a63076f078,14-03-2025,11:16,676,ST,RS,,,,NY,RS,,,,SR,RS,,"TK, TN",,TK,RS,,"TN, SR",,TN,RL,,"TK, SR",,Crow,1,True,morn2,,morn2__trial1_first_cont
-b37a8c63-3c8d-46bb-b7dc-e44f74fdfca1,14-03-2025,11:18,678,ST,RS,,,,NY,RS,,,,SR,RS,,"TK, TN",,TK,RS,,"TN, SR",,TN,RL,,"TK, SR",,Crow,1,True,morn2,,morn2__trial1_first_cont
-4f939a5f-de5e-4029-a3f4-93fb0297934e,14-03-2025,11:20,680,ST,RS,,,,NY,RS,,,,SR,RS,,"TK, TN",,TK,RS,,"TN, SR",,TN,RS,,"TK, SR",,Crow,1,True,morn2,,morn2__trial1_first_cont
-dfc8a042-7aa4-445a-a1a0-b6c2ad91d679,14-03-2025,11:22,682,ST,RS,,,,NY,RS,,,,SR,RS,,TN,TK,TK,RS,,"TN, SR",,TN,RS,,SR,TK,Crow,1,True,morn2,,morn2__trial1_first_cont
-ce56c7ab-67f1-4397-8548-286ec6c4ada9,14-03-2025,11:24,684,ST,RS,,,,NY,RS,,,,SR,RS,,TN,TK,TK,RS,,"TN, SR",,TN,RS,,SR,TK,Crow,1,True,morn2,,morn2__trial1_first_cont
-d0333846-3c1c-43eb-b3d6-958bb50c0151,14-03-2025,11:26,686,ST,RS,,,,NY,RS,,,,SR,RS,,TN,TK,TK,RS,,"TN, SR",,TN,RS,,SR,TK,Crow,1,True,morn2,,morn2__trial1_first_cont
-ebca6b06-c681-481f-b151-d38fae450aa6,14-03-2025,11:28,688,ST,RS,,,,NY,RS,,,,SR,RS,,TN,TK,TK,RS,,"TN, SR",,TN,RS,,SR,TK,Crow,1,True,morn2,,morn2__trial1_first_cont
-3c8b6694-82b6-43e2-8a8b-16603b0d5f4b,14-03-2025,11:30,690,ST,RS,,,,NY,RS,,,,SR,RS,,TN,TK,TK,RS,,"TN, SR",,TN,RS,,SR,TK,Crow,1,True,morn2,,morn2__trial1_first_cont
-0506dc4c-680e-4780-a53c-3e9cf9998bb2,14-03-2025,11:32,692,ST,RS,,,,NY,RS,,,,SR,RS,,TN,TK,TK,RS,,"TN, SR",,TN,RS,,SR,TK,Crow,1,True,morn2,,morn2__trial1_first_cont
-f125e26e-0168-482a-82a1-fa0a3e8d5ead,14-03-2025,11:34,694,ST,RS,,,,NY,RS,,,,SR,RS,,TN,TK,TK,RS,,"TN, SR",,TN,RS,,SR,TK,Crow,1,True,morn2,,morn2__trial1_first_cont
-0c657885-5723-43be-8626-266a5c0e6e86,14-03-2025,11:36,696,ST,RS,,,,NY,RS,,,,SR,RS,,TN,TK,TK,RS,,"TN, SR",,TN,RS,,SR,TK,Crow,1,True,morn2,,morn2__trial1_first_cont
-76c22c60-6d3a-4cc3-89d9-e4abf1bea499,14-03-2025,11:38,698,ST,RS,,TN,,NY,RS,,,,SR,RS,,,TK,TK,RS,,,SR,TN,RS,,ST,,Crow,1,True,morn2,,morn2__trial1_first_cont
-b5468649-db6f-474b-be50-3f839d0e5097,14-03-2025,11:40,700,ST,RS,,TN,,NY,RS,,,,SR,RS,,,TK,TK,RS,,,SR,TN,RS,,ST,,Crow,1,True,morn2,,morn2__trial1_first_cont
-26ce4bb5-03ef-4001-83bf-56c87b0618d9,14-03-2025,11:42,702,ST,RS,,TN,,NY,RS,,,,SR,RS,,,TK,TK,RS,,,SR,TN,RS,,ST,,Crow,1,True,morn2,,morn2__trial1_first_cont
-be58f7dd-2e15-4e3c-9318-c294cde465d1,14-03-2025,11:44,704,ST,RS,,TN,,NY,RS,,,,SR,RS,,,TK,TK,RS,,,SR,TN,RS,,ST,,Crow,1,True,morn2,,morn2__trial1_first_cont
-b97cd5d0-c223-46c0-9256-605c8f0ad645,14-03-2025,11:46,706,ST,RS,,TN,,NY,RS,,,,SR,RS,,,TK,TK,RS,,,SR,TN,RS,,ST,,Crow,1,True,extra,,__trial1_first_cont
-55b4a9b2-29da-4018-b19e-4c6932f492af,14-03-2025,13:20,800,ST,E,,,,NY,E,,,,SR,E,,,,TK,E,,,,TN,E,,,,Crow,1,True,enrich,,enrich__trial1_first_cont
-93a4d7e5-f5f8-4135-b8b4-7b81c1f6d6cf,14-03-2025,13:21,801,ST,E,,,TK,NY,E,,,,SR,E,,,,TK,E,,,ST,TN,E,,,,Crow,1,True,enrich,,enrich__trial1_first_cont
-f37384ea-41a6-4296-ba18-2afb28163258,14-03-2025,13:23,803,ST,E,,,TK,NY,E,,,,SR,E,,,,TK,E,,,"TN, ST",TN,E,,,TK,Crow,1,True,enrich,,enrich__trial1_first_cont
-3646a275-4726-46a4-b2d8-91133ba5cc17,14-03-2025,13:25,805,ST,E,,,TK,NY,E,,,,SR,E,,,,TK,E,,,"TN, ST",TN,E,,,TK,Crow,1,True,enrich,,enrich__trial1_first_cont
-8b12ac55-a6b6-4872-bb19-c5fed8ed8e95,14-03-2025,13:27,807,ST,E,,,"TK, TN",NY,E,,,,SR,RS,,,,TK,E,,,"ST, TN",TN,E,,,"TK, ST",Crow,1,True,enrich,,enrich__trial1_first_cont
-1b32deee-4a13-4834-ba23-e1382f584bf0,14-03-2025,13:29,809,ST,E,,TN,,NY,E,,,,SR,RS,,,,TK,E,,,"TN, ST",TN,E,,ST,TK,Crow,1,True,enrich,,enrich__trial1_first_cont
-d8bda446-1479-4322-a9a0-2d7c40116e71,14-03-2025,13:31,811,ST,E,,TN,,NY,E,,,,SR,RS,,,,TK,E,,,"TN, ST",TN,E,,ST,TK,Crow,1,True,enrich,,enrich__trial1_first_cont
-9bf23619-d36e-4e43-81e0-34fd57d5e2b1,14-03-2025,13:33,813,ST,E,,TN,"NY, TK",NY,E,,,"ST, TN",SR,RS,,,,TK,E,,,"TN, ST",TN,E,,ST,"TK, NY",Crow,1,True,enrich,,enrich__trial1_first_cont
-b37c55bf-023f-4098-ba87-d45e957ede64,14-03-2025,13:35,815,ST,E,,,,NY,GG,,,TN,SR,RS,,,,TK,RS,,,,TN,E,,,NY,Crow,1,True,enrich,,enrich__trial1_first_cont
-757c20c1-7c92-4cf7-9da0-e438c29f9166,14-03-2025,13:37,817,ST,E,,,,NY,RS,,,TK,SR,RS,,,,TK,RS,,,NY,TN,E,,,,Crow,1,True,enrich,,enrich__trial1_first_cont
-0e88f6c9-8a5e-43ab-883c-c07d5f12ea7c,14-03-2025,13:39,819,ST,M,,,TN,NY,RS,,,TK,SR,RS,,,,TK,RS,,,NY,TN,E,,,ST,Crow,1,True,enrich,,enrich__trial1_first_cont
-4af9a70f-818e-4d69-9961-f0545d530751,14-03-2025,13:41,821,ST,E,,,TN,NY,RS,,,TK,SR,RS,,,,TK,RS,,,NY,TN,E,,,ST,Crow,1,True,enrich,,enrich__trial1_first_cont
-904b1113-bb18-486e-bbdc-93666cf6b36d,14-03-2025,13:43,823,ST,E,,,TN,NY,RS,,,,SR,RS,,,,TK,RS,,,,TN,E,,,ST,Crow,1,True,enrich,,enrich__trial1_first_cont
-48ca3e4e-f42e-4c8c-af50-5ca02db09cc8,14-03-2025,13:45,825,ST,E,,,TN,NY,RS,,,,SR,RS,,,,TK,RS,,,,TN,E,,,ST,Crow,1,True,enrich,,enrich__trial1_first_cont
-19692c1e-ccd6-433a-ad39-4a490c4063dc,14-03-2025,13:47,827,ST,E,,,TN,NY,RS,,,,SR,RS,,,,TK,RS,,,,TN,E,,,ST,Crow,1,True,enrich,,enrich__trial1_first_cont
-f098b815-7d80-4638-af79-0441164a4031,14-03-2025,13:49,829,ST,RS,,NY,,NY,M,,ST,,SR,RS,,,,TK,RS,,,,TN,M,,,,Crow,1,True,enrich,,enrich__trial1_first_cont
-feae4e17-c5c2-4a64-99ce-346b775fc95b,14-03-2025,13:51,831,ST,M,,,NY,NY,RS,,,ST,SR,RS,,,,TK,RS,,,,TN,M,,,,Crow,1,True,enrich,,enrich__trial1_first_cont
-5561db4c-90a5-4e0c-8fcc-3eab425e785d,14-03-2025,13:53,833,ST,RS,,,TN,NY,M,,,,SR,RS,,,,TK,RS,,,,TN,E,,,ST,Crow,1,True,enrich,,enrich__trial1_first_cont
-2e187996-11a2-45cc-914d-042747c1727e,14-03-2025,13:56,836,ST,RS,,,TN,NY,M,,,,SR,RS,,,,TK,RS,,,,TN,E,,,ST,Crow,1,True,enrich,,enrich__trial1_first_cont
-627d918d-df0e-4bbe-b106-751a30898e96,14-03-2025,13:57,837,ST,E,,,,NY,RS,,TK,,SR,RS,,,,TK,RS,,NY,,TN,M,,,,Crow,1,True,enrich,,enrich__trial1_first_cont
-73e64adf-16f2-4dd0-9939-5a89703c1735,14-03-2025,13:59,839,ST,E,,,,NY,M,,TN,,SR,M,,,,TK,RS,,,,TN,M,,NY,,Crow,1,True,enrich,,enrich__trial1_first_cont
-8a416e7d-47ff-4519-b5c3-32c5d8c224af,14-03-2025,14:01,841,ST,RS,,,,NY,RS,,,,SR,RS,,,,TK,RS,,TN,,TN,M,,TK,,Crow,1,True,enrich,,enrich__trial1_first_cont
-9c0b9f7b-1076-4fdf-af02-0f20a6111540,14-03-2025,14:03,843,ST,RS,,TN,TK,NY,RS,,,,SR,RS,,,,TK,RS,,,"TN, ST",TN,RS,,,"TK, ST",Crow,1,True,enrich,,enrich__trial1_first_cont
-944ede61-b8f8-4389-ac9b-ff24abf3491b,14-03-2025,14:05,845,ST,RS,,TN,TK,NY,RS,,,,SR,DS,,,,TK,RS,,TN,ST,TN,RS,,"TK, ST",,Crow,1,True,enrich,,enrich__trial1_first_cont
-959cfe03-457c-45de-a15b-1d994ca5b053,14-03-2025,14:07,847,ST,RS,,TN,TK,NY,RS,,,SR,SR,DS,,,NY,TK,RS,,TN,ST,TN,RS,,"TK, ST",,Crow,1,True,enrich,,enrich__trial1_first_cont
-4537f4bd-0063-4f40-a914-c1bcccd94ce0,14-03-2025,14:10,850,ST,RS,,TN,TK,NY,RS,,,SR,SR,M,,,NY,TK,RS,,TN,ST,TN,RS,,"TK, ST",,Crow,1,True,enrich,,enrich__trial1_first_cont
-d0565ba6-88db-4398-a3b0-d93ec4354c8c,14-03-2025,14:11,851,ST,GR,TK,TN,SR,NY,RS,,,,SR,RS,,"TK, TN",ST,TK,GG,"ST, TN",SR,,TN,GG,TK,"ST, SR",,Crow,1,True,enrich,,enrich__trial1_first_cont
-0ba91f90-94d7-4a80-a656-957ba93c4b27,14-03-2025,14:13,853,ST,GR,TK,TN,"SR, NY",NY,M,,,"SR, TK, TN, ST",SR,RS,,"TK, TN","NY, ST",TK,GG,ST,"TN, SR",,TN,RS,,"TK, SR","NY, ST",Crow,1,True,enrich,,enrich__trial1_first_cont
-2ff9f32a-149d-4426-8d83-824789a0bc8d,14-03-2025,14:15,855,ST,GR,TK,TN,SR,NY,RS,,,,SR,RS,,"TN, TK",ST,TK,GG,ST,"TN, SR",,TN,RS,,"ST, SR",TK,Crow,1,True,enrich,,enrich__trial1_first_cont
-a9ba0729-50a4-48d3-b594-1af66521aa85,14-03-2025,14:17,857,ST,GR,TK,TN,"NY, SR",NY,RS,,,"TN, ST, TK, SR",SR,RS,,"TN, TK","NY, ST",TK,GG,ST,"SR, TN",NY,TN,RS,,"SR, ST","TK, NY",Crow,1,True,enrich,,enrich__trial1_first_cont
-d95bbe78-4b52-47e9-becc-03487b5e3f9c,14-03-2025,14:19,859,ST,GR,TK,TN,"NY, SR",NY,RS,,,"TN, ST, TK, SR",SR,RS,,"TN, TK","NY, ST",TK,GG,ST,"SR, TN",NY,TN,RS,,"SR, ST","TK, NY",Crow,1,True,enrich,,enrich__trial1_first_cont
-fa5d35fb-37c2-4d15-bd50-847f07efa4b8,14-03-2025,14:21,861,ST,GR,TK,TN,"NY, SR",NY,RS,,,"TN, ST, TK, SR",SR,RS,,"TN, TK","NY, ST",TK,GG,ST,"SR, TN",NY,TN,RS,,"SR, ST","TK, NY",Crow,1,True,enrich,,enrich__trial1_first_cont
-cafd4e83-7103-43ab-addb-d1b708b268d7,14-03-2025,14:23,863,ST,GR,TK,"SR, TN",NY,NY,RS,,,"TN, ST, TK, SR",SR,RS,,"TK, TN, ST",,TK,GG,ST,"ST, TN, SR",NY,TN,RS,,"SR, ST, TK",NY,Crow,1,True,enrich,,enrich__trial1_first_cont
-000d5dd3-dc1e-4f11-b8dd-840bd1d1a878,14-03-2025,14:25,865,ST,PL,TK,"TN, SR",NY,NY,M,,,"ST, TK, SR, TN",SR,RS,,"TN, TK","ST, NY",TK,PL,ST,"SR, TN",NY,TN,RS,,"TK, SR, ST",NY,Crow,1,True,enrich,,enrich__trial1_first_cont
-403cd246-be70-4ba8-bd62-789b6a24f85b,14-03-2025,14:27,867,ST,GR,TK,NY,"SR, TN",NY,RS,,ST,"TK, TN, SR",SR,RS,,TN,"TK, ST, NY",TK,GG,ST,,"NY, TN, SR",TN,RS,,SR,"NY, TK, ST",Crow,1,True,enrich,,enrich__trial1_first_cont
-6b2a161a-ba88-4fd8-939c-d12fe31affec,14-03-2025,14:29,869,ST,GR,TK,NY,"SR, TN",NY,RS,,ST,"TK, TN, SR",SR,RS,,TN,"TK, ST, NY",TK,GG,ST,,"NY, TN, SR",TN,RS,,SR,"NY, TK, ST",Crow,1,True,enrich,,enrich__trial1_first_cont
-9e487cb8-e8ad-4cf1-91ab-ca6f8595890e,14-03-2025,14:31,871,ST,GR,TK,SR,,NY,PL,,TN,,SR,RS,,"ST, TK",,TK,GG,ST,SR,,TN,PL,,NY,,Crow,1,True,enrich,,enrich__trial1_first_cont
-d261cd4b-fe25-4d2e-acb8-cae9b130edd4,14-03-2025,14:33,873,ST,GR,TK,SR,,NY,PL,,TN,,SR,RS,,"ST, TK",,TK,GG,ST,SR,,TN,PL,,NY,,Crow,1,True,enrich,,enrich__trial1_first_cont
-72ed8a4d-539c-4918-b335-58239d162d43,14-03-2025,14:35,875,ST,PL,TK,SR,,NY,RS,,TN,,SR,RS,,"TK, ST",,TK,PL,ST,,,TN,RS,,NY,,Crow,1,True,enrich,,enrich__trial1_first_cont
-3909e663-272d-45a2-b6f2-4482e4865914,14-03-2025,14:37,877,ST,RS,,SR,TK,NY,PL,,TN,,SR,RL,,"TK, ST",,TK,RS,,SR,ST,TN,PL,,NY,,Crow,1,True,enrich,,enrich__trial1_first_cont
-2289b276-e0b0-41d6-8f9e-f9b4462aedeb,14-03-2025,14:39,879,ST,RS,,SR,TK,NY,PL,TN,,,SR,RL,,"TK, ST",,TK,RS,,SR,ST,TN,PL,NY,,,Crow,1,True,enrich,,enrich__trial1_first_cont
-25eda141-be41-4286-8ee8-b3724f510e74,14-03-2025,14:41,881,ST,RS,,SR,TK,NY,RS,,,,SR,RL,,"TK, ST",,TK,RS,,SR,ST,TN,RS,,,,Crow,1,True,enrich,,enrich__trial1_first_cont
-dc80c727-d9d9-4b21-be68-c8234db0bc7f,14-03-2025,14:43,883,ST,RS,,SR,TK,NY,RS,,,,SR,RL,,"TK, ST",,TK,RS,,SR,ST,TN,RS,,,,Crow,1,True,enrich,,enrich__trial1_first_cont
+f8c5c365-6a21-465b-8fe3-f7f0883d55a6,14-03-2025,09:34,574,ST,RS,,,,NY,E,,,,SR,RS,,,,TK,RS,,,,TN,RS,,,,Crow,1,True,morn1,A_UNKNOWN_DATE,morn1_A_UNKNOWN_DATE_trial1_first_cont
+1843b240-cbac-4efd-837f-4cdc6c3e2b57,14-03-2025,09:36,576,ST,RS,,,,NY,E,,,,SR,RS,,,,TK,RS,,,,TN,M,,,,Crow,1,True,morn1,A_UNKNOWN_DATE,morn1_A_UNKNOWN_DATE_trial1_first_cont
+5cb29631-aa3f-4178-8b2f-e27aed83a63a,14-03-2025,09:38,578,ST,RS,,NY,TN,NY,RS,,ST,TN,SR,M,,,,TK,RS,,,,TN,M,,,"ST, NY",Crow,1,True,morn1,A_UNKNOWN_DATE,morn1_A_UNKNOWN_DATE_trial1_first_cont
+c81df9c3-55e4-48b9-83e5-58976f59f8f0,14-03-2025,09:40,580,ST,RS,,,,NY,RS,,,,SR,RS,,,,TK,RS,,,,TN,RS,,,,Crow,1,True,morn1,A_UNKNOWN_DATE,morn1_A_UNKNOWN_DATE_trial1_first_cont
+c9832f0e-a51e-4407-9e02-b9b0b2d4e309,14-03-2025,09:42,582,ST,RS,,,NY,NY,M,,,ST,SR,RS,,,,TK,RS,,,,TN,RS,,,,Crow,1,True,morn1,A_UNKNOWN_DATE,morn1_A_UNKNOWN_DATE_trial1_first_cont
+e66533d7-c0e0-4a2b-9dbe-9b0027f51b42,14-03-2025,09:44,584,ST,M,,,"TN, NY",NY,M,,,"TN, ST",SR,RS,,,,TK,RS,,,,TN,DS,,,"ST, NY",Crow,1,True,morn1,A_UNKNOWN_DATE,morn1_A_UNKNOWN_DATE_trial1_first_cont
+46915bde-b509-4275-94e1-3af66441e021,14-03-2025,09:46,586,ST,RS,,,SR,NY,RS,,,,SR,M,,,ST,TK,RS,,,,TN,RS,,,,Crow,1,True,morn1,A_UNKNOWN_DATE,morn1_A_UNKNOWN_DATE_trial1_first_cont
+a082c725-ac1a-4398-8731-31d5296cb83b,14-03-2025,09:48,588,ST,GR,TN,,"SR, NY",NY,M,,,"SR, ST, TN",SR,M,,,"TN, ST, NY",TK,RS,,,,TN,GG,ST,,"NY, SR",Crow,1,True,morn1,A_UNKNOWN_DATE,morn1_A_UNKNOWN_DATE_trial1_first_cont
+c90d4d07-ca68-4d39-8f86-a31d68516511,14-03-2025,09:50,590,ST,RS,,TN,,NY,PL,,SR,,SR,PL,,NY,,TK,RS,,,,TN,RS,,ST,,Crow,1,True,morn1,A_UNKNOWN_DATE,morn1_A_UNKNOWN_DATE_trial1_first_cont
+250703f2-3799-42c5-84a1-581560f4566b,14-03-2025,09:52,592,ST,RS,,TN,SR,NY,RS,,,,SR,M,,,"TN, ST",TK,RS,,,,TN,RS,,ST,SR,Crow,1,True,morn1,A_UNKNOWN_DATE,morn1_A_UNKNOWN_DATE_trial1_first_cont
+92e77fea-795e-44c9-94b4-2e2343478c1c,14-03-2025,09:54,594,ST,RS,,,TN,NY,RS,,,,SR,M,,,,TK,RS,,,,TN,M,,,ST,Crow,1,True,morn1,A_UNKNOWN_DATE,morn1_A_UNKNOWN_DATE_trial1_first_cont
+85cee0ac-df54-40ea-bb96-92628af6fbc3,14-03-2025,09:56,596,ST,RS,,,"SR, TN",NY,M,,,,SR,M,,,"TN, ST",TK,RS,,,,TN,M,,,"ST, SR",Crow,1,True,morn1,A_UNKNOWN_DATE,morn1_A_UNKNOWN_DATE_trial1_first_cont
+58361727-bc67-450e-9e1b-02255720d6a4,14-03-2025,09:58,598,ST,RS,,,NY,NY,RS,,,ST,SR,PL,TK,,TN,TK,PL,SR,,TN,TN,RS,,,"SR, ST",Crow,1,True,morn1,A_UNKNOWN_DATE,morn1_A_UNKNOWN_DATE_trial1_first_cont
+3f2413d1-6ccf-4445-9645-46eb684420fc,14-03-2025,10:00,600,ST,RS,,"TN, TK",,NY,RS,,,,SR,RS,,,,TK,PL,TN,ST,,TN,PL,SR,ST,,Crow,1,True,morn1,A_UNKNOWN_DATE,morn1_A_UNKNOWN_DATE_trial1_first_cont
+1558914b-679a-4994-8591-47ec11545bbb,14-03-2025,10:02,602,ST,RS,,"TK, TN",,NY,RS,,,,SR,M,,,,TK,PL,TN,ST,,TN,PL,TK,ST,,Crow,1,True,morn1,A_UNKNOWN_DATE,morn1_A_UNKNOWN_DATE_trial1_first_cont
+44ce43a8-fc0e-4e7c-b2bd-36ff5ee554c8,14-03-2025,10:04,604,ST,RS,,,,NY,RS,,,,SR,M,,,,TK,RS,,,,TN,RS,,,,Crow,1,True,morn1,A_UNKNOWN_DATE,morn1_A_UNKNOWN_DATE_trial1_first_cont
+c98294c3-5a9e-4329-be14-3a0ebb3b47ff,14-03-2025,10:06,606,ST,RS,TK,,,NY,RS,,,,SR,DS,,,,TK,RS,ST,,,TN,RS,,,,Crow,1,True,morn1,A_UNKNOWN_DATE,morn1_A_UNKNOWN_DATE_trial1_first_cont
+6637ff12-ff95-4616-ab18-61af38c79b16,14-03-2025,10:08,608,ST,RS,,,TN,NY,RS,,,,SR,RS,,,TK,TK,M,,,"SR, TN",TN,E,,,"ST, TK",Crow,1,True,morn1,A_UNKNOWN_DATE,morn1_A_UNKNOWN_DATE_trial1_first_cont
+d5d4e59d-a6a7-49d1-9608-cd83f2aaf17c,14-03-2025,10:10,610,ST,RS,,,"SR, TK, NY",NY,RS,,,"ST, TK, SR, TN",SR,RS,,,"TN, NY, ST, TK",TK,RS,,,"ST, NY, SR",TN,RS,,,"SR, NY",Crow,1,True,morn1,A_UNKNOWN_DATE,morn1_A_UNKNOWN_DATE_trial1_first_cont
+8aa9fa0c-a078-4d3f-b6f8-df8b80fb6621,14-03-2025,10:12,612,ST,RS,,NY,,NY,RS,,ST,,SR,RS,,,"TN, TK",TK,RS,,,SR,TN,RS,,,SR,Crow,1,True,morn1,A_UNKNOWN_DATE,morn1_A_UNKNOWN_DATE_trial1_first_cont
+6c95e98d-4edd-42a9-8204-46c5c5e7b2c2,14-03-2025,10:14,614,ST,SD,,NY,,NY,RS,,ST,,SR,RS,,,"TN, TK",TK,RS,,,SR,TN,E,,,SR,Crow,1,True,morn1,A_UNKNOWN_DATE,morn1_A_UNKNOWN_DATE_trial1_first_cont
+0ac4aa00-7ee2-4c32-9ead-15f2a0f7d7a9,14-03-2025,10:16,616,ST,RS,,,NY,NY,RS,,,ST,SR,RS,,,"TN, TK",TK,RS,,,SR,TN,RS,,,SR,Crow,1,True,morn1,A_UNKNOWN_DATE,morn1_A_UNKNOWN_DATE_trial1_first_cont
+aa0399b5-2bb7-4274-ae80-ce58c9a8982d,14-03-2025,10:18,618,ST,M,,,,NY,M,,,SR,SR,M,,,NY,TK,RS,,,,TN,M,,,,Crow,1,True,morn1,A_UNKNOWN_DATE,morn1_A_UNKNOWN_DATE_trial1_first_cont
+928060f4-f8d8-4b2a-8322-da501545c599,14-03-2025,10:20,620,ST,M,,,,NY,RS,,,SR,SR,RS,,,NY,TK,RS,,,,TN,E,,,,Crow,1,True,morn1,A_UNKNOWN_DATE,morn1_A_UNKNOWN_DATE_trial1_first_cont
+a5fe4062-5f89-44e9-b99c-8366c76e6202,14-03-2025,10:22,622,ST,RS,,,,NY,RS,,,,SR,RS,,,,TK,RS,,,,TN,RS,,,,Crow,1,True,morn1,A_UNKNOWN_DATE,morn1_A_UNKNOWN_DATE_trial1_first_cont
+0abd71a9-d0e5-4d1c-b6a6-3773874b9540,14-03-2025,10:24,624,ST,RS,,,,NY,RS,,,,SR,RS,,,,TK,RS,,,,TN,RS,,,,Crow,1,True,morn1,A_UNKNOWN_DATE,morn1_A_UNKNOWN_DATE_trial1_first_cont
+7a1ecefc-e294-44d2-bf56-3d23bff371a6,14-03-2025,10:26,626,ST,E,,,TN,NY,RS,,,SR,SR,RS,,,NY,TK,RS,,,,TN,RS,,,ST,Crow,1,True,morn1,A_UNKNOWN_DATE,morn1_A_UNKNOWN_DATE_trial1_first_cont
+b31eb160-dcf0-4d3c-bef0-177c7cf61c4d,14-03-2025,10:28,628,ST,E,,,TN,NY,RS,,,SR,SR,RS,,,NY,TK,RS,,,,TN,RS,,,ST,Crow,1,True,morn1,A_UNKNOWN_DATE,morn1_A_UNKNOWN_DATE_trial1_first_cont
+be93d708-97cb-4990-a931-c659c8aed506,14-03-2025,10:30,630,ST,E,,,TN,NY,RS,,,SR,SR,RS,,,NY,TK,RS,,,,TN,RS,,,ST,Crow,1,True,morn1,A_UNKNOWN_DATE,morn1_A_UNKNOWN_DATE_trial1_first_cont
+fd52ff6b-7a51-4911-a919-eb816fb5b41f,14-03-2025,10:46,646,ST,RS,,,,NY,RS,,,,SR,RS,,,"TN, TK",TK,RS,,,"TN, SR",TN,RS,,,"SR, TK",Crow,1,True,morn2,A_UNKNOWN_DATE,morn2_A_UNKNOWN_DATE_trial1_first_cont
+d782fe2c-7055-46b6-82e9-352eed2b1b0f,14-03-2025,10:48,648,ST,RS,,NY,,NY,RS,,ST,,SR,RS,,TN,,TK,RS,,,,TN,RS,,SR,,Crow,1,True,morn2,A_UNKNOWN_DATE,morn2_A_UNKNOWN_DATE_trial1_first_cont
+1de4908c-4908-4f6f-8d6c-f6fea6703a1e,14-03-2025,10:50,650,ST,RS,,,,NY,RS,,,,SR,RS,,TN,,TK,RS,,,,TN,RS,,SR,,Crow,1,True,morn2,A_UNKNOWN_DATE,morn2_A_UNKNOWN_DATE_trial1_first_cont
+a040875d-23a2-435f-9831-5aa21b0da979,14-03-2025,10:52,652,ST,RS,,,,NY,RS,,,TK,SR,RS,,TN,,TK,RS,,,NY,TN,RS,,SR,,Crow,1,True,morn2,A_UNKNOWN_DATE,morn2_A_UNKNOWN_DATE_trial1_first_cont
+fc26ab95-e89f-494c-a407-9296702c8ccc,14-03-2025,10:54,654,ST,RS,,,,NY,RS,,,TK,SR,RS,,TN,,TK,RS,,,NY,TN,RS,,SR,,Crow,1,True,morn2,A_UNKNOWN_DATE,morn2_A_UNKNOWN_DATE_trial1_first_cont
+7ae64dd9-e573-4c1d-b543-ceab61224d68,14-03-2025,10:56,656,ST,RS,,,,NY,RS,,,,SR,RS,,"TN, TK",,TK,RS,,"TN, SR",,TN,RS,,"SR, TK",,Crow,1,True,morn2,A_UNKNOWN_DATE,morn2_A_UNKNOWN_DATE_trial1_first_cont
+98481693-27f4-454f-8c8e-c4333911a183,14-03-2025,10:58,658,ST,RS,,,,NY,RS,,,,SR,RS,,"TN, TK",,TK,RS,,"TN, SR",,TN,RS,,"SR, TK",,Crow,1,True,morn2,A_UNKNOWN_DATE,morn2_A_UNKNOWN_DATE_trial1_first_cont
+27bf9b55-1b7d-4743-88b2-ba172b857cc4,14-03-2025,11:00,660,ST,RS,,,,NY,RS,,,,SR,RS,,"TN, TK",,TK,RS,,"TN, SR",,TN,RS,,"SR, TK",,Crow,1,True,morn2,A_UNKNOWN_DATE,morn2_A_UNKNOWN_DATE_trial1_first_cont
+e9296d6d-a090-42b2-8722-d5e83b82905b,14-03-2025,11:02,662,ST,RS,,,,NY,RS,,,,SR,RS,,"TK, TN",,TK,RS,,"TN, SR",,TN,RL,,"TK, SR",,Crow,1,True,morn2,A_UNKNOWN_DATE,morn2_A_UNKNOWN_DATE_trial1_first_cont
+d33a6efe-2073-4091-adf1-8e2d29abd8d3,14-03-2025,11:04,664,ST,RS,,,,NY,RS,,,,SR,RS,,"TK, TN",,TK,RS,,"TN, SR",,TN,RL,,"TK, SR",,Crow,1,True,morn2,A_UNKNOWN_DATE,morn2_A_UNKNOWN_DATE_trial1_first_cont
+1a23a382-bd49-45c1-9adb-e5293ae76d40,14-03-2025,11:06,666,ST,RS,,,,NY,RS,,,,SR,RS,,"TK, TN",,TK,RS,,"TN, SR",,TN,RL,,"TK, SR",,Crow,1,True,morn2,A_UNKNOWN_DATE,morn2_A_UNKNOWN_DATE_trial1_first_cont
+1555b00c-74df-4ffd-a350-2e41deb7ef2a,14-03-2025,11:08,668,ST,RS,,,,NY,RS,,,,SR,RS,,"TK, TN",,TK,RS,,"TN, SR",,TN,RL,,"TK, SR",,Crow,1,True,morn2,A_UNKNOWN_DATE,morn2_A_UNKNOWN_DATE_trial1_first_cont
+e61fcf92-74dc-4d6f-b13f-2209e9047fa1,14-03-2025,11:10,670,ST,RS,,,,NY,RS,,,,SR,RS,,"TK, TN",,TK,RS,,"TN, SR",,TN,RL,,"TK, SR",,Crow,1,True,morn2,A_UNKNOWN_DATE,morn2_A_UNKNOWN_DATE_trial1_first_cont
+ddd4ea5b-1878-4074-bc45-5ebb79f69acd,14-03-2025,11:12,672,ST,RS,,,,NY,RS,,,,SR,RS,,"TK, TN",,TK,RS,,"TN, SR",,TN,RL,,"TK, SR",,Crow,1,True,morn2,A_UNKNOWN_DATE,morn2_A_UNKNOWN_DATE_trial1_first_cont
+41d53f15-caa0-4049-b90c-6b0ddeaeba71,14-03-2025,11:14,674,ST,RS,,,,NY,RS,,,,SR,RS,,"TK, TN",,TK,RS,,"TN, SR",,TN,RL,,"TK, SR",,Crow,1,True,morn2,A_UNKNOWN_DATE,morn2_A_UNKNOWN_DATE_trial1_first_cont
+1ade8301-bab0-4207-a8ad-26a63076f078,14-03-2025,11:16,676,ST,RS,,,,NY,RS,,,,SR,RS,,"TK, TN",,TK,RS,,"TN, SR",,TN,RL,,"TK, SR",,Crow,1,True,morn2,A_UNKNOWN_DATE,morn2_A_UNKNOWN_DATE_trial1_first_cont
+b37a8c63-3c8d-46bb-b7dc-e44f74fdfca1,14-03-2025,11:18,678,ST,RS,,,,NY,RS,,,,SR,RS,,"TK, TN",,TK,RS,,"TN, SR",,TN,RL,,"TK, SR",,Crow,1,True,morn2,A_UNKNOWN_DATE,morn2_A_UNKNOWN_DATE_trial1_first_cont
+4f939a5f-de5e-4029-a3f4-93fb0297934e,14-03-2025,11:20,680,ST,RS,,,,NY,RS,,,,SR,RS,,"TK, TN",,TK,RS,,"TN, SR",,TN,RS,,"TK, SR",,Crow,1,True,morn2,A_UNKNOWN_DATE,morn2_A_UNKNOWN_DATE_trial1_first_cont
+dfc8a042-7aa4-445a-a1a0-b6c2ad91d679,14-03-2025,11:22,682,ST,RS,,,,NY,RS,,,,SR,RS,,TN,TK,TK,RS,,"TN, SR",,TN,RS,,SR,TK,Crow,1,True,morn2,A_UNKNOWN_DATE,morn2_A_UNKNOWN_DATE_trial1_first_cont
+ce56c7ab-67f1-4397-8548-286ec6c4ada9,14-03-2025,11:24,684,ST,RS,,,,NY,RS,,,,SR,RS,,TN,TK,TK,RS,,"TN, SR",,TN,RS,,SR,TK,Crow,1,True,morn2,A_UNKNOWN_DATE,morn2_A_UNKNOWN_DATE_trial1_first_cont
+d0333846-3c1c-43eb-b3d6-958bb50c0151,14-03-2025,11:26,686,ST,RS,,,,NY,RS,,,,SR,RS,,TN,TK,TK,RS,,"TN, SR",,TN,RS,,SR,TK,Crow,1,True,morn2,A_UNKNOWN_DATE,morn2_A_UNKNOWN_DATE_trial1_first_cont
+ebca6b06-c681-481f-b151-d38fae450aa6,14-03-2025,11:28,688,ST,RS,,,,NY,RS,,,,SR,RS,,TN,TK,TK,RS,,"TN, SR",,TN,RS,,SR,TK,Crow,1,True,morn2,A_UNKNOWN_DATE,morn2_A_UNKNOWN_DATE_trial1_first_cont
+3c8b6694-82b6-43e2-8a8b-16603b0d5f4b,14-03-2025,11:30,690,ST,RS,,,,NY,RS,,,,SR,RS,,TN,TK,TK,RS,,"TN, SR",,TN,RS,,SR,TK,Crow,1,True,morn2,A_UNKNOWN_DATE,morn2_A_UNKNOWN_DATE_trial1_first_cont
+0506dc4c-680e-4780-a53c-3e9cf9998bb2,14-03-2025,11:32,692,ST,RS,,,,NY,RS,,,,SR,RS,,TN,TK,TK,RS,,"TN, SR",,TN,RS,,SR,TK,Crow,1,True,morn2,A_UNKNOWN_DATE,morn2_A_UNKNOWN_DATE_trial1_first_cont
+f125e26e-0168-482a-82a1-fa0a3e8d5ead,14-03-2025,11:34,694,ST,RS,,,,NY,RS,,,,SR,RS,,TN,TK,TK,RS,,"TN, SR",,TN,RS,,SR,TK,Crow,1,True,morn2,A_UNKNOWN_DATE,morn2_A_UNKNOWN_DATE_trial1_first_cont
+0c657885-5723-43be-8626-266a5c0e6e86,14-03-2025,11:36,696,ST,RS,,,,NY,RS,,,,SR,RS,,TN,TK,TK,RS,,"TN, SR",,TN,RS,,SR,TK,Crow,1,True,morn2,A_UNKNOWN_DATE,morn2_A_UNKNOWN_DATE_trial1_first_cont
+76c22c60-6d3a-4cc3-89d9-e4abf1bea499,14-03-2025,11:38,698,ST,RS,,TN,,NY,RS,,,,SR,RS,,,TK,TK,RS,,,SR,TN,RS,,ST,,Crow,1,True,morn2,A_UNKNOWN_DATE,morn2_A_UNKNOWN_DATE_trial1_first_cont
+b5468649-db6f-474b-be50-3f839d0e5097,14-03-2025,11:40,700,ST,RS,,TN,,NY,RS,,,,SR,RS,,,TK,TK,RS,,,SR,TN,RS,,ST,,Crow,1,True,morn2,A_UNKNOWN_DATE,morn2_A_UNKNOWN_DATE_trial1_first_cont
+26ce4bb5-03ef-4001-83bf-56c87b0618d9,14-03-2025,11:42,702,ST,RS,,TN,,NY,RS,,,,SR,RS,,,TK,TK,RS,,,SR,TN,RS,,ST,,Crow,1,True,morn2,A_UNKNOWN_DATE,morn2_A_UNKNOWN_DATE_trial1_first_cont
+be58f7dd-2e15-4e3c-9318-c294cde465d1,14-03-2025,11:44,704,ST,RS,,TN,,NY,RS,,,,SR,RS,,,TK,TK,RS,,,SR,TN,RS,,ST,,Crow,1,True,morn2,A_UNKNOWN_DATE,morn2_A_UNKNOWN_DATE_trial1_first_cont
+b97cd5d0-c223-46c0-9256-605c8f0ad645,14-03-2025,11:46,706,ST,RS,,TN,,NY,RS,,,,SR,RS,,,TK,TK,RS,,,SR,TN,RS,,ST,,Crow,1,True,extra,A_UNKNOWN_DATE,_A_UNKNOWN_DATE_trial1_first_cont
+55b4a9b2-29da-4018-b19e-4c6932f492af,14-03-2025,13:20,800,ST,E,,,,NY,E,,,,SR,E,,,,TK,E,,,,TN,E,,,,Crow,1,True,enrich,A_UNKNOWN_DATE,enrich_A_UNKNOWN_DATE_trial1_first_cont
+93a4d7e5-f5f8-4135-b8b4-7b81c1f6d6cf,14-03-2025,13:21,801,ST,E,,,TK,NY,E,,,,SR,E,,,,TK,E,,,ST,TN,E,,,,Crow,1,True,enrich,A_UNKNOWN_DATE,enrich_A_UNKNOWN_DATE_trial1_first_cont
+f37384ea-41a6-4296-ba18-2afb28163258,14-03-2025,13:23,803,ST,E,,,TK,NY,E,,,,SR,E,,,,TK,E,,,"TN, ST",TN,E,,,TK,Crow,1,True,enrich,A_UNKNOWN_DATE,enrich_A_UNKNOWN_DATE_trial1_first_cont
+3646a275-4726-46a4-b2d8-91133ba5cc17,14-03-2025,13:25,805,ST,E,,,TK,NY,E,,,,SR,E,,,,TK,E,,,"TN, ST",TN,E,,,TK,Crow,1,True,enrich,A_UNKNOWN_DATE,enrich_A_UNKNOWN_DATE_trial1_first_cont
+8b12ac55-a6b6-4872-bb19-c5fed8ed8e95,14-03-2025,13:27,807,ST,E,,,"TK, TN",NY,E,,,,SR,RS,,,,TK,E,,,"ST, TN",TN,E,,,"TK, ST",Crow,1,True,enrich,A_UNKNOWN_DATE,enrich_A_UNKNOWN_DATE_trial1_first_cont
+1b32deee-4a13-4834-ba23-e1382f584bf0,14-03-2025,13:29,809,ST,E,,TN,,NY,E,,,,SR,RS,,,,TK,E,,,"TN, ST",TN,E,,ST,TK,Crow,1,True,enrich,A_UNKNOWN_DATE,enrich_A_UNKNOWN_DATE_trial1_first_cont
+d8bda446-1479-4322-a9a0-2d7c40116e71,14-03-2025,13:31,811,ST,E,,TN,,NY,E,,,,SR,RS,,,,TK,E,,,"TN, ST",TN,E,,ST,TK,Crow,1,True,enrich,A_UNKNOWN_DATE,enrich_A_UNKNOWN_DATE_trial1_first_cont
+9bf23619-d36e-4e43-81e0-34fd57d5e2b1,14-03-2025,13:33,813,ST,E,,TN,"NY, TK",NY,E,,,"ST, TN",SR,RS,,,,TK,E,,,"TN, ST",TN,E,,ST,"TK, NY",Crow,1,True,enrich,A_UNKNOWN_DATE,enrich_A_UNKNOWN_DATE_trial1_first_cont
+b37c55bf-023f-4098-ba87-d45e957ede64,14-03-2025,13:35,815,ST,E,,,,NY,GG,,,TN,SR,RS,,,,TK,RS,,,,TN,E,,,NY,Crow,1,True,enrich,A_UNKNOWN_DATE,enrich_A_UNKNOWN_DATE_trial1_first_cont
+757c20c1-7c92-4cf7-9da0-e438c29f9166,14-03-2025,13:37,817,ST,E,,,,NY,RS,,,TK,SR,RS,,,,TK,RS,,,NY,TN,E,,,,Crow,1,True,enrich,A_UNKNOWN_DATE,enrich_A_UNKNOWN_DATE_trial1_first_cont
+0e88f6c9-8a5e-43ab-883c-c07d5f12ea7c,14-03-2025,13:39,819,ST,M,,,TN,NY,RS,,,TK,SR,RS,,,,TK,RS,,,NY,TN,E,,,ST,Crow,1,True,enrich,A_UNKNOWN_DATE,enrich_A_UNKNOWN_DATE_trial1_first_cont
+4af9a70f-818e-4d69-9961-f0545d530751,14-03-2025,13:41,821,ST,E,,,TN,NY,RS,,,TK,SR,RS,,,,TK,RS,,,NY,TN,E,,,ST,Crow,1,True,enrich,A_UNKNOWN_DATE,enrich_A_UNKNOWN_DATE_trial1_first_cont
+904b1113-bb18-486e-bbdc-93666cf6b36d,14-03-2025,13:43,823,ST,E,,,TN,NY,RS,,,,SR,RS,,,,TK,RS,,,,TN,E,,,ST,Crow,1,True,enrich,A_UNKNOWN_DATE,enrich_A_UNKNOWN_DATE_trial1_first_cont
+48ca3e4e-f42e-4c8c-af50-5ca02db09cc8,14-03-2025,13:45,825,ST,E,,,TN,NY,RS,,,,SR,RS,,,,TK,RS,,,,TN,E,,,ST,Crow,1,True,enrich,A_UNKNOWN_DATE,enrich_A_UNKNOWN_DATE_trial1_first_cont
+19692c1e-ccd6-433a-ad39-4a490c4063dc,14-03-2025,13:47,827,ST,E,,,TN,NY,RS,,,,SR,RS,,,,TK,RS,,,,TN,E,,,ST,Crow,1,True,enrich,A_UNKNOWN_DATE,enrich_A_UNKNOWN_DATE_trial1_first_cont
+f098b815-7d80-4638-af79-0441164a4031,14-03-2025,13:49,829,ST,RS,,NY,,NY,M,,ST,,SR,RS,,,,TK,RS,,,,TN,M,,,,Crow,1,True,enrich,A_UNKNOWN_DATE,enrich_A_UNKNOWN_DATE_trial1_first_cont
+feae4e17-c5c2-4a64-99ce-346b775fc95b,14-03-2025,13:51,831,ST,M,,,NY,NY,RS,,,ST,SR,RS,,,,TK,RS,,,,TN,M,,,,Crow,1,True,enrich,A_UNKNOWN_DATE,enrich_A_UNKNOWN_DATE_trial1_first_cont
+5561db4c-90a5-4e0c-8fcc-3eab425e785d,14-03-2025,13:53,833,ST,RS,,,TN,NY,M,,,,SR,RS,,,,TK,RS,,,,TN,E,,,ST,Crow,1,True,enrich,A_UNKNOWN_DATE,enrich_A_UNKNOWN_DATE_trial1_first_cont
+2e187996-11a2-45cc-914d-042747c1727e,14-03-2025,13:56,836,ST,RS,,,TN,NY,M,,,,SR,RS,,,,TK,RS,,,,TN,E,,,ST,Crow,1,True,enrich,A_UNKNOWN_DATE,enrich_A_UNKNOWN_DATE_trial1_first_cont
+627d918d-df0e-4bbe-b106-751a30898e96,14-03-2025,13:57,837,ST,E,,,,NY,RS,,TK,,SR,RS,,,,TK,RS,,NY,,TN,M,,,,Crow,1,True,enrich,A_UNKNOWN_DATE,enrich_A_UNKNOWN_DATE_trial1_first_cont
+73e64adf-16f2-4dd0-9939-5a89703c1735,14-03-2025,13:59,839,ST,E,,,,NY,M,,TN,,SR,M,,,,TK,RS,,,,TN,M,,NY,,Crow,1,True,enrich,A_UNKNOWN_DATE,enrich_A_UNKNOWN_DATE_trial1_first_cont
+8a416e7d-47ff-4519-b5c3-32c5d8c224af,14-03-2025,14:01,841,ST,RS,,,,NY,RS,,,,SR,RS,,,,TK,RS,,TN,,TN,M,,TK,,Crow,1,True,enrich,A_UNKNOWN_DATE,enrich_A_UNKNOWN_DATE_trial1_first_cont
+9c0b9f7b-1076-4fdf-af02-0f20a6111540,14-03-2025,14:03,843,ST,RS,,TN,TK,NY,RS,,,,SR,RS,,,,TK,RS,,,"TN, ST",TN,RS,,,"TK, ST",Crow,1,True,enrich,A_UNKNOWN_DATE,enrich_A_UNKNOWN_DATE_trial1_first_cont
+944ede61-b8f8-4389-ac9b-ff24abf3491b,14-03-2025,14:05,845,ST,RS,,TN,TK,NY,RS,,,,SR,DS,,,,TK,RS,,TN,ST,TN,RS,,"TK, ST",,Crow,1,True,enrich,A_UNKNOWN_DATE,enrich_A_UNKNOWN_DATE_trial1_first_cont
+959cfe03-457c-45de-a15b-1d994ca5b053,14-03-2025,14:07,847,ST,RS,,TN,TK,NY,RS,,,SR,SR,DS,,,NY,TK,RS,,TN,ST,TN,RS,,"TK, ST",,Crow,1,True,enrich,A_UNKNOWN_DATE,enrich_A_UNKNOWN_DATE_trial1_first_cont
+4537f4bd-0063-4f40-a914-c1bcccd94ce0,14-03-2025,14:10,850,ST,RS,,TN,TK,NY,RS,,,SR,SR,M,,,NY,TK,RS,,TN,ST,TN,RS,,"TK, ST",,Crow,1,True,enrich,A_UNKNOWN_DATE,enrich_A_UNKNOWN_DATE_trial1_first_cont
+d0565ba6-88db-4398-a3b0-d93ec4354c8c,14-03-2025,14:11,851,ST,GR,TK,TN,SR,NY,RS,,,,SR,RS,,"TK, TN",ST,TK,GG,"ST, TN",SR,,TN,GG,TK,"ST, SR",,Crow,1,True,enrich,A_UNKNOWN_DATE,enrich_A_UNKNOWN_DATE_trial1_first_cont
+0ba91f90-94d7-4a80-a656-957ba93c4b27,14-03-2025,14:13,853,ST,GR,TK,TN,"SR, NY",NY,M,,,"SR, TK, TN, ST",SR,RS,,"TK, TN","NY, ST",TK,GG,ST,"TN, SR",,TN,RS,,"TK, SR","NY, ST",Crow,1,True,enrich,A_UNKNOWN_DATE,enrich_A_UNKNOWN_DATE_trial1_first_cont
+2ff9f32a-149d-4426-8d83-824789a0bc8d,14-03-2025,14:15,855,ST,GR,TK,TN,SR,NY,RS,,,,SR,RS,,"TN, TK",ST,TK,GG,ST,"TN, SR",,TN,RS,,"ST, SR",TK,Crow,1,True,enrich,A_UNKNOWN_DATE,enrich_A_UNKNOWN_DATE_trial1_first_cont
+a9ba0729-50a4-48d3-b594-1af66521aa85,14-03-2025,14:17,857,ST,GR,TK,TN,"NY, SR",NY,RS,,,"TN, ST, TK, SR",SR,RS,,"TN, TK","NY, ST",TK,GG,ST,"SR, TN",NY,TN,RS,,"SR, ST","TK, NY",Crow,1,True,enrich,A_UNKNOWN_DATE,enrich_A_UNKNOWN_DATE_trial1_first_cont
+d95bbe78-4b52-47e9-becc-03487b5e3f9c,14-03-2025,14:19,859,ST,GR,TK,TN,"NY, SR",NY,RS,,,"TN, ST, TK, SR",SR,RS,,"TN, TK","NY, ST",TK,GG,ST,"SR, TN",NY,TN,RS,,"SR, ST","TK, NY",Crow,1,True,enrich,A_UNKNOWN_DATE,enrich_A_UNKNOWN_DATE_trial1_first_cont
+fa5d35fb-37c2-4d15-bd50-847f07efa4b8,14-03-2025,14:21,861,ST,GR,TK,TN,"NY, SR",NY,RS,,,"TN, ST, TK, SR",SR,RS,,"TN, TK","NY, ST",TK,GG,ST,"SR, TN",NY,TN,RS,,"SR, ST","TK, NY",Crow,1,True,enrich,A_UNKNOWN_DATE,enrich_A_UNKNOWN_DATE_trial1_first_cont
+cafd4e83-7103-43ab-addb-d1b708b268d7,14-03-2025,14:23,863,ST,GR,TK,"SR, TN",NY,NY,RS,,,"TN, ST, TK, SR",SR,RS,,"TK, TN, ST",,TK,GG,ST,"ST, TN, SR",NY,TN,RS,,"SR, ST, TK",NY,Crow,1,True,enrich,A_UNKNOWN_DATE,enrich_A_UNKNOWN_DATE_trial1_first_cont
+000d5dd3-dc1e-4f11-b8dd-840bd1d1a878,14-03-2025,14:25,865,ST,PL,TK,"TN, SR",NY,NY,M,,,"ST, TK, SR, TN",SR,RS,,"TN, TK","ST, NY",TK,PL,ST,"SR, TN",NY,TN,RS,,"TK, SR, ST",NY,Crow,1,True,enrich,A_UNKNOWN_DATE,enrich_A_UNKNOWN_DATE_trial1_first_cont
+403cd246-be70-4ba8-bd62-789b6a24f85b,14-03-2025,14:27,867,ST,GR,TK,NY,"SR, TN",NY,RS,,ST,"TK, TN, SR",SR,RS,,TN,"TK, ST, NY",TK,GG,ST,,"NY, TN, SR",TN,RS,,SR,"NY, TK, ST",Crow,1,True,enrich,A_UNKNOWN_DATE,enrich_A_UNKNOWN_DATE_trial1_first_cont
+6b2a161a-ba88-4fd8-939c-d12fe31affec,14-03-2025,14:29,869,ST,GR,TK,NY,"SR, TN",NY,RS,,ST,"TK, TN, SR",SR,RS,,TN,"TK, ST, NY",TK,GG,ST,,"NY, TN, SR",TN,RS,,SR,"NY, TK, ST",Crow,1,True,enrich,A_UNKNOWN_DATE,enrich_A_UNKNOWN_DATE_trial1_first_cont
+9e487cb8-e8ad-4cf1-91ab-ca6f8595890e,14-03-2025,14:31,871,ST,GR,TK,SR,,NY,PL,,TN,,SR,RS,,"ST, TK",,TK,GG,ST,SR,,TN,PL,,NY,,Crow,1,True,enrich,A_UNKNOWN_DATE,enrich_A_UNKNOWN_DATE_trial1_first_cont
+d261cd4b-fe25-4d2e-acb8-cae9b130edd4,14-03-2025,14:33,873,ST,GR,TK,SR,,NY,PL,,TN,,SR,RS,,"ST, TK",,TK,GG,ST,SR,,TN,PL,,NY,,Crow,1,True,enrich,A_UNKNOWN_DATE,enrich_A_UNKNOWN_DATE_trial1_first_cont
+72ed8a4d-539c-4918-b335-58239d162d43,14-03-2025,14:35,875,ST,PL,TK,SR,,NY,RS,,TN,,SR,RS,,"TK, ST",,TK,PL,ST,,,TN,RS,,NY,,Crow,1,True,enrich,A_UNKNOWN_DATE,enrich_A_UNKNOWN_DATE_trial1_first_cont
+3909e663-272d-45a2-b6f2-4482e4865914,14-03-2025,14:37,877,ST,RS,,SR,TK,NY,PL,,TN,,SR,RL,,"TK, ST",,TK,RS,,SR,ST,TN,PL,,NY,,Crow,1,True,enrich,A_UNKNOWN_DATE,enrich_A_UNKNOWN_DATE_trial1_first_cont
+2289b276-e0b0-41d6-8f9e-f9b4462aedeb,14-03-2025,14:39,879,ST,RS,,SR,TK,NY,PL,TN,,,SR,RL,,"TK, ST",,TK,RS,,SR,ST,TN,PL,NY,,,Crow,1,True,enrich,A_UNKNOWN_DATE,enrich_A_UNKNOWN_DATE_trial1_first_cont
+25eda141-be41-4286-8ee8-b3724f510e74,14-03-2025,14:41,881,ST,RS,,SR,TK,NY,RS,,,,SR,RL,,"TK, ST",,TK,RS,,SR,ST,TN,RS,,,,Crow,1,True,enrich,A_UNKNOWN_DATE,enrich_A_UNKNOWN_DATE_trial1_first_cont
+dc80c727-d9d9-4b21-be68-c8234db0bc7f,14-03-2025,14:43,883,ST,RS,,SR,TK,NY,RS,,,,SR,RL,,"TK, ST",,TK,RS,,SR,ST,TN,RS,,,,Crow,1,True,enrich,A_UNKNOWN_DATE,enrich_A_UNKNOWN_DATE_trial1_first_cont
 d5efcbc3-15a8-401c-9f53-b98f41afc5d4,23-03-2025,09:37,577,ST,E,,,,NY,E,,,,SR,RS,,,TN,TK,RS,,,,TN,E,,,SR,Playback,2,True,morn1,A_2,morn1_A_2_trial2_first_play
 6700040a-ad32-4105-b296-8131f767c284,23-03-2025,09:39,579,ST,E,,,,NY,E,,,TK,SR,RS,,,TN,TK,RS,,,NY,TN,E,,,SR,Playback,2,True,morn1,A_2,morn1_A_2_trial2_first_play
 c0ef7ad9-6319-422b-a678-20e84e9ccf5a,23-03-2025,09:41,581,ST,E,,,,NY,M,,,SR,SR,RS,,,"TN, NY",TK,RS,,,,TN,E,,,SR,Playback,2,True,morn1,A_2,morn1_A_2_trial2_first_play

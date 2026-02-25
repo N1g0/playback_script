@@ -545,108 +545,49 @@ def get_phase_from_time(time_value: Union[str, time, pd.Timestamp]) -> Optional[
         return None
 
 
-def get_group_vectorized(
+def get_group(
         dates_series: pd.Series,
         cage_dates_dict: Dict[str, List[str]],
-        behave_dict: Dict[str, str]
+        behave_dict: Dict[str, str],
+        file_type: str
 ) -> pd.Series:
-    """
-    Vectorized mapping of dates to groups with a behavior-based group prefix.
 
-    Args:
-        dates_series: Column containing date strings (e.g., '03-04-2025').
-        cage_dates_dict: Mapping of Cage names to lists of dates ['DD.MM'].
-        behave_dict: Dictionary of {animal_id: behavior_code}.
+    animal_ids = set(behave_dict.keys())
+    prefix: str = file_type
 
-    Returns:
-        pd.Series: A series of formatted group strings like '*C_Cage1'.
-    """
-    # --- STEP 1: PRE-CALCULATE PREFIX ---
-    # We look at the set of animal IDs found in the current file
-    animal_ids: Set[str] = set(behave_dict.keys())
+    if not prefix:
+        groups = {
+            'A': {'TN', 'TK', 'LN', 'NR', 'NY', 'ST', 'MN', 'SR'},
+            'B': {'MN', 'MS', 'NH', 'LN', 'NR', 'NY', 'ST'},
+            'C': {'MZ', 'SB', 'GG', 'LN', 'NR', 'MS'}
+        }
 
-    group_A_ids: set = {'TN', 'TK', 'LN', 'NR', 'NY', 'ST', 'MN', 'SR'}
-    group_B_ids: set = {'MN', 'MS', 'NH', 'LN', 'NR', 'NY', 'ST'}
-    group_C_ids: set = {'MZ', 'SB', 'GG', 'LN', 'NR', 'MS'}
+        if any(marker in animal_ids for marker in {'GG', 'SB'}):
+            prefix = 'C'
+        else:
+            match_counts: dict = {g: len(animal_ids & members) for g, members in groups.items()}
+            max_matches = max(match_counts.values())
 
-    # Determine prefix based on priority
-    if 'GG' in animal_ids or 'SB' in animal_ids:
-        prefix: str = 'C'
-    elif animal_ids & group_A_ids:
-        prefix: str = 'A'
-    elif animal_ids & group_B_ids:
-        prefix: str = 'B'
-    elif animal_ids & group_C_ids:
-        prefix: str = 'C'
-    else:
-        prefix: str = ''
+            if max_matches > 0:
+                prefix = max(match_counts, key=match_counts.get)
 
-    # --- STEP 2: BUILD REVERSE LOOKUP DICT ---
-    # Converts {Group: [Dates]} -> {Date: Group}
-    date_to_group: Dict[str, str] = {
-        d: str(group) for group, dates in cage_dates_dict.items() for d in dates
-    }
-
-    # --- STEP 3: VECTORIZED DATA PROCESSING ---
-    # Ensure dates are datetime objects for formatting
-    temp_dates = pd.to_datetime(dates_series, dayfirst=True, errors='coerce')
-
-    # Format to "DD.MM" to match cage_dates_dict keys
-    short_dates = temp_dates.dt.strftime("%d.%m")
-
-    # Map the groups via the dictionary
-    matched_groups = short_dates.map(date_to_group)
-
-    # Construct final result
-    mask = matched_groups.notna()
-    result = pd.Series('', index=dates_series.index)
-
-    prefix_str = f"{prefix}_" if prefix else "*"
-    result[mask] = prefix_str + matched_groups[mask].astype(str)
-
-    return result
-
-
-# not used
-def get_group_from_date_column(dates_series, cage_dates_dict, behave_dict):
-    # 1. Reverse lookup (Keep this, it's small and fast)
-    date_to_group = {}
-    for group, dates in cage_dates_dict.items():
+    clean_date_map: dict = {}
+    for cage, dates in cage_dates_dict.items():
         for d in dates:
-            date_to_group[d] = group
+            standard_d = str(d).replace('-', '.').replace('/', '.')
+            clean_date_map[standard_d] = str(cage)
 
-    # 2. Determine prefix (Keep this, it's constant time)
-    values = set(behave_dict.values())
-    prefix = None
-    if 'GG' in values or 'SB' in values:
-        prefix = 'C'
-    elif values & {'TN', 'TK', 'LN', 'NR', 'NY', 'ST', 'MN', 'SR'}:
-        prefix = 'A'
-    elif values & {'MN', 'MS', 'NH', 'LN', 'NR', 'NY', 'ST'}:
-        prefix = 'B'
-    elif values & {'MZ', 'SB', 'GG', 'LN', 'NR', 'MS'}:
-        prefix = 'C'
-
-    # 3. VECTORIZED DATE CONVERSION
-    # Convert the entire series to datetime objects at once using C-speed
-    temp_dates = pd.to_datetime(dates_series, dayfirst=True, errors='coerce')
-
-    # Format the entire series to "DD.MM" strings at once
+    # Convert dates_series to standardized "DD.MM" strings
+    temp_dates: pd.Series = pd.to_datetime(dates_series, dayfirst=True, errors='coerce')
     short_dates = temp_dates.dt.strftime("%d.%m")
 
-    # 4. VECTORIZED MAPPING
-    # Map the group names from your dictionary
-    matched_groups = short_dates.map(date_to_group)
+    matched_cages = short_dates.map(clean_date_map)
 
-    # 5. VECTORIZED STRING CONSTRUCTION
-    # Use fillna to handle missing dates and then format the strings
-    mask = matched_groups.notna()
-    result = pd.Series('', index=dates_series.index)
+    # Build the final string: "B_Cage1" or "*Cage1"
+    prefix_str: str = f"{prefix}_" if prefix else "*"
 
-    final_prefix = f"*{prefix}" if prefix else "*"
-    result[mask] = final_prefix + matched_groups[mask].astype(str)
-
-    return result
+    # fillna to keep track of what didn't match
+    return prefix_str + matched_cages.fillna("UNKNOWN_DATE")
 
 
 def generate_block_ID(df: pd.DataFrame) -> pd.Series:
@@ -718,7 +659,7 @@ def get_behavior_code_dict(df: pd.DataFrame) -> Dict[str, str]:
     return behave_dict
 
 
-def reshape_behavior_data(df: pd.DataFrame) -> pd.DataFrame:
+def reshape_behavior_data(df: pd.DataFrame, file_type) -> pd.DataFrame:
     working_df = df.copy()
     behave_mapping = get_behavior_code_dict(working_df)
 
@@ -744,10 +685,11 @@ def reshape_behavior_data(df: pd.DataFrame) -> pd.DataFrame:
         working_df['phase'] = working_df['1_TIme'].apply(get_phase_from_time)
 
     # 3. Group Mapping (Required for block_ID)
-    working_df['group'] = get_group_vectorized(
+    working_df['group'] = get_group(
         working_df['date'],
         Cage_Comp_Dates,
-        behave_mapping
+        behave_mapping,
+        file_type
     )
     #print('working_df group added: \n', working_df.head())
     # 4. Now generate Block ID (Now that phase, group, trial, etc. all exist)
@@ -758,7 +700,7 @@ def reshape_behavior_data(df: pd.DataFrame) -> pd.DataFrame:
     return working_df
 
 
-def process_sort_event(sorted_df: pd.DataFrame):
+def process_sort_event(sorted_df: pd.DataFrame, file_type):
     df_dec_ind: pd.DataFrame = detect_ind(sorted_df)
     #print('df_dec_ind: \n', df_dec_ind)
     # Fix date column
@@ -767,7 +709,7 @@ def process_sort_event(sorted_df: pd.DataFrame):
     df_dec_ind["1_TIme"] = pd.to_datetime(df_dec_ind["1_TIme"]).dt.strftime("%H:%M")
     #print('df_dec_ind date changed: \n', df_dec_ind)
 
-    resh_df: pd.DataFrame = reshape_behavior_data(df_dec_ind)
+    resh_df: pd.DataFrame = reshape_behavior_data(df_dec_ind, file_type)
     #print('resh_df: \n', resh_df)
 
     return resh_df
