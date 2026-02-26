@@ -12,7 +12,6 @@ os.makedirs(output_dir, exist_ok=True)
 
 # Collect all Excel and CSV files
 data_files: list[str] = glob.glob(os.path.join(input_dir, "*.csv")) + glob.glob(os.path.join(input_dir, "*.xlsx"))
-print(data_files)
 
 # --- Prepare storage ---
 all_raw_dfs: dict[str, list[pd.DataFrame]] = defaultdict(list)
@@ -34,7 +33,7 @@ for input_file_path in data_files:
     if "all_occurence" in input_file_path.lower():
         df_occ: pd.DataFrame = Methods.read_data(input_file_path)
         all_occ_data, file_type = Methods.file_name(input_file_path, df_occ, all_occ_dfs)
-        Methods.process_all_occurrence(df_occ, file_type, all_occ_dfs)
+        all_occ_dfs = Methods.process_all_occurrence(df_occ, file_type, all_occ_dfs, output_dir)
         continue
 
     df_raw: pd.DataFrame = Methods.read_data(input_file_path)
@@ -43,7 +42,7 @@ for input_file_path in data_files:
 # --------------------------------------------------------------------------
 #                     PHASE 2: Process Each Raw DataFrame
 # --------------------------------------------------------------------------
-#TODO: Implement All Occurence data into processing pipeline
+#TODO: Concate both occ dfs into one and save in final_occ/fix df stucture first
 # Fact-check data if data processing was successful and no data are missing
 # Build data search function?
 
@@ -74,6 +73,8 @@ for file_type, list_of_raw_dfs in all_raw_dfs.items():
 
             # Reshaping (The 3 tables)
             behave_df, dist_df, occ_df = Methods.process_sort_beh_dist(event_sorted_df)
+            print('occ_df: \n', occ_df)
+            #TODO: Fix qaulifier and .append all_occ.dfs is Dataframe not dict anymore (change to one or the other)
 
             # Save (Individual file outputs)
             behave_df.to_csv(os.path.join(steps_dir, f"type{file_type}_file{idx}_step3_behave.csv"), index=False)
@@ -102,7 +103,6 @@ if all_dist_data:
     final_dist.to_csv(os.path.join(output_dir, "final_combined_distance.csv"), index=False)
     print(f"📁 Saved final_combined_distance.csv ({len(final_dist)} rows)")
 
-#TODO: Sorting all the columns to the propper columns names and dates
 all_dfs_list = []
 for cage_type in all_occ_dfs:
     all_dfs_list.extend(all_occ_dfs[cage_type])

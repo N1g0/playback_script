@@ -28,7 +28,7 @@ c4c54c5f-b11e-460d-96b8-bfa8d1055ee2,03-04-2025,10:23,623,MZ,RS,,,,,SB,RL,,,,,GG
 9f8e49fa-1cbf-4d8c-ac0d-db2bcd21f6ea,03-04-2025,10:25,625,MZ,RS,,,,,SB,RL,,,GG,,GG,RS,,LN,NR,,LN,RS,,GG,NR,,NR,RL,,,"GG, LN",,Playback,3,True,morn1,C_3,morn1_C_3_trial3_first_play
 8f325aa4-dff4-4bc6-bea8-d761a885df6a,03-04-2025,10:27,627,MZ,E,,,,,SB,RL,,,GG,,GG,RS,,LN,NR,,LN,RS,,GG,NR,,NR,RL,,,"GG, LN",,Playback,3,True,morn1,C_3,morn1_C_3_trial3_first_play
 db688407-a3d6-4833-9a8f-245b0ba5d275,03-04-2025,10:29,629,MZ,E,,,,,SB,RL,,,GG,,GG,RS,,LN,NR,,LN,RS,,GG,NR,,NR,RS,,,"GG, LN",,Playback,3,True,morn1,C_3,morn1_C_3_trial3_first_play
-6b2cbe2b-db51-4d1c-b0dd-c1d11f8ce18f,03-04-2025,10:31,631,MZ,E,,,,,SB,RL,,,GG,,GG,RS,,LN,NR,,LN,RS,,GG,NR,,NR,RS,,,"GG, LN",,Playback,3,True,extra,C_3,_C_3_trial3_first_play
+6b2cbe2b-db51-4d1c-b0dd-c1d11f8ce18f,03-04-2025,10:31,631,MZ,E,,,,,SB,RL,,,GG,,GG,RS,,LN,NR,,LN,RS,,GG,NR,,NR,RS,,,"GG, LN",,Playback,3,True,extra,C_3,extra_C_3_trial3_first_play
 d775ed85-a7e5-44c5-87f4-aa9678c29a6f,03-04-2025,10:47,647,MZ,DS,,,,,SB,RL,,,,,GG,RS,,,,,LN,RS,,,,,NR,M,,,,,Playback,3,True,morn2,C_3,morn2_C_3_trial3_first_play
 9580308d-59fb-41a3-80c1-995a62e44b74,03-04-2025,10:49,649,MZ,M,,,,,SB,AG,,"LN, GG",NR,Norio was strongly displaying at rushing at gg on and sb,GG,RS,,"SB, LN",NR,,LN,RS,,"SB, GG",NR,,NR,AG,,,"LN, GG, SB",,Playback,3,True,morn2,C_3,morn2_C_3_trial3_first_play
 4bfb9a9f-184d-428c-85c2-c9975374336c,03-04-2025,10:51,651,MZ,GG,SB,LN,,,SB,GR,MZ,LN,,,GG,M,,,,,LN,,,"MZ, SB",,,NR,M,,,,,Playback,3,True,morn2,C_3,morn2_C_3_trial3_first_play
@@ -130,7 +130,7 @@ d5bdd626-fd28-4945-9602-d05deb8b3e67,04-04-2025,10:21,621,MZ,RL,,,,,SB,RL,,,GG,,
 8d892b8a-a00e-4b52-9c11-221d5610ef3d,04-04-2025,10:25,625,MZ,RL,,,,,SB,RL,,,GG,,GG,RS,,LN,SB,,LN,RS,,GG,NR,,NR,RL,,,LN,,Playback,3,False,morn1,C_3,morn1_C_3_trial3_sec_play
 75567f56-b497-493e-ae19-cd47434e2d52,04-04-2025,10:27,627,MZ,RL,,,,,SB,RL,,,GG,,GG,RS,,LN,SB,,LN,RS,,GG,NR,,NR,RL,,,LN,,Playback,3,False,morn1,C_3,morn1_C_3_trial3_sec_play
 62831afb-89c7-425a-b278-acd623c5b94b,04-04-2025,10:29,629,MZ,RL,,,,,SB,RL,,,GG,,GG,RS,,LN,SB,,LN,RS,,GG,NR,,NR,RL,,,LN,,Playback,3,False,morn1,C_3,morn1_C_3_trial3_sec_play
-efc41f5a-c484-405f-a946-d81d4085e57a,04-04-2025,10:32,632,MZ,SD,,,,,SB,RS,,,"GG, LN",,GG,RS,,LN,SB,,LN,RS,,GG,SB,,NR,RL,,,,,Playback,3,False,extra,C_3,_C_3_trial3_sec_play
+efc41f5a-c484-405f-a946-d81d4085e57a,04-04-2025,10:32,632,MZ,SD,,,,,SB,RS,,,"GG, LN",,GG,RS,,LN,SB,,LN,RS,,GG,SB,,NR,RL,,,,,Playback,3,False,extra,C_3,extra_C_3_trial3_sec_play
 90ae135a-cacb-416a-bd24-ce7b151c4875,04-04-2025,10:45,645,MZ,RL,,,,,SB,RL,,,"GG, LN, NR",,GG,RS,,"LN, NR",SB,,LN,RS,,"NR, GG",SB,,NR,RL,,"GG, LN",SB,,Playback,3,False,morn2,C_3,morn2_C_3_trial3_sec_play
 4ad3d2a7-0275-438d-afc1-89372f3b851f,04-04-2025,10:47,647,MZ,RL,,,,,SB,RL,,,"GG, LN, NR",,GG,RS,,"LN, NR",SB,,LN,RS,,"NR, GG",SB,,NR,RL,,"GG, LN",SB,,Playback,3,False,morn2,C_3,morn2_C_3_trial3_sec_play
 7e3b65ae-935f-4dd2-a7b6-c3a933848858,04-04-2025,10:49,649,MZ,RL,,,,,SB,RL,,,"GG, LN, NR",,GG,RS,,"LN, NR",SB,,LN,RS,,"NR, GG",SB,,NR,RL,,"GG, LN",SB,,Playback,3,False,morn2,C_3,morn2_C_3_trial3_sec_play
@@ -236,7 +236,7 @@ c0e3dc9e-bb39-466d-96a7-b358878b041f,16-04-2025,10:19,619,MZ,GG,LN,GG,,,SB,RL,,,
 350ccfa6-7b05-4020-bed5-efd99fcb31df,16-04-2025,10:25,625,MZ,RL,,,,,SB,RL,,,,,GG,RL,,LN,,,LN,RS,,GG,,,NR,RS,,,,,Crow,4,True,morn1,C_3,morn1_C_3_trial4_first_cont
 8dd86409-20bb-481e-a06a-b246f727ff1a,16-04-2025,10:27,627,MZ,M,,,,,SB,RS,,,,,GG,RL,,LN,,,LN,RS,,GG,,,NR,RS,,,,,Crow,4,True,morn1,C_3,morn1_C_3_trial4_first_cont
 721bba2d-095c-435e-9a3f-369912de5540,16-04-2025,10:29,629,MZ,DS,,,,Calls from other cage,SB,RS,,,,,GG,RS,,LN,,,LN,RS,,GG,,,NR,RS,,,,,Crow,4,True,morn1,C_3,morn1_C_3_trial4_first_cont
-1b18dfc9-930c-4acd-8f1c-900428ae02f5,16-04-2025,10:31,631,MZ,M,,,,,SB,RS,,,,,GG,RS,,LN,,,LN,RS,,GG,,,NR,RS,,,,,Crow,4,True,extra,C_3,_C_3_trial4_first_cont
+1b18dfc9-930c-4acd-8f1c-900428ae02f5,16-04-2025,10:31,631,MZ,M,,,,,SB,RS,,,,,GG,RS,,LN,,,LN,RS,,GG,,,NR,RS,,,,,Crow,4,True,extra,C_3,extra_C_3_trial4_first_cont
 26cfa82a-ddf8-4fc1-b040-1a2f4a02f74e,16-04-2025,10:53,653,MZ,AG,,,"SB, LN, NR",Fighting in other cage,SB,AG,,,"MZ, LN, NR",,GG,RS,,,,,LN,AG,,,"NR, SB, MZ",,NR,AG,,,"SB, MZ, LN",,Crow,4,True,morn2,C_3,morn2_C_3_trial4_first_cont
 ab6fa906-b26a-483b-818e-678b3b885ec5,16-04-2025,10:55,655,MZ,M,,,,,SB,RS,,,,,GG,RS,,LN,,,LN,RS,,GG,,,NR,M,,,,,Crow,4,True,morn2,C_3,morn2_C_3_trial4_first_cont
 eb35670e-ac5e-4c7a-b9a9-3a24b907491a,16-04-2025,10:57,657,MZ,AG,,,"GG, SB, LN, NR",NR attacked SB,SB,AG,,,"GG, MZ, LN, NR",Chasing NR support by GG and LN,GG,AG,,,,,LN,AG,,,,,NR,AG,,,,Atacked SB got support by MZ when he got chased by SB,Crow,4,True,morn2,C_3,morn2_C_3_trial4_first_cont
@@ -474,7 +474,7 @@ d9a76a54-4fc2-40bd-89d9-bcda85c8d68b,30-04-2025,11:36,696,MZ,GG,NR,,,,SB,RS,,,,,
 461b2dd2-9cc7-4b02-9d7f-66d4ee4da234,30-04-2025,11:40,700,MZ,RL,,NR,,,SB,RL,,,,,GG,RS,,,,,LN,RL,,,,,NR,RS,,MZ,,,Crow,5,True,morn2,C_3,morn2_C_3_trial5_first_cont
 cbb98afa-03e7-45e9-94d4-165df793f5c5,30-04-2025,11:42,702,MZ,RL,,NR,,,SB,RL,,,,,GG,RS,,,,,LN,RS,,,,,NR,RS,,MZ,,,Crow,5,True,morn2,C_3,morn2_C_3_trial5_first_cont
 9e189de2-1357-4ec7-a760-340888ca5b71,30-04-2025,11:44,704,MZ,RL,,NR,,,SB,RL,,,,,GG,RS,,,,,LN,RS,,,,,NR,RS,,MZ,,,Crow,5,True,morn2,C_3,morn2_C_3_trial5_first_cont
-bde6cfb5-c13e-4b88-b029-f639f02aef25,30-04-2025,11:46,706,MZ,RL,,NR,,,SB,RL,,,,,GG,RS,,,,,LN,RS,,,,,NR,RS,,MZ,,,Crow,5,True,extra,C_3,_C_3_trial5_first_cont
+bde6cfb5-c13e-4b88-b029-f639f02aef25,30-04-2025,11:46,706,MZ,RL,,NR,,,SB,RL,,,,,GG,RS,,,,,LN,RS,,,,,NR,RS,,MZ,,,Crow,5,True,extra,C_3,extra_C_3_trial5_first_cont
 f5a7b31e-af48-4775-884b-ca72f2346003,30-04-2025,13:18,798,MZ,E,,,NR,,SB,E,,,,,GG,E,,,,,LN,E,,,,,NR,E,,,MZ,,Crow,5,True,enrich,C_3,enrich_C_3_trial5_first_cont
 ab2d3e1b-030f-4c7a-aea4-b46d9d24f122,30-04-2025,13:20,800,MZ,E,,,,,SB,E,,,,,GG,E,,,,,LN,E,,,,,NR,E,,,,,Crow,5,True,enrich,C_3,enrich_C_3_trial5_first_cont
 16ba2a87-b0d8-4f42-a5fd-e28cea32aa98,30-04-2025,13:22,802,MZ,E,,,,,SB,E,,,,,GG,E,,,,,LN,E,,,,,NR,E,,,,,Crow,5,True,enrich,C_3,enrich_C_3_trial5_first_cont
@@ -550,7 +550,7 @@ dc618d0c-81de-449a-90f6-ed383e6d39ea,01-05-2025,10:21,621,MZ,E,,,,,SB,RL,,,,,GG,
 cda484df-a16d-4410-86e9-55899d356ae7,01-05-2025,10:25,625,MZ,E,,,,,SB,RL,,,,,GG,RS,,LN,,,LN,RL,,GG,,,NR,SD,,,,,Crow,5,False,morn1,C_3,morn1_C_3_trial5_sec_cont
 e7b9b7af-8bf5-4828-b44a-f746b668d6ff,01-05-2025,10:27,627,MZ,E,,,,,SB,RL,,,,,GG,RS,,LN,,,LN,RL,,GG,,,NR,SD,,,,,Crow,5,False,morn1,C_3,morn1_C_3_trial5_sec_cont
 071e595f-1853-495c-bb91-76ece4948214,01-05-2025,10:29,629,MZ,RS,,,,,SB,RL,,,,,GG,RS,,LN,,,LN,RL,,GG,,,NR,RS,,,,,Crow,5,False,morn1,C_3,morn1_C_3_trial5_sec_cont
-c8194cce-bd38-417d-a2f6-270549970629,01-05-2025,10:31,631,MZ,RL,,,,,SB,RL,,,,,GG,RS,,LN,,,LN,RL,,,,,NR,RL,,,,,Crow,5,False,extra,C_3,_C_3_trial5_sec_cont
+c8194cce-bd38-417d-a2f6-270549970629,01-05-2025,10:31,631,MZ,RL,,,,,SB,RL,,,,,GG,RS,,LN,,,LN,RL,,,,,NR,RL,,,,,Crow,5,False,extra,C_3,extra_C_3_trial5_sec_cont
 963a3263-5b81-47e1-9c80-050642ad8643,01-05-2025,10:45,645,MZ,GG,SB,,,,SB,GR,MZ,,,,GG,RS,,"NR, LN",,,LN,RL,,"GG, NR",,,NR,RL,,"GG, LN",,,Crow,5,False,morn2,C_3,morn2_C_3_trial5_sec_cont
 646656a2-802c-43c6-8d95-34651804c4c8,01-05-2025,10:47,647,MZ,GG,SB,,,,SB,GR,MZ,,,,GG,RS,,"NR, LN",,,LN,RL,,"GG, NR",,,NR,RL,,"GG, LN",,,Crow,5,False,morn2,C_3,morn2_C_3_trial5_sec_cont
 7e4ad37d-9ea3-4112-9c2d-b578b41ca22f,01-05-2025,10:49,649,MZ,GG,SB,,,,SB,GR,MZ,,,,GG,RS,,"NR, LN",,,LN,RL,,"GG, NR",,,NR,RL,,"GG, LN",,,Crow,5,False,morn2,C_3,morn2_C_3_trial5_sec_cont
@@ -686,7 +686,7 @@ da37804a-f529-4a99-8d02-e0ea3316d174,14-05-2025,11:28,688,MZ,RS,,,,,SB,RS,,,,,GG
 b4cb69d6-6866-47a5-b0c3-8d79ca4c30f3,14-05-2025,11:40,700,MZ,RS,,,,,SB,RL,,,,,GG,RS,,,,,LN,RS,,,,,NR,RS,,,,,Playback,6,True,morn2,C_3,morn2_C_3_trial6_first_play
 14a479b5-8c14-4b96-a0de-838c4b2af4cc,14-05-2025,11:42,702,MZ,RS,,,,,SB,RL,,,,,GG,RS,,,,,LN,RS,,,,,NR,RS,,,,,Playback,6,True,morn2,C_3,morn2_C_3_trial6_first_play
 d0851456-b50d-464c-a75f-405a393db6d6,14-05-2025,11:44,704,MZ,RS,,,,,SB,RL,,,,,GG,RS,,,,,LN,RS,,,,,NR,RS,,,,,Playback,6,True,morn2,C_3,morn2_C_3_trial6_first_play
-6b87210c-3570-48b6-8bbd-e8a386da56c4,14-05-2025,11:46,706,MZ,RS,,,,,SB,RL,,,,,GG,RS,,,,,LN,RS,,,,,NR,RS,,,,,Playback,6,True,extra,C_3,_C_3_trial6_first_play
+6b87210c-3570-48b6-8bbd-e8a386da56c4,14-05-2025,11:46,706,MZ,RS,,,,,SB,RL,,,,,GG,RS,,,,,LN,RS,,,,,NR,RS,,,,,Playback,6,True,extra,C_3,extra_C_3_trial6_first_play
 fdd1df40-e2b4-4fe2-822b-5750830d1c1f,14-05-2025,13:18,798,MZ,E,,,,,SB,E,,NR,,,GG,E,,,,,LN,E,,,,,NR,E,,SB,,,Playback,6,True,enrich,C_3,enrich_C_3_trial6_first_play
 fab494a2-d960-409e-be2d-43c43c6e29ea,14-05-2025,13:20,800,MZ,E,,,,,SB,E,,NR,,,GG,E,,,,,LN,E,,,,,NR,E,,SB,,,Playback,6,True,enrich,C_3,enrich_C_3_trial6_first_play
 0bd67959-0cd9-4d28-9fc4-3c5f6a7bca20,14-05-2025,13:22,802,MZ,E,,,,,SB,E,,NR,,,GG,E,,,,,LN,E,,,,,NR,E,,SB,,,Playback,6,True,enrich,C_3,enrich_C_3_trial6_first_play
@@ -793,7 +793,7 @@ ebc7570e-e3ff-49e7-b247-30d93c0add8d,15-05-2025,11:38,698,MZ,RS,,,,,SB,RL,,,,,GG
 9bb9af92-9a84-4c08-a1db-b6c698e306c5,15-05-2025,11:40,700,MZ,RS,,,,,SB,RL,,,,,GG,RL,,,,,LN,RS,,,,,NR,RL,,,,,Playback,6,False,morn2,C_3,morn2_C_3_trial6_sec_play
 ae678263-e652-4746-9db6-c71b75fb0e65,15-05-2025,11:42,702,MZ,RS,,,,,SB,RL,,,,,GG,RL,,,,,LN,RS,,,,,NR,RL,,,,,Playback,6,False,morn2,C_3,morn2_C_3_trial6_sec_play
 10020cde-89af-4171-a280-0b8932a9f3aa,15-05-2025,11:44,704,MZ,RS,,,,,SB,RL,,,,,GG,RL,,,,,LN,RS,,,,,NR,RL,,,,,Playback,6,False,morn2,C_3,morn2_C_3_trial6_sec_play
-07898ece-8f90-46be-ba00-7588b9733db9,15-05-2025,11:46,706,MZ,RS,,,,,SB,RL,,,,,GG,GG,NR,,,,LN,RS,,,,,NR,GR,GG,,,,Playback,6,False,extra,C_3,_C_3_trial6_sec_play
+07898ece-8f90-46be-ba00-7588b9733db9,15-05-2025,11:46,706,MZ,RS,,,,,SB,RL,,,,,GG,GG,NR,,,,LN,RS,,,,,NR,GR,GG,,,,Playback,6,False,extra,C_3,extra_C_3_trial6_sec_play
 02f6aa7d-c444-4001-9364-fcc3fbdaf3f3,15-05-2025,13:17,797,MZ,E,,,,,SB,E,,,"LN, NR",,GG,E,,LN,,,LN,E,,GG,SB,,NR,E,,,SB,,Playback,6,False,enrich,C_3,enrich_C_3_trial6_sec_play
 9094bd01-9e5f-4f4d-a3e4-68dfeaa78068,15-05-2025,13:19,799,MZ,E,,,,,SB,E,,,"LN, NR",,GG,E,,LN,,,LN,E,,GG,SB,,NR,E,,,SB,,Playback,6,False,enrich,C_3,enrich_C_3_trial6_sec_play
 ecb83232-99a4-4fec-9750-19dc3c9c8e89,15-05-2025,13:21,801,MZ,E,,"LN, SB",GG,,SB,E,,,"MZ, LN",,GG,E,,LN,"MZ, SB",,LN,E,,"GG, MZ",SB,,NR,E,,,,,Playback,6,False,enrich,C_3,enrich_C_3_trial6_sec_play

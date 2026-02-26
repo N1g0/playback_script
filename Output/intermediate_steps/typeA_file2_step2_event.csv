@@ -227,8 +227,8 @@ f4c97afb-4245-42d8-87a5-7e1909da59d4,04-04-2025,10:23,623,ST,RS,,TN,,SR,RS,,,,TK
 9b93fa3c-11d2-4a60-9e0b-26a3811cf98b,04-04-2025,10:25,625,ST,RS,,TN,,SR,RS,,,,TK,RS,,,,TN,RS,,ST,,Playback,3,False,morn1,A_3,morn1_A_3_trial3_sec_play
 a421fffd-7313-49b1-91ea-529d2989c5d7,04-04-2025,10:27,627,ST,RS,,TN,,SR,RS,,,,TK,RS,,,,TN,RS,,ST,,Playback,3,False,morn1,A_3,morn1_A_3_trial3_sec_play
 1c5b3fc7-f6e0-4ac2-838a-b2780a8be037,04-04-2025,10:29,629,ST,RS,,TN,,SR,RS,,,,TK,RL,,,,TN,RS,,ST,,Playback,3,False,morn1,A_3,morn1_A_3_trial3_sec_play
-6c10cf35-4399-4cf0-b304-ee53c38c1ace,04-04-2025,10:31,631,ST,RS,,TN,,SR,M,,,,TK,RL,,,,TN,RS,,ST,,Playback,3,False,extra,A_3,_A_3_trial3_sec_play
-4117ca46-0de2-42e9-b3d5-6d2fff6820e9,04-04-2025,10:33,633,ST,RS,,,,SR,RS,,,,TK,RL,,,,TN,M,,,,Playback,3,False,extra,A_3,_A_3_trial3_sec_play
+6c10cf35-4399-4cf0-b304-ee53c38c1ace,04-04-2025,10:31,631,ST,RS,,TN,,SR,M,,,,TK,RL,,,,TN,RS,,ST,,Playback,3,False,extra,A_3,extra_A_3_trial3_sec_play
+4117ca46-0de2-42e9-b3d5-6d2fff6820e9,04-04-2025,10:33,633,ST,RS,,,,SR,RS,,,,TK,RL,,,,TN,M,,,,Playback,3,False,extra,A_3,extra_A_3_trial3_sec_play
 cffa4c33-7a33-4f9f-bcbd-46d3acf5e300,04-04-2025,10:45,645,ST,RL,,,TN,SR,RS,,,,TK,RS,,,,TN,RS,,,ST,Playback,3,False,morn2,A_3,morn2_A_3_trial3_sec_play
 35ce1d50-3df1-4d3d-aa48-d47671821f34,04-04-2025,10:47,647,ST,RL,,,TN,SR,RS,,,,TK,RS,,,,TN,RS,,,ST,Playback,3,False,morn2,A_3,morn2_A_3_trial3_sec_play
 e4b3375d-b40d-48da-9184-39ae40681350,04-04-2025,10:49,649,ST,RL,,,TN,SR,RS,,,,TK,RS,,,,TN,RS,,,ST,Playback,3,False,morn2,A_3,morn2_A_3_trial3_sec_play
@@ -466,7 +466,7 @@ d2ca1977-814f-43d0-a6ba-2040491c6052,17-04-2025,11:33,693,ST,RS,,,,SR,RS,,,,TK,R
 ad5a7b74-2631-4a4f-8661-fefc0b5b4b70,17-04-2025,11:39,699,ST,RS,,,,SR,RS,,,,TK,GR,TN,,,TN,GG,TK,,,Crow,4,False,morn2,A_3,morn2_A_3_trial4_sec_cont
 536dcc43-1746-47a4-bfb7-934de1d4625a,17-04-2025,11:41,701,ST,RS,,,,SR,RS,,,,TK,GR,TN,,,TN,GG,TK,,,Crow,4,False,morn2,A_3,morn2_A_3_trial4_sec_cont
 db8c3b06-48f5-491c-a88d-9e43b41e5cb8,17-04-2025,11:43,703,ST,M,,,,SR,RS,,,,TK,PL,,TN,,TN,PL,,TK,,Crow,4,False,morn2,A_3,morn2_A_3_trial4_sec_cont
-5e60d67c-faf0-4b9d-a531-01c32d40601e,17-04-2025,11:46,706,ST,M,,TK,,SR,RS,,,,TK,M,,ST,,TN,RS,,,,Crow,4,False,extra,A_3,_A_3_trial4_sec_cont
+5e60d67c-faf0-4b9d-a531-01c32d40601e,17-04-2025,11:46,706,ST,M,,TK,,SR,RS,,,,TK,M,,ST,,TN,RS,,,,Crow,4,False,extra,A_3,extra_A_3_trial4_sec_cont
 f9176336-8100-4d22-90cc-de2fce7eb061,17-04-2025,13:19,799,ST,E,,,TN,SR,RS,,,TK,TK,E,,,SR,TN,E,,,ST,Crow,4,False,enrich,A_3,enrich_A_3_trial4_sec_cont
 2ae5b776-9d79-40f7-b50c-f9409ae9eb69,17-04-2025,13:20,800,ST,E,,,TN,SR,RS,,,TK,TK,E,,,SR,TN,E,,,ST,Crow,4,False,enrich,A_3,enrich_A_3_trial4_sec_cont
 513e5e99-57d8-4909-b8f7-c114557df240,17-04-2025,13:23,803,ST,E,,,TN,SR,RS,,,,TK,RS,,,,TN,E,,,ST,Crow,4,False,enrich,A_3,enrich_A_3_trial4_sec_cont
@@ -570,7 +570,7 @@ af9d557b-fffb-4a45-abba-32cc5a5fc72a,30-04-2025,11:34,694,ST,GM,TK,TN,,SR,RS,,,,
 90d4b423-7442-4b1a-ad2b-7c2c4e95402f,30-04-2025,11:40,700,ST,GM,TK,TN,,SR,RS,,,,TK,GM,ST,TN,,TN,RS,,"ST, TK",,Crow,5,True,morn2,A_3,morn2_A_3_trial5_first_cont
 424cf52b-e477-4144-99c9-71db68156bea,30-04-2025,11:42,702,ST,GM,TK,TN,,SR,RS,,,,TK,GM,ST,TN,,TN,RS,,"ST, TK",,Crow,5,True,morn2,A_3,morn2_A_3_trial5_first_cont
 28813bc1-6776-448e-a56e-0bd85ec46cb5,30-04-2025,11:44,704,ST,RS,,"TN, TK",,SR,RS,,,,TK,RS,,"TN, ST",,TN,RS,,"TK, ST",,Crow,5,True,morn2,A_3,morn2_A_3_trial5_first_cont
-34312298-5b46-47e3-b023-112e310cbe95,30-04-2025,11:46,706,ST,M,,TN,,SR,RS,,,,TK,RS,,,,TN,M,,ST,,Crow,5,True,extra,A_3,_A_3_trial5_first_cont
+34312298-5b46-47e3-b023-112e310cbe95,30-04-2025,11:46,706,ST,M,,TN,,SR,RS,,,,TK,RS,,,,TN,M,,ST,,Crow,5,True,extra,A_3,extra_A_3_trial5_first_cont
 c5c01bee-bf88-47fc-b166-21f4c9fcf367,30-04-2025,13:18,798,ST,E,,TN,,SR,RS,,,,TK,RS,,,,TN,E,,ST,,Crow,5,True,enrich,A_3,enrich_A_3_trial5_first_cont
 30241e75-623a-4403-9505-07f645b3e9a4,30-04-2025,13:20,800,ST,RS,,,TN,SR,RS,,,,TK,RS,,,,TN,M,,,ST,Crow,5,True,enrich,A_3,enrich_A_3_trial5_first_cont
 06d25131-e613-4228-9103-37868e021e25,30-04-2025,13:22,802,ST,E,,TN,,SR,RS,,,,TK,RS,,,,TN,E,,ST,,Crow,5,True,enrich,A_3,enrich_A_3_trial5_first_cont
@@ -646,7 +646,7 @@ b9650d2c-d1db-48de-a2e5-161f2d6d4509,01-05-2025,10:17,617,ST,RS,,,,SR,RS,,,TN,TK
 d575326f-0ddb-46a0-8527-5d0fb3cf4804,01-05-2025,10:25,625,ST,RS,,,,SR,RS,,"TN, TK",,TK,M,,"TN, SR",,TN,RS,,"TK, SR",,Crow,5,False,morn1,A_3,morn1_A_3_trial5_sec_cont
 44e92f22-87e5-446a-bf9c-ba02dae573e8,01-05-2025,10:27,627,ST,RS,,,,SR,RS,,"TN, TK",,TK,RS,,"TN, SR",,TN,RL,,"TK, SR",,Crow,5,False,morn1,A_3,morn1_A_3_trial5_sec_cont
 856d737f-6d0b-42c6-9190-ef22055a1264,01-05-2025,10:29,629,ST,RS,,,,SR,GR,TK,TN,,TK,GG,SR,TN,,TN,RS,,"SR, TK",,Crow,5,False,morn1,A_3,morn1_A_3_trial5_sec_cont
-d2e76fb7-591a-4db0-a43b-850f35b3a23c,01-05-2025,10:31,631,ST,RS,,,,SR,GR,TK,TN,,TK,GG,SR,TN,,TN,RS,,"SR, TK",,Crow,5,False,extra,A_3,_A_3_trial5_sec_cont
+d2e76fb7-591a-4db0-a43b-850f35b3a23c,01-05-2025,10:31,631,ST,RS,,,,SR,GR,TK,TN,,TK,GG,SR,TN,,TN,RS,,"SR, TK",,Crow,5,False,extra,A_3,extra_A_3_trial5_sec_cont
 6debffe4-b4a5-4c35-ad7d-3b35a30f8198,01-05-2025,10:45,645,ST,RS,,,,SR,RS,,"TK, TN",,TK,RL,,"TN, SR",,TN,RS,,"TK, SR",,Crow,5,False,morn2,A_3,morn2_A_3_trial5_sec_cont
 602d59ba-94fd-45c1-8571-44b99acf7534,01-05-2025,10:47,647,ST,RS,,,,SR,RS,,"TK, TN",,TK,RL,,"TN, SR",,TN,RS,,"TK, SR",,Crow,5,False,morn2,A_3,morn2_A_3_trial5_sec_cont
 fd987864-afea-4ca6-a7dd-9f08889aa092,01-05-2025,10:49,649,ST,RS,,,,SR,RS,,"TK, TN",,TK,RL,,"TN, SR",,TN,RS,,"TK, SR",,Crow,5,False,morn2,A_3,morn2_A_3_trial5_sec_cont
@@ -888,7 +888,7 @@ cb4adc2e-4e44-4fcc-872c-c15eaa6342c8,15-05-2025,11:36,696,ST,RL,,,,SR,RL,,,,TK,R
 1f452885-f071-40b0-b6af-7c4b497259f7,15-05-2025,11:40,700,ST,RL,,,,SR,RL,,,,TK,RS,,,,TN,RS,,,,Playback,6,False,morn2,A_3,morn2_A_3_trial6_sec_play
 0395acb6-f68b-4b19-ab84-e2102ae7ff20,15-05-2025,11:42,702,ST,RL,,,,SR,RL,,,,TK,RS,,,,TN,RS,,,,Playback,6,False,morn2,A_3,morn2_A_3_trial6_sec_play
 18c0fb35-40ac-4d5f-a2ef-e449c72c67c2,15-05-2025,11:44,704,ST,RL,,,,SR,RL,,,,TK,RS,,,,TN,RS,,,,Playback,6,False,morn2,A_3,morn2_A_3_trial6_sec_play
-1dc28099-139b-42fd-931f-bcf3b0abebdd,15-05-2025,11:46,706,ST,RL,,,,SR,RL,,,,TK,RS,,,,TN,RS,,,,Playback,6,False,extra,A_3,_A_3_trial6_sec_play
+1dc28099-139b-42fd-931f-bcf3b0abebdd,15-05-2025,11:46,706,ST,RL,,,,SR,RL,,,,TK,RS,,,,TN,RS,,,,Playback,6,False,extra,A_3,extra_A_3_trial6_sec_play
 ccf32ddf-2e31-4cd2-9059-f93f351e489b,15-05-2025,13:17,797,ST,E,,,TN,SR,RS,,,,TK,RS,,,TN,TN,E,,,"TK, ST",Playback,6,False,enrich,A_3,enrich_A_3_trial6_sec_play
 4ed617e8-d9f2-49d5-86e1-e55a98d110e4,15-05-2025,13:19,799,ST,E,,,TN,SR,M,,,"TK, TN",TK,E,,TN,SR,TN,E,,TK,"SR, ST",Playback,6,False,enrich,A_3,enrich_A_3_trial6_sec_play
 26c8bec7-66fc-4c3f-aa7d-04a6ff0d775c,15-05-2025,13:21,801,ST,E,,,"SR, TN",SR,RS,,,ST,TK,E,,TN,,TN,E,,TK,ST,Playback,6,False,enrich,A_3,enrich_A_3_trial6_sec_play

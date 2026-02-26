@@ -598,7 +598,7 @@ def generate_block_ID(df: pd.DataFrame) -> pd.Series:
     """
     # 1. Phase: morn1, morn2, etc.
     phase: pd.Series = df['phase'].fillna('').str.lower()
-    phase = phase.where(phase.isin(['morn1', 'morn2', 'enrich']), '')
+    phase = phase.where(phase.isin(['morn1', 'morn2', 'enrich', 'extra']), '')
 
     # 2. Group: Needs to be handled carefully if empty
     group: pd.Series = '_' + df['group'].fillna('Unknown').astype(str)
@@ -625,7 +625,7 @@ def generate_block_ID(df: pd.DataFrame) -> pd.Series:
     # Final result is a Series of concatenated strings
     return phase + group + trial_str + day_str + cond_str
 
-
+'''
 def get_behavior_code_dict(df: pd.DataFrame) -> Dict[str, str]:
     """
     Creates a mapping between individual codes (e.g., 'MZ') and their
@@ -655,6 +655,38 @@ def get_behavior_code_dict(df: pd.DataFrame) -> Dict[str, str]:
 
                 # Ensure the key is valid (not NaN) before adding to dictionary
                 if pd.notna(code_key) and pd.notna(behavior_val):
+                    behave_dict[str(code_key)] = str(behavior_val)
+
+    return behave_dict
+'''
+
+
+def get_behavior_code_dict(df: pd.DataFrame) -> Dict[str, str]:
+    """
+    Creates a mapping between individual codes and their behaviors by
+    searching for the first non-null values in the entire DataFrame.
+    """
+    pattern: Pattern[str] = re.compile(r"^Ind_(\d+)$")
+    behave_dict: Dict[str, str] = {}
+
+    for col in df.columns:
+        m: Optional[Match[str]] = pattern.match(col)
+
+        if m:
+            num: str = m.group(1)
+            behavior_col: str = f"Ind_{num}_Behavior"
+
+            # Check if the paired behavior column exists
+            if behavior_col in df.columns:
+                # 1. Find the first valid (non-NaN) individual code
+                first_code_idx = df[col].first_valid_index()
+                # 2. Find the first valid (non-NaN) behavior
+                first_behave_idx = df[behavior_col].first_valid_index()
+
+                if first_code_idx is not None and first_behave_idx is not None:
+                    code_key = df.at[first_code_idx, col]
+                    behavior_val = df.at[first_behave_idx, behavior_col]
+
                     behave_dict[str(code_key)] = str(behavior_val)
 
     return behave_dict
@@ -804,6 +836,7 @@ def classify_behavior(int1: str, behaviour: str, targets: Any, metadata: dict, i
             current_flags['sitting'] = 1
         elif behaviour == 'RL':
             current_flags['resting'] = 1
+    #        current_flags['laying'] = 1
 
         res['behaviour'].append(
             {**metadata, 'Ind1': int1, 'behaviour': behaviour, 'qualifier': None, 'partner': None, **current_flags})
@@ -892,7 +925,7 @@ def reshape_row_to_multiple(row: pd.Series, beha_dict: Dict[str, str]) -> Dict[s
                             })
 
         # --- PART B: BEHAVIOR CLASSIFICATION ---
-        # We only process if there is a behavior code (e.g., 'E', 'PL', 'GG')
+        # process if there is a behavior code (e.g., 'E', 'PL', 'GG')
         if behaviour and behaviour.lower() != 'nan' and behaviour != '':
             # Determine target for social behaviors
             targets = contact if pd.notna(contact) else (arr if pd.notna(arr) else None)
@@ -921,17 +954,6 @@ def process_sort_beh_dist(df):
     return df_beh, df_dist, df_occ
 
 
-def parse_flexible_date(val):
-    """Parses European dots or ISO format and forward-fills missing values."""
-    if pd.isna(val) or val == "": return None
-    s = str(val).strip()
-    try:
-        if '.' in s: return pd.to_datetime(s, dayfirst=True)
-        return pd.to_datetime(s)
-    except:
-        return pd.to_datetime(s, errors='coerce')
-
-
 def to_msm(time_val):
     """Converts HH:MM or Timestamp to minutes since midnight."""
     if pd.isna(time_val): return 0
@@ -944,75 +966,193 @@ def to_msm(time_val):
         return 0
 
 
-def get_occurrence_metadata(df, row, b_col_idx):
-    """Scans neighboring columns for Contact and Notes relative to a behavior column."""
-    partner, notes = "", ""
-    # Check the next 5 columns for specific keywords
-    for i in range(b_col_idx + 1, min(b_col_idx + 6, len(df.columns))):
-        c_name = df.columns[i]
-        if 'Contact' in c_name: partner = row[c_name]
-        if 'Notes' in c_name or 'Occurence' in c_name: notes = row[c_name]
-    return partner, notes
+def get_occurrence_metadata(row: pd.Series, prefix: str) -> Tuple[str, str]:
+    """
+    Refactored Metadata Extractor:
+    Uses the individual's column prefix to grab related Contact and Notes.
+    """
+    # 1. Extract Contact/Partner (Check Contact first, then AR as fallback)
+    partner = row.get(f"{prefix}_Contact")
+    if pd.isna(partner) or str(partner).strip() == "":
+        partner = row.get(f"{prefix}_AR")
+
+    # 2. Extract Notes
+    notes = row.get(f"{prefix}_Notes")
+
+    # 3. Clean and Return
+    partner_str = str(partner).strip() if pd.notna(partner) else ""
+    notes_str = str(notes).strip() if pd.notna(notes) else ""
+
+    return partner_str, notes_str
 
 
-def process_all_occurrence(df, file_type, all_occ_dfs):
+def parse_flexible_date(date_str):
+    if pd.isna(date_str) or str(date_str).strip() == "":
+        return pd.NaT
+
+    date_str = str(date_str).strip()
+
+    try:
+        return pd.to_datetime(date_str, dayfirst=False, errors='coerce')
+    except:
+        return pd.NaT
+
+
+def standardize_dataframe_dates(df):
+    # 1. Identify the source column (created_at or date)
+    source_col = 'created_at' if 'created_at' in df.columns else 'date'
+
+    if source_col not in df.columns:
+        print(f"⚠️ No column named '{source_col}' found.")
+        return df
+
+    # 2. Rename original column to 'date_old'
+    # Use a dictionary to avoid errors if 'date_old' already exists
+    df = df.rename(columns={source_col: 'date_old'})
+
+    # 3. Parse dates (using the Month-First logic discussed)
+    # df['date_old'] now contains your 04.05.2025 or 4/16/25
+    df['date_dt'] = pd.to_datetime(df['date_old'], dayfirst=False, errors='coerce').ffill()
+
+    # 4. Create the new 'date' column in "DD Month YYYY" format
+    df['date'] = df['date_dt'].dt.strftime('%d %B %Y')
+
+    # 5. Reorder columns so 'date' is where the original was
+    # Find index of 'date_old' and place 'date' and 'date_dt' next to it
+    cols = list(df.columns)
+    old_idx = cols.index('date_old')
+
+    # Remove 'date' and 'date_dt' from their current positions
+    cols.remove('date')
+    cols.remove('date_dt')
+
+    # Insert them right after 'date_old'
+    cols.insert(old_idx + 1, 'date')
+    cols.insert(old_idx + 2, 'date_dt')
+
+    df = df[cols]
+
+    return df
+
+
+def apply_schedule_and_phase(df, schedule_dict, get_phase_from_time_func):
+    """
+    Integrates trial, condition, first_day, and phase into the working DataFrame.
+    """
+    # 1. Create a lookup table from the schedule_dict
+    schedule_rows = []
+    for (cond, trial), dates in schedule_dict.items():
+        for i, d in enumerate(dates):
+            # Standardizing date format to match your df['date_str'] or 'date'
+            # Assuming your schedule_dict uses "04.04.2025" and df uses "04 April 2025"
+            # We convert both to a standard datetime for the merge
+            schedule_rows.append({
+                'merge_date': pd.to_datetime(d, dayfirst=True),
+                'condition': cond,
+                'trial': trial,
+                'first_day': (i == 0)  # True if it's the first date in the list
+            })
+
+    sched_df = pd.DataFrame(schedule_rows)
+
+    # 2. Ensure the main df has a datetime column for merging
+    if 'date_dt' not in df.columns:
+        df['date_dt'] = pd.to_datetime(df['date'], errors='coerce')
+
+    # 3. Merge schedule info into the main dataframe
+    df = df.merge(sched_df, left_on='date_dt', right_on='merge_date', how='left')
+
+    # Clean up merge column
+    df.drop(columns=['merge_date'], inplace=True)
+
+    # 4. Apply Phase mapping based on '1_TIme'
+    if '1_TIme' in df.columns:
+        # result looks like: 'Morning', 'Afternoon', etc.
+        df['phase'] = df['1_TIme'].apply(get_phase_from_time_func)
+
+    return df
+
+
+def process_all_occurrence(df, file_type, all_occ_dfs, output_dir):
     """Main function to flatten and validate occurrence data."""
 
-    # 1. Standardize Dates
-    date_col = 'created_at' if 'created_at' in df.columns else 'date'
-    if date_col not in df.columns:
-        print(f"⚠️ Skipping: No date column found in {file_type}")
-        return
+    # This creates 'date_dt' (Timestamp) and 'date' (String)
+    df = standardize_dataframe_dates(df)
+    df = detect_ind(df)
+    behave_dict = get_behavior_code_dict(df)
 
-    df['date_dt'] = df[date_col].apply(parse_flexible_date).ffill()
-    df['date_str'] = df['date_dt'].dt.strftime('%d-%m-%Y')
+    # Get Trial, Condition, and First_Day info
+    df = apply_schedule_and_phase(df, schedule_dict, get_phase_from_time)
 
-    # 2. Identify Behavior Columns
+    # Pre-calculate Cages (Pass the Series, not a string)
+    df['group'] = get_group(df['date_dt'], Cage_Comp_Dates, behave_dict, file_type).values
+
+    # Generate the unique Block Identifier
+    df['block_ID'] = generate_block_ID(df)
+
+    # 4. Identify Behavior Columns
     beh_cols = [c for c in df.columns if '_Behavior' in c]
     rows = []
-    behave_dict = get_behavior_code_dict(df)
-    # 3. Process Rows with Cage Verification
+
+    # 5. Process Rows
     for _, row in df.iterrows():
+        # Metadata context for the row
         msm_val = to_msm(row.get('1_TIme', '00:00'))
+        metadata = {
+            'ec5_uuid': row.get('ec5_uuid', ''),
+            'condition': row.get('condition', 'Unknown'),
+            'date': row.get('date', ''),
+            'date_dt': row.get('date_dt', ''),
+            'msm': msm_val,
+            'group': row.get('group', file_type),
+            'trial': row.get('trial', ''),
+            'phase': row.get('phase', ''),
+            'first_day': row.get('first_day', False),
+            'block_ID': row.get('block_ID', '')
+        }
 
         for b_col in beh_cols:
             val = row[b_col]
             if pd.isna(val) or str(val).strip() == "":
                 continue
 
-                # Extract ID: '4_ST_Behavior' -> 'ST'
-            parts = b_col.split('_')
-            ind_id = parts[1] if len(parts) > 2 else parts[0]
+            # b_col is e.g., '4_ST_Behavior'
+            # We want the prefix '4_ST'
+            prefix = "_".join(b_col.split('_')[:2])
 
-            # REUSE YOUR EXISTING LOGIC: Verify this animal belongs in this cage
-            actual_cage = get_group(ind_id, Cage_Comp_Dates, behave_dict, file_type)
+            # Extract Ind ID for the 'Ind1' column (e.g., 'ST')
+            ind_id = b_col.split('_')[1]
 
-            # Optional: Warning if the ID doesn't match the file_type
-            if actual_cage and actual_cage != file_type:
-                # This helps catch manual entry errors in the raw files
-                pass
-
-            partner, notes = get_occurrence_metadata(df, row, df.columns.get_loc(b_col))
+            # Use the new Refactored Worker
+            partner, notes = get_occurrence_metadata(row, prefix)
 
             rows.append({
-                'ec5_uuid': row.get('ec5_uuid', ''),
-                'condition': 'All_Occurrence',
-                'date': row['date_str'],
-                'msm': msm_val,
-                'group': file_type,
+                **metadata,  # Unpack standard context
                 'Ind1': ind_id,
-                'behaviour': val,
-                'partner': partner if pd.notna(partner) else "",
-                'notes': notes if pd.notna(notes) else "",
+                'behaviour': str(val).strip(),
+                'partner': partner,
                 'playing': 1 if val == 'PL' else 0,
-                'aggression': 1 if val == 'AG' else 0
+                'aggression': 1 if val == 'AG' else 0,
+                'notes': notes
             })
 
+    # 6. Save
     if rows:
+        # Create the DataFrame from the rows list
         occ_df = pd.DataFrame(rows)
-        # Ensure the list exists for this key before appending
-        all_occ_dfs[file_type].append(occ_df)
+
+        # Save ONLY the processed df to your dictionary
+        all_occ_dfs[file_type] = occ_df
+
         print(f"✅ Processed {len(occ_df)} occurrences from Cage {file_type}")
+
+        # Optional: Save to a file immediately
+        occ_df.to_csv(f"{output_dir}/processed_occurrence_cage_{file_type}.csv", index=False)
+
+        return all_occ_dfs
+
+    else:
+        print(f"⚠️ No occurrences found for Cage {file_type}")
 
 
 def read_data(input_file_path: str):
