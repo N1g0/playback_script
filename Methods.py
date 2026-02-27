@@ -625,41 +625,6 @@ def generate_block_ID(df: pd.DataFrame) -> pd.Series:
     # Final result is a Series of concatenated strings
     return phase + group + trial_str + day_str + cond_str
 
-'''
-def get_behavior_code_dict(df: pd.DataFrame) -> Dict[str, str]:
-    """
-    Creates a mapping between individual codes (e.g., 'MZ') and their
-    corresponding behavior values (e.g., 'E') from the first row of the DataFrame.
-
-    Args:
-        df: A pandas DataFrame containing 'Ind_N' and 'Ind_N_Behavior' columns.
-
-    Returns:
-        A dictionary where keys are individual codes and values are behaviors.
-    """
-    # Type hint for the compiled regex pattern
-    pattern: Pattern[str] = re.compile(r"^Ind_(\d+)$")
-    behave_dict: Dict[str, str] = {}
-
-    for col in df.columns:
-        m: Optional[Match[str]] = pattern.match(col)
-
-        if m:
-            num: str = m.group(1)
-            behavior_col: str = f"Ind_{num}_Behavior"
-
-            # Check if the paired behavior column exists in the DataFrame
-            if behavior_col in df.columns:
-                code_key = df[col].iloc[0]
-                behavior_val = df[behavior_col].iloc[0]
-
-                # Ensure the key is valid (not NaN) before adding to dictionary
-                if pd.notna(code_key) and pd.notna(behavior_val):
-                    behave_dict[str(code_key)] = str(behavior_val)
-
-    return behave_dict
-'''
-
 
 def get_behavior_code_dict(df: pd.DataFrame) -> Dict[str, str]:
     """
@@ -724,26 +689,20 @@ def reshape_behavior_data(df: pd.DataFrame, file_type) -> pd.DataFrame:
         behave_mapping,
         file_type
     )
-    #print('working_df group added: \n', working_df.head())
     # 4. Now generate Block ID (Now that phase, group, trial, etc. all exist)
     working_df['block_ID'] = generate_block_ID(working_df)
-
-    #print('working_df Block ID added: \n', working_df[['date', 'block_ID']].head())
 
     return working_df
 
 
 def process_sort_event(sorted_df: pd.DataFrame, file_type):
     df_dec_ind: pd.DataFrame = detect_ind(sorted_df)
-    #print('df_dec_ind: \n', df_dec_ind)
     # Fix date column
     df_dec_ind["date"] = pd.to_datetime(df_dec_ind["date"]).dt.strftime("%d-%m-%Y")
     # Fix time column
     df_dec_ind["1_TIme"] = pd.to_datetime(df_dec_ind["1_TIme"]).dt.strftime("%H:%M")
-    #print('df_dec_ind date changed: \n', df_dec_ind)
 
     resh_df: pd.DataFrame = reshape_behavior_data(df_dec_ind, file_type)
-    #print('resh_df: \n', resh_df)
 
     return resh_df
 
@@ -994,6 +953,7 @@ def parse_flexible_date(date_str):
 
     try:
         return pd.to_datetime(date_str, dayfirst=False, errors='coerce')
+
     except:
         return pd.NaT
 
@@ -1073,7 +1033,7 @@ def apply_schedule_and_phase(df, schedule_dict, get_phase_from_time_func):
     return df
 
 
-def process_all_occurrence(df, file_type, all_occ_dfs, output_dir):
+def process_all_occurrence(df, file_type):
     """Main function to flatten and validate occurrence data."""
 
     # This creates 'date_dt' (Timestamp) and 'date' (String)
@@ -1101,8 +1061,7 @@ def process_all_occurrence(df, file_type, all_occ_dfs, output_dir):
         metadata = {
             'ec5_uuid': row.get('ec5_uuid', ''),
             'condition': row.get('condition', 'Unknown'),
-            'date': row.get('date', ''),
-            'date_dt': row.get('date_dt', ''),
+            'date': row.get('date_dt', ''),
             'msm': msm_val,
             'group': row.get('group', file_type),
             'trial': row.get('trial', ''),
@@ -1116,40 +1075,54 @@ def process_all_occurrence(df, file_type, all_occ_dfs, output_dir):
             if pd.isna(val) or str(val).strip() == "":
                 continue
 
-            # b_col is e.g., '4_ST_Behavior'
-            # We want the prefix '4_ST'
+            # b_col is e.g., '4_ST_Behavior' to '4_ST'
             prefix = "_".join(b_col.split('_')[:2])
-
             # Extract Ind ID for the 'Ind1' column (e.g., 'ST')
             ind_id = b_col.split('_')[1]
 
             # Use the new Refactored Worker
             partner, notes = get_occurrence_metadata(row, prefix)
 
+            # --- Behavioral Logic ---
+            beh_raw = str(val).strip().upper()
+
+            # Default values
+            main_beh = beh_raw
+            qualifier = None
+            is_playing = 0
+            is_aggression = 0
+
+            if beh_raw.startswith('PL'):
+                is_playing = 1
+                # For Play, usually kept as 'PL' or split if you have 'PLx'
+                if len(beh_raw) > 2:
+                    main_beh = beh_raw[:2]
+                    qualifier = beh_raw[2:]
+
+            elif beh_raw in {'AG', 'DS', 'AR'}:
+                is_aggression = 1
+                # SPLIT LOGIC: A/G, D/S, A/R
+                main_beh = beh_raw[0]
+                qualifier = beh_raw[1]
+
+            # Append to our list
             rows.append({
-                **metadata,  # Unpack standard context
+                **metadata,
                 'Ind1': ind_id,
-                'behaviour': str(val).strip(),
-                'partner': partner,
-                'playing': 1 if val == 'PL' else 0,
-                'aggression': 1 if val == 'AG' else 0,
-                'notes': notes
+                'behaviour': main_beh,
+                'qualifier': qualifier,
+                'partner': partner if partner else None,
+                'notes': notes if notes else None,
+                'playing': is_playing,
+                'aggression': is_aggression
             })
 
     # 6. Save
     if rows:
         # Create the DataFrame from the rows list
-        occ_df = pd.DataFrame(rows)
+        occ_df: pd.DataFrame = pd.DataFrame(rows)
 
-        # Save ONLY the processed df to your dictionary
-        all_occ_dfs[file_type] = occ_df
-
-        print(f"✅ Processed {len(occ_df)} occurrences from Cage {file_type}")
-
-        # Optional: Save to a file immediately
-        occ_df.to_csv(f"{output_dir}/processed_occurrence_cage_{file_type}.csv", index=False)
-
-        return all_occ_dfs
+        return occ_df
 
     else:
         print(f"⚠️ No occurrences found for Cage {file_type}")
@@ -1173,7 +1146,7 @@ def read_data(input_file_path: str):
         return None
 
 
-def file_name(input_file_path, df_raw, all_raw_dfs):
+def file_name(input_file_path, df_raw, all_raw_list):
     # --- Determine file type ---
     file_name: str = os.path.basename(input_file_path).lower()
     file_type: str | None = None
@@ -1188,9 +1161,9 @@ def file_name(input_file_path, df_raw, all_raw_dfs):
     if file_type:
         print(f"→ Detected {file_type} file: {input_file_path}")
 
-        all_raw_dfs[file_type].append(df_raw)
+        all_raw_list[file_type].append(df_raw)
 
-        return all_raw_dfs, file_type
+        return all_raw_list, file_type
 
     else:
         print(f"⚠️ Could not detect file type (A, B, or C) for: {input_file_path}. Skipping.")

@@ -15,7 +15,6 @@ data_files: list[str] = glob.glob(os.path.join(input_dir, "*.csv")) + glob.glob(
 
 # --- Prepare storage ---
 all_raw_dfs: dict[str, list[pd.DataFrame]] = defaultdict(list)
-all_occ_dfs: dict[str, list[pd.DataFrame]] = defaultdict(list)
 
 # Global lists to store all data across all file types and chunks
 all_behave_data: list = []
@@ -29,11 +28,17 @@ all_occ_data: list = []
 for input_file_path in data_files:
     print(f"Processing: {input_file_path}")
 
-    # --- Skip All_Occurence files ---
+    # --- Process All_Occurence files ---
     if "all_occurence" in input_file_path.lower():
         df_occ: pd.DataFrame = Methods.read_data(input_file_path)
-        all_occ_data, file_type = Methods.file_name(input_file_path, df_occ, all_occ_dfs)
-        all_occ_dfs = Methods.process_all_occurrence(df_occ, file_type, all_occ_dfs, output_dir)
+        all_raw_dfs, file_type = Methods.file_name(input_file_path, df_occ, all_raw_dfs)
+        occ_df = Methods.process_all_occurrence(df_occ, file_type)
+
+        print(f"✅ Processed {len(occ_df)} occurrences from Cage {file_type}")
+
+        all_occ_data.append(occ_df)
+        # Optional: Save to a file immediately
+        occ_df.to_csv(f"{output_dir}/processed_occurrence_cage_{file_type}.csv", index=False)
         continue
 
     df_raw: pd.DataFrame = Methods.read_data(input_file_path)
@@ -42,7 +47,7 @@ for input_file_path in data_files:
 # --------------------------------------------------------------------------
 #                     PHASE 2: Process Each Raw DataFrame
 # --------------------------------------------------------------------------
-#TODO: Concate both occ dfs into one and save in final_occ/fix df stucture first
+#TODO:
 # Fact-check data if data processing was successful and no data are missing
 # Build data search function?
 
@@ -73,8 +78,6 @@ for file_type, list_of_raw_dfs in all_raw_dfs.items():
 
             # Reshaping (The 3 tables)
             behave_df, dist_df, occ_df = Methods.process_sort_beh_dist(event_sorted_df)
-            print('occ_df: \n', occ_df)
-            #TODO: Fix qaulifier and .append all_occ.dfs is Dataframe not dict anymore (change to one or the other)
 
             # Save (Individual file outputs)
             behave_df.to_csv(os.path.join(steps_dir, f"type{file_type}_file{idx}_step3_behave.csv"), index=False)
@@ -83,7 +86,7 @@ for file_type, list_of_raw_dfs in all_raw_dfs.items():
             # Add to global lists for the final combined files
             all_behave_data.append(behave_df)
             all_dist_data.append(dist_df)
-            all_occ_dfs[file_type].append(occ_df)
+            all_occ_data.append(occ_df)
 
             print(f"✅ Finished file #{idx + 1}")
 
@@ -103,19 +106,10 @@ if all_dist_data:
     final_dist.to_csv(os.path.join(output_dir, "final_combined_distance.csv"), index=False)
     print(f"📁 Saved final_combined_distance.csv ({len(final_dist)} rows)")
 
-all_dfs_list = []
-for cage_type in all_occ_dfs:
-    all_dfs_list.extend(all_occ_dfs[cage_type])
 
-# 2. Check if the flattened list has any data
-if all_dfs_list:
-    # Concatenate all dataframes into one long "final" dataframe
-    final_occ = pd.concat(all_dfs_list, ignore_index=True)
-
-    # Save to CSV
-    output_path = os.path.join(output_dir, "final_combined_occurrence.csv")
-    final_occ.to_csv(output_path, index=False)
-
+if all_occ_data:
+    final_occ = pd.concat(all_occ_data, ignore_index=True)
+    final_occ.to_csv(os.path.join(output_dir, "final_combined_all_occurrences.csv"), index=False)
     print(f"📁 Saved final_combined_occurrence.csv ({len(final_occ)} rows)")
 else:
-    print("⚠️ No data was found to concatenate.")
+    print("⚠️ No valid DataFrames found to concatenate.")
