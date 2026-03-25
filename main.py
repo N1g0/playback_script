@@ -24,7 +24,12 @@ all_occ_data: list = []
 # --------------------------------------------------------------------------
 #                          PHASE 1: Read and Store
 # --------------------------------------------------------------------------
-
+#TODO: Qualifiers in behavior RS and others
+# Document all of the varibable names/processing steps
+# DUplicates in Distance -> SHOW SAME DISTANCE; SORTING TOOL? / missing days used days for analysis -> Read Me file / User GUIDE
+# Ind1 in all occ change into name (1 -> Nametag) / distinguish between origin behaviour vs. all_occ
+# all_occ no qualifier
+# extra definition snd UNKNOWN dates?
 for input_file_path in data_files:
     print(f"Processing: {input_file_path}")
 
@@ -61,13 +66,13 @@ for file_type, list_of_raw_dfs in all_raw_dfs.items():
     for idx, raw_df in enumerate(list_of_raw_dfs):
         try:
             # Time Adjustment
-            time_sorted_df_raw, _ = Methods.adjust_msm_in_raw_empty(
+            time_sorted_df_raw = Methods.adjust_msm_in_raw_empty(
                 raw_df=raw_df,
                 file_type=file_type,
-                output_dir=output_dir,
+                output_dir=steps_dir,
                 time_col_raw="1_TIme",
-                time_col_empty="time"
             )
+            #print('time_sorted_df_raw: \n', time_sorted_df_raw)
             # Save
             time_sorted_df_raw.to_csv(os.path.join(steps_dir, f"type{file_type}_file{idx}_step1_time.csv"), index=False)
 

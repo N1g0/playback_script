@@ -88,10 +88,33 @@ def is_excluded(msm):
 filtered_gaps = []
 
 
-def time_to_msm(t_str: str) -> int:
-    """Converts 'HH:MM' string to integer minutes since midnight."""
-    t = datetime.strptime(t_str, "%H:%M")
-    return t.hour * 60 + t.minute
+def time_to_msm(time_value) -> int | None:
+    """Convert various time formats to minutes since midnight."""
+
+    try:
+        # 1. If already numeric (e.g. corrected_msm)
+        if isinstance(time_value, (int, float)):
+            return int(time_value)
+
+        # 2. If already a time-like object
+        if isinstance(time_value, (time, pd.Timestamp)):
+            time_obj = time_value
+
+        else:
+            # 3. Parse string values
+            time_str = str(time_value).strip()
+
+            try:
+                time_obj = datetime.strptime(time_str, "%H:%M:%S").time()
+            except ValueError:
+                time_obj = datetime.strptime(time_str, "%H:%M").time()
+
+        # 4. Convert to minutes
+        return time_obj.hour * 60 + time_obj.minute
+
+    except Exception as e:
+        print(f"🛑 Failed to parse time value '{time_value}': {e}")
+        return None
 
 
 def calculate_df_msm(df: pd.DataFrame, col: str) -> pd.Series:
@@ -182,12 +205,10 @@ def adjust_msm_in_raw_empty(
     file_type: str,
     output_dir: str,
     time_col_raw: str = "1_TIme",
-    time_col_empty: str = "time",
-) -> tuple[pd.DataFrame, pd.DataFrame]:
+) -> pd.DataFrame:
 
     # --- Copy inputs to avoid mutation ---
     raw_df = raw_df.copy()
-    empty_df = empty_dataframe(schedule_dict)
     raw_df = raw_df.rename(columns={"created_at": "date"})
 
     date_col = "date"
@@ -196,16 +217,6 @@ def adjust_msm_in_raw_empty(
     raw_df[date_col] = pd.to_datetime(
         raw_df[date_col], format="%Y-%m-%dT%H:%M:%S.%fZ", errors="coerce"
     )
-    empty_df[date_col] = pd.to_datetime(
-        empty_df[date_col], format="%d.%m.%Y", errors="coerce"
-    )
-
-    # --- Ensure template time column exists ---
-    if time_col_empty not in empty_df.columns:
-        if time_col_empty in empty_df.index.names:
-            empty_df = empty_df.reset_index(level=time_col_empty)
-        else:
-            raise KeyError(f"'{time_col_empty}' not found in empty_df")
 
     # --- Determine time format based on file type ---
     if file_type == 'A':
@@ -220,35 +231,23 @@ def adjust_msm_in_raw_empty(
     raw_df[time_col_raw] = pd.to_datetime(
         raw_df[time_col_raw], format=raw_time_format, errors="coerce"
     )
-    empty_df[time_col_empty] = pd.to_datetime(
-        empty_df[time_col_empty], format="%H:%M", errors="coerce"
-    )
 
     raw_df["msm"] = calculate_df_msm(raw_df, time_col_raw)
-    empty_df["msm"] = calculate_df_msm(empty_df, time_col_empty)
-
-    # --- Drop invalid rows ---
-    valid_empty_df = empty_df.dropna(subset=["msm", date_col]).copy()
-    invalid_empty_df = empty_df[empty_df["msm"].isna() | empty_df[date_col].isna()].copy()
     raw_df = raw_df.dropna(subset=["msm", date_col]).copy()
 
     # Normalize dates (ensure same day alignment)
     raw_df[date_col] = raw_df[date_col].dt.normalize()
-    valid_empty_df[date_col] = valid_empty_df[date_col].dt.normalize()
 
     # --- Sort ---
     raw_df = raw_df.sort_values(["date", "msm"]).reset_index(drop=True)
-    valid_empty_df = valid_empty_df.sort_values(["date", "msm"]).reset_index(drop=True)
-
-    #print('raw_df: ', raw_df)
-    #print('valid_empty_df: ', valid_empty_df)
 
     # Ensure date column is date-only
     raw_df['date'] = pd.to_datetime(raw_df['date']).dt.date
 
     os.makedirs(output_dir, exist_ok=True)
 
-    all_missing = []
+    updated_df: list = []
+    all_missing: list = []
     for date, time_sorted_df in raw_df.groupby('date'):
         adjusted_df, gaps = analyze_time_gaps(time_sorted_df)
         for g in gaps:
@@ -276,17 +275,19 @@ def adjust_msm_in_raw_empty(
             f"sorted_data{suffix}.csv"
         )
 
+        updated_df.append(adjusted_df)
+
         # Save merged DataFrame
         adjusted_df.to_csv(
             output_file_path,
             index=False,
             sep=';'
         )
-        #print('adjusted_df: ', adjusted_df)
+
+    time_corrected_df: pd.DataFrame = pd.concat(updated_df, ignore_index=True)
 
     save_missing_data(all_missing, output_dir, file_type)
-
-    return raw_df, valid_empty_df
+    return time_corrected_df
 
 
 def generate_timepoints() -> List[str]:
@@ -503,7 +504,7 @@ def get_group_from_date(date_str, cage_dates_dict, behave_dict):
     return f"*{group_str}"
 
 
-def get_phase_from_time(time_value: Union[str, time, pd.Timestamp]) -> Optional[str]:
+def get_phase_from_time(time_value: float) -> Optional[str]:
     """
     Categorizes a time value into experimental phases (morn1, morn2, enrich, extra).
 
@@ -515,35 +516,17 @@ def get_phase_from_time(time_value: Union[str, time, pd.Timestamp]) -> Optional[
     """
     if pd.isna(time_value) or time_value == '':
         return None
+    msm: int = time_to_msm(time_value)
 
-    try:
-        # 1. Handle cases where time_value is already a time-like object
-        if isinstance(time_value, (time, pd.Timestamp)):
-            time_obj = time_value
-        else:
-            # 2. Parse string values
-            time_str: str = str(time_value).strip()
-            try:
-                time_obj = datetime.strptime(time_str, '%H:%M:%S').time()
-            except ValueError:
-                time_obj = datetime.strptime(time_str, '%H:%M').time()
-
-        # 3. Convert to total minutes for easier comparison
-        total_minutes: int = time_obj.hour * 60 + time_obj.minute
-
-        # 4. Logic Gates for Phases
-        if 570 <= total_minutes <= 630:  # 09:30 - 10:30
-            return 'morn1'
-        elif 645 <= total_minutes <= 705:  # 10:45 - 11:45
-            return 'morn2'
-        elif total_minutes >= 720:  # 12:00 onwards
-            return 'enrich'
-        else:
-            return 'extra'
-
-    except Exception as e:
-        print(f"🛑 Failed to parse time value '{time_value}': {e}")
-        return None
+    # 4. Logic Gates for Phases
+    if 570 <= msm <= 630:  # 09:30 - 10:30
+        return 'morn1'
+    elif 645 <= msm <= 705:  # 10:45 - 11:45
+        return 'morn2'
+    elif msm >= 720:  # 12:00 onwards
+        return 'enrich'
+    else:
+        return 'extra'
 
 
 def get_group(
@@ -677,11 +660,9 @@ def reshape_behavior_data(df: pd.DataFrame, file_type) -> pd.DataFrame:
 
     sched_df = pd.DataFrame(rows)
     working_df = working_df.merge(sched_df, on='date', how='left')
-
     # 2. Phase mapping (Required for block_ID)
-    if '1_TIme' in working_df.columns:
-        working_df['phase'] = working_df['1_TIme'].apply(get_phase_from_time)
-
+    if 'corrected_msm' in working_df.columns:
+        working_df['phase'] = working_df["corrected_msm"].apply(get_phase_from_time)
     # 3. Group Mapping (Required for block_ID)
     working_df['group'] = get_group(
         working_df['date'],
@@ -699,9 +680,6 @@ def process_sort_event(sorted_df: pd.DataFrame, file_type):
     df_dec_ind: pd.DataFrame = detect_ind(sorted_df)
     # Fix date column
     df_dec_ind["date"] = pd.to_datetime(df_dec_ind["date"]).dt.strftime("%d-%m-%Y")
-    # Fix time column
-    df_dec_ind["1_TIme"] = pd.to_datetime(df_dec_ind["1_TIme"]).dt.strftime("%H:%M")
-
     resh_df: pd.DataFrame = reshape_behavior_data(df_dec_ind, file_type)
 
     return resh_df
@@ -1040,7 +1018,6 @@ def process_all_occurrence(df, file_type):
     df = standardize_dataframe_dates(df)
     df = detect_ind(df)
     behave_dict = get_behavior_code_dict(df)
-
     # Get Trial, Condition, and First_Day info
     df = apply_schedule_and_phase(df, schedule_dict, get_phase_from_time)
 
