@@ -5,7 +5,7 @@ from datetime import datetime, timedelta, time
 import numpy as np
 import pandas as pd
 from scipy.optimize import linear_sum_assignment
-from typing import Dict, List, Tuple, Any, Match, Pattern, Optional, Union, Set
+from typing import Dict, List, Tuple, Any, Match, Pattern, Optional
 from dateutil import parser
 
 pd.set_option('display.max_columns', None)   # show all columns
@@ -254,7 +254,7 @@ def adjust_msm_in_raw_empty(
             if not is_excluded(g):
                 h, m = divmod(int(g), 60)
 
-                print(f"MISSING DATA in {file_type} / {date.strftime('%Y-%m-%d')} AT: {h:02d}:{m:02d}")
+                #print(f"MISSING DATA in {file_type} / {date.strftime('%Y-%m-%d')} AT: {h:02d}:{m:02d}")
 
                 all_missing.append({
                     "file_type": file_type,
@@ -399,36 +399,35 @@ def detect_ind(raw_df: pd.DataFrame) -> pd.DataFrame:
 
     # 3. Dynamic mapping of associated data
     for idx, (order, ident, behavior_col) in enumerate(matches, start=1):
-        # New Column Names
-        ind_col = f"Ind_{idx}"
-        beh_col = f"Ind_{idx}_Behavior"
-        con_col = f"Ind_{idx}_Contact"
-        prox_col = f"Ind_{idx}_AR"
-        dist_col = f"Ind_{idx}_3M"
-        note_col = f"Ind_{idx}_Notes"
+        # 1. Define New Column Names clearly
+        ind_col = f"Ind_{idx}({ident})"
+        beh_col = f"{ident}_Behavior"
+        con_col = f"{ident}_Contact"
+        prox_col = f"{ident}_AR"
+        dist_col = f"{ident}_3M"
+        note_col = f"{ident}_Notes"
 
-        # Assign Animal ID (MZ, SB, etc.)
+        # 2. Assign the ID column (This always exists now)
         df[ind_col] = ident
+        out_cols.append(ind_col)  # Add to list immediately
 
-        # Rename the columns by looking for the expected numeric index
-        # MZ is 4, so Contact is 5, AR is 6, 3M is 7...
+        # 3. Map Raw Names -> New Names
         rename_map = {
             behavior_col: beh_col,
             f"{order + 1}_Contact": con_col,
             f"{order + 2}_AR": prox_col,
             f"{order + 3}_3M": dist_col,
-            f"{order + 5}_Notes": note_col
+            f"{order + 4}_Notes": note_col
         }
 
-        # Only rename if the column actually exists in raw data
+        # 4. Only rename and track columns that actually exist in the CSV
         actual_rename = {k: v for k, v in rename_map.items() if k in df.columns}
         df.rename(columns=actual_rename, inplace=True)
 
-        # Add all successfully renamed columns to our final output list
-        out_cols.extend([ind_col])
-        out_cols.extend(list(actual_rename.values()))
+        # 5. Add the successfully renamed values to our final output list
+        out_cols.extend(actual_rename.values())
 
-    # Ensure we don't crash if out_cols contains something missing
+    # Final Filter: Keep only what is in the dataframe
     final_cols = [c for c in out_cols if c in df.columns]
     return df[final_cols].copy()
 
@@ -501,6 +500,7 @@ def get_group_from_date(date_str, cage_dates_dict, behave_dict):
         prefix = 'No data for that day'
 
     group_str = f"{prefix}{matched_group}" if prefix else matched_group
+    # TODO: Add column instead of * to indicate if all occation or scanning
     return f"*{group_str}"
 
 
@@ -567,9 +567,12 @@ def get_group(
 
     matched_cages = short_dates.map(clean_date_map)
 
+    # TODO: Add column instead of * to indicate if all occation or scanning
+
     # Build the final string: "B_Cage1" or "*Cage1"
     prefix_str: str = f"{prefix}_" if prefix else "*"
 
+    # TODO: Fix UNKNOWN_Date or make it clearer
     # fillna to keep track of what didn't match
     return prefix_str + matched_cages.fillna("UNKNOWN_DATE")
 
@@ -610,25 +613,26 @@ def generate_block_ID(df: pd.DataFrame) -> pd.Series:
 
 
 def get_behavior_code_dict(df: pd.DataFrame) -> Dict[str, str]:
-    """
-    Creates a mapping between individual codes and their behaviors by
-    searching for the first non-null values in the entire DataFrame.
-    """
-    pattern: Pattern[str] = re.compile(r"^Ind_(\d+)$")
+    # index e.g.: Ind_1(MZ)
+    # Group 1: The digit (\d+)
+    # Group 2: The initials within parentheses ([^)]+)
+    pattern: Pattern[str] = re.compile(r"^Ind_(\d+)\(([^)]+)\)$")
     behave_dict: Dict[str, str] = {}
 
     for col in df.columns:
         m: Optional[Match[str]] = pattern.match(col)
 
         if m:
-            num: str = m.group(1)
-            behavior_col: str = f"Ind_{num}_Behavior"
+            # num = m.group(1) # Not strictly needed if using initials for behavior col
+            initials: str = m.group(2)
 
-            # Check if the paired behavior column exists
+            # The behavior column in your df follows the format 'MZ_Behavior'
+            behavior_col: str = f"{initials}_Behavior"
+
             if behavior_col in df.columns:
-                # 1. Find the first valid (non-NaN) individual code
+                # Find first non-null for the ID code (e.g., 'MZ')
                 first_code_idx = df[col].first_valid_index()
-                # 2. Find the first valid (non-NaN) behavior
+                # Find first non-null for the Behavior (e.g., 'E')
                 first_behave_idx = df[behavior_col].first_valid_index()
 
                 if first_code_idx is not None and first_behave_idx is not None:
@@ -678,6 +682,7 @@ def reshape_behavior_data(df: pd.DataFrame, file_type) -> pd.DataFrame:
 
 def process_sort_event(sorted_df: pd.DataFrame, file_type):
     df_dec_ind: pd.DataFrame = detect_ind(sorted_df)
+    #print('df_dec_ind:', df_dec_ind)
     # Fix date column
     df_dec_ind["date"] = pd.to_datetime(df_dec_ind["date"]).dt.strftime("%d-%m-%Y")
     resh_df: pd.DataFrame = reshape_behavior_data(df_dec_ind, file_type)
@@ -773,7 +778,7 @@ def classify_behavior(int1: str, behaviour: str, targets: Any, metadata: dict, i
             current_flags['sitting'] = 1
         elif behaviour == 'RL':
             current_flags['resting'] = 1
-    #        current_flags['laying'] = 1
+            current_flags['laying'] = 1
 
         res['behaviour'].append(
             {**metadata, 'Ind1': int1, 'behaviour': behaviour, 'qualifier': None, 'partner': None, **current_flags})
@@ -809,66 +814,79 @@ def reshape_behavior_data_to_tables(df: pd.DataFrame, beha_dict: Dict[str, str])
 
 
 def reshape_row_to_multiple(row: pd.Series, beha_dict: Dict[str, str]) -> Dict[str, List[Any]]:
-    """
-    WORKER FUNCTION: Processes one row and handles the 'NaN' string errors.
-    """
     final_output = {'distance': [], 'behaviour': [], 'occurrence': []}
+    seen_dyads = set()
 
-    # 1. Extract Metadata (Context for every new row generated)
     metadata = {
         'ec5_uuid': row.get('ec5_uuid'),
         'condition': row.get('condition'),
         'date': row.get('date'),
-        'msm': row.get('msm'),
+        'msm': row.get('corrected_msm'),
         'group': row.get('group'),
         'trial': row.get('trial'),
         'phase': row.get('phase'),
         'block_ID': row.get('block_ID')
     }
 
-    # 2. Loop through the 5 animals (Ind_1 to Ind_5)
-    for i in range(1, 6):
-        int1 = row.get(f'Ind_{i}')
-        if pd.isna(int1):
-            continue  # Skip empty animal slots
+    # 1. We need to find which "Ind_X" columns actually exist in the row
+    # and map the Index (1-5) to the Initials (MZ, SB, etc.)
+    index_to_initials = {}
+    for col in row.index:
+        # Match pattern like Ind_1(MZ)
+        m = re.match(r"Ind_(\d+)\(([^)]+)\)", col)
+        if m:
+            index_to_initials[m.group(1)] = m.group(2)
 
-        # SAFETY: Convert to string and handle NaN to prevent regex/strip errors
-        behaviour = str(row.get(f'Ind_{i}_Behavior', '')).strip()
-        contact = row.get(f'Ind_{i}_Contact')
-        arr = row.get(f'Ind_{i}_AR')
-        three_met = row.get(f'Ind_{i}_3M')
-        ind_notes = row.get(f'Ind_{i}_Notes')
+    # 2. Loop through the found indices
+    for i, initials in index_to_initials.items():
+        # Get the ID (e.g., 'MZ') stored in the cell 'Ind_1(MZ)'
+        full_col_name = f"Ind_{i}({initials})"
+        int1 = row.get(full_col_name)
+
+        if pd.isna(int1):
+            continue
+
+            # Use the INITIALS to get the behavior and proximity data
+        behaviour = str(row.get(f'{initials}_Behavior', '')).strip()
+        contact = row.get(f'{initials}_Contact')
+        arr = row.get(f'{initials}_AR')
+        three_met = row.get(f'{initials}_3M')
+        # ind_notes = row.get(f'{initials}_Notes') # Check if this exists in your DF
 
         # --- PART A: SOCIAL DISTANCES ---
-        # Logic: If no specific proximity is noted, assume distance 4 (Far)
         if pd.isna(contact) and pd.isna(arr) and pd.isna(three_met):
             for other_id in beha_dict.keys():
                 if other_id != int1:
-                    final_output['distance'].append({
-                        **metadata, 'Ind1': int1, 'partner': other_id,
-                        'dyad': f"{int1}-{other_id}", 'distance': 4
-                    })
+                    # Create a sorted key: ("MN", "NY") instead of "MN-NY"
+                    dyad_key = tuple(sorted([str(int1), str(other_id)]))
+
+                    if dyad_key not in seen_dyads:
+                        final_output['distance'].append({
+                            **metadata, 'Ind1': int1, 'partner': other_id,
+                            'dyad': f"{dyad_key[0]}-{dyad_key[1]}", 'distance': 4
+                        })
+                        seen_dyads.add(dyad_key)
         else:
-            # Map levels: 1=Contact, 2=AR, 3=3M
             for val, dist_score in [(contact, 1), (arr, 2), (three_met, 3)]:
                 if pd.notna(val):
-                    # Handle multiple partners like 'LN, NR'
                     for p in str(val).split(','):
                         p_clean = p.strip()
                         if p_clean:
-                            final_output['distance'].append({
-                                **metadata, 'Ind1': int1, 'partner': p_clean,
-                                'dyad': f"{int1}-{p_clean}", 'distance': dist_score
-                            })
+                            dyad_key = tuple(sorted([str(int1), p_clean]))
+
+                            if dyad_key not in seen_dyads:
+                                final_output['distance'].append({
+                                    **metadata, 'Ind1': int1, 'partner': p_clean,
+                                    'dyad': f"{dyad_key[0]}-{dyad_key[1]}", 'distance': dist_score
+                                })
+                                seen_dyads.add(dyad_key)
 
         # --- PART B: BEHAVIOR CLASSIFICATION ---
-        # process if there is a behavior code (e.g., 'E', 'PL', 'GG')
         if behaviour and behaviour.lower() != 'nan' and behaviour != '':
-            # Determine target for social behaviors
             targets = contact if pd.notna(contact) else (arr if pd.notna(arr) else None)
 
-            # Use classify_behavior helper (modular logic)
-            beh_data = classify_behavior(int1, behaviour, targets, metadata, ind_notes)
+            # Note: Ensure classify_behavior is updated to handle 'initials' if needed
+            beh_data = classify_behavior(int1, behaviour, targets, metadata, None)
             final_output['behaviour'].extend(beh_data['behaviour'])
             final_output['occurrence'].extend(beh_data['occurrence'])
 
@@ -877,7 +895,7 @@ def reshape_row_to_multiple(row: pd.Series, beha_dict: Dict[str, str]) -> Dict[s
 
 def process_sort_beh_dist(df):
     behave_mapping = get_behavior_code_dict(df)
-
+    print('behave_mapping: ', behave_mapping)
     # Reshape everything into the 3 target tables
     tables = reshape_behavior_data_to_tables(df, behave_mapping)
 
@@ -972,7 +990,7 @@ def standardize_dataframe_dates(df):
 
     return df
 
-
+# TODO: vershcieben in pipeline und intermediate step schaffen!!!
 def apply_schedule_and_phase(df, schedule_dict, get_phase_from_time_func):
     """
     Integrates trial, condition, first_day, and phase into the working DataFrame.
@@ -1046,26 +1064,28 @@ def process_all_occurrence(df, file_type):
             'first_day': row.get('first_day', False),
             'block_ID': row.get('block_ID', '')
         }
-
         for b_col in beh_cols:
             val = row[b_col]
             if pd.isna(val) or str(val).strip() == "":
                 continue
 
             # b_col is e.g., '4_ST_Behavior' to '4_ST'
-            prefix = "_".join(b_col.split('_')[:2])
+            #prefix = "_".join(b_col.split('_')[:2])
+            #print('beh_cols: ', beh_cols)
+
             # Extract Ind ID for the 'Ind1' column (e.g., 'ST')
-            ind_id = b_col.split('_')[1]
+            ind_id = b_col.split('_')[0]
+            #print('ind_id: ', ind_id)
 
             # Use the new Refactored Worker
-            partner, notes = get_occurrence_metadata(row, prefix)
-
+            partner, notes = get_occurrence_metadata(row, ind_id)
+            #print('partner / notes: ', partner, notes)
             # --- Behavioral Logic ---
             beh_raw = str(val).strip().upper()
 
             # Default values
             main_beh = beh_raw
-            qualifier = None
+            #qualifier = None
             is_playing = 0
             is_aggression = 0
 
@@ -1074,20 +1094,20 @@ def process_all_occurrence(df, file_type):
                 # For Play, usually kept as 'PL' or split if you have 'PLx'
                 if len(beh_raw) > 2:
                     main_beh = beh_raw[:2]
-                    qualifier = beh_raw[2:]
+                #    qualifier = beh_raw[2:]
 
             elif beh_raw in {'AG', 'DS', 'AR'}:
                 is_aggression = 1
                 # SPLIT LOGIC: A/G, D/S, A/R
-                main_beh = beh_raw[0]
-                qualifier = beh_raw[1]
+                main_beh = beh_raw[:2]
+               # qualifier = beh_raw[1]
 
             # Append to our list
             rows.append({
                 **metadata,
                 'Ind1': ind_id,
                 'behaviour': main_beh,
-                'qualifier': qualifier,
+               # 'qualifier': qualifier,
                 'partner': partner if partner else None,
                 'notes': notes if notes else None,
                 'playing': is_playing,
@@ -1145,3 +1165,152 @@ def file_name(input_file_path, df_raw, all_raw_list):
     else:
         print(f"⚠️ Could not detect file type (A, B, or C) for: {input_file_path}. Skipping.")
         return None
+
+
+def sanity_check_msm_coverage(df: pd.DataFrame, file_type: str) -> pd.DataFrame:
+
+    if df.empty:
+        print(f"⚠️ Empty dataframe for cage {file_type}")
+        return pd.DataFrame()
+
+    df = df.copy()
+
+    # ✅ Always define msm column
+    if 'corrected_msm' in df.columns:
+        df['msm'] = df['corrected_msm']
+    elif 'msm' not in df.columns:
+        print("⚠️ No msm column found!")
+        return pd.DataFrame()
+
+    # Ensure date is datetime
+    df['date'] = pd.to_datetime(df['date'], errors='coerce')
+
+    summary = (
+        df.groupby(['date', 'msm'])
+        .size()
+        .reset_index(name='n_observations')
+    )
+
+    summary['cage'] = file_type
+
+    return summary
+
+
+def sanity_check_with_missing(all_sanity_df: pd.DataFrame) -> pd.DataFrame:
+
+    if all_sanity_df.empty:
+        print("⚠️ sanity_combined is empty!")
+        return pd.DataFrame()
+
+    required_cols = {'date', 'msm', 'cage'}
+    missing_cols = required_cols - set(all_sanity_df.columns)
+
+    if missing_cols:
+        raise ValueError(f"Missing required columns in sanity data: {missing_cols}")
+
+    expected = build_full_expected_grid()
+
+    merged = expected.merge(
+        all_sanity_df,
+        on=['date', 'msm', 'cage'],
+        how='left'
+    )
+
+    merged['n_observations'] = merged['n_observations'].fillna(0)
+
+    def classify(n):
+        if n == 1:
+            return "OK"
+        elif n == 0:
+            return "MISSING"
+        else:
+            return "DUPLICATE"
+
+    merged['status'] = merged['n_observations'].apply(classify)
+
+    return merged
+
+
+def build_full_expected_grid():
+    rows = []
+
+    timepoints = generate_timepoints()
+    cages = ['A', 'B', 'C']
+
+    for (condition, trial), dates in schedule_dict.items():
+        for d in dates:
+            date_obj = pd.to_datetime(d, dayfirst=True)
+
+            for t in timepoints:
+                msm = time_to_msm(t)
+
+                for cage in cages:
+                    rows.append({
+                        "date": date_obj,
+                        "msm": msm,
+                        "cage": cage
+                    })
+
+    return pd.DataFrame(rows)
+
+
+def classify_row(row):
+    if row['n_missing'] == 0 and row['n_duplicate'] == 0:
+        return "OK"
+    elif row['n_duplicate'] > 0:
+        return "DUPLICATE"
+    else:
+        return "MISSING"
+
+
+def count_status(row):
+    values = [row['A'], row['B'], row['C']]
+
+    n_ok = sum(1 for v in values if v == 1)
+    n_missing = sum(1 for v in values if v == 0)
+    n_duplicate = sum(1 for v in values if v > 1)
+
+    return pd.Series({
+        'n_ok': n_ok,
+        'n_missing': n_missing,
+        'n_duplicate': n_duplicate
+    })
+
+
+def sanity_check(all_sanity: list, output_dir: str) -> None:
+    sanity_combined = pd.concat(all_sanity, ignore_index=True)
+
+    # 🔥 NEW: include missing data
+    sanity_full = sanity_check_with_missing(sanity_combined)
+    summary = sanity_full['status'].value_counts()
+    sanity_pivot = sanity_full.pivot_table(
+        index=['date', 'msm'],
+        columns='cage',
+        values='n_observations',
+        fill_value=0
+    ).reset_index()
+    sanity_pivot['total'] = sanity_pivot[['A', 'B', 'C']].sum(axis=1)
+    sanity_pivot[['n_ok', 'n_missing', 'n_duplicate']] = sanity_pivot.apply(
+        count_status, axis=1
+    )
+    sanity_pivot['row_status'] = sanity_pivot.apply(classify_row, axis=1)
+
+    daily_missing = (
+        sanity_pivot.assign(
+            A_missing=(sanity_pivot['A'] == 0),
+            B_missing=(sanity_pivot['B'] == 0),
+            C_missing=(sanity_pivot['C'] == 0),
+        )
+            .groupby('date')[['A_missing', 'B_missing', 'C_missing']]
+            .sum()
+            .reset_index()
+            .rename(columns={
+            'A_missing': 'A_missing_day',
+            'B_missing': 'B_missing_day',
+            'C_missing': 'C_missing_day'
+        })
+    )
+    sanity_pivot = sanity_pivot.merge(daily_missing, on='date', how='left', validate='m:1')
+
+    # Save
+    sanity_pivot.to_csv(os.path.join(output_dir, "sanity_check.csv"), index=False)

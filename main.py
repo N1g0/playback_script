@@ -20,16 +20,12 @@ all_raw_dfs: dict[str, list[pd.DataFrame]] = defaultdict(list)
 all_behave_data: list = []
 all_dist_data: list = []
 all_occ_data: list = []
+all_sanity: list = []
 
 # --------------------------------------------------------------------------
 #                          PHASE 1: Read and Store
 # --------------------------------------------------------------------------
-#TODO: Qualifiers in behavior RS and others
-# Document all of the varibable names/processing steps
-# DUplicates in Distance -> SHOW SAME DISTANCE; SORTING TOOL? / missing days used days for analysis -> Read Me file / User GUIDE
-# Ind1 in all occ change into name (1 -> Nametag) / distinguish between origin behaviour vs. all_occ
-# all_occ no qualifier
-# extra definition snd UNKNOWN dates?
+
 for input_file_path in data_files:
     print(f"Processing: {input_file_path}")
 
@@ -53,17 +49,25 @@ for input_file_path in data_files:
 #                     PHASE 2: Process Each Raw DataFrame
 # --------------------------------------------------------------------------
 #TODO:
-# Fact-check data if data processing was successful and no data are missing
-# Build data search function?
+# Sanitycheck: How many points are in every msm over all three cages and days (evtl. Überarbeiten)
+# Intermediate step, with all datapoints (times) and the final process data with the fixed timewindow (apply_schedule_and_phase)
+# missing days used days for analysis -> Tabelle erstellen die die Aussortierten Tage / Zeiten abspeichert
+# New all-Occation: in every stage (morn1, morn2, ...) was there a aggression/Play 1/0 for each individual
+# qualifier entfernen, * in column umwandeln, UNKOWN checken
+# DOCUMENTATION überarbeiten!
 
 # Define subfolders for organization
 steps_dir = os.path.join(output_dir, "intermediate_steps")
 os.makedirs(steps_dir, exist_ok=True)
+#print('all_raw_dfs: \n', all_raw_dfs)
 
 for file_type, list_of_raw_dfs in all_raw_dfs.items():
     print(f"\nProcessing files for Type {file_type}...")
-
+    #print('file_type:', file_type)
+    #print('list_of_raw_dfs: \n', list_of_raw_dfs)
     for idx, raw_df in enumerate(list_of_raw_dfs):
+        #print('idx: ', idx)
+        #print('raw_df inner loop: \n', raw_df)
         try:
             # Time Adjustment
             time_sorted_df_raw = Methods.adjust_msm_in_raw_empty(
@@ -75,6 +79,11 @@ for file_type, list_of_raw_dfs in all_raw_dfs.items():
             #print('time_sorted_df_raw: \n', time_sorted_df_raw)
             # Save
             time_sorted_df_raw.to_csv(os.path.join(steps_dir, f"type{file_type}_file{idx}_step1_time.csv"), index=False)
+
+            print("\nRunning MSM sanity check...")
+
+            sanity_df = Methods.sanity_check_msm_coverage(time_sorted_df_raw, file_type)
+            all_sanity.append(sanity_df)
 
             # Detection and Renaming (event_sorted_df)
             event_sorted_df = Methods.process_sort_event(time_sorted_df_raw, file_type)
@@ -97,6 +106,8 @@ for file_type, list_of_raw_dfs in all_raw_dfs.items():
 
         except Exception as e:
             print(f"🛑 Error processing Type {file_type} (file #{idx + 1}): {e}")
+
+Methods.sanity_check(all_sanity, output_dir)
 
 # --- FINAL COMBINATION STEP ---
 print("\nCombining all files into final outputs...")
