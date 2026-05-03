@@ -292,6 +292,7 @@ def adjust_msm_in_raw_empty(
 
 def generate_timepoints() -> List[str]:
     times: List[str] = []
+    # TODO: Check timepoints and find if all occation or not!
 
     # Morning session
     t: datetime = datetime.strptime("09:30", "%H:%M")
@@ -460,50 +461,6 @@ def get_condition_and_trial(date_str, schedule_dict):
     return None, None, None
 
 
-# not used
-def get_group_from_date(date_str, cage_dates_dict, behave_dict):
-    # Convert input date to "DD.MM" format, allowing flexible input
-    try:
-        date_obj = parser.parse(date_str, dayfirst=True)
-        short_date = date_obj.strftime("%d.%m")
-    except (ValueError, TypeError):
-        return ''  # Invalid date format
-
-    # First, find the group the date belongs to
-    matched_group = None
-    for group, dates in cage_dates_dict.items():
-        if short_date in dates:
-            matched_group = group
-            break
-
-    # If the date is not found in any group, return empty
-    if not matched_group:
-        return ''
-
-    # Define sets for each prefix group
-    group_A_ids = {'TN', 'TK', 'LN', 'NR', 'NY', 'ST', 'MN', 'SR'}
-    group_B_ids = {'MN', 'MS', 'NH', 'LN', 'NR', 'NY', 'ST'}
-    group_C_ids = {'MZ', 'SB', 'GG', 'LN', 'NR', 'MS'}
-
-    values = set(behave_dict.values())
-
-    # Determine prefix based on behavior codes
-    if 'GG' in values or 'SB' in values:
-        prefix = 'C'
-    elif values & group_A_ids:
-        prefix = 'A'
-    elif values & group_B_ids:
-        prefix = 'B'
-    elif values & group_C_ids:
-        prefix = 'C'
-    else:
-        prefix = 'No data for that day'
-
-    group_str = f"{prefix}{matched_group}" if prefix else matched_group
-    # TODO: Add column instead of * to indicate if all occation or scanning
-    return f"*{group_str}"
-
-
 def get_phase_from_time(time_value: float) -> Optional[str]:
     """
     Categorizes a time value into experimental phases (morn1, morn2, enrich, extra).
@@ -545,36 +502,27 @@ def get_group(
             'B': {'MN', 'MS', 'NH', 'LN', 'NR', 'NY', 'ST'},
             'C': {'MZ', 'SB', 'GG', 'LN', 'NR', 'MS'}
         }
-
         if any(marker in animal_ids for marker in {'GG', 'SB'}):
             prefix = 'C'
         else:
-            match_counts: dict = {g: len(animal_ids & members) for g, members in groups.items()}
+            match_counts = {g: len(animal_ids & members) for g, members in groups.items()}
             max_matches = max(match_counts.values())
-
             if max_matches > 0:
                 prefix = max(match_counts, key=match_counts.get)
 
-    clean_date_map: dict = {}
+    # Standardize dates and map cages
+    clean_date_map = {}
     for cage, dates in cage_dates_dict.items():
         for d in dates:
             standard_d = str(d).replace('-', '.').replace('/', '.')
             clean_date_map[standard_d] = str(cage)
 
-    # Convert dates_series to standardized "DD.MM" strings
-    temp_dates: pd.Series = pd.to_datetime(dates_series, dayfirst=True, errors='coerce')
+    temp_dates = pd.to_datetime(dates_series, dayfirst=True, errors='coerce')
     short_dates = temp_dates.dt.strftime("%d.%m")
+    #TODO: Check UNKNOWN and if returned propperly!!!
+    matched_cages = short_dates.map(clean_date_map).fillna("UNKNOWN_DATE")
 
-    matched_cages = short_dates.map(clean_date_map)
-
-    # TODO: Add column instead of * to indicate if all occation or scanning
-
-    # Build the final string: "B_Cage1" or "*Cage1"
-    prefix_str: str = f"{prefix}_" if prefix else "*"
-
-    # TODO: Fix UNKNOWN_Date or make it clearer
-    # fillna to keep track of what didn't match
-    return prefix_str + matched_cages.fillna("UNKNOWN_DATE")
+    return matched_cages
 
 
 def generate_block_ID(df: pd.DataFrame) -> pd.Series:
@@ -667,13 +615,15 @@ def reshape_behavior_data(df: pd.DataFrame, file_type) -> pd.DataFrame:
     # 2. Phase mapping (Required for block_ID)
     if 'corrected_msm' in working_df.columns:
         working_df['phase'] = working_df["corrected_msm"].apply(get_phase_from_time)
-    # 3. Group Mapping (Required for block_ID)
+    # 3. Group Mapping (Refactored)
+    # We call the function and assign the result to two new columns
     working_df['group'] = get_group(
         working_df['date'],
         Cage_Comp_Dates,
         behave_mapping,
         file_type
     )
+    working_df['is_all_occasions'] = False
     # 4. Now generate Block ID (Now that phase, group, trial, etc. all exist)
     working_df['block_ID'] = generate_block_ID(working_df)
 
@@ -741,8 +691,7 @@ def classify_behavior(int1: str, behaviour: str, targets: Any, metadata: dict, i
 
     behaviour = str(behaviour).strip()
     # Logic for qualifiers (second char of code)
-    main_beh = behaviour[0] if len(behaviour) > 1 else behaviour
-    qualifier = behaviour[1] if len(behaviour) > 1 else None
+    main_beh = behaviour
 
     # Binary Flag Templates
     solo_flags = {k: 0 for k in ['eating', 'playing', 'moving', 'resting', 'sitting', 'self_direct', 'grooming']}
@@ -755,13 +704,13 @@ def classify_behavior(int1: str, behaviour: str, targets: Any, metadata: dict, i
              'playing': 1})
     elif behaviour.upper() in {'AG', 'DS', 'AR'}:
         res['occurrence'].append(
-            {**metadata, 'Ind1': int1, 'behaviour': main_beh, 'qualifier': qualifier, 'partner': targets,
+            {**metadata, 'Ind1': int1, 'behaviour': main_beh, 'partner': targets,
              'notes': ind_notes, **occ_flags, 'aggression': 1})
 
     # States: Grooming (GG, GR, GM)
     elif behaviour.upper() in {'GG', 'GR', 'GM'}:
         res['behaviour'].append(
-            {**metadata, 'Ind1': int1, 'behaviour': main_beh, 'qualifier': qualifier, 'partner': targets, **solo_flags,
+            {**metadata, 'Ind1': int1, 'behaviour': main_beh, 'partner': targets, **solo_flags,
              'grooming': 1})
 
     # States: Solo
@@ -823,6 +772,7 @@ def reshape_row_to_multiple(row: pd.Series, beha_dict: Dict[str, str]) -> Dict[s
         'date': row.get('date'),
         'msm': row.get('corrected_msm'),
         'group': row.get('group'),
+        'is_all_occasions': row.get('is_all_occasions'),
         'trial': row.get('trial'),
         'phase': row.get('phase'),
         'block_ID': row.get('block_ID')
@@ -1040,7 +990,9 @@ def process_all_occurrence(df, file_type):
     df = apply_schedule_and_phase(df, schedule_dict, get_phase_from_time)
 
     # Pre-calculate Cages (Pass the Series, not a string)
-    df['group'] = get_group(df['date_dt'], Cage_Comp_Dates, behave_dict, file_type).values
+    df['group'] = get_group(df['date_dt'], Cage_Comp_Dates, behave_dict, file_type)
+    df['is_all_occasions'] = True
+    #TODO: mark all-occation entrie!
 
     # Generate the unique Block Identifier
     df['block_ID'] = generate_block_ID(df)
@@ -1059,6 +1011,7 @@ def process_all_occurrence(df, file_type):
             'date': row.get('date_dt', ''),
             'msm': msm_val,
             'group': row.get('group', file_type),
+            'is_all_occasions': row.get('is_all_occasions', None),
             'trial': row.get('trial', ''),
             'phase': row.get('phase', ''),
             'first_day': row.get('first_day', False),

@@ -53,7 +53,7 @@ for input_file_path in data_files:
 # Intermediate step, with all datapoints (times) and the final process data with the fixed timewindow (apply_schedule_and_phase)
 # missing days used days for analysis -> Tabelle erstellen die die Aussortierten Tage / Zeiten abspeichert
 # New all-Occation: in every stage (morn1, morn2, ...) was there a aggression/Play 1/0 for each individual
-# qualifier entfernen, * in column umwandeln, UNKOWN checken
+# UNKNOWN checken und phase überprüfen wann es nicht gecallt wird?
 # DOCUMENTATION überarbeiten!
 
 # Define subfolders for organization
