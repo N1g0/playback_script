@@ -52,7 +52,6 @@ for input_file_path in data_files:
 # Sanitycheck: How many points are in every msm over all three cages and days (evtl. Überarbeiten)
 # Intermediate step, with all datapoints (times) and the final process data with the fixed timewindow (apply_schedule_and_phase)
 # missing days used days for analysis -> Tabelle erstellen die die Aussortierten Tage / Zeiten abspeichert
-# New all-Occation: in every stage (morn1, morn2, ...) was there a aggression/Play 1/0 for each individual
 # UNKNOWN checken und phase überprüfen wann es nicht gecallt wird?
 # DOCUMENTATION überarbeiten!
 
@@ -122,10 +121,18 @@ if all_dist_data:
     final_dist.to_csv(os.path.join(output_dir, "final_combined_distance.csv"), index=False)
     print(f"📁 Saved final_combined_distance.csv ({len(final_dist)} rows)")
 
-
 if all_occ_data:
-    final_occ = pd.concat(all_occ_data, ignore_index=True)
-    final_occ.to_csv(os.path.join(output_dir, "final_combined_all_occurrences.csv"), index=False)
-    print(f"📁 Saved final_combined_occurrence.csv ({len(final_occ)} rows)")
+    all_occ = pd.concat(all_occ_data, ignore_index=True)
+    all_occ.to_csv(os.path.join(steps_dir, "combined_all_occurrences.csv"), index=False)
+    print(f"📁 Saved combined_occurrence.csv ({len(all_occ)} rows)")
+    #TODO: compress_all_occ logic überprüfen!!!
+    compressed_df: pd.DataFrame = Methods.compress_all_occ(all_occ)
+
+    if not compressed_df.empty:
+        compressed_df.to_csv(os.path.join(output_dir, "final_combined_all_occurrences.csv"), index=False)
+        print(f"📁 Saved final_combined_occurrence.csv ({len(compressed_df)} rows)")
+    else:
+        print("⚠️ Compression resulted in an empty DataFrame.")
+
 else:
     print("⚠️ No valid DataFrames found to concatenate.")

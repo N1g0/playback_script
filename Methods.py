@@ -1038,7 +1038,6 @@ def process_all_occurrence(df, file_type):
 
             # Default values
             main_beh = beh_raw
-            #qualifier = None
             is_playing = 0
             is_aggression = 0
 
@@ -1047,25 +1046,27 @@ def process_all_occurrence(df, file_type):
                 # For Play, usually kept as 'PL' or split if you have 'PLx'
                 if len(beh_raw) > 2:
                     main_beh = beh_raw[:2]
-                #    qualifier = beh_raw[2:]
 
             elif beh_raw in {'AG', 'DS', 'AR'}:
                 is_aggression = 1
-                # SPLIT LOGIC: A/G, D/S, A/R
                 main_beh = beh_raw[:2]
-               # qualifier = beh_raw[1]
 
-            # Append to our list
-            rows.append({
+            new_row = {
                 **metadata,
                 'Ind1': ind_id,
                 'behaviour': main_beh,
-               # 'qualifier': qualifier,
-                'partner': partner if partner else None,
-                'notes': notes if notes else None,
+                'partner': partner or None,
+                'notes': notes or None,
                 'playing': is_playing,
-                'aggression': is_aggression
-            })
+                'aggression': is_aggression,
+            }
+
+            phase = metadata.get('phase')
+            for p in ['morn1', 'morn2', 'enrich', 'extra']:
+                new_row[f'agg_{p}'] = int(1 if is_aggression and phase == p else 0)
+                new_row[f'play_{p}'] = int(1 if is_playing and phase == p else 0)
+
+            rows.append(new_row)
 
     # 6. Save
     if rows:
@@ -1233,9 +1234,7 @@ def count_status(row):
 def sanity_check(all_sanity: list, output_dir: str) -> None:
     sanity_combined = pd.concat(all_sanity, ignore_index=True)
 
-    # 🔥 NEW: include missing data
     sanity_full = sanity_check_with_missing(sanity_combined)
-    summary = sanity_full['status'].value_counts()
     sanity_pivot = sanity_full.pivot_table(
         index=['date', 'msm'],
         columns='cage',
@@ -1267,3 +1266,65 @@ def sanity_check(all_sanity: list, output_dir: str) -> None:
 
     # Save
     sanity_pivot.to_csv(os.path.join(output_dir, "sanity_check.csv"), index=False)
+
+
+def compress_all_occ(all_occ: pd.DataFrame) -> pd.DataFrame:
+    """
+    Compresses an all-occurrences behavioral DataFrame by grouping duplicate entries.
+
+    Groups the data by day ('date'), individual ID ('Ind1'), and time period ('phase').
+    For matching rows, it retains the metadata from the first recorded instance,
+    aggregates the totals for playing and aggression into new columns, and combines
+    all unique interaction partners into a comma-separated list.
+
+    Parameters
+    ----------
+    all_occ : pd.DataFrame
+        The raw behavioral DataFrame containing columns such as 'date', 'Ind1',
+        'phase', 'playing', 'aggression', and 'partner'.
+
+    Returns
+    -------
+    pd.DataFrame
+        A compressed DataFrame with unique date-individual-phase keys, including
+        new 'play_amount' and 'agg_amount' calculation columns.
+    """
+
+    # 1. Drop unnecessary metadata and tracking columns
+    columns_to_drop = ['ec5_uuid', 'msm', 'is_all_occasions', 'is_all_occation', 'notes', 'behaviour']
+    all_occ_cleaned = all_occ.drop(columns=[col for col in columns_to_drop if col in all_occ.columns])
+
+    # 2. Calculate the total continuous frequencies (sums) for play and aggression
+    amounts = all_occ_cleaned.groupby(['date', 'Ind1', 'phase'])[['playing', 'aggression']].sum().reset_index()
+    # Rename these aggregated sums so they can coexist with the original binary columns
+    amounts = amounts.rename(columns={'playing': 'play_amount', 'aggression': 'agg_amount'})
+
+    # 3. Define a helper function to merge multiple observation partners cleanly
+    def combine_partners(series: pd.Series) -> str:
+        # Filter out missing, null, empty strings, or stringified 'None' values
+        valid_partners = [str(x) for x in series if pd.notna(x) and str(x).lower() not in ['none', 'nan', '']]
+        # Deduplicate the list while preserving the chronological order of appearance
+        unique_partners = list(dict.fromkeys(valid_partners))
+        # Return a clean list if partners exist, otherwise default to "None"
+        return ", ".join(unique_partners) if unique_partners else "None"
+
+    # 4. Construct a dynamic mapping dictionary for the main DataFrame aggregation
+    agg_dict = {}
+    for col in all_occ_cleaned.columns:
+        # Skip the grouping keys themselves
+        if col in ['date', 'Ind1', 'phase']:
+            continue
+        # Apply the custom string merger for the partner column
+        elif col == 'partner':
+            agg_dict['partner'] = combine_partners
+        # Default strategy: Keep the absolute first occurrence record for all other metrics
+        else:
+            agg_dict[col] = 'first'
+
+    # 5. Compress the main DataFrame structure based on the mapped strategies
+    compressed_df = all_occ_cleaned.groupby(['date', 'Ind1', 'phase'], as_index=False).agg(agg_dict)
+
+    # 6. Stitch the calculated frequencies ('amounts') back onto the consolidated structure
+    compressed_df = pd.merge(compressed_df, amounts, on=['date', 'Ind1', 'phase'])
+
+    return compressed_df
