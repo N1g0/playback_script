@@ -49,10 +49,10 @@ for input_file_path in data_files:
 #                     PHASE 2: Process Each Raw DataFrame
 # --------------------------------------------------------------------------
 #TODO:
-# Sanitycheck: How many points are in every msm over all three cages and days (evtl. Überarbeiten)
-# Intermediate step, with all datapoints (times) and the final process data with the fixed timewindow (apply_schedule_and_phase)
+# Sanitycheck: How many points are in every msm over all three cages and days (Überarbeiten und testen!!!)
 # missing days used days for analysis -> Tabelle erstellen die die Aussortierten Tage / Zeiten abspeichert
-# UNKNOWN checken und phase überprüfen wann es nicht gecallt wird?
+# Intermediate step, with all datapoints (times) and the final process data with the fixed timewindow (apply_schedule_and_phase) (gefixt??)
+# UNKNOWN checken (gefixt?) und phase überprüfen wann es nicht gecallt wird?
 # DOCUMENTATION überarbeiten!
 
 # Define subfolders for organization

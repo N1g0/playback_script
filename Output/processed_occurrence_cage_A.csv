@@ -1,0 +1,240 @@
+ec5_uuid,condition,date,msm,group,is_all_occasions,trial,phase,first_day,block_ID,Ind1,behaviour,partner,notes,playing,aggression,agg_morn1,play_morn1,agg_morn2,play_morn2,agg_enrich,play_enrich,agg_extra,play_extra
+pBh,Playback,2025-04-04,582,3,True,3,morn1,False,morn1_3_trial3_sec_play,ST,DS,,,0,1,1,0,0,0,0,0,0,0
+kud,Playback,2025-04-04,688,3,True,3,morn2,False,morn2_3_trial3_sec_play,ST,DS,,,0,1,0,0,1,0,0,0,0,0
+O5Z,Playback,2025-04-04,856,3,True,3,enrich,False,enrich_3_trial3_sec_play,ST,DS,,,0,1,0,0,0,0,1,0,0,0
+EYO,Playback,2025-04-04,859,3,True,3,enrich,False,enrich_3_trial3_sec_play,ST,DS,,,0,1,0,0,0,0,1,0,0,0
+PWQ,Playback,2025-04-04,625,3,True,3,morn1,False,morn1_3_trial3_sec_play,ST,DS,,,0,1,1,0,0,0,0,0,0,0
+hRT,Playback,2025-04-04,628,3,True,3,morn1,False,morn1_3_trial3_sec_play,ST,DS,,,0,1,1,0,0,0,0,0,0,0
+0jF,Playback,2025-04-04,629,3,True,3,morn1,False,morn1_3_trial3_sec_play,ST,DS,,,0,1,1,0,0,0,0,0,0,0
+VuV,Playback,2025-04-04,635,3,True,3,extra,False,extra_3_trial3_sec_play,ST,DS,,BEFORE PLAYBACK,0,1,0,0,0,0,0,0,1,0
+THT,Playback,2025-04-04,652,3,True,3,morn2,False,morn2_3_trial3_sec_play,ST,DS,,,0,1,0,0,1,0,0,0,0,0
+9sX,Playback,2025-04-04,654,3,True,3,morn2,False,morn2_3_trial3_sec_play,ST,DS,,,0,1,0,0,1,0,0,0,0,0
+any,Playback,2025-04-04,672,3,True,3,morn2,False,morn2_3_trial3_sec_play,ST,PL,TK,WRESTLE,1,0,0,0,0,1,0,0,0,0
+fTQ,Playback,2025-04-04,674,3,True,3,morn2,False,morn2_3_trial3_sec_play,ST,DS,,,0,1,0,0,1,0,0,0,0,0
+xVm,Playback,2025-04-04,679,3,True,3,morn2,False,morn2_3_trial3_sec_play,ST,PL,TN,CHASE & WRESTLE,1,0,0,0,0,1,0,0,0,0
+g4q,Playback,2025-04-04,680,3,True,3,morn2,False,morn2_3_trial3_sec_play,ST,PL,TN,CHASE & WRESTLE,1,0,0,0,0,1,0,0,0,0
+TQP,Playback,2025-04-04,681,3,True,3,morn2,False,morn2_3_trial3_sec_play,ST,PL,TN,CHASE & WRESTLE,1,0,0,0,0,1,0,0,0,0
+iZ9,Playback,2025-04-04,682,3,True,3,morn2,False,morn2_3_trial3_sec_play,ST,PL,TN,CHASE & WRESTLE,1,0,0,0,0,1,0,0,0,0
+6Ls,Playback,2025-04-04,683,3,True,3,morn2,False,morn2_3_trial3_sec_play,ST,PL,TN,CHASE & WRESTLE,1,0,0,0,0,1,0,0,0,0
+oTQ,Playback,2025-04-04,582,3,True,3,morn1,False,morn1_3_trial3_sec_play,ST,DS,,,0,1,1,0,0,0,0,0,0,0
+KVc,Playback,2025-04-04,586,3,True,3,morn1,False,morn1_3_trial3_sec_play,ST,DS,,,0,1,1,0,0,0,0,0,0,0
+tqV,Playback,2025-04-04,629,3,True,3,morn1,False,morn1_3_trial3_sec_play,ST,DS,,,0,1,1,0,0,0,0,0,0,0
+REc,Playback,2025-04-04,647,3,True,3,morn2,False,morn2_3_trial3_sec_play,ST,DS,,,0,1,0,0,1,0,0,0,0,0
+mMa,Playback,2025-04-04,584,3,True,3,morn1,False,morn1_3_trial3_sec_play,ST,DS,,,0,1,1,0,0,0,0,0,0,0
+mju,Playback,2025-04-04,825,3,True,3,enrich,False,enrich_3_trial3_sec_play,ST,DS,,,0,1,0,0,0,0,1,0,0,0
+8wE,Playback,2025-04-04,857,3,True,3,enrich,False,enrich_3_trial3_sec_play,ST,PL,TK,,1,0,0,0,0,0,0,1,0,0
+40C,Playback,2025-04-04,811,3,True,3,enrich,False,enrich_3_trial3_sec_play,ST,DS,,,0,1,0,0,0,0,1,0,0,0
+DV8,Crow,2025-05-01,619,3,True,5,morn1,False,morn1_3_trial5_sec_cont,ST,DS,,,0,1,1,0,0,0,0,0,0,0
+Ahr,Crow,2025-05-01,682,3,True,5,morn2,False,morn2_3_trial5_sec_cont,ST,DS,,,0,1,0,0,1,0,0,0,0,0
+nZF,Crow,2025-05-01,685,3,True,5,morn2,False,morn2_3_trial5_sec_cont,ST,DS,,,0,1,0,0,1,0,0,0,0,0
+Swd,Crow,2025-05-01,687,3,True,5,morn2,False,morn2_3_trial5_sec_cont,ST,DS,,,0,1,0,0,1,0,0,0,0,0
+bgt,Crow,2025-05-01,805,3,True,5,enrich,False,enrich_3_trial5_sec_cont,ST,PL,TK,,1,0,0,0,0,0,0,1,0,0
+NUb,Crow,2025-05-04,684,2,True,6,morn2,True,morn2_2_trial6_first_cont,ST,DS,,,0,1,0,0,1,0,0,0,0,0
+N3J,Crow,2025-05-04,700,2,True,6,morn2,True,morn2_2_trial6_first_cont,ST,DS,,,0,1,0,0,1,0,0,0,0,0
+mpf,Crow,2025-05-05,863,2,True,6,enrich,False,enrich_2_trial6_sec_cont,ST,PL,NY,CHASE,1,0,0,0,0,0,0,1,0,0
+FnG,Crow,2025-05-05,864,2,True,6,enrich,False,enrich_2_trial6_sec_cont,ST,PL,NY,,1,0,0,0,0,0,0,1,0,0
+gEo,Crow,2025-05-05,883,2,True,6,enrich,False,enrich_2_trial6_sec_cont,ST,PL,NY,,1,0,0,0,0,0,0,1,0,0
+jPE,Crow,2025-05-05,884,2,True,6,enrich,False,enrich_2_trial6_sec_cont,ST,PL,NY,,1,0,0,0,0,0,0,1,0,0
+uO3,Crow,2025-05-05,885,2,True,6,enrich,False,enrich_2_trial6_sec_cont,ST,PL,NY,,1,0,0,0,0,0,0,1,0,0
+QjT,Crow,2025-05-05,646,2,True,6,morn2,False,morn2_2_trial6_sec_cont,ST,DS,,,0,1,0,0,1,0,0,0,0,0
+sD6,Crow,2025-05-05,660,2,True,6,morn2,False,morn2_2_trial6_sec_cont,ST,PL,TK,,1,0,0,0,0,1,0,0,0,0
+NZe,Crow,2025-05-05,668,2,True,6,morn2,False,morn2_2_trial6_sec_cont,ST,PL,TK,,1,0,0,0,0,1,0,0,0,0
+1Hq,Crow,2025-05-05,669,2,True,6,morn2,False,morn2_2_trial6_sec_cont,ST,PL,TK,,1,0,0,0,0,1,0,0,0,0
+k8X,Crow,2025-05-05,670,2,True,6,morn2,False,morn2_2_trial6_sec_cont,ST,PL,TK,,1,0,0,0,0,1,0,0,0,0
+sM7,Crow,2025-05-05,671,2,True,6,morn2,False,morn2_2_trial6_sec_cont,ST,PL,TK,,1,0,0,0,0,1,0,0,0,0
+z8m,Crow,2025-05-05,672,2,True,6,morn2,False,morn2_2_trial6_sec_cont,ST,PL,TK,,1,0,0,0,0,1,0,0,0,0
+Brq,Crow,2025-05-05,606,2,True,6,morn1,False,morn1_2_trial6_sec_cont,ST,PL,TK,,1,0,0,1,0,0,0,0,0,0
+yaC,Crow,2025-05-05,630,2,True,6,morn1,False,morn1_2_trial6_sec_cont,ST,DS,,,0,1,1,0,0,0,0,0,0,0
+zfR,Crow,2025-05-05,867,2,True,6,enrich,False,enrich_2_trial6_sec_cont,ST,DS,,,0,1,0,0,0,0,1,0,0,0
+p1F,Crow,2025-05-05,870,2,True,6,enrich,False,enrich_2_trial6_sec_cont,ST,DS,,,0,1,0,0,0,0,1,0,0,0
+Ff5,Crow,2025-05-05,595,2,True,6,morn1,False,morn1_2_trial6_sec_cont,ST,DS,,,0,1,1,0,0,0,0,0,0,0
+ODE,Crow,2025-05-05,589,2,True,6,morn1,False,morn1_2_trial6_sec_cont,ST,PL,TK,,1,0,0,1,0,0,0,0,0,0
+07X,Crow,2025-05-05,592,2,True,6,morn1,False,morn1_2_trial6_sec_cont,ST,PL,TK,,1,0,0,1,0,0,0,0,0,0
+YDN,Crow,2025-05-05,607,2,True,6,morn1,False,morn1_2_trial6_sec_cont,ST,PL,TK,,1,0,0,1,0,0,0,0,0,0
+eK3,Crow,2025-05-05,680,2,True,6,morn2,False,morn2_2_trial6_sec_cont,ST,PL,SR,biting,1,0,0,0,0,1,0,0,0,0
+ZMY,Crow,2025-05-05,681,2,True,6,morn2,False,morn2_2_trial6_sec_cont,ST,PL,SR,biting,1,0,0,0,0,1,0,0,0,0
+VNR,Crow,2025-05-05,682,2,True,6,morn2,False,morn2_2_trial6_sec_cont,ST,PL,SR,biting,1,0,0,0,0,1,0,0,0,0
+F2y,Crow,2025-05-05,683,2,True,6,morn2,False,morn2_2_trial6_sec_cont,ST,PL,SR,biting,1,0,0,0,0,1,0,0,0,0
+Lp8,Crow,2025-05-05,684,2,True,6,morn2,False,morn2_2_trial6_sec_cont,ST,PL,SR,biting,1,0,0,0,0,1,0,0,0,0
+4qK,Crow,2025-05-05,685,2,True,6,morn2,False,morn2_2_trial6_sec_cont,ST,PL,SR,biting,1,0,0,0,0,1,0,0,0,0
+zH3,Crow,2025-05-05,686,2,True,6,morn2,False,morn2_2_trial6_sec_cont,ST,PL,SR,biting,1,0,0,0,0,1,0,0,0,0
+D9v,Crow,2025-05-05,687,2,True,6,morn2,False,morn2_2_trial6_sec_cont,ST,PL,SR,biting,1,0,0,0,0,1,0,0,0,0
+b7Q,Crow,2025-05-05,688,2,True,6,morn2,False,morn2_2_trial6_sec_cont,ST,PL,SR,biting,1,0,0,0,0,1,0,0,0,0
+2cX,Crow,2025-05-05,689,2,True,6,morn2,False,morn2_2_trial6_sec_cont,ST,PL,SR,biting,1,0,0,0,0,1,0,0,0,0
+mJ5,Crow,2025-05-05,690,2,True,6,morn2,False,morn2_2_trial6_sec_cont,ST,PL,SR,biting,1,0,0,0,0,1,0,0,0,0
+8R9,Crow,2025-05-05,691,2,True,6,morn2,False,morn2_2_trial6_sec_cont,ST,PL,SR,biting,1,0,0,0,0,1,0,0,0,0
+k4W,Crow,2025-05-05,692,2,True,6,morn2,False,morn2_2_trial6_sec_cont,ST,PL,SR,biting,1,0,0,0,0,1,0,0,0,0
+N2z,Crow,2025-05-05,693,2,True,6,morn2,False,morn2_2_trial6_sec_cont,ST,PL,SR,biting,1,0,0,0,0,1,0,0,0,0
+yVr,Crow,2025-04-09,629,1,True,3,morn1,False,morn1_1_trial3_sec_cont,NY,DS,,,0,1,1,0,0,0,0,0,0,0
+ca9,Crow,2025-04-09,661,1,True,3,morn2,False,morn2_1_trial3_sec_cont,NY,DS,,,0,1,0,0,1,0,0,0,0,0
+zC5,Crow,2025-05-04,690,2,True,6,morn2,True,morn2_2_trial6_first_cont,NY,DS,,,0,1,0,0,1,0,0,0,0,0
+3CY,Crow,2025-05-04,862,2,True,6,enrich,True,enrich_2_trial6_first_cont,NY,PL,TK,MOUTH ON MOUTH,1,0,0,0,0,0,0,1,0,0
+nAh,Crow,2025-05-04,863,2,True,6,enrich,True,enrich_2_trial6_first_cont,NY,PL,TK,MOUTH ON MOUTH,1,0,0,0,0,0,0,1,0,0
+Z8y,Crow,2025-05-04,864,2,True,6,enrich,True,enrich_2_trial6_first_cont,NY,PL,TK,MOUTH ON MOUTH,1,0,0,0,0,0,0,1,0,0
+uK1,Crow,2025-05-04,865,2,True,6,enrich,True,enrich_2_trial6_first_cont,NY,PL,TK,MOUTH ON MOUTH,1,0,0,0,0,0,0,1,0,0
+R3a,Crow,2025-05-04,866,2,True,6,enrich,True,enrich_2_trial6_first_cont,NY,PL,TK,MOUTH ON MOUTH,1,0,0,0,0,0,0,1,0,0
+Fmb,Crow,2025-05-04,867,2,True,6,enrich,True,enrich_2_trial6_first_cont,NY,PL,TK,MOUTH ON MOUTH,1,0,0,0,0,0,0,1,0,0
+cJh,Crow,2025-05-04,868,2,True,6,enrich,True,enrich_2_trial6_first_cont,NY,PL,TK,MOUTH ON MOUTH,1,0,0,0,0,0,0,1,0,0
+n9h,Crow,2025-05-04,869,2,True,6,enrich,True,enrich_2_trial6_first_cont,NY,PL,TK,MOUTH ON MOUTH,1,0,0,0,0,0,0,1,0,0
+h2y,Crow,2025-05-04,870,2,True,6,enrich,True,enrich_2_trial6_first_cont,NY,PL,TK,MOUTH ON MOUTH,1,0,0,0,0,0,0,1,0,0
+UNQ,Crow,2025-05-04,871,2,True,6,enrich,True,enrich_2_trial6_first_cont,NY,PL,TK,MOUTH ON MOUTH,1,0,0,0,0,0,0,1,0,0
+nqm,Crow,2025-05-04,872,2,True,6,enrich,True,enrich_2_trial6_first_cont,NY,PL,TK,MOUTH ON MOUTH,1,0,0,0,0,0,0,1,0,0
+J6z,Crow,2025-05-04,873,2,True,6,enrich,True,enrich_2_trial6_first_cont,NY,PL,TK,MOUTH ON MOUTH,1,0,0,0,0,0,0,1,0,0
+zeo,Crow,2025-05-04,874,2,True,6,enrich,True,enrich_2_trial6_first_cont,NY,PL,TK,MOUTH ON MOUTH,1,0,0,0,0,0,0,1,0,0
+qut,Crow,2025-05-04,660,2,True,6,morn2,True,morn2_2_trial6_first_cont,NY,DS,,,0,1,0,0,1,0,0,0,0,0
+tbt,Crow,2025-05-04,699,2,True,6,morn2,True,morn2_2_trial6_first_cont,NY,DS,,,0,1,0,0,1,0,0,0,0,0
+9ET,Crow,2025-05-04,704,2,True,6,morn2,True,morn2_2_trial6_first_cont,NY,DS,,,0,1,0,0,1,0,0,0,0,0
+TTa,Crow,2025-05-04,876,2,True,6,enrich,True,enrich_2_trial6_first_cont,NY,DS,,,0,1,0,0,0,0,1,0,0,0
+hHp,Crow,2025-05-04,894,2,True,6,enrich,True,enrich_2_trial6_first_cont,NY,PL,SR,,1,0,0,0,0,0,0,1,0,0
+a8G,Crow,2025-05-04,895,2,True,6,enrich,True,enrich_2_trial6_first_cont,NY,PL,SR,,1,0,0,0,0,0,0,1,0,0
+JKz,Crow,2025-05-04,896,2,True,6,enrich,True,enrich_2_trial6_first_cont,NY,PL,SR,,1,0,0,0,0,0,0,1,0,0
+xjU,Playback,2025-04-04,603,3,True,3,morn1,False,morn1_3_trial3_sec_play,SR,DS,,,0,1,1,0,0,0,0,0,0,0
+xOh,Playback,2025-04-04,811,3,True,3,enrich,False,enrich_3_trial3_sec_play,SR,DS,,,0,1,0,0,0,0,1,0,0,0
+xho,Playback,2025-04-04,663,3,True,3,morn2,False,morn2_3_trial3_sec_play,SR,DS,,,0,1,0,0,1,0,0,0,0,0
+8o1,Playback,2025-04-04,578,3,True,3,morn1,False,morn1_3_trial3_sec_play,SR,DS,,,0,1,1,0,0,0,0,0,0,0
+Da9,Crow,2025-05-01,608,3,True,5,morn1,False,morn1_3_trial5_sec_cont,SR,PL,TN,,1,0,0,1,0,0,0,0,0,0
+Uft,Playback,2025-04-04,582,3,True,3,morn1,False,morn1_3_trial3_sec_play,TK,DS,,,0,1,1,0,0,0,0,0,0,0
+3Xa,Playback,2025-04-04,582,3,True,3,morn1,False,morn1_3_trial3_sec_play,TK,PL,ST,,1,0,0,1,0,0,0,0,0,0
+Aup,Playback,2025-04-04,593,3,True,3,morn1,False,morn1_3_trial3_sec_play,TK,DS,,,0,1,1,0,0,0,0,0,0,0
+jRU,Playback,2025-04-04,600,3,True,3,morn1,False,morn1_3_trial3_sec_play,TK,DS,,,0,1,1,0,0,0,0,0,0,0
+pHC,Playback,2025-04-04,679,3,True,3,morn2,False,morn2_3_trial3_sec_play,TK,PL,TN,MOUTH OPEN ON TN,1,0,0,0,0,1,0,0,0,0
+Qyx,Playback,2025-04-04,807,3,True,3,enrich,False,enrich_3_trial3_sec_play,TK,DS,,,0,1,0,0,0,0,1,0,0,0
+K8Z,Playback,2025-04-04,589,3,True,3,morn1,False,morn1_3_trial3_sec_play,TK,PL,SR,TK follow SR - pull leg,1,0,0,1,0,0,0,0,0,0
+5Bm,Playback,2025-04-04,590,3,True,3,morn1,False,morn1_3_trial3_sec_play,TK,PL,SR,TK follow SR - pull leg,1,0,0,1,0,0,0,0,0,0
+U5K,Playback,2025-04-04,591,3,True,3,morn1,False,morn1_3_trial3_sec_play,TK,PL,SR,TK follow SR - pull leg,1,0,0,1,0,0,0,0,0,0
+V3C,Playback,2025-04-04,592,3,True,3,morn1,False,morn1_3_trial3_sec_play,TK,PL,SR,TK follow SR - pull leg,1,0,0,1,0,0,0,0,0,0
+tfg,Crow,2025-04-08,579,1,True,3,morn1,True,morn1_1_trial3_first_cont,TK,PL,NR,slapping leg,1,0,0,1,0,0,0,0,0,0
+3eM,Crow,2025-04-08,599,1,True,3,morn1,True,morn1_1_trial3_first_cont,TK,PL,NR,chase in circles - pull leg,1,0,0,1,0,0,0,0,0,0
+b3S,Crow,2025-04-08,828,1,True,3,enrich,True,enrich_1_trial3_first_cont,TK,DS,,,0,1,0,0,0,0,1,0,0,0
+kV0,Crow,2025-04-08,857,1,True,3,enrich,True,enrich_1_trial3_first_cont,TK,DS,,,0,1,0,0,0,0,1,0,0,0
+g9D,Crow,2025-04-08,838,1,True,3,enrich,True,enrich_1_trial3_first_cont,TK,PL,NR,"grabbing foot, wrestling",1,0,0,0,0,0,0,1,0,0
+M2G,Crow,2025-04-08,839,1,True,3,enrich,True,enrich_1_trial3_first_cont,TK,PL,NR,"grabbing foot, wrestling",1,0,0,0,0,0,0,1,0,0
+vZ3,Crow,2025-04-08,840,1,True,3,enrich,True,enrich_1_trial3_first_cont,TK,PL,NR,"grabbing foot, wrestling",1,0,0,0,0,0,0,1,0,0
+c5F,Crow,2025-04-08,841,1,True,3,enrich,True,enrich_1_trial3_first_cont,TK,PL,NR,"grabbing foot, wrestling",1,0,0,0,0,0,0,1,0,0
+B4n,Crow,2025-04-08,842,1,True,3,enrich,True,enrich_1_trial3_first_cont,TK,PL,NR,"grabbing foot, wrestling",1,0,0,0,0,0,0,1,0,0
+q2K,Crow,2025-04-08,843,1,True,3,enrich,True,enrich_1_trial3_first_cont,TK,PL,NR,"grabbing foot, wrestling",1,0,0,0,0,0,0,1,0,0
+nrY,Crow,2025-04-08,844,1,True,3,enrich,True,enrich_1_trial3_first_cont,TK,PL,NR,"grabbing foot, wrestling",1,0,0,0,0,0,0,1,0,0
+9sG,Crow,2025-04-08,594,1,True,3,morn1,True,morn1_1_trial3_first_cont,TK,PL,NR,walking in circles - grabbing feet,1,0,0,1,0,0,0,0,0,0
+Xra,Crow,2025-04-08,595,1,True,3,morn1,True,morn1_1_trial3_first_cont,TK,PL,NR,walking in circles - grabbing feet,1,0,0,1,0,0,0,0,0,0
+2jS,Crow,2025-04-08,596,1,True,3,morn1,True,morn1_1_trial3_first_cont,TK,PL,NR,walking in circles - grabbing feet,1,0,0,1,0,0,0,0,0,0
+VGn,Crow,2025-04-08,597,1,True,3,morn1,True,morn1_1_trial3_first_cont,TK,PL,NR,walking in circles - grabbing feet,1,0,0,1,0,0,0,0,0,0
+gvg,Crow,2025-04-09,629,1,True,3,morn1,False,morn1_1_trial3_sec_cont,TK,DS,,,0,1,1,0,0,0,0,0,0,0
+BgU,Crow,2025-04-09,578,1,True,3,morn1,False,morn1_1_trial3_sec_cont,TK,PL,,CHASE & SWING ON ROPE,1,0,0,1,0,0,0,0,0,0
+nOM,Crow,2025-04-09,592,1,True,3,morn1,False,morn1_1_trial3_sec_cont,TK,PL,,CHASE,1,0,0,1,0,0,0,0,0,0
+Y5g,Crow,2025-04-09,635,1,True,3,extra,False,extra_1_trial3_sec_cont,TK,DS,,BEFORE PLAYBACK,0,1,0,0,0,0,0,0,1,0
+omz,Crow,2025-04-09,654,1,True,3,morn2,False,morn2_1_trial3_sec_cont,TK,DS,,,0,1,0,0,1,0,0,0,0,0
+eRr,Crow,2025-04-09,656,1,True,3,morn2,False,morn2_1_trial3_sec_cont,TK,DS,,,0,1,0,0,1,0,0,0,0,0
+JyY,Crow,2025-04-09,663,1,True,3,morn2,False,morn2_1_trial3_sec_cont,TK,PL,TN,,1,0,0,0,0,1,0,0,0,0
+AdE,Crow,2025-04-09,670,1,True,3,morn2,False,morn2_1_trial3_sec_cont,TK,DS,,,0,1,0,0,1,0,0,0,0,0
+Sra,Crow,2025-04-09,674,1,True,3,morn2,False,morn2_1_trial3_sec_cont,TK,DS,,,0,1,0,0,1,0,0,0,0,0
+b16,Crow,2025-04-09,840,1,True,3,enrich,False,enrich_1_trial3_sec_cont,TK,PL,TN,,1,0,0,0,0,0,0,1,0,0
+mJm,Crow,2025-04-09,625,1,True,3,morn1,False,morn1_1_trial3_sec_cont,TK,DS,,,0,1,1,0,0,0,0,0,0,0
+R2J,Crow,2025-04-09,581,1,True,3,morn1,False,morn1_1_trial3_sec_cont,TK,DS,,,0,1,1,0,0,0,0,0,0,0
+Xvp,Crow,2025-04-09,850,1,True,3,enrich,False,enrich_1_trial3_sec_cont,TK,PL,TN,"CHASE, GRAB ARMS",1,0,0,0,0,0,0,1,0,0
+XCT,Crow,2025-04-09,654,1,True,3,morn2,False,morn2_1_trial3_sec_cont,TK,PL,TN,"WRESTLE, CHASE",1,0,0,0,0,1,0,0,0,0
+P8d,Crow,2025-04-09,655,1,True,3,morn2,False,morn2_1_trial3_sec_cont,TK,PL,TN,"WRESTLE, CHASE",1,0,0,0,0,1,0,0,0,0
+G3d,Crow,2025-04-09,656,1,True,3,morn2,False,morn2_1_trial3_sec_cont,TK,PL,TN,"WRESTLE, CHASE",1,0,0,0,0,1,0,0,0,0
+f7V,Crow,2025-04-09,657,1,True,3,morn2,False,morn2_1_trial3_sec_cont,TK,PL,TN,"WRESTLE, CHASE",1,0,0,0,0,1,0,0,0,0
+Tm2,Crow,2025-04-09,658,1,True,3,morn2,False,morn2_1_trial3_sec_cont,TK,PL,TN,"WRESTLE, CHASE",1,0,0,0,0,1,0,0,0,0
+sJ4,Crow,2025-04-09,659,1,True,3,morn2,False,morn2_1_trial3_sec_cont,TK,PL,TN,"WRESTLE, CHASE",1,0,0,0,0,1,0,0,0,0
+0Lp,Crow,2025-04-09,660,1,True,3,morn2,False,morn2_1_trial3_sec_cont,TK,PL,TN,"WRESTLE, CHASE",1,0,0,0,0,1,0,0,0,0
+w2B,Crow,2025-04-09,661,1,True,3,morn2,False,morn2_1_trial3_sec_cont,TK,PL,TN,"WRESTLE, CHASE",1,0,0,0,0,1,0,0,0,0
+D8M,Crow,2025-04-09,703,1,True,3,morn2,False,morn2_1_trial3_sec_cont,TK,PL,TN,"FOLLOW, GRAB ARMS",1,0,0,0,0,1,0,0,0,0
+AYP,Crow,2025-04-09,704,1,True,3,morn2,False,morn2_1_trial3_sec_cont,TK,PL,TN,"FOLLOW, GRAB ARMS",1,0,0,0,0,1,0,0,0,0
+8Qd,Crow,2025-04-09,705,1,True,3,morn2,False,morn2_1_trial3_sec_cont,TK,PL,TN,"FOLLOW, GRAB ARMS",1,0,0,0,0,1,0,0,0,0
+UaH,Crow,2025-04-09,859,1,True,3,enrich,False,enrich_1_trial3_sec_cont,TK,PL,TN,,1,0,0,0,0,0,0,1,0,0
+oog,Crow,2025-04-09,860,1,True,3,enrich,False,enrich_1_trial3_sec_cont,TK,PL,TN,,1,0,0,0,0,0,0,1,0,0
+Qb6,Crow,2025-04-09,861,1,True,3,enrich,False,enrich_1_trial3_sec_cont,TK,PL,TN,,1,0,0,0,0,0,0,1,0,0
+6By,Crow,2025-04-09,862,1,True,3,enrich,False,enrich_1_trial3_sec_cont,TK,PL,TN,,1,0,0,0,0,0,0,1,0,0
+HB9,Crow,2025-04-09,864,1,True,3,enrich,False,enrich_1_trial3_sec_cont,TK,PL,TN,WRESTLING,1,0,0,0,0,0,0,1,0,0
+Zky,Crow,2025-04-09,865,1,True,3,enrich,False,enrich_1_trial3_sec_cont,TK,PL,TN,WRESTLING,1,0,0,0,0,0,0,1,0,0
+3tG,Crow,2025-04-09,866,1,True,3,enrich,False,enrich_1_trial3_sec_cont,TK,PL,TN,WRESTLING,1,0,0,0,0,0,0,1,0,0
+hhi,Crow,2025-04-09,585,1,True,3,morn1,False,morn1_1_trial3_sec_cont,TK,DS,,,0,1,1,0,0,0,0,0,0,0
+uS8,Crow,2025-04-09,629,1,True,3,morn1,False,morn1_1_trial3_sec_cont,TK,DS,,,0,1,1,0,0,0,0,0,0,0
+2v3,Crow,2025-04-09,649,1,True,3,morn2,False,morn2_1_trial3_sec_cont,TK,PL,TN,,1,0,0,0,0,1,0,0,0,0
+Usz,Crow,2025-04-09,651,1,True,3,morn2,False,morn2_1_trial3_sec_cont,TK,DS,,,0,1,0,0,1,0,0,0,0,0
+qpQ,Crow,2025-04-09,655,1,True,3,morn2,False,morn2_1_trial3_sec_cont,TK,PL,TN,wrestle,1,0,0,0,0,1,0,0,0,0
+nxp,Crow,2025-04-09,580,1,True,3,morn1,False,morn1_1_trial3_sec_cont,TK,DS,,,0,1,1,0,0,0,0,0,0,0
+WZk,Crow,2025-04-09,592,1,True,3,morn1,False,morn1_1_trial3_sec_cont,TK,PL,TN,,1,0,0,1,0,0,0,0,0,0
+9FT,Crow,2025-04-09,803,1,True,3,enrich,False,enrich_1_trial3_sec_cont,TK,DS,,,0,1,0,0,0,0,1,0,0,0
+Rfk,Crow,2025-04-09,598,1,True,3,morn1,False,morn1_1_trial3_sec_cont,TK,PL,TN,,1,0,0,1,0,0,0,0,0,0
+wtq,Crow,2025-04-09,599,1,True,3,morn1,False,morn1_1_trial3_sec_cont,TK,PL,TN,,1,0,0,1,0,0,0,0,0,0
+Ffu,Crow,2025-04-09,600,1,True,3,morn1,False,morn1_1_trial3_sec_cont,TK,PL,TN,,1,0,0,1,0,0,0,0,0,0
+25O,Crow,2025-04-09,601,1,True,3,morn1,False,morn1_1_trial3_sec_cont,TK,PL,TN,,1,0,0,1,0,0,0,0,0,0
+mhx,Crow,2025-05-01,678,3,True,5,morn2,False,morn2_3_trial5_sec_cont,TK,DS,,,0,1,0,0,1,0,0,0,0,0
+Bbc,Crow,2025-05-01,822,3,True,5,enrich,False,enrich_3_trial5_sec_cont,TK,PL,TN,,1,0,0,0,0,0,0,1,0,0
+gGd,Crow,2025-05-01,823,3,True,5,enrich,False,enrich_3_trial5_sec_cont,TK,PL,TN,,1,0,0,0,0,0,0,1,0,0
+Yu9,Crow,2025-05-01,824,3,True,5,enrich,False,enrich_3_trial5_sec_cont,TK,PL,TN,,1,0,0,0,0,0,0,1,0,0
+X2m,Crow,2025-05-01,825,3,True,5,enrich,False,enrich_3_trial5_sec_cont,TK,PL,TN,,1,0,0,0,0,0,0,1,0,0
+nV7,Crow,2025-05-01,826,3,True,5,enrich,False,enrich_3_trial5_sec_cont,TK,PL,TN,,1,0,0,0,0,0,0,1,0,0
+11t,Crow,2025-05-01,849,3,True,5,enrich,False,enrich_3_trial5_sec_cont,TK,PL,TN,,1,0,0,0,0,0,0,1,0,0
+eH4,Crow,2025-05-01,850,3,True,5,enrich,False,enrich_3_trial5_sec_cont,TK,PL,TN,,1,0,0,0,0,0,0,1,0,0
+dQ3,Crow,2025-05-01,851,3,True,5,enrich,False,enrich_3_trial5_sec_cont,TK,PL,TN,,1,0,0,0,0,0,0,1,0,0
+78c,Crow,2025-05-01,852,3,True,5,enrich,False,enrich_3_trial5_sec_cont,TK,PL,TN,,1,0,0,0,0,0,0,1,0,0
+Zhq,Crow,2025-05-04,697,2,True,6,morn2,True,morn2_2_trial6_first_cont,TK,DS,,,0,1,0,0,1,0,0,0,0,0
+n9u,Crow,2025-05-04,576,2,True,6,morn1,True,morn1_2_trial6_first_cont,TK,PL,TN,,1,0,0,1,0,0,0,0,0,0
+1Fm,Crow,2025-05-04,606,2,True,6,morn1,True,morn1_2_trial6_first_cont,TK,PL,TN,WRESTLE,1,0,0,1,0,0,0,0,0,0
+2TK,Crow,2025-05-04,607,2,True,6,morn1,True,morn1_2_trial6_first_cont,TK,PL,TN,WRESTLE,1,0,0,1,0,0,0,0,0,0
+11E,Crow,2025-05-04,608,2,True,6,morn1,True,morn1_2_trial6_first_cont,TK,PL,TN,WRESTLE,1,0,0,1,0,0,0,0,0,0
+5vN,Crow,2025-05-04,609,2,True,6,morn1,True,morn1_2_trial6_first_cont,TK,PL,TN,WRESTLE,1,0,0,1,0,0,0,0,0,0
+Pm4,Crow,2025-05-04,610,2,True,6,morn1,True,morn1_2_trial6_first_cont,TK,PL,TN,WRESTLE,1,0,0,1,0,0,0,0,0,0
+cVN,Crow,2025-05-04,597,2,True,6,morn1,True,morn1_2_trial6_first_cont,TK,PL,TN,ARM GRAB,1,0,0,1,0,0,0,0,0,0
+MST,Crow,2025-05-04,598,2,True,6,morn1,True,morn1_2_trial6_first_cont,TK,PL,TN,ARM GRAB,1,0,0,1,0,0,0,0,0,0
+es8,Crow,2025-05-04,599,2,True,6,morn1,True,morn1_2_trial6_first_cont,TK,PL,TN,ARM GRAB,1,0,0,1,0,0,0,0,0,0
+8zD,Crow,2025-05-04,600,2,True,6,morn1,True,morn1_2_trial6_first_cont,TK,PL,TN,ARM GRAB,1,0,0,1,0,0,0,0,0,0
+YR8,Crow,2025-05-04,601,2,True,6,morn1,True,morn1_2_trial6_first_cont,TK,PL,TN,ARM GRAB,1,0,0,1,0,0,0,0,0,0
+X7U,Crow,2025-05-04,602,2,True,6,morn1,True,morn1_2_trial6_first_cont,TK,PL,TN,ARM GRAB,1,0,0,1,0,0,0,0,0,0
+Fu7,Crow,2025-05-04,653,2,True,6,morn2,True,morn2_2_trial6_first_cont,TK,DS,,,0,1,0,0,1,0,0,0,0,0
+3Bh,Crow,2025-05-04,714,2,True,6,extra,True,extra_2_trial6_first_cont,TK,PL,TN,,1,0,0,0,0,0,0,0,0,1
+rOv,Crow,2025-05-04,595,2,True,6,morn1,True,morn1_2_trial6_first_cont,TK,DS,,,0,1,1,0,0,0,0,0,0,0
+uZH,Crow,2025-05-04,672,2,True,6,morn2,True,morn2_2_trial6_first_cont,TK,PL,TN,,1,0,0,0,0,1,0,0,0,0
+G6T,Crow,2025-05-04,801,2,True,6,enrich,True,enrich_2_trial6_first_cont,TK,PL,TN,pulling arms and legs,1,0,0,0,0,0,0,1,0,0
+WtY,Crow,2025-05-04,699,2,True,6,morn2,True,morn2_2_trial6_first_cont,TK,DS,,,0,1,0,0,1,0,0,0,0,0
+d5R,Crow,2025-05-04,696,2,True,6,morn2,True,morn2_2_trial6_first_cont,TK,PL,TN,,1,0,0,0,0,1,0,0,0,0
+weG,Crow,2025-05-04,697,2,True,6,morn2,True,morn2_2_trial6_first_cont,TK,PL,TN,,1,0,0,0,0,1,0,0,0,0
+ZOW,Crow,2025-05-04,698,2,True,6,morn2,True,morn2_2_trial6_first_cont,TK,PL,TN,,1,0,0,0,0,1,0,0,0,0
+jKe,Crow,2025-05-04,611,2,True,6,morn1,True,morn1_2_trial6_first_cont,TK,PL,TN,,1,0,0,1,0,0,0,0,0,0
+5ZC,Crow,2025-05-04,625,2,True,6,morn1,True,morn1_2_trial6_first_cont,TN,AG,,TOWARDS TK,0,1,1,0,0,0,0,0,0,0
+YDD,Crow,2025-05-04,635,2,True,6,extra,True,extra_2_trial6_first_cont,TN,DS,,TOWARDS SR - BEFORE PLAYBACK,0,1,0,0,0,0,0,0,1,0
+eaR,Crow,2025-05-04,654,2,True,6,morn2,True,morn2_2_trial6_first_cont,TN,AG,,TOWARDS ST,0,1,0,0,1,0,0,0,0,0
+D3N,Crow,2025-05-04,654,2,True,6,morn2,True,morn2_2_trial6_first_cont,TN,DS,,,0,1,0,0,1,0,0,0,0,0
+ZHP,Crow,2025-05-04,625,2,True,6,morn1,True,morn1_2_trial6_first_cont,TN,DS,,,0,1,1,0,0,0,0,0,0,0
+TSQ,Crow,2025-05-04,597,2,True,6,morn1,True,morn1_2_trial6_first_cont,TN,PL,ST,FOLLOW + WRESTLE,1,0,0,1,0,0,0,0,0,0
+Z5r,Crow,2025-05-04,598,2,True,6,morn1,True,morn1_2_trial6_first_cont,TN,PL,ST,,1,0,0,1,0,0,0,0,0,0
+w4S,Crow,2025-05-04,599,2,True,6,morn1,True,morn1_2_trial6_first_cont,TN,PL,ST,,1,0,0,1,0,0,0,0,0,0
+Q3t,Crow,2025-05-04,600,2,True,6,morn1,True,morn1_2_trial6_first_cont,TN,PL,ST,,1,0,0,1,0,0,0,0,0,0
+1qf,Crow,2025-05-04,601,2,True,6,morn1,True,morn1_2_trial6_first_cont,TN,PL,ST,,1,0,0,1,0,0,0,0,0,0
+gFC,Crow,2025-05-04,602,2,True,6,morn1,True,morn1_2_trial6_first_cont,TN,PL,ST,,1,0,0,1,0,0,0,0,0,0
+8ax,Crow,2025-05-04,646,2,True,6,morn2,True,morn2_2_trial6_first_cont,TN,DS,,,0,1,0,0,1,0,0,0,0,0
+cX9,Crow,2025-04-08,615,1,True,3,morn1,True,morn1_1_trial3_first_cont,MT,DS,,,0,1,1,0,0,0,0,0,0,0
+6j5,Crow,2025-04-08,669,1,True,3,morn2,True,morn2_1_trial3_first_cont,MT,DS,,,0,1,0,0,1,0,0,0,0,0
+XeF,Crow,2025-04-09,586,1,True,3,morn1,False,morn1_1_trial3_sec_cont,MT,PL,NR,HITTING ARMS,1,0,0,1,0,0,0,0,0,0
+Q9B,Crow,2025-04-09,629,1,True,3,morn1,False,morn1_1_trial3_sec_cont,MT,DS,,,0,1,1,0,0,0,0,0,0,0
+Ju6,Crow,2025-04-09,818,1,True,3,enrich,False,enrich_1_trial3_sec_cont,MT,DS,,,0,1,0,0,0,0,1,0,0,0
+xND,Crow,2025-04-09,820,1,True,3,enrich,False,enrich_1_trial3_sec_cont,MT,DS,,,0,1,0,0,0,0,1,0,0,0
+teN,Crow,2025-04-09,821,1,True,3,enrich,False,enrich_1_trial3_sec_cont,MT,DS,,,0,1,0,0,0,0,1,0,0,0
+tox,Crow,2025-04-09,824,1,True,3,enrich,False,enrich_1_trial3_sec_cont,MT,DS,,,0,1,0,0,0,0,1,0,0,0
+v5f,Crow,2025-04-09,831,1,True,3,enrich,False,enrich_1_trial3_sec_cont,MT,DS,,,0,1,0,0,0,0,1,0,0,0
+2U2,Crow,2025-04-09,578,1,True,3,morn1,False,morn1_1_trial3_sec_cont,MT,PL,NR,,1,0,0,1,0,0,0,0,0,0
+P2k,Crow,2025-04-08,615,1,True,3,morn1,True,morn1_1_trial3_first_cont,NR,DS,,,0,1,1,0,0,0,0,0,0,0
+10R,Crow,2025-04-08,618,1,True,3,morn1,True,morn1_1_trial3_first_cont,NR,DS,,,0,1,1,0,0,0,0,0,0,0
+vHE,Crow,2025-04-08,669,1,True,3,morn2,True,morn2_1_trial3_first_cont,NR,DS,,,0,1,0,0,1,0,0,0,0,0
+VyM,Crow,2025-04-08,828,1,True,3,enrich,True,enrich_1_trial3_first_cont,NR,DS,,,0,1,0,0,0,0,1,0,0,0
+NYs,Crow,2025-04-08,844,1,True,3,enrich,True,enrich_1_trial3_first_cont,NR,PL,TK,chase,1,0,0,0,0,0,0,1,0,0
+dqR,Crow,2025-04-08,857,1,True,3,enrich,True,enrich_1_trial3_first_cont,NR,DS,,,0,1,0,0,0,0,1,0,0,0
+fAq,Crow,2025-04-08,828,1,True,3,enrich,True,enrich_1_trial3_first_cont,NR,PL,,circles,1,0,0,0,0,0,0,1,0,0
+rjH,Crow,2025-04-08,829,1,True,3,enrich,True,enrich_1_trial3_first_cont,NR,PL,,circles,1,0,0,0,0,0,0,1,0,0
+5sY,Crow,2025-04-08,830,1,True,3,enrich,True,enrich_1_trial3_first_cont,NR,PL,,circles,1,0,0,0,0,0,0,1,0,0
+pko,Crow,2025-04-08,831,1,True,3,enrich,True,enrich_1_trial3_first_cont,NR,PL,,circles,1,0,0,0,0,0,0,1,0,0
+Fsy,Crow,2025-04-08,833,1,True,3,enrich,True,enrich_1_trial3_first_cont,NR,PL,TK,circles - wrestling,1,0,0,0,0,0,0,1,0,0
+3k3,Crow,2025-04-08,834,1,True,3,enrich,True,enrich_1_trial3_first_cont,NR,PL,TK,circles - wrestling,1,0,0,0,0,0,0,1,0,0
+L7Q,Crow,2025-04-08,835,1,True,3,enrich,True,enrich_1_trial3_first_cont,NR,PL,TK,circles - wrestling,1,0,0,0,0,0,0,1,0,0
+4Wx,Crow,2025-04-08,836,1,True,3,enrich,True,enrich_1_trial3_first_cont,NR,PL,TK,circles - wrestling,1,0,0,0,0,0,0,1,0,0
+W63,Crow,2025-04-08,857,1,True,3,enrich,True,enrich_1_trial3_first_cont,NR,PL,,chasing,1,0,0,0,0,0,0,1,0,0
+yGn,Crow,2025-04-08,858,1,True,3,enrich,True,enrich_1_trial3_first_cont,NR,PL,,chasing,1,0,0,0,0,0,0,1,0,0
+BP1,Crow,2025-04-08,859,1,True,3,enrich,True,enrich_1_trial3_first_cont,NR,PL,,chasing,1,0,0,0,0,0,0,1,0,0
+ePQ,Crow,2025-04-08,592,1,True,3,morn1,True,morn1_1_trial3_first_cont,NR,PL,TK,wrestling pulling arms,1,0,0,1,0,0,0,0,0,0
+uzK,Crow,2025-04-08,593,1,True,3,morn1,True,morn1_1_trial3_first_cont,NR,PL,TK,wrestling pulling arms,1,0,0,1,0,0,0,0,0,0
+ms3,Crow,2025-04-09,629,1,True,3,morn1,False,morn1_1_trial3_sec_cont,NR,DS,,,0,1,1,0,0,0,0,0,0,0
+JQu,Crow,2025-04-09,827,1,True,3,enrich,False,enrich_1_trial3_sec_cont,NR,DS,,,0,1,0,0,0,0,1,0,0,0
+DOq,Crow,2025-04-09,586,1,True,3,morn1,False,morn1_1_trial3_sec_cont,NR,DS,,,0,1,1,0,0,0,0,0,0,0

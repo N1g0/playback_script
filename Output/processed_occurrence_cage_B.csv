@@ -1,0 +1,212 @@
+ec5_uuid,condition,date,msm,group,is_all_occasions,trial,phase,first_day,block_ID,Ind1,behaviour,partner,notes,playing,aggression,agg_morn1,play_morn1,agg_morn2,play_morn2,agg_enrich,play_enrich,agg_extra,play_extra
+c2021bc8-d46f-47e4-8a32-24726700a0b6,Playback,2025-03-12,843,1,True,1,enrich,False,enrich_1_trial1_sec_play,NH,DS,,,0,1,0,0,0,0,1,0,0,0
+c2021bc8-d46f-47e4-8a32-24726700a0b6,Playback,2025-03-12,843,1,True,1,enrich,False,enrich_1_trial1_sec_play,NH,DS,,Pan hoot with stick,0,1,0,0,0,0,1,0,0,0
+7e373872-3d0f-4779-889f-01102d52128e,Playback,2025-03-12,845,1,True,1,enrich,False,enrich_1_trial1_sec_play,NH,DS,,,0,1,0,0,0,0,1,0,0,0
+ecfc7357-f1d3-4a3e-9c03-68040660035b,Playback,2025-03-12,847,1,True,1,enrich,False,enrich_1_trial1_sec_play,ST,DS,NH,,0,1,0,0,0,0,1,0,0,0
+ecfc7357-f1d3-4a3e-9c03-68040660035b,Playback,2025-03-12,847,1,True,1,enrich,False,enrich_1_trial1_sec_play,NH,DS,ST,,0,1,0,0,0,0,1,0,0,0
+ecfc7357-f1d3-4a3e-9c03-68040660035b,Playback,2025-03-12,847,1,True,1,enrich,False,enrich_1_trial1_sec_play,ST,DS,NH,Towards cage c,0,1,0,0,0,0,1,0,0,0
+ecfc7357-f1d3-4a3e-9c03-68040660035b,Playback,2025-03-12,847,1,True,1,enrich,False,enrich_1_trial1_sec_play,NH,DS,ST,Towards cage c,0,1,0,0,0,0,1,0,0,0
+9de25b42-d6c4-4733-b67e-5080ea954b05,Playback,2025-03-12,849,1,True,1,enrich,False,enrich_1_trial1_sec_play,ST,DS,NH,,0,1,0,0,0,0,1,0,0,0
+9de25b42-d6c4-4733-b67e-5080ea954b05,Playback,2025-03-12,849,1,True,1,enrich,False,enrich_1_trial1_sec_play,NH,DS,ST,,0,1,0,0,0,0,1,0,0,0
+7042277d-2331-47be-9021-80a990a01672,Playback,2025-03-12,861,1,True,1,enrich,False,enrich_1_trial1_sec_play,NH,DS,,,0,1,0,0,0,0,1,0,0,0
+eb57ce1a-0fc2-4b11-bece-1a215981a5a6,Playback,2025-03-12,867,1,True,1,enrich,False,enrich_1_trial1_sec_play,MS,PL,NH,,1,0,0,0,0,0,0,1,0,0
+eb57ce1a-0fc2-4b11-bece-1a215981a5a6,Playback,2025-03-12,867,1,True,1,enrich,False,enrich_1_trial1_sec_play,NH,PL,MS,,1,0,0,0,0,0,0,1,0,0
+eb57ce1a-0fc2-4b11-bece-1a215981a5a6,Playback,2025-03-12,867,1,True,1,enrich,False,enrich_1_trial1_sec_play,MS,PL,NH,,1,0,0,0,0,0,0,1,0,0
+eb57ce1a-0fc2-4b11-bece-1a215981a5a6,Playback,2025-03-12,867,1,True,1,enrich,False,enrich_1_trial1_sec_play,NH,PL,MS,,1,0,0,0,0,0,0,1,0,0
+8990c4d8-5028-4750-bd62-d9a5a9c7316e,Playback,2025-03-12,869,1,True,1,enrich,False,enrich_1_trial1_sec_play,MS,PL,"ST, NH",,1,0,0,0,0,0,0,1,0,0
+8990c4d8-5028-4750-bd62-d9a5a9c7316e,Playback,2025-03-12,869,1,True,1,enrich,False,enrich_1_trial1_sec_play,ST,PL,"MS, NH",,1,0,0,0,0,0,0,1,0,0
+8990c4d8-5028-4750-bd62-d9a5a9c7316e,Playback,2025-03-12,869,1,True,1,enrich,False,enrich_1_trial1_sec_play,NH,PL,"MS, ST",,1,0,0,0,0,0,0,1,0,0
+8990c4d8-5028-4750-bd62-d9a5a9c7316e,Playback,2025-03-12,869,1,True,1,enrich,False,enrich_1_trial1_sec_play,MS,PL,"ST, NH",,1,0,0,0,0,0,0,1,0,0
+8990c4d8-5028-4750-bd62-d9a5a9c7316e,Playback,2025-03-12,869,1,True,1,enrich,False,enrich_1_trial1_sec_play,ST,PL,"MS, NH",,1,0,0,0,0,0,0,1,0,0
+8990c4d8-5028-4750-bd62-d9a5a9c7316e,Playback,2025-03-12,869,1,True,1,enrich,False,enrich_1_trial1_sec_play,NH,PL,"MS, ST",,1,0,0,0,0,0,0,1,0,0
+22280968-7cb0-46e1-b88a-e0a56934f328,Playback,2025-03-12,875,1,True,1,enrich,False,enrich_1_trial1_sec_play,MS,PL,ST,,1,0,0,0,0,0,0,1,0,0
+22280968-7cb0-46e1-b88a-e0a56934f328,Playback,2025-03-12,875,1,True,1,enrich,False,enrich_1_trial1_sec_play,ST,PL,MS,,1,0,0,0,0,0,0,1,0,0
+22280968-7cb0-46e1-b88a-e0a56934f328,Playback,2025-03-12,875,1,True,1,enrich,False,enrich_1_trial1_sec_play,MS,PL,ST,,1,0,0,0,0,0,0,1,0,0
+22280968-7cb0-46e1-b88a-e0a56934f328,Playback,2025-03-12,875,1,True,1,enrich,False,enrich_1_trial1_sec_play,ST,PL,MS,,1,0,0,0,0,0,0,1,0,0
+2798817d-708f-48c2-8a1b-c57dcac4b1e2,Playback,2025-03-12,877,1,True,1,enrich,False,enrich_1_trial1_sec_play,MS,PL,ST,,1,0,0,0,0,0,0,1,0,0
+2798817d-708f-48c2-8a1b-c57dcac4b1e2,Playback,2025-03-12,877,1,True,1,enrich,False,enrich_1_trial1_sec_play,ST,PL,MS,,1,0,0,0,0,0,0,1,0,0
+2798817d-708f-48c2-8a1b-c57dcac4b1e2,Playback,2025-03-12,877,1,True,1,enrich,False,enrich_1_trial1_sec_play,MS,PL,ST,,1,0,0,0,0,0,0,1,0,0
+2798817d-708f-48c2-8a1b-c57dcac4b1e2,Playback,2025-03-12,877,1,True,1,enrich,False,enrich_1_trial1_sec_play,ST,PL,MS,,1,0,0,0,0,0,0,1,0,0
+e374d507-c698-46b2-ac5d-3d12fd2b12cd,Playback,2025-03-12,879,1,True,1,enrich,False,enrich_1_trial1_sec_play,MS,PL,ST,,1,0,0,0,0,0,0,1,0,0
+e374d507-c698-46b2-ac5d-3d12fd2b12cd,Playback,2025-03-12,879,1,True,1,enrich,False,enrich_1_trial1_sec_play,ST,PL,MS,,1,0,0,0,0,0,0,1,0,0
+e374d507-c698-46b2-ac5d-3d12fd2b12cd,Playback,2025-03-12,879,1,True,1,enrich,False,enrich_1_trial1_sec_play,MS,PL,ST,,1,0,0,0,0,0,0,1,0,0
+e374d507-c698-46b2-ac5d-3d12fd2b12cd,Playback,2025-03-12,879,1,True,1,enrich,False,enrich_1_trial1_sec_play,ST,PL,MS,,1,0,0,0,0,0,0,1,0,0
+7814adef-1d0d-45b6-b431-04d4ddee7b74,Playback,2025-03-12,881,1,True,1,enrich,False,enrich_1_trial1_sec_play,MS,PL,ST,,1,0,0,0,0,0,0,1,0,0
+7814adef-1d0d-45b6-b431-04d4ddee7b74,Playback,2025-03-12,881,1,True,1,enrich,False,enrich_1_trial1_sec_play,ST,PL,MS,,1,0,0,0,0,0,0,1,0,0
+7814adef-1d0d-45b6-b431-04d4ddee7b74,Playback,2025-03-12,881,1,True,1,enrich,False,enrich_1_trial1_sec_play,MS,PL,ST,,1,0,0,0,0,0,0,1,0,0
+7814adef-1d0d-45b6-b431-04d4ddee7b74,Playback,2025-03-12,881,1,True,1,enrich,False,enrich_1_trial1_sec_play,ST,PL,MS,,1,0,0,0,0,0,0,1,0,0
+18d2059f-0ab6-4768-9201-af2906e3e05a,Playback,2025-03-12,883,1,True,1,enrich,False,enrich_1_trial1_sec_play,MS,PL,ST,,1,0,0,0,0,0,0,1,0,0
+18d2059f-0ab6-4768-9201-af2906e3e05a,Playback,2025-03-12,883,1,True,1,enrich,False,enrich_1_trial1_sec_play,ST,PL,MS,,1,0,0,0,0,0,0,1,0,0
+18d2059f-0ab6-4768-9201-af2906e3e05a,Playback,2025-03-12,883,1,True,1,enrich,False,enrich_1_trial1_sec_play,MS,PL,ST,,1,0,0,0,0,0,0,1,0,0
+18d2059f-0ab6-4768-9201-af2906e3e05a,Playback,2025-03-12,883,1,True,1,enrich,False,enrich_1_trial1_sec_play,ST,PL,MS,,1,0,0,0,0,0,0,1,0,0
+db2628fe-4b78-44c8-a4e7-5dfcb547086e,Playback,2025-03-12,885,1,True,1,enrich,False,enrich_1_trial1_sec_play,MS,PL,ST,,1,0,0,0,0,0,0,1,0,0
+db2628fe-4b78-44c8-a4e7-5dfcb547086e,Playback,2025-03-12,885,1,True,1,enrich,False,enrich_1_trial1_sec_play,ST,PL,MS,,1,0,0,0,0,0,0,1,0,0
+db2628fe-4b78-44c8-a4e7-5dfcb547086e,Playback,2025-03-12,885,1,True,1,enrich,False,enrich_1_trial1_sec_play,MS,PL,ST,,1,0,0,0,0,0,0,1,0,0
+db2628fe-4b78-44c8-a4e7-5dfcb547086e,Playback,2025-03-12,885,1,True,1,enrich,False,enrich_1_trial1_sec_play,ST,PL,MS,,1,0,0,0,0,0,0,1,0,0
+f6a68a06-652d-473b-bd08-4c8d4ae64ae0,Crow,2025-04-08,820,1,True,3,enrich,True,enrich_1_trial3_first_cont,ST,DS,,St scream and display,0,1,0,0,0,0,1,0,0,0
+eb5879d6-a1cb-4427-b504-bf898f0b36fb,Crow,2025-04-09,581,1,True,3,morn1,False,morn1_1_trial3_sec_cont,NH,DS,,Displayed few seconds before,0,1,1,0,0,0,0,0,0,0
+0ce95d64-9caa-4392-bd9a-ea5f9f9e9e1b,Crow,2025-04-09,615,1,True,3,morn1,False,morn1_1_trial3_sec_cont,ST,DS,,Displayed 20 seconds ago,0,1,1,0,0,0,0,0,0,0
+0ce95d64-9caa-4392-bd9a-ea5f9f9e9e1b,Crow,2025-04-09,615,1,True,3,morn1,False,morn1_1_trial3_sec_cont,ST,DS,,Displayed 20 seconds ago,0,1,1,0,0,0,0,0,0,0
+483f107a-e0b2-437f-8a16-7e5521a46444,Crow,2025-04-09,618,1,True,3,morn1,False,morn1_1_trial3_sec_cont,ST,DS,,,0,1,1,0,0,0,0,0,0,0
+483f107a-e0b2-437f-8a16-7e5521a46444,Crow,2025-04-09,618,1,True,3,morn1,False,morn1_1_trial3_sec_cont,ST,DS,,,0,1,1,0,0,0,0,0,0,0
+324aa967-b85a-47d9-9ed9-eb3d4cb48b2d,Crow,2025-04-09,690,1,True,3,morn2,False,morn2_1_trial3_sec_cont,ST,DS,,,0,1,0,0,1,0,0,0,0,0
+e6721147-29ff-47ac-b3de-86134a581577,Crow,2025-04-09,695,1,True,3,morn2,False,morn2_1_trial3_sec_cont,ST,DS,,Displayed 10 seconds ago,0,1,0,0,1,0,0,0,0,0
+c37905c2-6c4d-47a0-9da3-795807124ee6,Crow,2025-04-09,700,1,True,3,morn2,False,morn2_1_trial3_sec_cont,ST,DS,,,0,1,0,0,1,0,0,0,0,0
+190a107d-1c26-44a5-9847-164e62fa1498,Playback,2025-04-21,575,1,True,4,morn1,True,morn1_1_trial4_first_play,ST,PL,NH,,1,0,0,1,0,0,0,0,0,0
+190a107d-1c26-44a5-9847-164e62fa1498,Playback,2025-04-21,575,1,True,4,morn1,True,morn1_1_trial4_first_play,NH,PL,ST,,1,0,0,1,0,0,0,0,0,0
+dbf5b039-2c5d-48ff-b460-0e3a927b52d7,Playback,2025-04-21,687,1,True,4,morn2,True,morn2_1_trial4_first_play,MS,PL,ST,,1,0,0,0,0,1,0,0,0,0
+dbf5b039-2c5d-48ff-b460-0e3a927b52d7,Playback,2025-04-21,687,1,True,4,morn2,True,morn2_1_trial4_first_play,ST,PL,MS,,1,0,0,0,0,1,0,0,0,0
+dbf5b039-2c5d-48ff-b460-0e3a927b52d7,Playback,2025-04-21,687,1,True,4,morn2,True,morn2_1_trial4_first_play,MS,PL,ST,,1,0,0,0,0,1,0,0,0,0
+dbf5b039-2c5d-48ff-b460-0e3a927b52d7,Playback,2025-04-21,687,1,True,4,morn2,True,morn2_1_trial4_first_play,ST,PL,MS,,1,0,0,0,0,1,0,0,0,0
+47650b7a-1bd6-4121-a718-28cc46d567a0,Playback,2025-04-22,583,1,True,4,morn1,False,morn1_1_trial4_sec_play,NH,DS,,Pan hoot towards cage c,0,1,1,0,0,0,0,0,0,0
+9bbaa949-29a8-4976-9454-51d568aa569b,Playback,2025-04-22,678,1,True,4,morn2,False,morn2_1_trial4_sec_play,ST,DS,,,0,1,0,0,1,0,0,0,0,0
+680a543f-5e61-4d08-bf2e-f4a7134bda73,Playback,2025-04-22,680,1,True,4,morn2,False,morn2_1_trial4_sec_play,ST,DS,,,0,1,0,0,1,0,0,0,0,0
+d6a23649-62b4-4809-bfcc-5f5516cd5ddc,Playback,2025-04-22,681,1,True,4,morn2,False,morn2_1_trial4_sec_play,NH,DS,,Displayed,0,1,0,0,1,0,0,0,0,0
+48f3b3f1-15d0-4b50-b6e9-e18dd9de4fe8,Playback,2025-04-22,684,1,True,4,morn2,False,morn2_1_trial4_sec_play,ST,PL,NH,,1,0,0,0,0,1,0,0,0,0
+48f3b3f1-15d0-4b50-b6e9-e18dd9de4fe8,Playback,2025-04-22,684,1,True,4,morn2,False,morn2_1_trial4_sec_play,NH,PL,ST,,1,0,0,0,0,1,0,0,0,0
+427e1132-5a8d-4e21-8340-ef0e2138ed8d,Playback,2025-04-22,686,1,True,4,morn2,False,morn2_1_trial4_sec_play,ST,PL,NH,,1,0,0,0,0,1,0,0,0,0
+427e1132-5a8d-4e21-8340-ef0e2138ed8d,Playback,2025-04-22,686,1,True,4,morn2,False,morn2_1_trial4_sec_play,NH,PL,ST,,1,0,0,0,0,1,0,0,0,0
+2f92f495-8d14-450e-8e16-d7a8cdda0fc0,Playback,2025-04-22,688,1,True,4,morn2,False,morn2_1_trial4_sec_play,ST,PL,NH,,1,0,0,0,0,1,0,0,0,0
+2f92f495-8d14-450e-8e16-d7a8cdda0fc0,Playback,2025-04-22,688,1,True,4,morn2,False,morn2_1_trial4_sec_play,NH,PL,ST,,1,0,0,0,0,1,0,0,0,0
+823e0128-be98-43ef-a7de-48e44bd08c3c,Playback,2025-04-22,690,1,True,4,morn2,False,morn2_1_trial4_sec_play,ST,PL,NH,,1,0,0,0,0,1,0,0,0,0
+823e0128-be98-43ef-a7de-48e44bd08c3c,Playback,2025-04-22,690,1,True,4,morn2,False,morn2_1_trial4_sec_play,NH,PL,ST,,1,0,0,0,0,1,0,0,0,0
+589acbf7-d2bd-475d-819f-8be323479fef,Crow,2025-03-14,584,UNKNOWN_DATE,True,1,morn1,True,morn1_UNKNOWN_DATE_trial1_first_cont,NR,PL,MN,,1,0,0,1,0,0,0,0,0,0
+7ee79de3-115d-40ac-9cd0-bd881b5cca62,Crow,2025-03-14,586,UNKNOWN_DATE,True,1,morn1,True,morn1_UNKNOWN_DATE_trial1_first_cont,NR,PL,MN,,1,0,0,1,0,0,0,0,0,0
+a34e9985-10cd-4907-a518-00e9e716ca09,Crow,2025-03-14,588,UNKNOWN_DATE,True,1,morn1,True,morn1_UNKNOWN_DATE_trial1_first_cont,NR,PL,MN,,1,0,0,1,0,0,0,0,0,0
+a34e9985-10cd-4907-a518-00e9e716ca09,Crow,2025-03-14,588,UNKNOWN_DATE,True,1,morn1,True,morn1_UNKNOWN_DATE_trial1_first_cont,MN,PL,NR,,1,0,0,1,0,0,0,0,0,0
+895c7f1b-5c49-4cfb-b3d5-a444c759daa8,Crow,2025-03-14,608,UNKNOWN_DATE,True,1,morn1,True,morn1_UNKNOWN_DATE_trial1_first_cont,MN,PL,,Playing with a bottle,1,0,0,1,0,0,0,0,0,0
+37389303-c253-4154-8ec0-1c684fed8e49,Crow,2025-03-14,616,UNKNOWN_DATE,True,1,morn1,True,morn1_UNKNOWN_DATE_trial1_first_cont,NH,DS,,Towards cage c,0,1,1,0,0,0,0,0,0,0
+37389303-c253-4154-8ec0-1c684fed8e49,Crow,2025-03-14,616,UNKNOWN_DATE,True,1,morn1,True,morn1_UNKNOWN_DATE_trial1_first_cont,MN,DS,,Towards cage c,0,1,1,0,0,0,0,0,0,0
+4cf78534-4969-468f-8e3f-46817c70d734,Crow,2025-03-14,628,UNKNOWN_DATE,True,1,morn1,True,morn1_UNKNOWN_DATE_trial1_first_cont,NR,PL,,Playing with a bottle,1,0,0,1,0,0,0,0,0,0
+c934b92c-f194-4b67-8425-0174a72af684,Crow,2025-03-14,630,UNKNOWN_DATE,True,1,morn1,True,morn1_UNKNOWN_DATE_trial1_first_cont,NR,PL,,,1,0,0,1,0,0,0,0,0,0
+c934b92c-f194-4b67-8425-0174a72af684,Crow,2025-03-14,630,UNKNOWN_DATE,True,1,morn1,True,morn1_UNKNOWN_DATE_trial1_first_cont,MN,PL,,,1,0,0,1,0,0,0,0,0,0
+0a61340a-660d-4d6a-97e5-f469015cc92c,Crow,2025-03-14,828,UNKNOWN_DATE,True,1,enrich,True,enrich_UNKNOWN_DATE_trial1_first_cont,NH,PL,NR,,1,0,0,0,0,0,0,1,0,0
+0a61340a-660d-4d6a-97e5-f469015cc92c,Crow,2025-03-14,828,UNKNOWN_DATE,True,1,enrich,True,enrich_UNKNOWN_DATE_trial1_first_cont,NR,PL,NH,,1,0,0,0,0,0,0,1,0,0
+56d5bda0-86ba-4562-9964-c203e238bbd0,Crow,2025-03-14,829,UNKNOWN_DATE,True,1,enrich,True,enrich_UNKNOWN_DATE_trial1_first_cont,NH,PL,NR,,1,0,0,0,0,0,0,1,0,0
+56d5bda0-86ba-4562-9964-c203e238bbd0,Crow,2025-03-14,829,UNKNOWN_DATE,True,1,enrich,True,enrich_UNKNOWN_DATE_trial1_first_cont,NR,PL,NH,,1,0,0,0,0,0,0,1,0,0
+6ef88271-c776-4cc2-83c0-d5f118d717df,Crow,2025-03-14,831,UNKNOWN_DATE,True,1,enrich,True,enrich_UNKNOWN_DATE_trial1_first_cont,NH,PL,NR,,1,0,0,0,0,0,0,1,0,0
+6ef88271-c776-4cc2-83c0-d5f118d717df,Crow,2025-03-14,831,UNKNOWN_DATE,True,1,enrich,True,enrich_UNKNOWN_DATE_trial1_first_cont,NR,PL,NH,,1,0,0,0,0,0,0,1,0,0
+67efdec0-419d-42dd-a9c3-013cdf30371c,Crow,2025-03-14,833,UNKNOWN_DATE,True,1,enrich,True,enrich_UNKNOWN_DATE_trial1_first_cont,NH,PL,NR,,1,0,0,0,0,0,0,1,0,0
+67efdec0-419d-42dd-a9c3-013cdf30371c,Crow,2025-03-14,833,UNKNOWN_DATE,True,1,enrich,True,enrich_UNKNOWN_DATE_trial1_first_cont,NR,PL,NH,,1,0,0,0,0,0,0,1,0,0
+19aeb07d-44b1-494a-82a5-e69e125c1002,Playback,2025-03-23,591,2,True,2,morn1,True,morn1_2_trial2_first_play,NR,PL,MN,,1,0,0,1,0,0,0,0,0,0
+19aeb07d-44b1-494a-82a5-e69e125c1002,Playback,2025-03-23,591,2,True,2,morn1,True,morn1_2_trial2_first_play,MN,PL,NR,,1,0,0,1,0,0,0,0,0,0
+fcd3521a-0d39-4c28-b305-49996f48a378,Playback,2025-03-23,813,2,True,2,enrich,True,enrich_2_trial2_first_play,NH,PL,NR,,1,0,0,0,0,0,0,1,0,0
+fcd3521a-0d39-4c28-b305-49996f48a378,Playback,2025-03-23,813,2,True,2,enrich,True,enrich_2_trial2_first_play,NR,PL,NH,,1,0,0,0,0,0,0,1,0,0
+976dcfe0-0817-43da-aa5d-00a9c9ea7d52,Playback,2025-03-23,815,2,True,2,enrich,True,enrich_2_trial2_first_play,NH,PL,NR,,1,0,0,0,0,0,0,1,0,0
+976dcfe0-0817-43da-aa5d-00a9c9ea7d52,Playback,2025-03-23,815,2,True,2,enrich,True,enrich_2_trial2_first_play,NR,PL,NH,,1,0,0,0,0,0,0,1,0,0
+251f372c-f46d-48b2-af1a-1e875d3e8577,Playback,2025-03-24,588,2,True,2,morn1,False,morn1_2_trial2_sec_play,NR,PL,MN,,1,0,0,1,0,0,0,0,0,0
+251f372c-f46d-48b2-af1a-1e875d3e8577,Playback,2025-03-24,588,2,True,2,morn1,False,morn1_2_trial2_sec_play,MN,PL,NR,,1,0,0,1,0,0,0,0,0,0
+222b219a-f5ff-43d5-88c6-cc15d0be156e,Playback,2025-03-24,624,2,True,2,morn1,False,morn1_2_trial2_sec_play,NR,PL,MN,,1,0,0,1,0,0,0,0,0,0
+222b219a-f5ff-43d5-88c6-cc15d0be156e,Playback,2025-03-24,624,2,True,2,morn1,False,morn1_2_trial2_sec_play,MN,PL,NR,,1,0,0,1,0,0,0,0,0,0
+3939f477-0d62-4b91-b651-436b5452a7d7,Playback,2025-03-24,626,2,True,2,morn1,False,morn1_2_trial2_sec_play,NR,PL,MN,,1,0,0,1,0,0,0,0,0,0
+3939f477-0d62-4b91-b651-436b5452a7d7,Playback,2025-03-24,626,2,True,2,morn1,False,morn1_2_trial2_sec_play,MN,PL,NR,,1,0,0,1,0,0,0,0,0,0
+cb0e0c90-c1b7-4a39-824d-ce4ca3932c78,Playback,2025-03-24,628,2,True,2,morn1,False,morn1_2_trial2_sec_play,NR,PL,MN,,1,0,0,1,0,0,0,0,0,0
+cb0e0c90-c1b7-4a39-824d-ce4ca3932c78,Playback,2025-03-24,628,2,True,2,morn1,False,morn1_2_trial2_sec_play,MN,PL,NR,,1,0,0,1,0,0,0,0,0,0
+3287e783-21b1-47e3-8222-70a568353ee6,Playback,2025-03-24,842,2,True,2,enrich,False,enrich_2_trial2_sec_play,NH,PL,NR,,1,0,0,0,0,0,0,1,0,0
+3287e783-21b1-47e3-8222-70a568353ee6,Playback,2025-03-24,842,2,True,2,enrich,False,enrich_2_trial2_sec_play,NR,PL,NH,,1,0,0,0,0,0,0,1,0,0
+b445b66c-d5be-4213-a185-f9b1adacffb9,Playback,2025-03-24,848,2,True,2,enrich,False,enrich_2_trial2_sec_play,NH,PL,NR,,1,0,0,0,0,0,0,1,0,0
+b445b66c-d5be-4213-a185-f9b1adacffb9,Playback,2025-03-24,848,2,True,2,enrich,False,enrich_2_trial2_sec_play,NR,PL,NH,,1,0,0,0,0,0,0,1,0,0
+08e9142c-8e54-4ce6-a49b-8046567ab424,Playback,2025-03-24,852,2,True,2,enrich,False,enrich_2_trial2_sec_play,NH,PL,NR,,1,0,0,0,0,0,0,1,0,0
+08e9142c-8e54-4ce6-a49b-8046567ab424,Playback,2025-03-24,852,2,True,2,enrich,False,enrich_2_trial2_sec_play,NR,PL,NH,,1,0,0,0,0,0,0,1,0,0
+5f4b277d-bbf3-461b-abe7-f4efa11ffa49,Playback,2025-04-26,588,2,True,5,morn1,True,morn1_2_trial5_first_play,MN,DS,,AG TOWARD LN,0,1,1,0,0,0,0,0,0,0
+4a308e05-a0fd-4dad-941f-46c3c7947ee8,Playback,2025-04-26,590,2,True,5,morn1,True,morn1_2_trial5_first_play,MN,DS,,,0,1,1,0,0,0,0,0,0,0
+79775ab3-2b39-42ae-8515-0669aa358a8d,Playback,2025-04-26,594,2,True,5,morn1,True,morn1_2_trial5_first_play,NH,DS,,,0,1,1,0,0,0,0,0,0,0
+79775ab3-2b39-42ae-8515-0669aa358a8d,Playback,2025-04-26,594,2,True,5,morn1,True,morn1_2_trial5_first_play,LN,PL,MN,,1,0,0,1,0,0,0,0,0,0
+79775ab3-2b39-42ae-8515-0669aa358a8d,Playback,2025-04-26,594,2,True,5,morn1,True,morn1_2_trial5_first_play,MN,PL,LN,,1,0,0,1,0,0,0,0,0,0
+db90d2af-6f38-4952-970c-d8f98f8fa937,Playback,2025-04-26,596,2,True,5,morn1,True,morn1_2_trial5_first_play,NH,PL,MN,,1,0,0,1,0,0,0,0,0,0
+db90d2af-6f38-4952-970c-d8f98f8fa937,Playback,2025-04-26,596,2,True,5,morn1,True,morn1_2_trial5_first_play,LN,PL,NR,,1,0,0,1,0,0,0,0,0,0
+db90d2af-6f38-4952-970c-d8f98f8fa937,Playback,2025-04-26,596,2,True,5,morn1,True,morn1_2_trial5_first_play,NR,PL,LN,,1,0,0,1,0,0,0,0,0,0
+db90d2af-6f38-4952-970c-d8f98f8fa937,Playback,2025-04-26,596,2,True,5,morn1,True,morn1_2_trial5_first_play,MN,PL,NH,,1,0,0,1,0,0,0,0,0,0
+8a8b74a5-a11b-428b-a922-dc1ff677620a,Playback,2025-04-26,598,2,True,5,morn1,True,morn1_2_trial5_first_play,NH,PL,"NR, MN",,1,0,0,1,0,0,0,0,0,0
+8a8b74a5-a11b-428b-a922-dc1ff677620a,Playback,2025-04-26,598,2,True,5,morn1,True,morn1_2_trial5_first_play,NR,PL,,,1,0,0,1,0,0,0,0,0,0
+8a8b74a5-a11b-428b-a922-dc1ff677620a,Playback,2025-04-26,598,2,True,5,morn1,True,morn1_2_trial5_first_play,MN,PL,"NH, NR",,1,0,0,1,0,0,0,0,0,0
+d6984ed7-4480-4de7-95c9-130112c831a6,Playback,2025-04-26,646,2,True,5,morn2,True,morn2_2_trial5_first_play,NH,DS,,,0,1,0,0,1,0,0,0,0,0
+4f23296d-bcc4-4caa-b766-5b25dee59847,Playback,2025-04-27,576,2,True,5,morn1,False,morn1_2_trial5_sec_play,NH,DS,,Pan hoot,0,1,1,0,0,0,0,0,0,0
+4f23296d-bcc4-4caa-b766-5b25dee59847,Playback,2025-04-27,575,2,True,5,morn1,False,morn1_2_trial5_sec_play,NH,DS,,Pan hoot,0,1,1,0,0,0,0,0,0,0
+4f23296d-bcc4-4caa-b766-5b25dee59847,Playback,2025-04-27,575,2,True,5,morn1,False,morn1_2_trial5_sec_play,NR,DS,,,0,1,1,0,0,0,0,0,0,0
+4f23296d-bcc4-4caa-b766-5b25dee59847,Playback,2025-04-27,575,2,True,5,morn1,False,morn1_2_trial5_sec_play,MN,AG,,AG-Spited water towards cage a,0,1,1,0,0,0,0,0,0,0
+8bb2fd62-3af7-47c6-9c76-44bc7101754a,Playback,2025-04-27,854,2,True,5,enrich,False,enrich_2_trial5_sec_play,NH,PL,"MN, NR",,1,0,0,0,0,0,0,1,0,0
+8bb2fd62-3af7-47c6-9c76-44bc7101754a,Playback,2025-04-27,854,2,True,5,enrich,False,enrich_2_trial5_sec_play,NR,PL,"NH, MN",,1,0,0,0,0,0,0,1,0,0
+8bb2fd62-3af7-47c6-9c76-44bc7101754a,Playback,2025-04-27,854,2,True,5,enrich,False,enrich_2_trial5_sec_play,MN,PL,"NR, NH",,1,0,0,0,0,0,0,1,0,0
+098aae89-c70f-44b9-8687-e838842cbed2,Crow,2025-05-04,610,2,True,6,morn1,True,morn1_2_trial6_first_cont,MN,DS,,,0,1,1,0,0,0,0,0,0,0
+e3a360e3-900c-485c-bfff-79027a3003e7,Crow,2025-05-04,611,2,True,6,morn1,True,morn1_2_trial6_first_cont,NH,DS,,,0,1,1,0,0,0,0,0,0,0
+e3a360e3-900c-485c-bfff-79027a3003e7,Crow,2025-05-04,611,2,True,6,morn1,True,morn1_2_trial6_first_cont,MN,DS,,Towards cage c,0,1,1,0,0,0,0,0,0,0
+585dc681-7739-4fc3-82c7-a68e7496891d,Crow,2025-05-04,856,2,True,6,enrich,True,enrich_2_trial6_first_cont,LN,PL,NR,,1,0,0,0,0,0,0,1,0,0
+585dc681-7739-4fc3-82c7-a68e7496891d,Crow,2025-05-04,856,2,True,6,enrich,True,enrich_2_trial6_first_cont,NR,PL,LN,,1,0,0,0,0,0,0,1,0,0
+7b8ab5eb-1b1b-4ff7-b3a0-eef6674d8999,Crow,2025-05-04,859,2,True,6,enrich,True,enrich_2_trial6_first_cont,LN,PL,NR,,1,0,0,0,0,0,0,1,0,0
+7b8ab5eb-1b1b-4ff7-b3a0-eef6674d8999,Crow,2025-05-04,859,2,True,6,enrich,True,enrich_2_trial6_first_cont,NR,PL,LN,,1,0,0,0,0,0,0,1,0,0
+b3f0c857-dfdb-438e-9741-a0ec88087513,Crow,2025-05-04,860,2,True,6,enrich,True,enrich_2_trial6_first_cont,LN,PL,NR,,1,0,0,0,0,0,0,1,0,0
+b3f0c857-dfdb-438e-9741-a0ec88087513,Crow,2025-05-04,860,2,True,6,enrich,True,enrich_2_trial6_first_cont,NR,PL,LN,,1,0,0,0,0,0,0,1,0,0
+5535abe4-1b81-4110-b794-648c87d66f9f,Crow,2025-05-04,864,2,True,6,enrich,True,enrich_2_trial6_first_cont,NH,PL,NR,,1,0,0,0,0,0,0,1,0,0
+5535abe4-1b81-4110-b794-648c87d66f9f,Crow,2025-05-04,864,2,True,6,enrich,True,enrich_2_trial6_first_cont,NR,PL,NH,,1,0,0,0,0,0,0,1,0,0
+9769d5f1-5b35-4775-a0f9-940939268bfc,Crow,2025-05-04,867,2,True,6,enrich,True,enrich_2_trial6_first_cont,NH,PL,NR,,1,0,0,0,0,0,0,1,0,0
+9769d5f1-5b35-4775-a0f9-940939268bfc,Crow,2025-05-04,867,2,True,6,enrich,True,enrich_2_trial6_first_cont,NR,PL,NH,,1,0,0,0,0,0,0,1,0,0
+f5fdc5a1-1499-4128-a155-cff1d8a18017,Crow,2025-05-19,616,2,True,7,morn1,True,morn1_2_trial7_first_cont,MN,DS,,,0,1,1,0,0,0,0,0,0,0
+84b6eb6b-8259-40cc-a8b7-41ef420b46f9,Crow,2025-05-19,618,2,True,7,morn1,True,morn1_2_trial7_first_cont,MN,DS,,,0,1,1,0,0,0,0,0,0,0
+0ca64fd8-4b09-4dc3-9d63-86a8ae0339f8,Crow,2025-05-19,620,2,True,7,morn1,True,morn1_2_trial7_first_cont,NH,DS,,Towards cage c,0,1,1,0,0,0,0,0,0,0
+0ca64fd8-4b09-4dc3-9d63-86a8ae0339f8,Crow,2025-05-19,620,2,True,7,morn1,True,morn1_2_trial7_first_cont,MN,DS,,Display towards cage c and then runs away,0,1,1,0,0,0,0,0,0,0
+d0479311-f0f4-4c78-a8a7-a141ac5cd3bb,Crow,2025-05-20,690,2,True,7,morn2,False,morn2_2_trial7_sec_cont,NH,RS,,,0,0,0,0,0,0,0,0,0,0
+d0479311-f0f4-4c78-a8a7-a141ac5cd3bb,Crow,2025-05-20,690,2,True,7,morn2,False,morn2_2_trial7_sec_cont,MN,DS,,Towards cage c,0,1,0,0,1,0,0,0,0,0
+fa1173c5-fdae-4a79-a07b-615427603b70,Playback,2025-05-30,866,2,True,7,enrich,True,enrich_2_trial7_first_play,NR,PL,,,1,0,0,0,0,0,0,1,0,0
+fa1173c5-fdae-4a79-a07b-615427603b70,Playback,2025-05-30,866,2,True,7,enrich,True,enrich_2_trial7_first_play,MN,PL,,Minato Norio play,1,0,0,0,0,0,0,1,0,0
+f341e77c-c1ff-4de0-90fa-2723120e335b,Playback,2025-05-30,869,2,True,7,enrich,True,enrich_2_trial7_first_play,NR,PL,,,1,0,0,0,0,0,0,1,0,0
+f341e77c-c1ff-4de0-90fa-2723120e335b,Playback,2025-05-30,869,2,True,7,enrich,True,enrich_2_trial7_first_play,MN,PL,,Minato Norio play,1,0,0,0,0,0,0,1,0,0
+e7aa0734-8663-41c9-aed0-b5cba8f4cfbe,Playback,2025-05-31,588,2,True,7,morn1,False,morn1_2_trial7_sec_play,NR,PL,,,1,0,0,1,0,0,0,0,0,0
+e7aa0734-8663-41c9-aed0-b5cba8f4cfbe,Playback,2025-05-31,588,2,True,7,morn1,False,morn1_2_trial7_sec_play,MN,PL,,Norio Minato play,1,0,0,1,0,0,0,0,0,0
+d233dd38-e546-4d3f-a7a5-5ed500477ba0,Playback,2025-05-31,846,2,True,7,enrich,False,enrich_2_trial7_sec_play,NR,PL,,,1,0,0,0,0,0,0,1,0,0
+d233dd38-e546-4d3f-a7a5-5ed500477ba0,Playback,2025-05-31,846,2,True,7,enrich,False,enrich_2_trial7_sec_play,MN,PL,,Minato Naoya played,1,0,0,0,0,0,0,1,0,0
+d97395a8-f967-45bf-ad22-6c3f2b76f04a,Playback,2025-05-31,859,2,True,7,enrich,False,enrich_2_trial7_sec_play,NR,PL,,,1,0,0,0,0,0,0,1,0,0
+d97395a8-f967-45bf-ad22-6c3f2b76f04a,Playback,2025-05-31,859,2,True,7,enrich,False,enrich_2_trial7_sec_play,MN,PL,,Norio Minato play,1,0,0,0,0,0,0,1,0,0
+a2b04628-495d-4a6d-aa06-afbedb5b9bea,Crow,2025-04-16,579,3,True,4,morn1,True,morn1_3_trial4_first_cont,MN,DS,,Towards cage c,0,1,1,0,0,0,0,0,0,0
+f3e5dfea-8396-4bf4-b44a-8a3d62935e7e,Crow,2025-04-16,583,3,True,4,morn1,True,morn1_3_trial4_first_cont,NH,DS,,,0,1,1,0,0,0,0,0,0,0
+f3e5dfea-8396-4bf4-b44a-8a3d62935e7e,Crow,2025-04-16,583,3,True,4,morn1,True,morn1_3_trial4_first_cont,NH,DS,,,0,1,1,0,0,0,0,0,0,0
+f3e5dfea-8396-4bf4-b44a-8a3d62935e7e,Crow,2025-04-16,583,3,True,4,morn1,True,morn1_3_trial4_first_cont,MN,DS,,Displayed pan hoot,0,1,1,0,0,0,0,0,0,0
+9e7f4adf-46b9-4050-90ff-ad45ab1c7ff0,Crow,2025-04-16,653,3,True,4,morn2,True,morn2_3_trial4_first_cont,NH,AG,"MN, NY",,0,1,0,0,1,0,0,0,0,0
+9e7f4adf-46b9-4050-90ff-ad45ab1c7ff0,Crow,2025-04-16,653,3,True,4,morn2,True,morn2_3_trial4_first_cont,MN,AG,"NH, NY",Ag towards ny,0,1,0,0,1,0,0,0,0,0
+9e7f4adf-46b9-4050-90ff-ad45ab1c7ff0,Crow,2025-04-16,653,3,True,4,morn2,True,morn2_3_trial4_first_cont,NY,AG,"NH, MN",,0,1,0,0,1,0,0,0,0,0
+1c807d5f-f6ee-4f99-8262-7093058d0410,Crow,2025-04-16,656,3,True,4,morn2,True,morn2_3_trial4_first_cont,MS,DS,,All for of them displayed toward cage c,0,1,0,0,1,0,0,0,0,0
+1c807d5f-f6ee-4f99-8262-7093058d0410,Crow,2025-04-16,656,3,True,4,morn2,True,morn2_3_trial4_first_cont,NH,DS,,,0,1,0,0,1,0,0,0,0,0
+1c807d5f-f6ee-4f99-8262-7093058d0410,Crow,2025-04-16,656,3,True,4,morn2,True,morn2_3_trial4_first_cont,MN,DS,,,0,1,0,0,1,0,0,0,0,0
+1c807d5f-f6ee-4f99-8262-7093058d0410,Crow,2025-04-16,656,3,True,4,morn2,True,morn2_3_trial4_first_cont,NY,DS,,,0,1,0,0,1,0,0,0,0,0
+96b5bc45-609a-4e46-942d-899748f2e30b,Crow,2025-04-16,657,3,True,4,morn2,True,morn2_3_trial4_first_cont,MS,DS,,,0,1,0,0,1,0,0,0,0,0
+96b5bc45-609a-4e46-942d-899748f2e30b,Crow,2025-04-16,657,3,True,4,morn2,True,morn2_3_trial4_first_cont,NH,DS,,,0,1,0,0,1,0,0,0,0,0
+96b5bc45-609a-4e46-942d-899748f2e30b,Crow,2025-04-16,657,3,True,4,morn2,True,morn2_3_trial4_first_cont,MN,DS,,,0,1,0,0,1,0,0,0,0,0
+96b5bc45-609a-4e46-942d-899748f2e30b,Crow,2025-04-16,657,3,True,4,morn2,True,morn2_3_trial4_first_cont,NY,DS,,All of them displayed toward cage c,0,1,0,0,1,0,0,0,0,0
+f01b9606-a535-4c4a-834f-f7659f6475b8,Crow,2025-04-17,881,3,True,4,enrich,False,enrich_3_trial4_sec_cont,MS,PL,NY,,1,0,0,0,0,0,0,1,0,0
+f01b9606-a535-4c4a-834f-f7659f6475b8,Crow,2025-04-17,881,3,True,4,enrich,False,enrich_3_trial4_sec_cont,NY,PL,MS,,1,0,0,0,0,0,0,1,0,0
+1633cc6d-7444-45df-bae9-a1296ff55643,Crow,2025-04-30,608,3,True,5,morn1,True,morn1_3_trial5_first_cont,MN,AG,,Ag towards cage c,0,1,1,0,0,0,0,0,0,0
+1633cc6d-7444-45df-bae9-a1296ff55643,Crow,2025-04-30,608,3,True,5,morn1,True,morn1_3_trial5_first_cont,MN,DS,,Ag towards cage c,0,1,1,0,0,0,0,0,0,0
+7c5f2bdd-596a-40b6-a8c0-50fb1a5ea65d,Crow,2025-04-30,620,3,True,5,morn1,True,morn1_3_trial5_first_cont,MS,PL,NY,,1,0,0,1,0,0,0,0,0,0
+7c5f2bdd-596a-40b6-a8c0-50fb1a5ea65d,Crow,2025-04-30,620,3,True,5,morn1,True,morn1_3_trial5_first_cont,NY,PL,MS,,1,0,0,1,0,0,0,0,0,0
+c4e4ddc5-7b29-4cae-a6b3-f9fdad537e26,Crow,2025-04-30,622,3,True,5,morn1,True,morn1_3_trial5_first_cont,MS,PL,NY,,1,0,0,1,0,0,0,0,0,0
+c4e4ddc5-7b29-4cae-a6b3-f9fdad537e26,Crow,2025-04-30,622,3,True,5,morn1,True,morn1_3_trial5_first_cont,NY,PL,MS,,1,0,0,1,0,0,0,0,0,0
+7d19fe0a-98e5-4f45-bfff-aab5eff828ea,Crow,2025-04-30,624,3,True,5,morn1,True,morn1_3_trial5_first_cont,MS,PL,NY,,1,0,0,1,0,0,0,0,0,0
+7d19fe0a-98e5-4f45-bfff-aab5eff828ea,Crow,2025-04-30,624,3,True,5,morn1,True,morn1_3_trial5_first_cont,NY,PL,MS,,1,0,0,1,0,0,0,0,0,0
+14b4f314-6807-4296-a002-f7864aa0cdb3,Crow,2025-04-30,798,3,True,5,enrich,True,enrich_3_trial5_first_cont,NY,AG,MS,Towards MS,0,1,0,0,0,0,1,0,0,0
+e49d37a8-6aad-444a-a0d9-ed75f9aaad62,Crow,2025-04-30,806,3,True,5,enrich,True,enrich_3_trial5_first_cont,MN,AG,,Towards cage c,0,1,0,0,0,0,1,0,0,0
+1a889edf-4872-4e2e-9289-4627e9e5145c,Crow,2025-04-30,838,3,True,5,enrich,True,enrich_3_trial5_first_cont,MS,AG,,AG TOWARDS NY,0,1,0,0,0,0,1,0,0,0
+ef6cfab1-3700-4470-82dc-f7b09cada5bf,Crow,2025-05-01,611,3,True,5,morn1,False,morn1_3_trial5_sec_cont,MN,AG,,Towards cage c,0,1,1,0,0,0,0,0,0,0
+a194f187-e0dc-4fb7-8f90-089c5f5bbba1,Crow,2025-05-01,613,3,True,5,morn1,False,morn1_3_trial5_sec_cont,NH,DS,,Towards cage c,0,1,1,0,0,0,0,0,0,0
+a194f187-e0dc-4fb7-8f90-089c5f5bbba1,Crow,2025-05-01,613,3,True,5,morn1,False,morn1_3_trial5_sec_cont,MN,DS,,Towards cage c,0,1,1,0,0,0,0,0,0,0
+77597533-b63b-4103-87b8-57279ab1e9da,Crow,2025-05-01,615,3,True,5,morn1,False,morn1_3_trial5_sec_cont,NH,AG,,Towards cage c,0,1,1,0,0,0,0,0,0,0
+77f63139-8051-4f35-b7f8-2a4c6685c15d,Crow,2025-05-01,663,3,True,5,morn2,False,morn2_3_trial5_sec_cont,MS,PL,NY,,1,0,0,0,0,1,0,0,0,0
+77f63139-8051-4f35-b7f8-2a4c6685c15d,Crow,2025-05-01,663,3,True,5,morn2,False,morn2_3_trial5_sec_cont,NY,PL,MS,,1,0,0,0,0,1,0,0,0,0
+1a21849d-25b2-4991-acbc-5cdb128e8799,Crow,2025-05-01,665,3,True,5,morn2,False,morn2_3_trial5_sec_cont,MS,PL,NY,,1,0,0,0,0,1,0,0,0,0
+1a21849d-25b2-4991-acbc-5cdb128e8799,Crow,2025-05-01,665,3,True,5,morn2,False,morn2_3_trial5_sec_cont,NY,PL,MS,,1,0,0,0,0,1,0,0,0,0
+47002f4d-a318-43c5-a2a9-282be2496a20,Crow,2025-05-01,667,3,True,5,morn2,False,morn2_3_trial5_sec_cont,MS,PL,NY,,1,0,0,0,0,1,0,0,0,0
+47002f4d-a318-43c5-a2a9-282be2496a20,Crow,2025-05-01,667,3,True,5,morn2,False,morn2_3_trial5_sec_cont,NY,PL,MS,,1,0,0,0,0,1,0,0,0,0
+116b0769-9c10-4d37-a141-6b15c6eefb8a,Crow,2025-05-01,669,3,True,5,morn2,False,morn2_3_trial5_sec_cont,MS,PL,NY,,1,0,0,0,0,1,0,0,0,0
+116b0769-9c10-4d37-a141-6b15c6eefb8a,Crow,2025-05-01,669,3,True,5,morn2,False,morn2_3_trial5_sec_cont,NY,PL,MS,,1,0,0,0,0,1,0,0,0,0
+a7d514f9-4d2d-4aca-b9c4-bc869fc0c352,Crow,2025-05-01,671,3,True,5,morn2,False,morn2_3_trial5_sec_cont,MS,PL,NY,,1,0,0,0,0,1,0,0,0,0
+a7d514f9-4d2d-4aca-b9c4-bc869fc0c352,Crow,2025-05-01,671,3,True,5,morn2,False,morn2_3_trial5_sec_cont,NY,PL,MS,,1,0,0,0,0,1,0,0,0,0
+5cf73e78-6a0f-45e8-9314-796f62e0078b,Crow,2025-05-01,673,3,True,5,morn2,False,morn2_3_trial5_sec_cont,MS,PL,NY,,1,0,0,0,0,1,0,0,0,0
+5cf73e78-6a0f-45e8-9314-796f62e0078b,Crow,2025-05-01,673,3,True,5,morn2,False,morn2_3_trial5_sec_cont,NY,PL,MS,,1,0,0,0,0,1,0,0,0,0
+16b23895-d4fb-4b5a-b0ad-369f97db1ba7,Crow,2025-05-01,675,3,True,5,morn2,False,morn2_3_trial5_sec_cont,MS,PL,NY,,1,0,0,0,0,1,0,0,0,0
+16b23895-d4fb-4b5a-b0ad-369f97db1ba7,Crow,2025-05-01,675,3,True,5,morn2,False,morn2_3_trial5_sec_cont,NY,PL,MS,,1,0,0,0,0,1,0,0,0,0
+1ffbee03-6fe3-4bc5-a6f3-2025976c5e65,Crow,2025-05-01,677,3,True,5,morn2,False,morn2_3_trial5_sec_cont,MS,PL,NY,,1,0,0,0,0,1,0,0,0,0
+1ffbee03-6fe3-4bc5-a6f3-2025976c5e65,Crow,2025-05-01,677,3,True,5,morn2,False,morn2_3_trial5_sec_cont,NY,PL,MS,,1,0,0,0,0,1,0,0,0,0
+12a5383b-eacc-477c-895f-b31373242f98,Crow,2025-05-01,817,3,True,5,enrich,False,enrich_3_trial5_sec_cont,MS,PL,NY,,1,0,0,0,0,0,0,1,0,0
+12a5383b-eacc-477c-895f-b31373242f98,Crow,2025-05-01,817,3,True,5,enrich,False,enrich_3_trial5_sec_cont,NY,PL,MS,,1,0,0,0,0,0,0,1,0,0
+4e7dfab7-6087-44f6-aa87-05eb126bb2d9,Playback,2025-05-15,630,3,True,6,morn1,False,morn1_3_trial6_sec_play,MN,DS,,Displayed toward cage a,0,1,1,0,0,0,0,0,0,0
+d9b1b2fa-cea3-42e0-9951-c94b94984aca,Playback,2025-05-15,646,3,True,6,morn2,False,morn2_3_trial6_sec_play,NY,AG,,AG towards MS,0,1,0,0,1,0,0,0,0,0
+3d03a54d-cec2-4479-8d8e-6bec75deb0eb,Playback,2025-05-15,871,3,True,6,enrich,False,enrich_3_trial6_sec_play,MS,DS,,,0,1,0,0,0,0,1,0,0,0

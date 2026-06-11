@@ -1,0 +1,1453 @@
+ec5_uuid,condition,date,msm,group,is_all_occasions,trial,phase,first_day,block_ID,Ind1,behaviour,partner,notes,playing,aggression,agg_morn1,play_morn1,agg_morn2,play_morn2,agg_enrich,play_enrich,agg_extra,play_extra
+pBh,Playback,2025-04-04 00:00:00,582.0,3,True,3,morn1,False,morn1_3_trial3_sec_play,ST,DS,,,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+kud,Playback,2025-04-04 00:00:00,688.0,3,True,3,morn2,False,morn2_3_trial3_sec_play,ST,DS,,,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+O5Z,Playback,2025-04-04 00:00:00,856.0,3,True,3,enrich,False,enrich_3_trial3_sec_play,ST,DS,,,0,1,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0
+EYO,Playback,2025-04-04 00:00:00,859.0,3,True,3,enrich,False,enrich_3_trial3_sec_play,ST,DS,,,0,1,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0
+PWQ,Playback,2025-04-04 00:00:00,625.0,3,True,3,morn1,False,morn1_3_trial3_sec_play,ST,DS,,,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hRT,Playback,2025-04-04 00:00:00,628.0,3,True,3,morn1,False,morn1_3_trial3_sec_play,ST,DS,,,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+0jF,Playback,2025-04-04 00:00:00,629.0,3,True,3,morn1,False,morn1_3_trial3_sec_play,ST,DS,,,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+VuV,Playback,2025-04-04 00:00:00,635.0,3,True,3,extra,False,extra_3_trial3_sec_play,ST,DS,,BEFORE PLAYBACK,0,1,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0
+THT,Playback,2025-04-04 00:00:00,652.0,3,True,3,morn2,False,morn2_3_trial3_sec_play,ST,DS,,,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+9sX,Playback,2025-04-04 00:00:00,654.0,3,True,3,morn2,False,morn2_3_trial3_sec_play,ST,DS,,,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+any,Playback,2025-04-04 00:00:00,672.0,3,True,3,morn2,False,morn2_3_trial3_sec_play,ST,PL,TK,WRESTLE,1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+fTQ,Playback,2025-04-04 00:00:00,674.0,3,True,3,morn2,False,morn2_3_trial3_sec_play,ST,DS,,,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+xVm,Playback,2025-04-04 00:00:00,679.0,3,True,3,morn2,False,morn2_3_trial3_sec_play,ST,PL,TN,CHASE & WRESTLE,1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+g4q,Playback,2025-04-04 00:00:00,680.0,3,True,3,morn2,False,morn2_3_trial3_sec_play,ST,PL,TN,CHASE & WRESTLE,1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+TQP,Playback,2025-04-04 00:00:00,681.0,3,True,3,morn2,False,morn2_3_trial3_sec_play,ST,PL,TN,CHASE & WRESTLE,1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+iZ9,Playback,2025-04-04 00:00:00,682.0,3,True,3,morn2,False,morn2_3_trial3_sec_play,ST,PL,TN,CHASE & WRESTLE,1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+6Ls,Playback,2025-04-04 00:00:00,683.0,3,True,3,morn2,False,morn2_3_trial3_sec_play,ST,PL,TN,CHASE & WRESTLE,1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+oTQ,Playback,2025-04-04 00:00:00,582.0,3,True,3,morn1,False,morn1_3_trial3_sec_play,ST,DS,,,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+KVc,Playback,2025-04-04 00:00:00,586.0,3,True,3,morn1,False,morn1_3_trial3_sec_play,ST,DS,,,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+tqV,Playback,2025-04-04 00:00:00,629.0,3,True,3,morn1,False,morn1_3_trial3_sec_play,ST,DS,,,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+REc,Playback,2025-04-04 00:00:00,647.0,3,True,3,morn2,False,morn2_3_trial3_sec_play,ST,DS,,,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+mMa,Playback,2025-04-04 00:00:00,584.0,3,True,3,morn1,False,morn1_3_trial3_sec_play,ST,DS,,,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+mju,Playback,2025-04-04 00:00:00,825.0,3,True,3,enrich,False,enrich_3_trial3_sec_play,ST,DS,,,0,1,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0
+8wE,Playback,2025-04-04 00:00:00,857.0,3,True,3,enrich,False,enrich_3_trial3_sec_play,ST,PL,TK,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+40C,Playback,2025-04-04 00:00:00,811.0,3,True,3,enrich,False,enrich_3_trial3_sec_play,ST,DS,,,0,1,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0
+DV8,Crow,2025-05-01 00:00:00,619.0,3,True,5,morn1,False,morn1_3_trial5_sec_cont,ST,DS,,,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Ahr,Crow,2025-05-01 00:00:00,682.0,3,True,5,morn2,False,morn2_3_trial5_sec_cont,ST,DS,,,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+nZF,Crow,2025-05-01 00:00:00,685.0,3,True,5,morn2,False,morn2_3_trial5_sec_cont,ST,DS,,,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+Swd,Crow,2025-05-01 00:00:00,687.0,3,True,5,morn2,False,morn2_3_trial5_sec_cont,ST,DS,,,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+bgt,Crow,2025-05-01 00:00:00,805.0,3,True,5,enrich,False,enrich_3_trial5_sec_cont,ST,PL,TK,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+NUb,Crow,2025-05-04 00:00:00,684.0,2,True,6,morn2,True,morn2_2_trial6_first_cont,ST,DS,,,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+N3J,Crow,2025-05-04 00:00:00,700.0,2,True,6,morn2,True,morn2_2_trial6_first_cont,ST,DS,,,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+mpf,Crow,2025-05-05 00:00:00,863.0,2,True,6,enrich,False,enrich_2_trial6_sec_cont,ST,PL,NY,CHASE,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+FnG,Crow,2025-05-05 00:00:00,864.0,2,True,6,enrich,False,enrich_2_trial6_sec_cont,ST,PL,NY,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+gEo,Crow,2025-05-05 00:00:00,883.0,2,True,6,enrich,False,enrich_2_trial6_sec_cont,ST,PL,NY,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+jPE,Crow,2025-05-05 00:00:00,884.0,2,True,6,enrich,False,enrich_2_trial6_sec_cont,ST,PL,NY,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+uO3,Crow,2025-05-05 00:00:00,885.0,2,True,6,enrich,False,enrich_2_trial6_sec_cont,ST,PL,NY,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+QjT,Crow,2025-05-05 00:00:00,646.0,2,True,6,morn2,False,morn2_2_trial6_sec_cont,ST,DS,,,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+sD6,Crow,2025-05-05 00:00:00,660.0,2,True,6,morn2,False,morn2_2_trial6_sec_cont,ST,PL,TK,,1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+NZe,Crow,2025-05-05 00:00:00,668.0,2,True,6,morn2,False,morn2_2_trial6_sec_cont,ST,PL,TK,,1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+1Hq,Crow,2025-05-05 00:00:00,669.0,2,True,6,morn2,False,morn2_2_trial6_sec_cont,ST,PL,TK,,1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+k8X,Crow,2025-05-05 00:00:00,670.0,2,True,6,morn2,False,morn2_2_trial6_sec_cont,ST,PL,TK,,1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+sM7,Crow,2025-05-05 00:00:00,671.0,2,True,6,morn2,False,morn2_2_trial6_sec_cont,ST,PL,TK,,1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+z8m,Crow,2025-05-05 00:00:00,672.0,2,True,6,morn2,False,morn2_2_trial6_sec_cont,ST,PL,TK,,1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+Brq,Crow,2025-05-05 00:00:00,606.0,2,True,6,morn1,False,morn1_2_trial6_sec_cont,ST,PL,TK,,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+yaC,Crow,2025-05-05 00:00:00,630.0,2,True,6,morn1,False,morn1_2_trial6_sec_cont,ST,DS,,,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+zfR,Crow,2025-05-05 00:00:00,867.0,2,True,6,enrich,False,enrich_2_trial6_sec_cont,ST,DS,,,0,1,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0
+p1F,Crow,2025-05-05 00:00:00,870.0,2,True,6,enrich,False,enrich_2_trial6_sec_cont,ST,DS,,,0,1,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0
+Ff5,Crow,2025-05-05 00:00:00,595.0,2,True,6,morn1,False,morn1_2_trial6_sec_cont,ST,DS,,,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+ODE,Crow,2025-05-05 00:00:00,589.0,2,True,6,morn1,False,morn1_2_trial6_sec_cont,ST,PL,TK,,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+07X,Crow,2025-05-05 00:00:00,592.0,2,True,6,morn1,False,morn1_2_trial6_sec_cont,ST,PL,TK,,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+YDN,Crow,2025-05-05 00:00:00,607.0,2,True,6,morn1,False,morn1_2_trial6_sec_cont,ST,PL,TK,,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+eK3,Crow,2025-05-05 00:00:00,680.0,2,True,6,morn2,False,morn2_2_trial6_sec_cont,ST,PL,SR,biting,1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+ZMY,Crow,2025-05-05 00:00:00,681.0,2,True,6,morn2,False,morn2_2_trial6_sec_cont,ST,PL,SR,biting,1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+VNR,Crow,2025-05-05 00:00:00,682.0,2,True,6,morn2,False,morn2_2_trial6_sec_cont,ST,PL,SR,biting,1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+F2y,Crow,2025-05-05 00:00:00,683.0,2,True,6,morn2,False,morn2_2_trial6_sec_cont,ST,PL,SR,biting,1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+Lp8,Crow,2025-05-05 00:00:00,684.0,2,True,6,morn2,False,morn2_2_trial6_sec_cont,ST,PL,SR,biting,1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+4qK,Crow,2025-05-05 00:00:00,685.0,2,True,6,morn2,False,morn2_2_trial6_sec_cont,ST,PL,SR,biting,1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+zH3,Crow,2025-05-05 00:00:00,686.0,2,True,6,morn2,False,morn2_2_trial6_sec_cont,ST,PL,SR,biting,1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+D9v,Crow,2025-05-05 00:00:00,687.0,2,True,6,morn2,False,morn2_2_trial6_sec_cont,ST,PL,SR,biting,1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+b7Q,Crow,2025-05-05 00:00:00,688.0,2,True,6,morn2,False,morn2_2_trial6_sec_cont,ST,PL,SR,biting,1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+2cX,Crow,2025-05-05 00:00:00,689.0,2,True,6,morn2,False,morn2_2_trial6_sec_cont,ST,PL,SR,biting,1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+mJ5,Crow,2025-05-05 00:00:00,690.0,2,True,6,morn2,False,morn2_2_trial6_sec_cont,ST,PL,SR,biting,1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+8R9,Crow,2025-05-05 00:00:00,691.0,2,True,6,morn2,False,morn2_2_trial6_sec_cont,ST,PL,SR,biting,1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+k4W,Crow,2025-05-05 00:00:00,692.0,2,True,6,morn2,False,morn2_2_trial6_sec_cont,ST,PL,SR,biting,1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+N2z,Crow,2025-05-05 00:00:00,693.0,2,True,6,morn2,False,morn2_2_trial6_sec_cont,ST,PL,SR,biting,1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+yVr,Crow,2025-04-09 00:00:00,629.0,1,True,3,morn1,False,morn1_1_trial3_sec_cont,NY,DS,,,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+ca9,Crow,2025-04-09 00:00:00,661.0,1,True,3,morn2,False,morn2_1_trial3_sec_cont,NY,DS,,,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+zC5,Crow,2025-05-04 00:00:00,690.0,2,True,6,morn2,True,morn2_2_trial6_first_cont,NY,DS,,,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+3CY,Crow,2025-05-04 00:00:00,862.0,2,True,6,enrich,True,enrich_2_trial6_first_cont,NY,PL,TK,MOUTH ON MOUTH,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+nAh,Crow,2025-05-04 00:00:00,863.0,2,True,6,enrich,True,enrich_2_trial6_first_cont,NY,PL,TK,MOUTH ON MOUTH,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+Z8y,Crow,2025-05-04 00:00:00,864.0,2,True,6,enrich,True,enrich_2_trial6_first_cont,NY,PL,TK,MOUTH ON MOUTH,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+uK1,Crow,2025-05-04 00:00:00,865.0,2,True,6,enrich,True,enrich_2_trial6_first_cont,NY,PL,TK,MOUTH ON MOUTH,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+R3a,Crow,2025-05-04 00:00:00,866.0,2,True,6,enrich,True,enrich_2_trial6_first_cont,NY,PL,TK,MOUTH ON MOUTH,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+Fmb,Crow,2025-05-04 00:00:00,867.0,2,True,6,enrich,True,enrich_2_trial6_first_cont,NY,PL,TK,MOUTH ON MOUTH,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+cJh,Crow,2025-05-04 00:00:00,868.0,2,True,6,enrich,True,enrich_2_trial6_first_cont,NY,PL,TK,MOUTH ON MOUTH,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+n9h,Crow,2025-05-04 00:00:00,869.0,2,True,6,enrich,True,enrich_2_trial6_first_cont,NY,PL,TK,MOUTH ON MOUTH,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+h2y,Crow,2025-05-04 00:00:00,870.0,2,True,6,enrich,True,enrich_2_trial6_first_cont,NY,PL,TK,MOUTH ON MOUTH,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+UNQ,Crow,2025-05-04 00:00:00,871.0,2,True,6,enrich,True,enrich_2_trial6_first_cont,NY,PL,TK,MOUTH ON MOUTH,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+nqm,Crow,2025-05-04 00:00:00,872.0,2,True,6,enrich,True,enrich_2_trial6_first_cont,NY,PL,TK,MOUTH ON MOUTH,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+J6z,Crow,2025-05-04 00:00:00,873.0,2,True,6,enrich,True,enrich_2_trial6_first_cont,NY,PL,TK,MOUTH ON MOUTH,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+zeo,Crow,2025-05-04 00:00:00,874.0,2,True,6,enrich,True,enrich_2_trial6_first_cont,NY,PL,TK,MOUTH ON MOUTH,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+qut,Crow,2025-05-04 00:00:00,660.0,2,True,6,morn2,True,morn2_2_trial6_first_cont,NY,DS,,,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+tbt,Crow,2025-05-04 00:00:00,699.0,2,True,6,morn2,True,morn2_2_trial6_first_cont,NY,DS,,,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+9ET,Crow,2025-05-04 00:00:00,704.0,2,True,6,morn2,True,morn2_2_trial6_first_cont,NY,DS,,,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+TTa,Crow,2025-05-04 00:00:00,876.0,2,True,6,enrich,True,enrich_2_trial6_first_cont,NY,DS,,,0,1,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0
+hHp,Crow,2025-05-04 00:00:00,894.0,2,True,6,enrich,True,enrich_2_trial6_first_cont,NY,PL,SR,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+a8G,Crow,2025-05-04 00:00:00,895.0,2,True,6,enrich,True,enrich_2_trial6_first_cont,NY,PL,SR,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+JKz,Crow,2025-05-04 00:00:00,896.0,2,True,6,enrich,True,enrich_2_trial6_first_cont,NY,PL,SR,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+xjU,Playback,2025-04-04 00:00:00,603.0,3,True,3,morn1,False,morn1_3_trial3_sec_play,SR,DS,,,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+xOh,Playback,2025-04-04 00:00:00,811.0,3,True,3,enrich,False,enrich_3_trial3_sec_play,SR,DS,,,0,1,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0
+xho,Playback,2025-04-04 00:00:00,663.0,3,True,3,morn2,False,morn2_3_trial3_sec_play,SR,DS,,,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+8o1,Playback,2025-04-04 00:00:00,578.0,3,True,3,morn1,False,morn1_3_trial3_sec_play,SR,DS,,,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Da9,Crow,2025-05-01 00:00:00,608.0,3,True,5,morn1,False,morn1_3_trial5_sec_cont,SR,PL,TN,,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+Uft,Playback,2025-04-04 00:00:00,582.0,3,True,3,morn1,False,morn1_3_trial3_sec_play,TK,DS,,,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+3Xa,Playback,2025-04-04 00:00:00,582.0,3,True,3,morn1,False,morn1_3_trial3_sec_play,TK,PL,ST,,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+Aup,Playback,2025-04-04 00:00:00,593.0,3,True,3,morn1,False,morn1_3_trial3_sec_play,TK,DS,,,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+jRU,Playback,2025-04-04 00:00:00,600.0,3,True,3,morn1,False,morn1_3_trial3_sec_play,TK,DS,,,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+pHC,Playback,2025-04-04 00:00:00,679.0,3,True,3,morn2,False,morn2_3_trial3_sec_play,TK,PL,TN,MOUTH OPEN ON TN,1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+Qyx,Playback,2025-04-04 00:00:00,807.0,3,True,3,enrich,False,enrich_3_trial3_sec_play,TK,DS,,,0,1,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0
+K8Z,Playback,2025-04-04 00:00:00,589.0,3,True,3,morn1,False,morn1_3_trial3_sec_play,TK,PL,SR,TK follow SR - pull leg,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+5Bm,Playback,2025-04-04 00:00:00,590.0,3,True,3,morn1,False,morn1_3_trial3_sec_play,TK,PL,SR,TK follow SR - pull leg,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+U5K,Playback,2025-04-04 00:00:00,591.0,3,True,3,morn1,False,morn1_3_trial3_sec_play,TK,PL,SR,TK follow SR - pull leg,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+V3C,Playback,2025-04-04 00:00:00,592.0,3,True,3,morn1,False,morn1_3_trial3_sec_play,TK,PL,SR,TK follow SR - pull leg,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+tfg,Crow,2025-04-08 00:00:00,579.0,1,True,3,morn1,True,morn1_1_trial3_first_cont,TK,PL,NR,slapping leg,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+3eM,Crow,2025-04-08 00:00:00,599.0,1,True,3,morn1,True,morn1_1_trial3_first_cont,TK,PL,NR,chase in circles - pull leg,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+b3S,Crow,2025-04-08 00:00:00,828.0,1,True,3,enrich,True,enrich_1_trial3_first_cont,TK,DS,,,0,1,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0
+kV0,Crow,2025-04-08 00:00:00,857.0,1,True,3,enrich,True,enrich_1_trial3_first_cont,TK,DS,,,0,1,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0
+g9D,Crow,2025-04-08 00:00:00,838.0,1,True,3,enrich,True,enrich_1_trial3_first_cont,TK,PL,NR,"grabbing foot, wrestling",1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+M2G,Crow,2025-04-08 00:00:00,839.0,1,True,3,enrich,True,enrich_1_trial3_first_cont,TK,PL,NR,"grabbing foot, wrestling",1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+vZ3,Crow,2025-04-08 00:00:00,840.0,1,True,3,enrich,True,enrich_1_trial3_first_cont,TK,PL,NR,"grabbing foot, wrestling",1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+c5F,Crow,2025-04-08 00:00:00,841.0,1,True,3,enrich,True,enrich_1_trial3_first_cont,TK,PL,NR,"grabbing foot, wrestling",1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+B4n,Crow,2025-04-08 00:00:00,842.0,1,True,3,enrich,True,enrich_1_trial3_first_cont,TK,PL,NR,"grabbing foot, wrestling",1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+q2K,Crow,2025-04-08 00:00:00,843.0,1,True,3,enrich,True,enrich_1_trial3_first_cont,TK,PL,NR,"grabbing foot, wrestling",1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+nrY,Crow,2025-04-08 00:00:00,844.0,1,True,3,enrich,True,enrich_1_trial3_first_cont,TK,PL,NR,"grabbing foot, wrestling",1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+9sG,Crow,2025-04-08 00:00:00,594.0,1,True,3,morn1,True,morn1_1_trial3_first_cont,TK,PL,NR,walking in circles - grabbing feet,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+Xra,Crow,2025-04-08 00:00:00,595.0,1,True,3,morn1,True,morn1_1_trial3_first_cont,TK,PL,NR,walking in circles - grabbing feet,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2jS,Crow,2025-04-08 00:00:00,596.0,1,True,3,morn1,True,morn1_1_trial3_first_cont,TK,PL,NR,walking in circles - grabbing feet,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+VGn,Crow,2025-04-08 00:00:00,597.0,1,True,3,morn1,True,morn1_1_trial3_first_cont,TK,PL,NR,walking in circles - grabbing feet,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+gvg,Crow,2025-04-09 00:00:00,629.0,1,True,3,morn1,False,morn1_1_trial3_sec_cont,TK,DS,,,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+BgU,Crow,2025-04-09 00:00:00,578.0,1,True,3,morn1,False,morn1_1_trial3_sec_cont,TK,PL,,CHASE & SWING ON ROPE,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+nOM,Crow,2025-04-09 00:00:00,592.0,1,True,3,morn1,False,morn1_1_trial3_sec_cont,TK,PL,,CHASE,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+Y5g,Crow,2025-04-09 00:00:00,635.0,1,True,3,extra,False,extra_1_trial3_sec_cont,TK,DS,,BEFORE PLAYBACK,0,1,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0
+omz,Crow,2025-04-09 00:00:00,654.0,1,True,3,morn2,False,morn2_1_trial3_sec_cont,TK,DS,,,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+eRr,Crow,2025-04-09 00:00:00,656.0,1,True,3,morn2,False,morn2_1_trial3_sec_cont,TK,DS,,,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+JyY,Crow,2025-04-09 00:00:00,663.0,1,True,3,morn2,False,morn2_1_trial3_sec_cont,TK,PL,TN,,1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+AdE,Crow,2025-04-09 00:00:00,670.0,1,True,3,morn2,False,morn2_1_trial3_sec_cont,TK,DS,,,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+Sra,Crow,2025-04-09 00:00:00,674.0,1,True,3,morn2,False,morn2_1_trial3_sec_cont,TK,DS,,,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+b16,Crow,2025-04-09 00:00:00,840.0,1,True,3,enrich,False,enrich_1_trial3_sec_cont,TK,PL,TN,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+mJm,Crow,2025-04-09 00:00:00,625.0,1,True,3,morn1,False,morn1_1_trial3_sec_cont,TK,DS,,,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+R2J,Crow,2025-04-09 00:00:00,581.0,1,True,3,morn1,False,morn1_1_trial3_sec_cont,TK,DS,,,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Xvp,Crow,2025-04-09 00:00:00,850.0,1,True,3,enrich,False,enrich_1_trial3_sec_cont,TK,PL,TN,"CHASE, GRAB ARMS",1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+XCT,Crow,2025-04-09 00:00:00,654.0,1,True,3,morn2,False,morn2_1_trial3_sec_cont,TK,PL,TN,"WRESTLE, CHASE",1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+P8d,Crow,2025-04-09 00:00:00,655.0,1,True,3,morn2,False,morn2_1_trial3_sec_cont,TK,PL,TN,"WRESTLE, CHASE",1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+G3d,Crow,2025-04-09 00:00:00,656.0,1,True,3,morn2,False,morn2_1_trial3_sec_cont,TK,PL,TN,"WRESTLE, CHASE",1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+f7V,Crow,2025-04-09 00:00:00,657.0,1,True,3,morn2,False,morn2_1_trial3_sec_cont,TK,PL,TN,"WRESTLE, CHASE",1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+Tm2,Crow,2025-04-09 00:00:00,658.0,1,True,3,morn2,False,morn2_1_trial3_sec_cont,TK,PL,TN,"WRESTLE, CHASE",1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+sJ4,Crow,2025-04-09 00:00:00,659.0,1,True,3,morn2,False,morn2_1_trial3_sec_cont,TK,PL,TN,"WRESTLE, CHASE",1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+0Lp,Crow,2025-04-09 00:00:00,660.0,1,True,3,morn2,False,morn2_1_trial3_sec_cont,TK,PL,TN,"WRESTLE, CHASE",1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+w2B,Crow,2025-04-09 00:00:00,661.0,1,True,3,morn2,False,morn2_1_trial3_sec_cont,TK,PL,TN,"WRESTLE, CHASE",1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+D8M,Crow,2025-04-09 00:00:00,703.0,1,True,3,morn2,False,morn2_1_trial3_sec_cont,TK,PL,TN,"FOLLOW, GRAB ARMS",1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+AYP,Crow,2025-04-09 00:00:00,704.0,1,True,3,morn2,False,morn2_1_trial3_sec_cont,TK,PL,TN,"FOLLOW, GRAB ARMS",1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+8Qd,Crow,2025-04-09 00:00:00,705.0,1,True,3,morn2,False,morn2_1_trial3_sec_cont,TK,PL,TN,"FOLLOW, GRAB ARMS",1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+UaH,Crow,2025-04-09 00:00:00,859.0,1,True,3,enrich,False,enrich_1_trial3_sec_cont,TK,PL,TN,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+oog,Crow,2025-04-09 00:00:00,860.0,1,True,3,enrich,False,enrich_1_trial3_sec_cont,TK,PL,TN,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+Qb6,Crow,2025-04-09 00:00:00,861.0,1,True,3,enrich,False,enrich_1_trial3_sec_cont,TK,PL,TN,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+6By,Crow,2025-04-09 00:00:00,862.0,1,True,3,enrich,False,enrich_1_trial3_sec_cont,TK,PL,TN,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+HB9,Crow,2025-04-09 00:00:00,864.0,1,True,3,enrich,False,enrich_1_trial3_sec_cont,TK,PL,TN,WRESTLING,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+Zky,Crow,2025-04-09 00:00:00,865.0,1,True,3,enrich,False,enrich_1_trial3_sec_cont,TK,PL,TN,WRESTLING,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+3tG,Crow,2025-04-09 00:00:00,866.0,1,True,3,enrich,False,enrich_1_trial3_sec_cont,TK,PL,TN,WRESTLING,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+hhi,Crow,2025-04-09 00:00:00,585.0,1,True,3,morn1,False,morn1_1_trial3_sec_cont,TK,DS,,,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+uS8,Crow,2025-04-09 00:00:00,629.0,1,True,3,morn1,False,morn1_1_trial3_sec_cont,TK,DS,,,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+2v3,Crow,2025-04-09 00:00:00,649.0,1,True,3,morn2,False,morn2_1_trial3_sec_cont,TK,PL,TN,,1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+Usz,Crow,2025-04-09 00:00:00,651.0,1,True,3,morn2,False,morn2_1_trial3_sec_cont,TK,DS,,,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+qpQ,Crow,2025-04-09 00:00:00,655.0,1,True,3,morn2,False,morn2_1_trial3_sec_cont,TK,PL,TN,wrestle,1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+nxp,Crow,2025-04-09 00:00:00,580.0,1,True,3,morn1,False,morn1_1_trial3_sec_cont,TK,DS,,,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+WZk,Crow,2025-04-09 00:00:00,592.0,1,True,3,morn1,False,morn1_1_trial3_sec_cont,TK,PL,TN,,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+9FT,Crow,2025-04-09 00:00:00,803.0,1,True,3,enrich,False,enrich_1_trial3_sec_cont,TK,DS,,,0,1,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0
+Rfk,Crow,2025-04-09 00:00:00,598.0,1,True,3,morn1,False,morn1_1_trial3_sec_cont,TK,PL,TN,,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+wtq,Crow,2025-04-09 00:00:00,599.0,1,True,3,morn1,False,morn1_1_trial3_sec_cont,TK,PL,TN,,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+Ffu,Crow,2025-04-09 00:00:00,600.0,1,True,3,morn1,False,morn1_1_trial3_sec_cont,TK,PL,TN,,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+25O,Crow,2025-04-09 00:00:00,601.0,1,True,3,morn1,False,morn1_1_trial3_sec_cont,TK,PL,TN,,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+mhx,Crow,2025-05-01 00:00:00,678.0,3,True,5,morn2,False,morn2_3_trial5_sec_cont,TK,DS,,,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+Bbc,Crow,2025-05-01 00:00:00,822.0,3,True,5,enrich,False,enrich_3_trial5_sec_cont,TK,PL,TN,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+gGd,Crow,2025-05-01 00:00:00,823.0,3,True,5,enrich,False,enrich_3_trial5_sec_cont,TK,PL,TN,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+Yu9,Crow,2025-05-01 00:00:00,824.0,3,True,5,enrich,False,enrich_3_trial5_sec_cont,TK,PL,TN,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+X2m,Crow,2025-05-01 00:00:00,825.0,3,True,5,enrich,False,enrich_3_trial5_sec_cont,TK,PL,TN,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+nV7,Crow,2025-05-01 00:00:00,826.0,3,True,5,enrich,False,enrich_3_trial5_sec_cont,TK,PL,TN,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+11t,Crow,2025-05-01 00:00:00,849.0,3,True,5,enrich,False,enrich_3_trial5_sec_cont,TK,PL,TN,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+eH4,Crow,2025-05-01 00:00:00,850.0,3,True,5,enrich,False,enrich_3_trial5_sec_cont,TK,PL,TN,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+dQ3,Crow,2025-05-01 00:00:00,851.0,3,True,5,enrich,False,enrich_3_trial5_sec_cont,TK,PL,TN,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+78c,Crow,2025-05-01 00:00:00,852.0,3,True,5,enrich,False,enrich_3_trial5_sec_cont,TK,PL,TN,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+Zhq,Crow,2025-05-04 00:00:00,697.0,2,True,6,morn2,True,morn2_2_trial6_first_cont,TK,DS,,,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+n9u,Crow,2025-05-04 00:00:00,576.0,2,True,6,morn1,True,morn1_2_trial6_first_cont,TK,PL,TN,,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+1Fm,Crow,2025-05-04 00:00:00,606.0,2,True,6,morn1,True,morn1_2_trial6_first_cont,TK,PL,TN,WRESTLE,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+2TK,Crow,2025-05-04 00:00:00,607.0,2,True,6,morn1,True,morn1_2_trial6_first_cont,TK,PL,TN,WRESTLE,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+11E,Crow,2025-05-04 00:00:00,608.0,2,True,6,morn1,True,morn1_2_trial6_first_cont,TK,PL,TN,WRESTLE,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+5vN,Crow,2025-05-04 00:00:00,609.0,2,True,6,morn1,True,morn1_2_trial6_first_cont,TK,PL,TN,WRESTLE,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+Pm4,Crow,2025-05-04 00:00:00,610.0,2,True,6,morn1,True,morn1_2_trial6_first_cont,TK,PL,TN,WRESTLE,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+cVN,Crow,2025-05-04 00:00:00,597.0,2,True,6,morn1,True,morn1_2_trial6_first_cont,TK,PL,TN,ARM GRAB,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+MST,Crow,2025-05-04 00:00:00,598.0,2,True,6,morn1,True,morn1_2_trial6_first_cont,TK,PL,TN,ARM GRAB,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+es8,Crow,2025-05-04 00:00:00,599.0,2,True,6,morn1,True,morn1_2_trial6_first_cont,TK,PL,TN,ARM GRAB,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+8zD,Crow,2025-05-04 00:00:00,600.0,2,True,6,morn1,True,morn1_2_trial6_first_cont,TK,PL,TN,ARM GRAB,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+YR8,Crow,2025-05-04 00:00:00,601.0,2,True,6,morn1,True,morn1_2_trial6_first_cont,TK,PL,TN,ARM GRAB,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+X7U,Crow,2025-05-04 00:00:00,602.0,2,True,6,morn1,True,morn1_2_trial6_first_cont,TK,PL,TN,ARM GRAB,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+Fu7,Crow,2025-05-04 00:00:00,653.0,2,True,6,morn2,True,morn2_2_trial6_first_cont,TK,DS,,,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+3Bh,Crow,2025-05-04 00:00:00,714.0,2,True,6,extra,True,extra_2_trial6_first_cont,TK,PL,TN,,1,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0
+rOv,Crow,2025-05-04 00:00:00,595.0,2,True,6,morn1,True,morn1_2_trial6_first_cont,TK,DS,,,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+uZH,Crow,2025-05-04 00:00:00,672.0,2,True,6,morn2,True,morn2_2_trial6_first_cont,TK,PL,TN,,1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+G6T,Crow,2025-05-04 00:00:00,801.0,2,True,6,enrich,True,enrich_2_trial6_first_cont,TK,PL,TN,pulling arms and legs,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+WtY,Crow,2025-05-04 00:00:00,699.0,2,True,6,morn2,True,morn2_2_trial6_first_cont,TK,DS,,,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+d5R,Crow,2025-05-04 00:00:00,696.0,2,True,6,morn2,True,morn2_2_trial6_first_cont,TK,PL,TN,,1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+weG,Crow,2025-05-04 00:00:00,697.0,2,True,6,morn2,True,morn2_2_trial6_first_cont,TK,PL,TN,,1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+ZOW,Crow,2025-05-04 00:00:00,698.0,2,True,6,morn2,True,morn2_2_trial6_first_cont,TK,PL,TN,,1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+jKe,Crow,2025-05-04 00:00:00,611.0,2,True,6,morn1,True,morn1_2_trial6_first_cont,TK,PL,TN,,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+5ZC,Crow,2025-05-04 00:00:00,625.0,2,True,6,morn1,True,morn1_2_trial6_first_cont,TN,AG,,TOWARDS TK,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+YDD,Crow,2025-05-04 00:00:00,635.0,2,True,6,extra,True,extra_2_trial6_first_cont,TN,DS,,TOWARDS SR - BEFORE PLAYBACK,0,1,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0
+eaR,Crow,2025-05-04 00:00:00,654.0,2,True,6,morn2,True,morn2_2_trial6_first_cont,TN,AG,,TOWARDS ST,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+D3N,Crow,2025-05-04 00:00:00,654.0,2,True,6,morn2,True,morn2_2_trial6_first_cont,TN,DS,,,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+ZHP,Crow,2025-05-04 00:00:00,625.0,2,True,6,morn1,True,morn1_2_trial6_first_cont,TN,DS,,,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+TSQ,Crow,2025-05-04 00:00:00,597.0,2,True,6,morn1,True,morn1_2_trial6_first_cont,TN,PL,ST,FOLLOW + WRESTLE,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+Z5r,Crow,2025-05-04 00:00:00,598.0,2,True,6,morn1,True,morn1_2_trial6_first_cont,TN,PL,ST,,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+w4S,Crow,2025-05-04 00:00:00,599.0,2,True,6,morn1,True,morn1_2_trial6_first_cont,TN,PL,ST,,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+Q3t,Crow,2025-05-04 00:00:00,600.0,2,True,6,morn1,True,morn1_2_trial6_first_cont,TN,PL,ST,,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+1qf,Crow,2025-05-04 00:00:00,601.0,2,True,6,morn1,True,morn1_2_trial6_first_cont,TN,PL,ST,,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+gFC,Crow,2025-05-04 00:00:00,602.0,2,True,6,morn1,True,morn1_2_trial6_first_cont,TN,PL,ST,,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+8ax,Crow,2025-05-04 00:00:00,646.0,2,True,6,morn2,True,morn2_2_trial6_first_cont,TN,DS,,,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+cX9,Crow,2025-04-08 00:00:00,615.0,1,True,3,morn1,True,morn1_1_trial3_first_cont,MT,DS,,,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+6j5,Crow,2025-04-08 00:00:00,669.0,1,True,3,morn2,True,morn2_1_trial3_first_cont,MT,DS,,,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+XeF,Crow,2025-04-09 00:00:00,586.0,1,True,3,morn1,False,morn1_1_trial3_sec_cont,MT,PL,NR,HITTING ARMS,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+Q9B,Crow,2025-04-09 00:00:00,629.0,1,True,3,morn1,False,morn1_1_trial3_sec_cont,MT,DS,,,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Ju6,Crow,2025-04-09 00:00:00,818.0,1,True,3,enrich,False,enrich_1_trial3_sec_cont,MT,DS,,,0,1,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0
+xND,Crow,2025-04-09 00:00:00,820.0,1,True,3,enrich,False,enrich_1_trial3_sec_cont,MT,DS,,,0,1,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0
+teN,Crow,2025-04-09 00:00:00,821.0,1,True,3,enrich,False,enrich_1_trial3_sec_cont,MT,DS,,,0,1,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0
+tox,Crow,2025-04-09 00:00:00,824.0,1,True,3,enrich,False,enrich_1_trial3_sec_cont,MT,DS,,,0,1,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0
+v5f,Crow,2025-04-09 00:00:00,831.0,1,True,3,enrich,False,enrich_1_trial3_sec_cont,MT,DS,,,0,1,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0
+2U2,Crow,2025-04-09 00:00:00,578.0,1,True,3,morn1,False,morn1_1_trial3_sec_cont,MT,PL,NR,,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+P2k,Crow,2025-04-08 00:00:00,615.0,1,True,3,morn1,True,morn1_1_trial3_first_cont,NR,DS,,,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+10R,Crow,2025-04-08 00:00:00,618.0,1,True,3,morn1,True,morn1_1_trial3_first_cont,NR,DS,,,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+vHE,Crow,2025-04-08 00:00:00,669.0,1,True,3,morn2,True,morn2_1_trial3_first_cont,NR,DS,,,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+VyM,Crow,2025-04-08 00:00:00,828.0,1,True,3,enrich,True,enrich_1_trial3_first_cont,NR,DS,,,0,1,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0
+NYs,Crow,2025-04-08 00:00:00,844.0,1,True,3,enrich,True,enrich_1_trial3_first_cont,NR,PL,TK,chase,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+dqR,Crow,2025-04-08 00:00:00,857.0,1,True,3,enrich,True,enrich_1_trial3_first_cont,NR,DS,,,0,1,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0
+fAq,Crow,2025-04-08 00:00:00,828.0,1,True,3,enrich,True,enrich_1_trial3_first_cont,NR,PL,,circles,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+rjH,Crow,2025-04-08 00:00:00,829.0,1,True,3,enrich,True,enrich_1_trial3_first_cont,NR,PL,,circles,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+5sY,Crow,2025-04-08 00:00:00,830.0,1,True,3,enrich,True,enrich_1_trial3_first_cont,NR,PL,,circles,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+pko,Crow,2025-04-08 00:00:00,831.0,1,True,3,enrich,True,enrich_1_trial3_first_cont,NR,PL,,circles,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+Fsy,Crow,2025-04-08 00:00:00,833.0,1,True,3,enrich,True,enrich_1_trial3_first_cont,NR,PL,TK,circles - wrestling,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+3k3,Crow,2025-04-08 00:00:00,834.0,1,True,3,enrich,True,enrich_1_trial3_first_cont,NR,PL,TK,circles - wrestling,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+L7Q,Crow,2025-04-08 00:00:00,835.0,1,True,3,enrich,True,enrich_1_trial3_first_cont,NR,PL,TK,circles - wrestling,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+4Wx,Crow,2025-04-08 00:00:00,836.0,1,True,3,enrich,True,enrich_1_trial3_first_cont,NR,PL,TK,circles - wrestling,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+W63,Crow,2025-04-08 00:00:00,857.0,1,True,3,enrich,True,enrich_1_trial3_first_cont,NR,PL,,chasing,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+yGn,Crow,2025-04-08 00:00:00,858.0,1,True,3,enrich,True,enrich_1_trial3_first_cont,NR,PL,,chasing,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+BP1,Crow,2025-04-08 00:00:00,859.0,1,True,3,enrich,True,enrich_1_trial3_first_cont,NR,PL,,chasing,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+ePQ,Crow,2025-04-08 00:00:00,592.0,1,True,3,morn1,True,morn1_1_trial3_first_cont,NR,PL,TK,wrestling pulling arms,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+uzK,Crow,2025-04-08 00:00:00,593.0,1,True,3,morn1,True,morn1_1_trial3_first_cont,NR,PL,TK,wrestling pulling arms,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+ms3,Crow,2025-04-09 00:00:00,629.0,1,True,3,morn1,False,morn1_1_trial3_sec_cont,NR,DS,,,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+JQu,Crow,2025-04-09 00:00:00,827.0,1,True,3,enrich,False,enrich_1_trial3_sec_cont,NR,DS,,,0,1,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0
+DOq,Crow,2025-04-09 00:00:00,586.0,1,True,3,morn1,False,morn1_1_trial3_sec_cont,NR,DS,,,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+c2021bc8-d46f-47e4-8a32-24726700a0b6,Playback,2025-03-12 00:00:00,843.0,1,True,1,enrich,False,enrich_1_trial1_sec_play,NH,DS,,,0,1,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0
+c2021bc8-d46f-47e4-8a32-24726700a0b6,Playback,2025-03-12 00:00:00,843.0,1,True,1,enrich,False,enrich_1_trial1_sec_play,NH,DS,,Pan hoot with stick,0,1,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0
+7e373872-3d0f-4779-889f-01102d52128e,Playback,2025-03-12 00:00:00,845.0,1,True,1,enrich,False,enrich_1_trial1_sec_play,NH,DS,,,0,1,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0
+ecfc7357-f1d3-4a3e-9c03-68040660035b,Playback,2025-03-12 00:00:00,847.0,1,True,1,enrich,False,enrich_1_trial1_sec_play,ST,DS,NH,,0,1,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0
+ecfc7357-f1d3-4a3e-9c03-68040660035b,Playback,2025-03-12 00:00:00,847.0,1,True,1,enrich,False,enrich_1_trial1_sec_play,NH,DS,ST,,0,1,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0
+ecfc7357-f1d3-4a3e-9c03-68040660035b,Playback,2025-03-12 00:00:00,847.0,1,True,1,enrich,False,enrich_1_trial1_sec_play,ST,DS,NH,Towards cage c,0,1,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0
+ecfc7357-f1d3-4a3e-9c03-68040660035b,Playback,2025-03-12 00:00:00,847.0,1,True,1,enrich,False,enrich_1_trial1_sec_play,NH,DS,ST,Towards cage c,0,1,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0
+9de25b42-d6c4-4733-b67e-5080ea954b05,Playback,2025-03-12 00:00:00,849.0,1,True,1,enrich,False,enrich_1_trial1_sec_play,ST,DS,NH,,0,1,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0
+9de25b42-d6c4-4733-b67e-5080ea954b05,Playback,2025-03-12 00:00:00,849.0,1,True,1,enrich,False,enrich_1_trial1_sec_play,NH,DS,ST,,0,1,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0
+7042277d-2331-47be-9021-80a990a01672,Playback,2025-03-12 00:00:00,861.0,1,True,1,enrich,False,enrich_1_trial1_sec_play,NH,DS,,,0,1,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0
+eb57ce1a-0fc2-4b11-bece-1a215981a5a6,Playback,2025-03-12 00:00:00,867.0,1,True,1,enrich,False,enrich_1_trial1_sec_play,MS,PL,NH,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+eb57ce1a-0fc2-4b11-bece-1a215981a5a6,Playback,2025-03-12 00:00:00,867.0,1,True,1,enrich,False,enrich_1_trial1_sec_play,NH,PL,MS,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+eb57ce1a-0fc2-4b11-bece-1a215981a5a6,Playback,2025-03-12 00:00:00,867.0,1,True,1,enrich,False,enrich_1_trial1_sec_play,MS,PL,NH,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+eb57ce1a-0fc2-4b11-bece-1a215981a5a6,Playback,2025-03-12 00:00:00,867.0,1,True,1,enrich,False,enrich_1_trial1_sec_play,NH,PL,MS,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+8990c4d8-5028-4750-bd62-d9a5a9c7316e,Playback,2025-03-12 00:00:00,869.0,1,True,1,enrich,False,enrich_1_trial1_sec_play,MS,PL,"ST, NH",,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+8990c4d8-5028-4750-bd62-d9a5a9c7316e,Playback,2025-03-12 00:00:00,869.0,1,True,1,enrich,False,enrich_1_trial1_sec_play,ST,PL,"MS, NH",,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+8990c4d8-5028-4750-bd62-d9a5a9c7316e,Playback,2025-03-12 00:00:00,869.0,1,True,1,enrich,False,enrich_1_trial1_sec_play,NH,PL,"MS, ST",,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+8990c4d8-5028-4750-bd62-d9a5a9c7316e,Playback,2025-03-12 00:00:00,869.0,1,True,1,enrich,False,enrich_1_trial1_sec_play,MS,PL,"ST, NH",,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+8990c4d8-5028-4750-bd62-d9a5a9c7316e,Playback,2025-03-12 00:00:00,869.0,1,True,1,enrich,False,enrich_1_trial1_sec_play,ST,PL,"MS, NH",,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+8990c4d8-5028-4750-bd62-d9a5a9c7316e,Playback,2025-03-12 00:00:00,869.0,1,True,1,enrich,False,enrich_1_trial1_sec_play,NH,PL,"MS, ST",,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+22280968-7cb0-46e1-b88a-e0a56934f328,Playback,2025-03-12 00:00:00,875.0,1,True,1,enrich,False,enrich_1_trial1_sec_play,MS,PL,ST,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+22280968-7cb0-46e1-b88a-e0a56934f328,Playback,2025-03-12 00:00:00,875.0,1,True,1,enrich,False,enrich_1_trial1_sec_play,ST,PL,MS,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+22280968-7cb0-46e1-b88a-e0a56934f328,Playback,2025-03-12 00:00:00,875.0,1,True,1,enrich,False,enrich_1_trial1_sec_play,MS,PL,ST,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+22280968-7cb0-46e1-b88a-e0a56934f328,Playback,2025-03-12 00:00:00,875.0,1,True,1,enrich,False,enrich_1_trial1_sec_play,ST,PL,MS,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+2798817d-708f-48c2-8a1b-c57dcac4b1e2,Playback,2025-03-12 00:00:00,877.0,1,True,1,enrich,False,enrich_1_trial1_sec_play,MS,PL,ST,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+2798817d-708f-48c2-8a1b-c57dcac4b1e2,Playback,2025-03-12 00:00:00,877.0,1,True,1,enrich,False,enrich_1_trial1_sec_play,ST,PL,MS,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+2798817d-708f-48c2-8a1b-c57dcac4b1e2,Playback,2025-03-12 00:00:00,877.0,1,True,1,enrich,False,enrich_1_trial1_sec_play,MS,PL,ST,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+2798817d-708f-48c2-8a1b-c57dcac4b1e2,Playback,2025-03-12 00:00:00,877.0,1,True,1,enrich,False,enrich_1_trial1_sec_play,ST,PL,MS,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+e374d507-c698-46b2-ac5d-3d12fd2b12cd,Playback,2025-03-12 00:00:00,879.0,1,True,1,enrich,False,enrich_1_trial1_sec_play,MS,PL,ST,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+e374d507-c698-46b2-ac5d-3d12fd2b12cd,Playback,2025-03-12 00:00:00,879.0,1,True,1,enrich,False,enrich_1_trial1_sec_play,ST,PL,MS,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+e374d507-c698-46b2-ac5d-3d12fd2b12cd,Playback,2025-03-12 00:00:00,879.0,1,True,1,enrich,False,enrich_1_trial1_sec_play,MS,PL,ST,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+e374d507-c698-46b2-ac5d-3d12fd2b12cd,Playback,2025-03-12 00:00:00,879.0,1,True,1,enrich,False,enrich_1_trial1_sec_play,ST,PL,MS,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+7814adef-1d0d-45b6-b431-04d4ddee7b74,Playback,2025-03-12 00:00:00,881.0,1,True,1,enrich,False,enrich_1_trial1_sec_play,MS,PL,ST,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+7814adef-1d0d-45b6-b431-04d4ddee7b74,Playback,2025-03-12 00:00:00,881.0,1,True,1,enrich,False,enrich_1_trial1_sec_play,ST,PL,MS,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+7814adef-1d0d-45b6-b431-04d4ddee7b74,Playback,2025-03-12 00:00:00,881.0,1,True,1,enrich,False,enrich_1_trial1_sec_play,MS,PL,ST,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+7814adef-1d0d-45b6-b431-04d4ddee7b74,Playback,2025-03-12 00:00:00,881.0,1,True,1,enrich,False,enrich_1_trial1_sec_play,ST,PL,MS,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+18d2059f-0ab6-4768-9201-af2906e3e05a,Playback,2025-03-12 00:00:00,883.0,1,True,1,enrich,False,enrich_1_trial1_sec_play,MS,PL,ST,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+18d2059f-0ab6-4768-9201-af2906e3e05a,Playback,2025-03-12 00:00:00,883.0,1,True,1,enrich,False,enrich_1_trial1_sec_play,ST,PL,MS,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+18d2059f-0ab6-4768-9201-af2906e3e05a,Playback,2025-03-12 00:00:00,883.0,1,True,1,enrich,False,enrich_1_trial1_sec_play,MS,PL,ST,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+18d2059f-0ab6-4768-9201-af2906e3e05a,Playback,2025-03-12 00:00:00,883.0,1,True,1,enrich,False,enrich_1_trial1_sec_play,ST,PL,MS,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+db2628fe-4b78-44c8-a4e7-5dfcb547086e,Playback,2025-03-12 00:00:00,885.0,1,True,1,enrich,False,enrich_1_trial1_sec_play,MS,PL,ST,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+db2628fe-4b78-44c8-a4e7-5dfcb547086e,Playback,2025-03-12 00:00:00,885.0,1,True,1,enrich,False,enrich_1_trial1_sec_play,ST,PL,MS,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+db2628fe-4b78-44c8-a4e7-5dfcb547086e,Playback,2025-03-12 00:00:00,885.0,1,True,1,enrich,False,enrich_1_trial1_sec_play,MS,PL,ST,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+db2628fe-4b78-44c8-a4e7-5dfcb547086e,Playback,2025-03-12 00:00:00,885.0,1,True,1,enrich,False,enrich_1_trial1_sec_play,ST,PL,MS,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+f6a68a06-652d-473b-bd08-4c8d4ae64ae0,Crow,2025-04-08 00:00:00,820.0,1,True,3,enrich,True,enrich_1_trial3_first_cont,ST,DS,,St scream and display,0,1,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0
+eb5879d6-a1cb-4427-b504-bf898f0b36fb,Crow,2025-04-09 00:00:00,581.0,1,True,3,morn1,False,morn1_1_trial3_sec_cont,NH,DS,,Displayed few seconds before,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+0ce95d64-9caa-4392-bd9a-ea5f9f9e9e1b,Crow,2025-04-09 00:00:00,615.0,1,True,3,morn1,False,morn1_1_trial3_sec_cont,ST,DS,,Displayed 20 seconds ago,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+0ce95d64-9caa-4392-bd9a-ea5f9f9e9e1b,Crow,2025-04-09 00:00:00,615.0,1,True,3,morn1,False,morn1_1_trial3_sec_cont,ST,DS,,Displayed 20 seconds ago,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+483f107a-e0b2-437f-8a16-7e5521a46444,Crow,2025-04-09 00:00:00,618.0,1,True,3,morn1,False,morn1_1_trial3_sec_cont,ST,DS,,,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+483f107a-e0b2-437f-8a16-7e5521a46444,Crow,2025-04-09 00:00:00,618.0,1,True,3,morn1,False,morn1_1_trial3_sec_cont,ST,DS,,,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+324aa967-b85a-47d9-9ed9-eb3d4cb48b2d,Crow,2025-04-09 00:00:00,690.0,1,True,3,morn2,False,morn2_1_trial3_sec_cont,ST,DS,,,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+e6721147-29ff-47ac-b3de-86134a581577,Crow,2025-04-09 00:00:00,695.0,1,True,3,morn2,False,morn2_1_trial3_sec_cont,ST,DS,,Displayed 10 seconds ago,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+c37905c2-6c4d-47a0-9da3-795807124ee6,Crow,2025-04-09 00:00:00,700.0,1,True,3,morn2,False,morn2_1_trial3_sec_cont,ST,DS,,,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+190a107d-1c26-44a5-9847-164e62fa1498,Playback,2025-04-21 00:00:00,575.0,1,True,4,morn1,True,morn1_1_trial4_first_play,ST,PL,NH,,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+190a107d-1c26-44a5-9847-164e62fa1498,Playback,2025-04-21 00:00:00,575.0,1,True,4,morn1,True,morn1_1_trial4_first_play,NH,PL,ST,,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+dbf5b039-2c5d-48ff-b460-0e3a927b52d7,Playback,2025-04-21 00:00:00,687.0,1,True,4,morn2,True,morn2_1_trial4_first_play,MS,PL,ST,,1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+dbf5b039-2c5d-48ff-b460-0e3a927b52d7,Playback,2025-04-21 00:00:00,687.0,1,True,4,morn2,True,morn2_1_trial4_first_play,ST,PL,MS,,1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+dbf5b039-2c5d-48ff-b460-0e3a927b52d7,Playback,2025-04-21 00:00:00,687.0,1,True,4,morn2,True,morn2_1_trial4_first_play,MS,PL,ST,,1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+dbf5b039-2c5d-48ff-b460-0e3a927b52d7,Playback,2025-04-21 00:00:00,687.0,1,True,4,morn2,True,morn2_1_trial4_first_play,ST,PL,MS,,1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+47650b7a-1bd6-4121-a718-28cc46d567a0,Playback,2025-04-22 00:00:00,583.0,1,True,4,morn1,False,morn1_1_trial4_sec_play,NH,DS,,Pan hoot towards cage c,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+9bbaa949-29a8-4976-9454-51d568aa569b,Playback,2025-04-22 00:00:00,678.0,1,True,4,morn2,False,morn2_1_trial4_sec_play,ST,DS,,,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+680a543f-5e61-4d08-bf2e-f4a7134bda73,Playback,2025-04-22 00:00:00,680.0,1,True,4,morn2,False,morn2_1_trial4_sec_play,ST,DS,,,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+d6a23649-62b4-4809-bfcc-5f5516cd5ddc,Playback,2025-04-22 00:00:00,681.0,1,True,4,morn2,False,morn2_1_trial4_sec_play,NH,DS,,Displayed,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+48f3b3f1-15d0-4b50-b6e9-e18dd9de4fe8,Playback,2025-04-22 00:00:00,684.0,1,True,4,morn2,False,morn2_1_trial4_sec_play,ST,PL,NH,,1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+48f3b3f1-15d0-4b50-b6e9-e18dd9de4fe8,Playback,2025-04-22 00:00:00,684.0,1,True,4,morn2,False,morn2_1_trial4_sec_play,NH,PL,ST,,1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+427e1132-5a8d-4e21-8340-ef0e2138ed8d,Playback,2025-04-22 00:00:00,686.0,1,True,4,morn2,False,morn2_1_trial4_sec_play,ST,PL,NH,,1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+427e1132-5a8d-4e21-8340-ef0e2138ed8d,Playback,2025-04-22 00:00:00,686.0,1,True,4,morn2,False,morn2_1_trial4_sec_play,NH,PL,ST,,1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+2f92f495-8d14-450e-8e16-d7a8cdda0fc0,Playback,2025-04-22 00:00:00,688.0,1,True,4,morn2,False,morn2_1_trial4_sec_play,ST,PL,NH,,1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+2f92f495-8d14-450e-8e16-d7a8cdda0fc0,Playback,2025-04-22 00:00:00,688.0,1,True,4,morn2,False,morn2_1_trial4_sec_play,NH,PL,ST,,1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+823e0128-be98-43ef-a7de-48e44bd08c3c,Playback,2025-04-22 00:00:00,690.0,1,True,4,morn2,False,morn2_1_trial4_sec_play,ST,PL,NH,,1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+823e0128-be98-43ef-a7de-48e44bd08c3c,Playback,2025-04-22 00:00:00,690.0,1,True,4,morn2,False,morn2_1_trial4_sec_play,NH,PL,ST,,1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+589acbf7-d2bd-475d-819f-8be323479fef,Crow,2025-03-14 00:00:00,584.0,UNKNOWN_DATE,True,1,morn1,True,morn1_UNKNOWN_DATE_trial1_first_cont,NR,PL,MN,,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+7ee79de3-115d-40ac-9cd0-bd881b5cca62,Crow,2025-03-14 00:00:00,586.0,UNKNOWN_DATE,True,1,morn1,True,morn1_UNKNOWN_DATE_trial1_first_cont,NR,PL,MN,,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+a34e9985-10cd-4907-a518-00e9e716ca09,Crow,2025-03-14 00:00:00,588.0,UNKNOWN_DATE,True,1,morn1,True,morn1_UNKNOWN_DATE_trial1_first_cont,NR,PL,MN,,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+a34e9985-10cd-4907-a518-00e9e716ca09,Crow,2025-03-14 00:00:00,588.0,UNKNOWN_DATE,True,1,morn1,True,morn1_UNKNOWN_DATE_trial1_first_cont,MN,PL,NR,,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+895c7f1b-5c49-4cfb-b3d5-a444c759daa8,Crow,2025-03-14 00:00:00,608.0,UNKNOWN_DATE,True,1,morn1,True,morn1_UNKNOWN_DATE_trial1_first_cont,MN,PL,,Playing with a bottle,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+37389303-c253-4154-8ec0-1c684fed8e49,Crow,2025-03-14 00:00:00,616.0,UNKNOWN_DATE,True,1,morn1,True,morn1_UNKNOWN_DATE_trial1_first_cont,NH,DS,,Towards cage c,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+37389303-c253-4154-8ec0-1c684fed8e49,Crow,2025-03-14 00:00:00,616.0,UNKNOWN_DATE,True,1,morn1,True,morn1_UNKNOWN_DATE_trial1_first_cont,MN,DS,,Towards cage c,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+4cf78534-4969-468f-8e3f-46817c70d734,Crow,2025-03-14 00:00:00,628.0,UNKNOWN_DATE,True,1,morn1,True,morn1_UNKNOWN_DATE_trial1_first_cont,NR,PL,,Playing with a bottle,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+c934b92c-f194-4b67-8425-0174a72af684,Crow,2025-03-14 00:00:00,630.0,UNKNOWN_DATE,True,1,morn1,True,morn1_UNKNOWN_DATE_trial1_first_cont,NR,PL,,,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+c934b92c-f194-4b67-8425-0174a72af684,Crow,2025-03-14 00:00:00,630.0,UNKNOWN_DATE,True,1,morn1,True,morn1_UNKNOWN_DATE_trial1_first_cont,MN,PL,,,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+0a61340a-660d-4d6a-97e5-f469015cc92c,Crow,2025-03-14 00:00:00,828.0,UNKNOWN_DATE,True,1,enrich,True,enrich_UNKNOWN_DATE_trial1_first_cont,NH,PL,NR,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+0a61340a-660d-4d6a-97e5-f469015cc92c,Crow,2025-03-14 00:00:00,828.0,UNKNOWN_DATE,True,1,enrich,True,enrich_UNKNOWN_DATE_trial1_first_cont,NR,PL,NH,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+56d5bda0-86ba-4562-9964-c203e238bbd0,Crow,2025-03-14 00:00:00,829.0,UNKNOWN_DATE,True,1,enrich,True,enrich_UNKNOWN_DATE_trial1_first_cont,NH,PL,NR,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+56d5bda0-86ba-4562-9964-c203e238bbd0,Crow,2025-03-14 00:00:00,829.0,UNKNOWN_DATE,True,1,enrich,True,enrich_UNKNOWN_DATE_trial1_first_cont,NR,PL,NH,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+6ef88271-c776-4cc2-83c0-d5f118d717df,Crow,2025-03-14 00:00:00,831.0,UNKNOWN_DATE,True,1,enrich,True,enrich_UNKNOWN_DATE_trial1_first_cont,NH,PL,NR,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+6ef88271-c776-4cc2-83c0-d5f118d717df,Crow,2025-03-14 00:00:00,831.0,UNKNOWN_DATE,True,1,enrich,True,enrich_UNKNOWN_DATE_trial1_first_cont,NR,PL,NH,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+67efdec0-419d-42dd-a9c3-013cdf30371c,Crow,2025-03-14 00:00:00,833.0,UNKNOWN_DATE,True,1,enrich,True,enrich_UNKNOWN_DATE_trial1_first_cont,NH,PL,NR,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+67efdec0-419d-42dd-a9c3-013cdf30371c,Crow,2025-03-14 00:00:00,833.0,UNKNOWN_DATE,True,1,enrich,True,enrich_UNKNOWN_DATE_trial1_first_cont,NR,PL,NH,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+19aeb07d-44b1-494a-82a5-e69e125c1002,Playback,2025-03-23 00:00:00,591.0,2,True,2,morn1,True,morn1_2_trial2_first_play,NR,PL,MN,,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+19aeb07d-44b1-494a-82a5-e69e125c1002,Playback,2025-03-23 00:00:00,591.0,2,True,2,morn1,True,morn1_2_trial2_first_play,MN,PL,NR,,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+fcd3521a-0d39-4c28-b305-49996f48a378,Playback,2025-03-23 00:00:00,813.0,2,True,2,enrich,True,enrich_2_trial2_first_play,NH,PL,NR,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+fcd3521a-0d39-4c28-b305-49996f48a378,Playback,2025-03-23 00:00:00,813.0,2,True,2,enrich,True,enrich_2_trial2_first_play,NR,PL,NH,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+976dcfe0-0817-43da-aa5d-00a9c9ea7d52,Playback,2025-03-23 00:00:00,815.0,2,True,2,enrich,True,enrich_2_trial2_first_play,NH,PL,NR,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+976dcfe0-0817-43da-aa5d-00a9c9ea7d52,Playback,2025-03-23 00:00:00,815.0,2,True,2,enrich,True,enrich_2_trial2_first_play,NR,PL,NH,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+251f372c-f46d-48b2-af1a-1e875d3e8577,Playback,2025-03-24 00:00:00,588.0,2,True,2,morn1,False,morn1_2_trial2_sec_play,NR,PL,MN,,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+251f372c-f46d-48b2-af1a-1e875d3e8577,Playback,2025-03-24 00:00:00,588.0,2,True,2,morn1,False,morn1_2_trial2_sec_play,MN,PL,NR,,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+222b219a-f5ff-43d5-88c6-cc15d0be156e,Playback,2025-03-24 00:00:00,624.0,2,True,2,morn1,False,morn1_2_trial2_sec_play,NR,PL,MN,,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+222b219a-f5ff-43d5-88c6-cc15d0be156e,Playback,2025-03-24 00:00:00,624.0,2,True,2,morn1,False,morn1_2_trial2_sec_play,MN,PL,NR,,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+3939f477-0d62-4b91-b651-436b5452a7d7,Playback,2025-03-24 00:00:00,626.0,2,True,2,morn1,False,morn1_2_trial2_sec_play,NR,PL,MN,,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+3939f477-0d62-4b91-b651-436b5452a7d7,Playback,2025-03-24 00:00:00,626.0,2,True,2,morn1,False,morn1_2_trial2_sec_play,MN,PL,NR,,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+cb0e0c90-c1b7-4a39-824d-ce4ca3932c78,Playback,2025-03-24 00:00:00,628.0,2,True,2,morn1,False,morn1_2_trial2_sec_play,NR,PL,MN,,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+cb0e0c90-c1b7-4a39-824d-ce4ca3932c78,Playback,2025-03-24 00:00:00,628.0,2,True,2,morn1,False,morn1_2_trial2_sec_play,MN,PL,NR,,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+3287e783-21b1-47e3-8222-70a568353ee6,Playback,2025-03-24 00:00:00,842.0,2,True,2,enrich,False,enrich_2_trial2_sec_play,NH,PL,NR,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+3287e783-21b1-47e3-8222-70a568353ee6,Playback,2025-03-24 00:00:00,842.0,2,True,2,enrich,False,enrich_2_trial2_sec_play,NR,PL,NH,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+b445b66c-d5be-4213-a185-f9b1adacffb9,Playback,2025-03-24 00:00:00,848.0,2,True,2,enrich,False,enrich_2_trial2_sec_play,NH,PL,NR,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+b445b66c-d5be-4213-a185-f9b1adacffb9,Playback,2025-03-24 00:00:00,848.0,2,True,2,enrich,False,enrich_2_trial2_sec_play,NR,PL,NH,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+08e9142c-8e54-4ce6-a49b-8046567ab424,Playback,2025-03-24 00:00:00,852.0,2,True,2,enrich,False,enrich_2_trial2_sec_play,NH,PL,NR,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+08e9142c-8e54-4ce6-a49b-8046567ab424,Playback,2025-03-24 00:00:00,852.0,2,True,2,enrich,False,enrich_2_trial2_sec_play,NR,PL,NH,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+5f4b277d-bbf3-461b-abe7-f4efa11ffa49,Playback,2025-04-26 00:00:00,588.0,2,True,5,morn1,True,morn1_2_trial5_first_play,MN,DS,,AG TOWARD LN,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+4a308e05-a0fd-4dad-941f-46c3c7947ee8,Playback,2025-04-26 00:00:00,590.0,2,True,5,morn1,True,morn1_2_trial5_first_play,MN,DS,,,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+79775ab3-2b39-42ae-8515-0669aa358a8d,Playback,2025-04-26 00:00:00,594.0,2,True,5,morn1,True,morn1_2_trial5_first_play,NH,DS,,,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+79775ab3-2b39-42ae-8515-0669aa358a8d,Playback,2025-04-26 00:00:00,594.0,2,True,5,morn1,True,morn1_2_trial5_first_play,LN,PL,MN,,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+79775ab3-2b39-42ae-8515-0669aa358a8d,Playback,2025-04-26 00:00:00,594.0,2,True,5,morn1,True,morn1_2_trial5_first_play,MN,PL,LN,,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+db90d2af-6f38-4952-970c-d8f98f8fa937,Playback,2025-04-26 00:00:00,596.0,2,True,5,morn1,True,morn1_2_trial5_first_play,NH,PL,MN,,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+db90d2af-6f38-4952-970c-d8f98f8fa937,Playback,2025-04-26 00:00:00,596.0,2,True,5,morn1,True,morn1_2_trial5_first_play,LN,PL,NR,,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+db90d2af-6f38-4952-970c-d8f98f8fa937,Playback,2025-04-26 00:00:00,596.0,2,True,5,morn1,True,morn1_2_trial5_first_play,NR,PL,LN,,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+db90d2af-6f38-4952-970c-d8f98f8fa937,Playback,2025-04-26 00:00:00,596.0,2,True,5,morn1,True,morn1_2_trial5_first_play,MN,PL,NH,,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+8a8b74a5-a11b-428b-a922-dc1ff677620a,Playback,2025-04-26 00:00:00,598.0,2,True,5,morn1,True,morn1_2_trial5_first_play,NH,PL,"NR, MN",,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+8a8b74a5-a11b-428b-a922-dc1ff677620a,Playback,2025-04-26 00:00:00,598.0,2,True,5,morn1,True,morn1_2_trial5_first_play,NR,PL,,,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+8a8b74a5-a11b-428b-a922-dc1ff677620a,Playback,2025-04-26 00:00:00,598.0,2,True,5,morn1,True,morn1_2_trial5_first_play,MN,PL,"NH, NR",,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+d6984ed7-4480-4de7-95c9-130112c831a6,Playback,2025-04-26 00:00:00,646.0,2,True,5,morn2,True,morn2_2_trial5_first_play,NH,DS,,,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+4f23296d-bcc4-4caa-b766-5b25dee59847,Playback,2025-04-27 00:00:00,576.0,2,True,5,morn1,False,morn1_2_trial5_sec_play,NH,DS,,Pan hoot,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+4f23296d-bcc4-4caa-b766-5b25dee59847,Playback,2025-04-27 00:00:00,575.0,2,True,5,morn1,False,morn1_2_trial5_sec_play,NH,DS,,Pan hoot,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+4f23296d-bcc4-4caa-b766-5b25dee59847,Playback,2025-04-27 00:00:00,575.0,2,True,5,morn1,False,morn1_2_trial5_sec_play,NR,DS,,,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+4f23296d-bcc4-4caa-b766-5b25dee59847,Playback,2025-04-27 00:00:00,575.0,2,True,5,morn1,False,morn1_2_trial5_sec_play,MN,AG,,AG-Spited water towards cage a,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+8bb2fd62-3af7-47c6-9c76-44bc7101754a,Playback,2025-04-27 00:00:00,854.0,2,True,5,enrich,False,enrich_2_trial5_sec_play,NH,PL,"MN, NR",,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+8bb2fd62-3af7-47c6-9c76-44bc7101754a,Playback,2025-04-27 00:00:00,854.0,2,True,5,enrich,False,enrich_2_trial5_sec_play,NR,PL,"NH, MN",,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+8bb2fd62-3af7-47c6-9c76-44bc7101754a,Playback,2025-04-27 00:00:00,854.0,2,True,5,enrich,False,enrich_2_trial5_sec_play,MN,PL,"NR, NH",,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+098aae89-c70f-44b9-8687-e838842cbed2,Crow,2025-05-04 00:00:00,610.0,2,True,6,morn1,True,morn1_2_trial6_first_cont,MN,DS,,,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+e3a360e3-900c-485c-bfff-79027a3003e7,Crow,2025-05-04 00:00:00,611.0,2,True,6,morn1,True,morn1_2_trial6_first_cont,NH,DS,,,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+e3a360e3-900c-485c-bfff-79027a3003e7,Crow,2025-05-04 00:00:00,611.0,2,True,6,morn1,True,morn1_2_trial6_first_cont,MN,DS,,Towards cage c,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+585dc681-7739-4fc3-82c7-a68e7496891d,Crow,2025-05-04 00:00:00,856.0,2,True,6,enrich,True,enrich_2_trial6_first_cont,LN,PL,NR,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+585dc681-7739-4fc3-82c7-a68e7496891d,Crow,2025-05-04 00:00:00,856.0,2,True,6,enrich,True,enrich_2_trial6_first_cont,NR,PL,LN,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+7b8ab5eb-1b1b-4ff7-b3a0-eef6674d8999,Crow,2025-05-04 00:00:00,859.0,2,True,6,enrich,True,enrich_2_trial6_first_cont,LN,PL,NR,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+7b8ab5eb-1b1b-4ff7-b3a0-eef6674d8999,Crow,2025-05-04 00:00:00,859.0,2,True,6,enrich,True,enrich_2_trial6_first_cont,NR,PL,LN,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+b3f0c857-dfdb-438e-9741-a0ec88087513,Crow,2025-05-04 00:00:00,860.0,2,True,6,enrich,True,enrich_2_trial6_first_cont,LN,PL,NR,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+b3f0c857-dfdb-438e-9741-a0ec88087513,Crow,2025-05-04 00:00:00,860.0,2,True,6,enrich,True,enrich_2_trial6_first_cont,NR,PL,LN,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+5535abe4-1b81-4110-b794-648c87d66f9f,Crow,2025-05-04 00:00:00,864.0,2,True,6,enrich,True,enrich_2_trial6_first_cont,NH,PL,NR,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+5535abe4-1b81-4110-b794-648c87d66f9f,Crow,2025-05-04 00:00:00,864.0,2,True,6,enrich,True,enrich_2_trial6_first_cont,NR,PL,NH,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+9769d5f1-5b35-4775-a0f9-940939268bfc,Crow,2025-05-04 00:00:00,867.0,2,True,6,enrich,True,enrich_2_trial6_first_cont,NH,PL,NR,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+9769d5f1-5b35-4775-a0f9-940939268bfc,Crow,2025-05-04 00:00:00,867.0,2,True,6,enrich,True,enrich_2_trial6_first_cont,NR,PL,NH,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+f5fdc5a1-1499-4128-a155-cff1d8a18017,Crow,2025-05-19 00:00:00,616.0,2,True,7,morn1,True,morn1_2_trial7_first_cont,MN,DS,,,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+84b6eb6b-8259-40cc-a8b7-41ef420b46f9,Crow,2025-05-19 00:00:00,618.0,2,True,7,morn1,True,morn1_2_trial7_first_cont,MN,DS,,,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+0ca64fd8-4b09-4dc3-9d63-86a8ae0339f8,Crow,2025-05-19 00:00:00,620.0,2,True,7,morn1,True,morn1_2_trial7_first_cont,NH,DS,,Towards cage c,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+0ca64fd8-4b09-4dc3-9d63-86a8ae0339f8,Crow,2025-05-19 00:00:00,620.0,2,True,7,morn1,True,morn1_2_trial7_first_cont,MN,DS,,Display towards cage c and then runs away,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+d0479311-f0f4-4c78-a8a7-a141ac5cd3bb,Crow,2025-05-20 00:00:00,690.0,2,True,7,morn2,False,morn2_2_trial7_sec_cont,NH,RS,,,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+d0479311-f0f4-4c78-a8a7-a141ac5cd3bb,Crow,2025-05-20 00:00:00,690.0,2,True,7,morn2,False,morn2_2_trial7_sec_cont,MN,DS,,Towards cage c,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+fa1173c5-fdae-4a79-a07b-615427603b70,Playback,2025-05-30 00:00:00,866.0,2,True,7,enrich,True,enrich_2_trial7_first_play,NR,PL,,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+fa1173c5-fdae-4a79-a07b-615427603b70,Playback,2025-05-30 00:00:00,866.0,2,True,7,enrich,True,enrich_2_trial7_first_play,MN,PL,,Minato Norio play,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+f341e77c-c1ff-4de0-90fa-2723120e335b,Playback,2025-05-30 00:00:00,869.0,2,True,7,enrich,True,enrich_2_trial7_first_play,NR,PL,,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+f341e77c-c1ff-4de0-90fa-2723120e335b,Playback,2025-05-30 00:00:00,869.0,2,True,7,enrich,True,enrich_2_trial7_first_play,MN,PL,,Minato Norio play,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+e7aa0734-8663-41c9-aed0-b5cba8f4cfbe,Playback,2025-05-31 00:00:00,588.0,2,True,7,morn1,False,morn1_2_trial7_sec_play,NR,PL,,,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+e7aa0734-8663-41c9-aed0-b5cba8f4cfbe,Playback,2025-05-31 00:00:00,588.0,2,True,7,morn1,False,morn1_2_trial7_sec_play,MN,PL,,Norio Minato play,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+d233dd38-e546-4d3f-a7a5-5ed500477ba0,Playback,2025-05-31 00:00:00,846.0,2,True,7,enrich,False,enrich_2_trial7_sec_play,NR,PL,,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+d233dd38-e546-4d3f-a7a5-5ed500477ba0,Playback,2025-05-31 00:00:00,846.0,2,True,7,enrich,False,enrich_2_trial7_sec_play,MN,PL,,Minato Naoya played,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+d97395a8-f967-45bf-ad22-6c3f2b76f04a,Playback,2025-05-31 00:00:00,859.0,2,True,7,enrich,False,enrich_2_trial7_sec_play,NR,PL,,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+d97395a8-f967-45bf-ad22-6c3f2b76f04a,Playback,2025-05-31 00:00:00,859.0,2,True,7,enrich,False,enrich_2_trial7_sec_play,MN,PL,,Norio Minato play,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+a2b04628-495d-4a6d-aa06-afbedb5b9bea,Crow,2025-04-16 00:00:00,579.0,3,True,4,morn1,True,morn1_3_trial4_first_cont,MN,DS,,Towards cage c,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+f3e5dfea-8396-4bf4-b44a-8a3d62935e7e,Crow,2025-04-16 00:00:00,583.0,3,True,4,morn1,True,morn1_3_trial4_first_cont,NH,DS,,,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+f3e5dfea-8396-4bf4-b44a-8a3d62935e7e,Crow,2025-04-16 00:00:00,583.0,3,True,4,morn1,True,morn1_3_trial4_first_cont,NH,DS,,,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+f3e5dfea-8396-4bf4-b44a-8a3d62935e7e,Crow,2025-04-16 00:00:00,583.0,3,True,4,morn1,True,morn1_3_trial4_first_cont,MN,DS,,Displayed pan hoot,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+9e7f4adf-46b9-4050-90ff-ad45ab1c7ff0,Crow,2025-04-16 00:00:00,653.0,3,True,4,morn2,True,morn2_3_trial4_first_cont,NH,AG,"MN, NY",,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+9e7f4adf-46b9-4050-90ff-ad45ab1c7ff0,Crow,2025-04-16 00:00:00,653.0,3,True,4,morn2,True,morn2_3_trial4_first_cont,MN,AG,"NH, NY",Ag towards ny,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+9e7f4adf-46b9-4050-90ff-ad45ab1c7ff0,Crow,2025-04-16 00:00:00,653.0,3,True,4,morn2,True,morn2_3_trial4_first_cont,NY,AG,"NH, MN",,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+1c807d5f-f6ee-4f99-8262-7093058d0410,Crow,2025-04-16 00:00:00,656.0,3,True,4,morn2,True,morn2_3_trial4_first_cont,MS,DS,,All for of them displayed toward cage c,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+1c807d5f-f6ee-4f99-8262-7093058d0410,Crow,2025-04-16 00:00:00,656.0,3,True,4,morn2,True,morn2_3_trial4_first_cont,NH,DS,,,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+1c807d5f-f6ee-4f99-8262-7093058d0410,Crow,2025-04-16 00:00:00,656.0,3,True,4,morn2,True,morn2_3_trial4_first_cont,MN,DS,,,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+1c807d5f-f6ee-4f99-8262-7093058d0410,Crow,2025-04-16 00:00:00,656.0,3,True,4,morn2,True,morn2_3_trial4_first_cont,NY,DS,,,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+96b5bc45-609a-4e46-942d-899748f2e30b,Crow,2025-04-16 00:00:00,657.0,3,True,4,morn2,True,morn2_3_trial4_first_cont,MS,DS,,,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+96b5bc45-609a-4e46-942d-899748f2e30b,Crow,2025-04-16 00:00:00,657.0,3,True,4,morn2,True,morn2_3_trial4_first_cont,NH,DS,,,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+96b5bc45-609a-4e46-942d-899748f2e30b,Crow,2025-04-16 00:00:00,657.0,3,True,4,morn2,True,morn2_3_trial4_first_cont,MN,DS,,,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+96b5bc45-609a-4e46-942d-899748f2e30b,Crow,2025-04-16 00:00:00,657.0,3,True,4,morn2,True,morn2_3_trial4_first_cont,NY,DS,,All of them displayed toward cage c,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+f01b9606-a535-4c4a-834f-f7659f6475b8,Crow,2025-04-17 00:00:00,881.0,3,True,4,enrich,False,enrich_3_trial4_sec_cont,MS,PL,NY,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+f01b9606-a535-4c4a-834f-f7659f6475b8,Crow,2025-04-17 00:00:00,881.0,3,True,4,enrich,False,enrich_3_trial4_sec_cont,NY,PL,MS,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+1633cc6d-7444-45df-bae9-a1296ff55643,Crow,2025-04-30 00:00:00,608.0,3,True,5,morn1,True,morn1_3_trial5_first_cont,MN,AG,,Ag towards cage c,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+1633cc6d-7444-45df-bae9-a1296ff55643,Crow,2025-04-30 00:00:00,608.0,3,True,5,morn1,True,morn1_3_trial5_first_cont,MN,DS,,Ag towards cage c,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+7c5f2bdd-596a-40b6-a8c0-50fb1a5ea65d,Crow,2025-04-30 00:00:00,620.0,3,True,5,morn1,True,morn1_3_trial5_first_cont,MS,PL,NY,,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+7c5f2bdd-596a-40b6-a8c0-50fb1a5ea65d,Crow,2025-04-30 00:00:00,620.0,3,True,5,morn1,True,morn1_3_trial5_first_cont,NY,PL,MS,,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+c4e4ddc5-7b29-4cae-a6b3-f9fdad537e26,Crow,2025-04-30 00:00:00,622.0,3,True,5,morn1,True,morn1_3_trial5_first_cont,MS,PL,NY,,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+c4e4ddc5-7b29-4cae-a6b3-f9fdad537e26,Crow,2025-04-30 00:00:00,622.0,3,True,5,morn1,True,morn1_3_trial5_first_cont,NY,PL,MS,,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+7d19fe0a-98e5-4f45-bfff-aab5eff828ea,Crow,2025-04-30 00:00:00,624.0,3,True,5,morn1,True,morn1_3_trial5_first_cont,MS,PL,NY,,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+7d19fe0a-98e5-4f45-bfff-aab5eff828ea,Crow,2025-04-30 00:00:00,624.0,3,True,5,morn1,True,morn1_3_trial5_first_cont,NY,PL,MS,,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+14b4f314-6807-4296-a002-f7864aa0cdb3,Crow,2025-04-30 00:00:00,798.0,3,True,5,enrich,True,enrich_3_trial5_first_cont,NY,AG,MS,Towards MS,0,1,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0
+e49d37a8-6aad-444a-a0d9-ed75f9aaad62,Crow,2025-04-30 00:00:00,806.0,3,True,5,enrich,True,enrich_3_trial5_first_cont,MN,AG,,Towards cage c,0,1,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0
+1a889edf-4872-4e2e-9289-4627e9e5145c,Crow,2025-04-30 00:00:00,838.0,3,True,5,enrich,True,enrich_3_trial5_first_cont,MS,AG,,AG TOWARDS NY,0,1,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0
+ef6cfab1-3700-4470-82dc-f7b09cada5bf,Crow,2025-05-01 00:00:00,611.0,3,True,5,morn1,False,morn1_3_trial5_sec_cont,MN,AG,,Towards cage c,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+a194f187-e0dc-4fb7-8f90-089c5f5bbba1,Crow,2025-05-01 00:00:00,613.0,3,True,5,morn1,False,morn1_3_trial5_sec_cont,NH,DS,,Towards cage c,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+a194f187-e0dc-4fb7-8f90-089c5f5bbba1,Crow,2025-05-01 00:00:00,613.0,3,True,5,morn1,False,morn1_3_trial5_sec_cont,MN,DS,,Towards cage c,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+77597533-b63b-4103-87b8-57279ab1e9da,Crow,2025-05-01 00:00:00,615.0,3,True,5,morn1,False,morn1_3_trial5_sec_cont,NH,AG,,Towards cage c,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+77f63139-8051-4f35-b7f8-2a4c6685c15d,Crow,2025-05-01 00:00:00,663.0,3,True,5,morn2,False,morn2_3_trial5_sec_cont,MS,PL,NY,,1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+77f63139-8051-4f35-b7f8-2a4c6685c15d,Crow,2025-05-01 00:00:00,663.0,3,True,5,morn2,False,morn2_3_trial5_sec_cont,NY,PL,MS,,1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+1a21849d-25b2-4991-acbc-5cdb128e8799,Crow,2025-05-01 00:00:00,665.0,3,True,5,morn2,False,morn2_3_trial5_sec_cont,MS,PL,NY,,1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+1a21849d-25b2-4991-acbc-5cdb128e8799,Crow,2025-05-01 00:00:00,665.0,3,True,5,morn2,False,morn2_3_trial5_sec_cont,NY,PL,MS,,1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+47002f4d-a318-43c5-a2a9-282be2496a20,Crow,2025-05-01 00:00:00,667.0,3,True,5,morn2,False,morn2_3_trial5_sec_cont,MS,PL,NY,,1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+47002f4d-a318-43c5-a2a9-282be2496a20,Crow,2025-05-01 00:00:00,667.0,3,True,5,morn2,False,morn2_3_trial5_sec_cont,NY,PL,MS,,1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+116b0769-9c10-4d37-a141-6b15c6eefb8a,Crow,2025-05-01 00:00:00,669.0,3,True,5,morn2,False,morn2_3_trial5_sec_cont,MS,PL,NY,,1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+116b0769-9c10-4d37-a141-6b15c6eefb8a,Crow,2025-05-01 00:00:00,669.0,3,True,5,morn2,False,morn2_3_trial5_sec_cont,NY,PL,MS,,1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+a7d514f9-4d2d-4aca-b9c4-bc869fc0c352,Crow,2025-05-01 00:00:00,671.0,3,True,5,morn2,False,morn2_3_trial5_sec_cont,MS,PL,NY,,1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+a7d514f9-4d2d-4aca-b9c4-bc869fc0c352,Crow,2025-05-01 00:00:00,671.0,3,True,5,morn2,False,morn2_3_trial5_sec_cont,NY,PL,MS,,1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+5cf73e78-6a0f-45e8-9314-796f62e0078b,Crow,2025-05-01 00:00:00,673.0,3,True,5,morn2,False,morn2_3_trial5_sec_cont,MS,PL,NY,,1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+5cf73e78-6a0f-45e8-9314-796f62e0078b,Crow,2025-05-01 00:00:00,673.0,3,True,5,morn2,False,morn2_3_trial5_sec_cont,NY,PL,MS,,1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+16b23895-d4fb-4b5a-b0ad-369f97db1ba7,Crow,2025-05-01 00:00:00,675.0,3,True,5,morn2,False,morn2_3_trial5_sec_cont,MS,PL,NY,,1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+16b23895-d4fb-4b5a-b0ad-369f97db1ba7,Crow,2025-05-01 00:00:00,675.0,3,True,5,morn2,False,morn2_3_trial5_sec_cont,NY,PL,MS,,1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+1ffbee03-6fe3-4bc5-a6f3-2025976c5e65,Crow,2025-05-01 00:00:00,677.0,3,True,5,morn2,False,morn2_3_trial5_sec_cont,MS,PL,NY,,1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+1ffbee03-6fe3-4bc5-a6f3-2025976c5e65,Crow,2025-05-01 00:00:00,677.0,3,True,5,morn2,False,morn2_3_trial5_sec_cont,NY,PL,MS,,1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+12a5383b-eacc-477c-895f-b31373242f98,Crow,2025-05-01 00:00:00,817.0,3,True,5,enrich,False,enrich_3_trial5_sec_cont,MS,PL,NY,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+12a5383b-eacc-477c-895f-b31373242f98,Crow,2025-05-01 00:00:00,817.0,3,True,5,enrich,False,enrich_3_trial5_sec_cont,NY,PL,MS,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+4e7dfab7-6087-44f6-aa87-05eb126bb2d9,Playback,2025-05-15 00:00:00,630.0,3,True,6,morn1,False,morn1_3_trial6_sec_play,MN,DS,,Displayed toward cage a,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+d9b1b2fa-cea3-42e0-9951-c94b94984aca,Playback,2025-05-15 00:00:00,646.0,3,True,6,morn2,False,morn2_3_trial6_sec_play,NY,AG,,AG towards MS,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+3d03a54d-cec2-4479-8d8e-6bec75deb0eb,Playback,2025-05-15 00:00:00,871.0,3,True,6,enrich,False,enrich_3_trial6_sec_play,MS,DS,,,0,1,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0
+954492ca-1553-45ea-a109-50c9adce65aa,Playback,2025-04-04 00:00:00,686.0,3,True,3,morn2,False,morn2_3_trial3_sec_play,MZ,DS,,,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+5281e1ee-e9be-4c12-8de1-245179b0bafd,Playback,2025-04-04 00:00:00,688.0,3,True,3,morn2,False,morn2_3_trial3_sec_play,MZ,DS,,,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+2231b58b-fb10-4a89-9c06-c9cd31e78c93,Playback,2025-04-04 00:00:00,690.0,3,True,3,morn2,False,morn2_3_trial3_sec_play,MZ,DS,,,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+11a22ea1-6708-4eba-807a-1b2d6e4642c1,Playback,2025-04-04 00:00:00,704.0,3,True,3,morn2,False,morn2_3_trial3_sec_play,MZ,PL,NR,,1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+d39a1d58-f5df-4baa-bd70-2ee5b1ee1c92,Playback,2025-04-04 00:00:00,851.0,3,True,3,enrich,False,enrich_3_trial3_sec_play,MZ,DS,,,0,1,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0
+b47b6642-3664-49ec-9577-91a85d38226a,Playback,2025-04-04 00:00:00,853.0,3,True,3,enrich,False,enrich_3_trial3_sec_play,MZ,DS,,,0,1,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0
+5eab034d-ae7a-4d4f-ac1c-c2f1876c7467,Crow,2025-04-16 00:00:00,576.0,3,True,4,morn1,True,morn1_3_trial4_first_cont,MZ,DS,,,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+f1624119-c99f-4050-86ec-b4c6dc3278a1,Crow,2025-04-16 00:00:00,582.0,3,True,4,morn1,True,morn1_3_trial4_first_cont,MZ,DS,,,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+dd32b829-7524-4ea0-aa3d-d2e62a028d7a,Crow,2025-04-30 00:00:00,581.0,3,True,5,morn1,True,morn1_3_trial5_first_cont,MZ,PL,NR,,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+d3341bf2-de36-455a-a8b0-ff0c7f97b647,Playback,2025-05-14 00:00:00,649.0,3,True,6,morn2,True,morn2_3_trial6_first_play,MZ,PL,LN,,1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+3b8cba56-db76-4f95-ad89-491bf5ddcc89,Playback,2025-05-14 00:00:00,655.0,3,True,6,morn2,True,morn2_3_trial6_first_play,MZ,DS,,,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+d9048aef-ae84-4883-a76d-34f39e438c03,Playback,2025-05-15 00:00:00,884.0,3,True,6,enrich,False,enrich_3_trial6_sec_play,SB,PL,LN,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+895776ab-9022-4867-9b31-72e7c96cd452,Crow,2025-05-01 00:00:00,848.0,3,True,5,enrich,False,enrich_3_trial5_sec_cont,SB,PL,NR,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+a4c0131e-f028-4e20-9c39-a26e87519b32,Crow,2025-05-01 00:00:00,602.0,3,True,5,morn1,False,morn1_3_trial5_sec_cont,SB,PL,NR,,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+43aa72c0-f947-46d0-b8cd-d37a9a0a59b1,Crow,2025-04-30 00:00:00,661.0,3,True,5,morn2,True,morn2_3_trial5_first_cont,SB,PL,NR,,1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+694f7a78-d7f2-43af-afce-a3a11e5dac1f,Crow,2025-04-30 00:00:00,575.0,3,True,5,morn1,True,morn1_3_trial5_first_cont,SB,PL,NR,,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+eb35670e-ac5e-4c7a-b9a9-3a24b907491a,Crow,2025-04-16 00:00:00,656.0,3,True,4,morn2,True,morn2_3_trial4_first_cont,SB,AG,,,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+d86a036f-bc1d-4ee5-8a69-cb4138aba374,Crow,2025-04-16 00:00:00,600.0,3,True,4,morn1,True,morn1_3_trial4_first_cont,SB,DS,,,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+78b7a1eb-0ebe-4d35-a0d1-2eeb5ca0743f,Crow,2025-04-16 00:00:00,602.0,3,True,4,morn1,True,morn1_3_trial4_first_cont,SB,DS,,,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+43c913ef-438b-4741-8bff-a1cb6c41a537,Crow,2025-04-17 00:00:00,858.0,3,True,4,enrich,False,enrich_3_trial4_sec_cont,GG,PL,NR,,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+954492ca-1553-45ea-a109-50c9adce65aa,Playback,2025-04-04 00:00:00,686.0,3,True,3,morn2,False,morn2_3_trial3_sec_play,NR,DS,,,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+5281e1ee-e9be-4c12-8de1-245179b0bafd,Playback,2025-04-04 00:00:00,688.0,3,True,3,morn2,False,morn2_3_trial3_sec_play,NR,DS,,,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+2231b58b-fb10-4a89-9c06-c9cd31e78c93,Playback,2025-04-04 00:00:00,690.0,3,True,3,morn2,False,morn2_3_trial3_sec_play,NR,DS,,,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+d3991c58-5c27-46e9-97c7-f21353189ebe,Playback,2025-04-04 00:00:00,692.0,3,True,3,morn2,False,morn2_3_trial3_sec_play,NR,DS,,,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+1b38d355-7448-485a-b1ee-80b9faffe9cc,Playback,2025-04-04 00:00:00,696.0,3,True,3,morn2,False,morn2_3_trial3_sec_play,NR,DS,,,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+963f9db0-45f6-44ad-8c3b-16958d610ac6,Playback,2025-04-04 00:00:00,696.0,3,True,3,morn2,False,morn2_3_trial3_sec_play,NR,DS,,,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+df28a9af-e70b-4104-9dca-67cd82570f0c,Playback,2025-04-04 00:00:00,698.0,3,True,3,morn2,False,morn2_3_trial3_sec_play,NR,DS,,,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+005113c1-9628-41ed-add0-0b2f0bf383b8,Playback,2025-04-04 00:00:00,700.0,3,True,3,morn2,False,morn2_3_trial3_sec_play,NR,DS,,,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+dc528e35-37e0-450f-a271-31be3c0b4913,Playback,2025-04-04 00:00:00,702.0,3,True,3,morn2,False,morn2_3_trial3_sec_play,NR,DS,,,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+11a22ea1-6708-4eba-807a-1b2d6e4642c1,Playback,2025-04-04 00:00:00,704.0,3,True,3,morn2,False,morn2_3_trial3_sec_play,NR,PL,MZ,,1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+3446153b-21f5-48e6-acb0-1dadbe269d96,Crow,2025-05-04 00:00:00,668.0,2,True,6,morn2,True,morn2_2_trial6_first_cont,SB,PL,MS,,1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+8f72c075-15c6-4027-a7e9-469cdbe689ab,Crow,2025-05-04 00:00:00,624.0,2,True,6,morn1,True,morn1_2_trial6_first_cont,GG,PL,MS,,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+1daa4067-72f7-498f-8863-18d37a10fef5,Playback,2025-03-12 00:00:00,858.0,1,True,1,enrich,False,enrich_1_trial1_sec_play,MZ,AG,SR,,0,1,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0
+e64681dd-f356-48d1-9b8b-98e47d1d3fb8,Crow,2025-04-08 00:00:00,573.0,1,True,3,morn1,True,morn1_1_trial3_first_cont,MZ,PL,SB,,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+6a98a52c-70d1-4eaf-bdeb-312fc1571d76,Crow,2025-04-08 00:00:00,651.0,1,True,3,morn2,True,morn2_1_trial3_first_cont,MZ,DS,,,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+fbb4625f-326e-498d-a0d4-abbe82ba36a0,Playback,2025-04-21 00:00:00,651.0,1,True,4,morn2,True,morn2_1_trial4_first_play,SB,DS,,,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+fbb4625f-326e-498d-a0d4-abbe82ba36a0,Playback,2025-04-21 00:00:00,651.0,1,True,4,morn2,True,morn2_1_trial4_first_play,GG,DS,,,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+eb74e5f8-c4c5-47f0-a393-f1f36659ec96,Playback,2025-04-21 00:00:00,654.0,1,True,4,morn2,True,morn2_1_trial4_first_play,SB,DS,,,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+4a2f18bd-cb04-4729-af9c-5bbb96da03fe,Crow,2025-04-08 00:00:00,679.0,1,True,3,morn2,True,morn2_1_trial3_first_cont,SB,DS,,,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+427779be-676f-4400-bc92-19d0a9d0d8e2,Crow,2025-04-08 00:00:00,663.0,1,True,3,morn2,True,morn2_1_trial3_first_cont,SB,DS,,,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+82586364-51b8-4129-ab25-3ccbeae05674,Crow,2025-04-08 00:00:00,630.0,1,True,3,morn1,True,morn1_1_trial3_first_cont,SB,DS,,,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+571d3a81-56f3-46d4-aa4d-756ac5d19863,Crow,2025-04-08 00:00:00,593.0,1,True,3,morn1,True,morn1_1_trial3_first_cont,GG,PL,TN,,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+fbb4625f-326e-498d-a0d4-abbe82ba36a0,Playback,2025-04-21 00:00:00,651.0,1,True,4,morn2,True,morn2_1_trial4_first_play,GG,DS,,,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+eb74e5f8-c4c5-47f0-a393-f1f36659ec96,Playback,2025-04-21 00:00:00,654.0,1,True,4,morn2,True,morn2_1_trial4_first_play,TN,DS,,,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+883a792e-795c-49da-acf3-e5cec96a12fb,Playback,2025-04-21 00:00:00,646.0,1,True,4,morn2,True,morn2_1_trial4_first_play,TN,AG,SR,,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+67457d92-ba94-45b1-9937-edb7760636e5,Playback,2025-04-21 00:00:00,647.0,1,True,4,morn2,True,morn2_1_trial4_first_play,TN,AG,SR,,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+47c34299-5539-4871-9ea9-de5aa4eb3e20,Playback,2025-04-21 00:00:00,650.0,1,True,4,morn2,True,morn2_1_trial4_first_play,TN,AG,SR,,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+ca734bb9-3429-45e9-b6bb-a52b45d120d0,Crow,2025-04-09 00:00:00,860.0,1,True,3,enrich,False,enrich_1_trial3_sec_cont,TN,PL,"GG, SB",,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+a45a5c6f-3170-40bd-8c83-e8c4d5f91a82,Crow,2025-04-09 00:00:00,822.0,1,True,3,enrich,False,enrich_1_trial3_sec_cont,TN,AG,SR,,0,1,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0
+62debad5-0448-4135-8593-9954b8501510,Playback,12-03-2025,649.0,1,False,1,morn2,,morn2_1_trial1_sec_play,MN,PL,SR,,1,0,,,,,,,,
+62debad5-0448-4135-8593-9954b8501510,Playback,12-03-2025,649.0,1,False,1,morn2,,morn2_1_trial1_sec_play,NR,PL,ST,,1,0,,,,,,,,
+74245bf4-7180-4a82-8ca6-4fa38685d859,Playback,12-03-2025,651.0,1,False,1,morn2,,morn2_1_trial1_sec_play,MN,PL,SR,,1,0,,,,,,,,
+74245bf4-7180-4a82-8ca6-4fa38685d859,Playback,12-03-2025,651.0,1,False,1,morn2,,morn2_1_trial1_sec_play,NR,PL,ST,,1,0,,,,,,,,
+31347887-c7b7-4b79-9ade-3ce14f50b042,Playback,12-03-2025,653.0,1,False,1,morn2,,morn2_1_trial1_sec_play,MN,PL,SR,,1,0,,,,,,,,
+31347887-c7b7-4b79-9ade-3ce14f50b042,Playback,12-03-2025,653.0,1,False,1,morn2,,morn2_1_trial1_sec_play,NR,PL,ST,,1,0,,,,,,,,
+74aeaa1c-33ab-4226-b480-ae7e0b9442f2,Playback,12-03-2025,825.0,1,False,1,enrich,,enrich_1_trial1_sec_play,MN,PL,SR,,1,0,,,,,,,,
+74aeaa1c-33ab-4226-b480-ae7e0b9442f2,Playback,12-03-2025,825.0,1,False,1,enrich,,enrich_1_trial1_sec_play,NR,PL,ST,,1,0,,,,,,,,
+41ee1bdd-6c7d-446a-9899-ec7d93eef98c,Playback,12-03-2025,829.0,1,False,1,enrich,,enrich_1_trial1_sec_play,MN,PL,SR,,1,0,,,,,,,,
+41ee1bdd-6c7d-446a-9899-ec7d93eef98c,Playback,12-03-2025,829.0,1,False,1,enrich,,enrich_1_trial1_sec_play,NR,PL,ST,,1,0,,,,,,,,
+fb170e91-de7c-4f2a-8450-21d322ba57af,Playback,12-03-2025,833.0,1,False,1,enrich,,enrich_1_trial1_sec_play,MN,PL,"SR, NY",,1,0,,,,,,,,
+fb170e91-de7c-4f2a-8450-21d322ba57af,Playback,12-03-2025,833.0,1,False,1,enrich,,enrich_1_trial1_sec_play,NY,PL,,,1,0,,,,,,,,
+8620f139-f793-4453-9f17-925a07b306c2,Playback,12-03-2025,851.0,1,False,1,enrich,,enrich_1_trial1_sec_play,MN,PL,,,1,0,,,,,,,,
+8620f139-f793-4453-9f17-925a07b306c2,Playback,12-03-2025,851.0,1,False,1,enrich,,enrich_1_trial1_sec_play,NR,PL,,,1,0,,,,,,,,
+9efb92a5-6656-4baf-87e0-601716676bc8,Playback,12-03-2025,863.0,1,False,1,enrich,,enrich_1_trial1_sec_play,NR,PL,TK,,1,0,,,,,,,,
+9efb92a5-6656-4baf-87e0-601716676bc8,Playback,12-03-2025,863.0,1,False,1,enrich,,enrich_1_trial1_sec_play,TK,PL,SR,,1,0,,,,,,,,
+27adf37e-1d10-4376-9887-da807ccc105e,Playback,12-03-2025,867.0,1,False,1,enrich,,enrich_1_trial1_sec_play,MN,PL,SR,,1,0,,,,,,,,
+27adf37e-1d10-4376-9887-da807ccc105e,Playback,12-03-2025,867.0,1,False,1,enrich,,enrich_1_trial1_sec_play,NR,PL,ST,,1,0,,,,,,,,
+2a93667e-a460-41e8-8d62-9addd6aca8f3,Playback,12-03-2025,869.0,1,False,1,enrich,,enrich_1_trial1_sec_play,NR,PL,TK,,1,0,,,,,,,,
+2a93667e-a460-41e8-8d62-9addd6aca8f3,Playback,12-03-2025,869.0,1,False,1,enrich,,enrich_1_trial1_sec_play,TK,PL,SR,,1,0,,,,,,,,
+f423c601-a907-41d2-a8ab-7aacb8f41b0e,Playback,12-03-2025,871.0,1,False,1,enrich,,enrich_1_trial1_sec_play,NR,PL,TK,,1,0,,,,,,,,
+f423c601-a907-41d2-a8ab-7aacb8f41b0e,Playback,12-03-2025,871.0,1,False,1,enrich,,enrich_1_trial1_sec_play,TK,PL,SR,,1,0,,,,,,,,
+1305166b-5863-43aa-b383-9b830490a346,Playback,12-03-2025,875.0,1,False,1,enrich,,enrich_1_trial1_sec_play,NR,PL,TK,,1,0,,,,,,,,
+1305166b-5863-43aa-b383-9b830490a346,Playback,12-03-2025,875.0,1,False,1,enrich,,enrich_1_trial1_sec_play,TK,PL,,,1,0,,,,,,,,
+a9694ae5-9cf8-4769-8e45-471bb1589581,Playback,12-03-2025,879.0,1,False,1,enrich,,enrich_1_trial1_sec_play,NR,PL,TK,,1,0,,,,,,,,
+a9694ae5-9cf8-4769-8e45-471bb1589581,Playback,12-03-2025,879.0,1,False,1,enrich,,enrich_1_trial1_sec_play,TK,PL,SR,,1,0,,,,,,,,
+22dd2697-736a-47bf-98f3-5b0a049f4a3e,Playback,12-03-2025,881.0,1,False,1,enrich,,enrich_1_trial1_sec_play,NR,PL,TK,,1,0,,,,,,,,
+22dd2697-736a-47bf-98f3-5b0a049f4a3e,Playback,12-03-2025,881.0,1,False,1,enrich,,enrich_1_trial1_sec_play,TK,PL,SR,,1,0,,,,,,,,
+51d8c48a-8260-4821-9814-79092498ac39,Playback,12-03-2025,885.0,1,False,1,enrich,,enrich_1_trial1_sec_play,NR,PL,TK,,1,0,,,,,,,,
+51d8c48a-8260-4821-9814-79092498ac39,Playback,12-03-2025,885.0,1,False,1,enrich,,enrich_1_trial1_sec_play,TK,PL,SR,,1,0,,,,,,,,
+000e75f5-2208-4353-9c92-ae4cbe434ba8,Crow,20-03-2025,843.0,1,False,2,enrich,,enrich_1_trial2_sec_cont,MN,PL,NR,,1,0,,,,,,,,
+000e75f5-2208-4353-9c92-ae4cbe434ba8,Crow,20-03-2025,843.0,1,False,2,enrich,,enrich_1_trial2_sec_cont,NR,PL,MT,,1,0,,,,,,,,
+3ca155e2-29b6-444b-be95-ca86c6dd298b,Crow,20-03-2025,845.0,1,False,2,enrich,,enrich_1_trial2_sec_cont,MN,PL,NR,,1,0,,,,,,,,
+3ca155e2-29b6-444b-be95-ca86c6dd298b,Crow,20-03-2025,845.0,1,False,2,enrich,,enrich_1_trial2_sec_cont,NR,PL,MT,,1,0,,,,,,,,
+28def944-0f13-401e-a4e6-e66d18b03085,Crow,09-04-2025,596.0,1,False,3,morn1,,morn1_1_trial3_sec_cont,NR,PL,TK,,1,0,,,,,,,,
+28def944-0f13-401e-a4e6-e66d18b03085,Crow,09-04-2025,596.0,1,False,3,morn1,,morn1_1_trial3_sec_cont,TK,PL,NR,,1,0,,,,,,,,
+58e84027-b8aa-4b1c-960f-470bc007651f,Crow,09-04-2025,600.0,1,False,3,morn1,,morn1_1_trial3_sec_cont,NR,PL,TK,,1,0,,,,,,,,
+58e84027-b8aa-4b1c-960f-470bc007651f,Crow,09-04-2025,600.0,1,False,3,morn1,,morn1_1_trial3_sec_cont,TK,PL,NR,,1,0,,,,,,,,
+18241ebd-15f2-4adc-af8b-415dbd2607e0,Crow,09-04-2025,616.0,1,False,3,morn1,,morn1_1_trial3_sec_cont,NR,PL,TK,,1,0,,,,,,,,
+18241ebd-15f2-4adc-af8b-415dbd2607e0,Crow,09-04-2025,616.0,1,False,3,morn1,,morn1_1_trial3_sec_cont,TK,PL,NR,,1,0,,,,,,,,
+7475beb5-246f-48c3-b34f-606f34314de3,Crow,09-04-2025,829.0,1,False,3,enrich,,enrich_1_trial3_sec_cont,NR,PL,TK,,1,0,,,,,,,,
+7475beb5-246f-48c3-b34f-606f34314de3,Crow,09-04-2025,829.0,1,False,3,enrich,,enrich_1_trial3_sec_cont,TK,PL,NR,,1,0,,,,,,,,
+aa39e42b-7de9-4abe-9360-5afd07e38087,Crow,09-04-2025,839.0,1,False,3,enrich,,enrich_1_trial3_sec_cont,NR,PL,TK,,1,0,,,,,,,,
+aa39e42b-7de9-4abe-9360-5afd07e38087,Crow,09-04-2025,839.0,1,False,3,enrich,,enrich_1_trial3_sec_cont,TK,PL,NR,,1,0,,,,,,,,
+5444cc92-900a-4c8b-a141-7a1eb12d5909,Crow,09-04-2025,841.0,1,False,3,enrich,,enrich_1_trial3_sec_cont,NR,PL,TK,,1,0,,,,,,,,
+5444cc92-900a-4c8b-a141-7a1eb12d5909,Crow,09-04-2025,841.0,1,False,3,enrich,,enrich_1_trial3_sec_cont,TK,PL,NR,,1,0,,,,,,,,
+c2d1c75c-8cc4-43f8-a50c-450b7f331d23,Crow,09-04-2025,843.0,1,False,3,enrich,,enrich_1_trial3_sec_cont,NR,PL,TK,,1,0,,,,,,,,
+c2d1c75c-8cc4-43f8-a50c-450b7f331d23,Crow,09-04-2025,843.0,1,False,3,enrich,,enrich_1_trial3_sec_cont,TK,PL,NR,,1,0,,,,,,,,
+a21758b1-c929-4c14-a495-013ef132b040,Crow,09-04-2025,845.0,1,False,3,enrich,,enrich_1_trial3_sec_cont,NR,PL,TK,,1,0,,,,,,,,
+a21758b1-c929-4c14-a495-013ef132b040,Crow,09-04-2025,845.0,1,False,3,enrich,,enrich_1_trial3_sec_cont,TK,PL,NR,,1,0,,,,,,,,
+e66533d7-c0e0-4a2b-9dbe-9b0027f51b42,Crow,14-03-2025,584.0,UNKNOWN_DATE,False,1,morn1,,morn1_UNKNOWN_DATE_trial1_first_cont,TN,DS,,,0,1,,,,,,,,
+c90d4d07-ca68-4d39-8f86-a31d68516511,Crow,14-03-2025,590.0,UNKNOWN_DATE,False,1,morn1,,morn1_UNKNOWN_DATE_trial1_first_cont,NY,PL,SR,,1,0,,,,,,,,
+c90d4d07-ca68-4d39-8f86-a31d68516511,Crow,14-03-2025,590.0,UNKNOWN_DATE,False,1,morn1,,morn1_UNKNOWN_DATE_trial1_first_cont,SR,PL,NY,,1,0,,,,,,,,
+58361727-bc67-450e-9e1b-02255720d6a4,Crow,14-03-2025,598.0,UNKNOWN_DATE,False,1,morn1,,morn1_UNKNOWN_DATE_trial1_first_cont,SR,PL,TK,,1,0,,,,,,,,
+58361727-bc67-450e-9e1b-02255720d6a4,Crow,14-03-2025,598.0,UNKNOWN_DATE,False,1,morn1,,morn1_UNKNOWN_DATE_trial1_first_cont,TK,PL,SR,,1,0,,,,,,,,
+3f2413d1-6ccf-4445-9645-46eb684420fc,Crow,14-03-2025,600.0,UNKNOWN_DATE,False,1,morn1,,morn1_UNKNOWN_DATE_trial1_first_cont,TK,PL,TN,,1,0,,,,,,,,
+3f2413d1-6ccf-4445-9645-46eb684420fc,Crow,14-03-2025,600.0,UNKNOWN_DATE,False,1,morn1,,morn1_UNKNOWN_DATE_trial1_first_cont,TN,PL,SR,,1,0,,,,,,,,
+1558914b-679a-4994-8591-47ec11545bbb,Crow,14-03-2025,602.0,UNKNOWN_DATE,False,1,morn1,,morn1_UNKNOWN_DATE_trial1_first_cont,TK,PL,TN,,1,0,,,,,,,,
+1558914b-679a-4994-8591-47ec11545bbb,Crow,14-03-2025,602.0,UNKNOWN_DATE,False,1,morn1,,morn1_UNKNOWN_DATE_trial1_first_cont,TN,PL,TK,,1,0,,,,,,,,
+c98294c3-5a9e-4329-be14-3a0ebb3b47ff,Crow,14-03-2025,606.0,UNKNOWN_DATE,False,1,morn1,,morn1_UNKNOWN_DATE_trial1_first_cont,SR,DS,,,0,1,,,,,,,,
+944ede61-b8f8-4389-ac9b-ff24abf3491b,Crow,14-03-2025,845.0,UNKNOWN_DATE,False,1,enrich,,enrich_UNKNOWN_DATE_trial1_first_cont,SR,DS,,,0,1,,,,,,,,
+959cfe03-457c-45de-a15b-1d994ca5b053,Crow,14-03-2025,847.0,UNKNOWN_DATE,False,1,enrich,,enrich_UNKNOWN_DATE_trial1_first_cont,SR,DS,,,0,1,,,,,,,,
+000d5dd3-dc1e-4f11-b8dd-840bd1d1a878,Crow,14-03-2025,865.0,UNKNOWN_DATE,False,1,enrich,,enrich_UNKNOWN_DATE_trial1_first_cont,ST,PL,TK,,1,0,,,,,,,,
+000d5dd3-dc1e-4f11-b8dd-840bd1d1a878,Crow,14-03-2025,865.0,UNKNOWN_DATE,False,1,enrich,,enrich_UNKNOWN_DATE_trial1_first_cont,TK,PL,ST,,1,0,,,,,,,,
+9e487cb8-e8ad-4cf1-91ab-ca6f8595890e,Crow,14-03-2025,871.0,UNKNOWN_DATE,False,1,enrich,,enrich_UNKNOWN_DATE_trial1_first_cont,NY,PL,TN,,1,0,,,,,,,,
+9e487cb8-e8ad-4cf1-91ab-ca6f8595890e,Crow,14-03-2025,871.0,UNKNOWN_DATE,False,1,enrich,,enrich_UNKNOWN_DATE_trial1_first_cont,TN,PL,NY,,1,0,,,,,,,,
+d261cd4b-fe25-4d2e-acb8-cae9b130edd4,Crow,14-03-2025,873.0,UNKNOWN_DATE,False,1,enrich,,enrich_UNKNOWN_DATE_trial1_first_cont,NY,PL,TN,,1,0,,,,,,,,
+d261cd4b-fe25-4d2e-acb8-cae9b130edd4,Crow,14-03-2025,873.0,UNKNOWN_DATE,False,1,enrich,,enrich_UNKNOWN_DATE_trial1_first_cont,TN,PL,NY,,1,0,,,,,,,,
+72ed8a4d-539c-4918-b335-58239d162d43,Crow,14-03-2025,875.0,UNKNOWN_DATE,False,1,enrich,,enrich_UNKNOWN_DATE_trial1_first_cont,ST,PL,TK,,1,0,,,,,,,,
+72ed8a4d-539c-4918-b335-58239d162d43,Crow,14-03-2025,875.0,UNKNOWN_DATE,False,1,enrich,,enrich_UNKNOWN_DATE_trial1_first_cont,TK,PL,ST,,1,0,,,,,,,,
+3909e663-272d-45a2-b6f2-4482e4865914,Crow,14-03-2025,877.0,UNKNOWN_DATE,False,1,enrich,,enrich_UNKNOWN_DATE_trial1_first_cont,NY,PL,TN,,1,0,,,,,,,,
+3909e663-272d-45a2-b6f2-4482e4865914,Crow,14-03-2025,877.0,UNKNOWN_DATE,False,1,enrich,,enrich_UNKNOWN_DATE_trial1_first_cont,TN,PL,NY,,1,0,,,,,,,,
+2289b276-e0b0-41d6-8f9e-f9b4462aedeb,Crow,14-03-2025,879.0,UNKNOWN_DATE,False,1,enrich,,enrich_UNKNOWN_DATE_trial1_first_cont,NY,PL,TN,,1,0,,,,,,,,
+2289b276-e0b0-41d6-8f9e-f9b4462aedeb,Crow,14-03-2025,879.0,UNKNOWN_DATE,False,1,enrich,,enrich_UNKNOWN_DATE_trial1_first_cont,TN,PL,NY,,1,0,,,,,,,,
+8ea1849b-4ca0-401d-a667-132ba459c867,Playback,23-03-2025,596.0,2,False,2,morn1,,morn1_2_trial2_first_play,TK,PL,TN,,1,0,,,,,,,,
+8ea1849b-4ca0-401d-a667-132ba459c867,Playback,23-03-2025,596.0,2,False,2,morn1,,morn1_2_trial2_first_play,TN,PL,TK,,1,0,,,,,,,,
+587a9f27-7310-45ad-95b7-0bd65e52b7f2,Playback,23-03-2025,600.0,2,False,2,morn1,,morn1_2_trial2_first_play,TK,PL,TN,,1,0,,,,,,,,
+587a9f27-7310-45ad-95b7-0bd65e52b7f2,Playback,23-03-2025,600.0,2,False,2,morn1,,morn1_2_trial2_first_play,TN,PL,TK,,1,0,,,,,,,,
+2fadc64c-8267-4a7f-9036-6afe56c409a4,Playback,23-03-2025,602.0,2,False,2,morn1,,morn1_2_trial2_first_play,TK,PL,TN,,1,0,,,,,,,,
+2fadc64c-8267-4a7f-9036-6afe56c409a4,Playback,23-03-2025,602.0,2,False,2,morn1,,morn1_2_trial2_first_play,TN,PL,TK,,1,0,,,,,,,,
+64924d9c-df63-4427-8f0f-908575217f15,Playback,23-03-2025,647.0,2,False,2,morn2,,morn2_2_trial2_first_play,SR,DS,,,0,1,,,,,,,,
+d47b9dbf-23ca-4c53-ab79-541331267594,Playback,23-03-2025,879.0,2,False,2,enrich,,enrich_2_trial2_first_play,SR,PL,"TN, ST",,1,0,,,,,,,,
+d47b9dbf-23ca-4c53-ab79-541331267594,Playback,23-03-2025,879.0,2,False,2,enrich,,enrich_2_trial2_first_play,TN,PL,"SR, ST",,1,0,,,,,,,,
+47c0ffd7-b4d7-42b4-9230-3b94ff27d70d,Playback,24-03-2025,689.0,2,False,2,morn2,,morn2_2_trial2_sec_play,TN,DS,,,0,1,,,,,,,,
+911f7cda-716c-4d2e-b187-6aa5abad4af7,Playback,24-03-2025,699.0,2,False,2,morn2,,morn2_2_trial2_sec_play,TN,DS,,,0,1,,,,,,,,
+e2c6c451-d6bf-400e-8908-3215e66d3579,Playback,24-03-2025,705.0,2,False,2,morn2,,morn2_2_trial2_sec_play,TN,DS,,,0,1,,,,,,,,
+04223151-786c-4cb8-ae75-9be15a329c74,Playback,24-03-2025,827.0,2,False,2,enrich,,enrich_2_trial2_sec_play,TN,DS,,,0,1,,,,,,,,
+0c049448-45c6-482d-82f5-b1ce445eccaa,Playback,24-03-2025,829.0,2,False,2,enrich,,enrich_2_trial2_sec_play,TN,DS,,,0,1,,,,,,,,
+d8119d58-c487-4608-a022-12ca52f8ac12,Playback,24-03-2025,847.0,2,False,2,enrich,,enrich_2_trial2_sec_play,ST,PL,NY,,1,0,,,,,,,,
+d8119d58-c487-4608-a022-12ca52f8ac12,Playback,24-03-2025,847.0,2,False,2,enrich,,enrich_2_trial2_sec_play,NY,PL,ST,,1,0,,,,,,,,
+92cdf155-3b28-4c4b-a856-5f25a14fa331,Playback,24-03-2025,849.0,2,False,2,enrich,,enrich_2_trial2_sec_play,ST,DS,,,0,1,,,,,,,,
+6683f027-997d-4e1f-b8f9-e21bc9f167b9,Playback,24-03-2025,871.0,2,False,2,enrich,,enrich_2_trial2_sec_play,TK,PL,TN,,1,0,,,,,,,,
+6683f027-997d-4e1f-b8f9-e21bc9f167b9,Playback,24-03-2025,871.0,2,False,2,enrich,,enrich_2_trial2_sec_play,TN,PL,TK,,1,0,,,,,,,,
+68a9273a-0adf-4d5c-818f-e9dbb4a17271,Playback,27-04-2025,655.0,2,False,5,morn2,,morn2_2_trial5_sec_play,TK,PL,TN,,1,0,,,,,,,,
+68a9273a-0adf-4d5c-818f-e9dbb4a17271,Playback,27-04-2025,655.0,2,False,5,morn2,,morn2_2_trial5_sec_play,TN,PL,TK,,1,0,,,,,,,,
+10bbb36f-2d05-4dcf-bcfa-1b7518c99f90,Playback,27-04-2025,657.0,2,False,5,morn2,,morn2_2_trial5_sec_play,TK,PL,TN,,1,0,,,,,,,,
+10bbb36f-2d05-4dcf-bcfa-1b7518c99f90,Playback,27-04-2025,657.0,2,False,5,morn2,,morn2_2_trial5_sec_play,TN,PL,TK,,1,0,,,,,,,,
+ea1d4464-0fbc-4bc4-9525-559fe40d283e,Playback,27-04-2025,703.0,2,False,5,morn2,,morn2_2_trial5_sec_play,ST,PL,SR,,1,0,,,,,,,,
+ea1d4464-0fbc-4bc4-9525-559fe40d283e,Playback,27-04-2025,703.0,2,False,5,morn2,,morn2_2_trial5_sec_play,SR,PL,ST,,1,0,,,,,,,,
+beb9c314-c22a-42ca-9e7f-d08aa010e270,Playback,27-04-2025,705.0,2,False,5,morn2,,morn2_2_trial5_sec_play,ST,PL,SR,,1,0,,,,,,,,
+beb9c314-c22a-42ca-9e7f-d08aa010e270,Playback,27-04-2025,705.0,2,False,5,morn2,,morn2_2_trial5_sec_play,SR,PL,ST,,1,0,,,,,,,,
+d7674044-93c1-472b-9e50-4132184e24b4,Playback,27-04-2025,859.0,2,False,5,enrich,,enrich_2_trial5_sec_play,ST,PL,TK,,1,0,,,,,,,,
+d7674044-93c1-472b-9e50-4132184e24b4,Playback,27-04-2025,859.0,2,False,5,enrich,,enrich_2_trial5_sec_play,TK,PL,ST,,1,0,,,,,,,,
+842baca4-c8cc-471b-bd6c-c8d207641154,Playback,27-04-2025,861.0,2,False,5,enrich,,enrich_2_trial5_sec_play,ST,PL,TK,,1,0,,,,,,,,
+842baca4-c8cc-471b-bd6c-c8d207641154,Playback,27-04-2025,861.0,2,False,5,enrich,,enrich_2_trial5_sec_play,TK,PL,ST,,1,0,,,,,,,,
+8e91fcf8-6acb-4c52-a718-f82689445fc6,Crow,04-05-2025,683.0,2,False,6,morn2,,morn2_2_trial6_first_cont,ST,DS,,,0,1,,,,,,,,
+cf584515-267f-4dad-bb38-2f6c5b6b07cd,Crow,04-05-2025,861.0,2,False,6,enrich,,enrich_2_trial6_first_cont,NY,PL,TK,,1,0,,,,,,,,
+cf584515-267f-4dad-bb38-2f6c5b6b07cd,Crow,04-05-2025,861.0,2,False,6,enrich,,enrich_2_trial6_first_cont,TK,PL,NY,,1,0,,,,,,,,
+83435206-2b82-432d-a48a-75e68515b4cd,Crow,04-05-2025,863.0,2,False,6,enrich,,enrich_2_trial6_first_cont,NY,PL,TK,,1,0,,,,,,,,
+83435206-2b82-432d-a48a-75e68515b4cd,Crow,04-05-2025,863.0,2,False,6,enrich,,enrich_2_trial6_first_cont,TK,PL,NY,,1,0,,,,,,,,
+dae6b028-21a0-44b2-8cd3-5106e5792a1b,Crow,04-05-2025,865.0,2,False,6,enrich,,enrich_2_trial6_first_cont,NY,PL,TK,,1,0,,,,,,,,
+dae6b028-21a0-44b2-8cd3-5106e5792a1b,Crow,04-05-2025,865.0,2,False,6,enrich,,enrich_2_trial6_first_cont,TK,PL,NY,,1,0,,,,,,,,
+3feb256b-2580-4f9f-86f4-abdc1d61cc90,Crow,04-05-2025,867.0,2,False,6,enrich,,enrich_2_trial6_first_cont,NY,PL,TK,,1,0,,,,,,,,
+3feb256b-2580-4f9f-86f4-abdc1d61cc90,Crow,04-05-2025,867.0,2,False,6,enrich,,enrich_2_trial6_first_cont,TK,PL,NY,,1,0,,,,,,,,
+f4caf734-0126-4fb5-8ee7-fa47daa4c4b4,Crow,04-05-2025,869.0,2,False,6,enrich,,enrich_2_trial6_first_cont,NY,PL,TK,,1,0,,,,,,,,
+f4caf734-0126-4fb5-8ee7-fa47daa4c4b4,Crow,04-05-2025,869.0,2,False,6,enrich,,enrich_2_trial6_first_cont,TK,PL,NY,,1,0,,,,,,,,
+4619d5cc-83c7-424f-bdd8-f044796cf768,Crow,04-05-2025,871.0,2,False,6,enrich,,enrich_2_trial6_first_cont,NY,PL,TK,,1,0,,,,,,,,
+4619d5cc-83c7-424f-bdd8-f044796cf768,Crow,04-05-2025,871.0,2,False,6,enrich,,enrich_2_trial6_first_cont,TK,PL,NY,,1,0,,,,,,,,
+1488c320-9bb6-498b-adaa-8b63d168a5b7,Crow,04-05-2025,873.0,2,False,6,enrich,,enrich_2_trial6_first_cont,NY,PL,TK,,1,0,,,,,,,,
+1488c320-9bb6-498b-adaa-8b63d168a5b7,Crow,04-05-2025,873.0,2,False,6,enrich,,enrich_2_trial6_first_cont,TK,PL,NY,,1,0,,,,,,,,
+4350a689-b209-41f6-9c7f-c8e35cc39969,Crow,05-05-2025,883.0,2,False,6,enrich,,enrich_2_trial6_sec_cont,ST,PL,NY,,1,0,,,,,,,,
+4350a689-b209-41f6-9c7f-c8e35cc39969,Crow,05-05-2025,883.0,2,False,6,enrich,,enrich_2_trial6_sec_cont,NY,PL,ST,,1,0,,,,,,,,
+cb92c134-4eaa-4c71-af9a-23d304973e04,Crow,05-05-2025,885.0,2,False,6,enrich,,enrich_2_trial6_sec_cont,ST,PL,NY,,1,0,,,,,,,,
+cb92c134-4eaa-4c71-af9a-23d304973e04,Crow,05-05-2025,885.0,2,False,6,enrich,,enrich_2_trial6_sec_cont,NY,PL,ST,,1,0,,,,,,,,
+fb7a1b4e-b726-4c69-8991-79c7f07ed9ba,Baseline,29-03-2025,825.0,UNKNOWN_DATE,False,1,enrich,,enrich_UNKNOWN_DATE_trial1_first_base,SR,PL,TK,,1,0,,,,,,,,
+fb7a1b4e-b726-4c69-8991-79c7f07ed9ba,Baseline,29-03-2025,825.0,UNKNOWN_DATE,False,1,enrich,,enrich_UNKNOWN_DATE_trial1_first_base,TK,PL,SR,,1,0,,,,,,,,
+2fcb00e7-3436-4980-b578-7bcac1e7a878,Baseline,29-03-2025,833.0,UNKNOWN_DATE,False,1,enrich,,enrich_UNKNOWN_DATE_trial1_first_base,TK,PL,TN,,1,0,,,,,,,,
+2fcb00e7-3436-4980-b578-7bcac1e7a878,Baseline,29-03-2025,833.0,UNKNOWN_DATE,False,1,enrich,,enrich_UNKNOWN_DATE_trial1_first_base,TN,PL,TK,,1,0,,,,,,,,
+c4d792fc-6b6d-4551-bc02-608336b7799d,Baseline,29-03-2025,835.0,UNKNOWN_DATE,False,1,enrich,,enrich_UNKNOWN_DATE_trial1_first_base,TK,PL,TN,,1,0,,,,,,,,
+c4d792fc-6b6d-4551-bc02-608336b7799d,Baseline,29-03-2025,835.0,UNKNOWN_DATE,False,1,enrich,,enrich_UNKNOWN_DATE_trial1_first_base,TN,PL,TK,,1,0,,,,,,,,
+63f512ac-8671-45b8-b19f-6db323a5b24d,Baseline,29-03-2025,837.0,UNKNOWN_DATE,False,1,enrich,,enrich_UNKNOWN_DATE_trial1_first_base,TK,PL,TN,,1,0,,,,,,,,
+63f512ac-8671-45b8-b19f-6db323a5b24d,Baseline,29-03-2025,837.0,UNKNOWN_DATE,False,1,enrich,,enrich_UNKNOWN_DATE_trial1_first_base,TN,PL,TK,,1,0,,,,,,,,
+984717fd-2a1a-423b-b4cb-e8c2fc801a91,Baseline,29-03-2025,839.0,UNKNOWN_DATE,False,1,enrich,,enrich_UNKNOWN_DATE_trial1_first_base,TK,PL,TN,,1,0,,,,,,,,
+984717fd-2a1a-423b-b4cb-e8c2fc801a91,Baseline,29-03-2025,839.0,UNKNOWN_DATE,False,1,enrich,,enrich_UNKNOWN_DATE_trial1_first_base,TN,PL,TK,,1,0,,,,,,,,
+2ea0fdc6-74e4-4170-a6c4-6ee9a00decb8,Baseline,29-03-2025,843.0,UNKNOWN_DATE,False,1,enrich,,enrich_UNKNOWN_DATE_trial1_first_base,TK,PL,TN,,1,0,,,,,,,,
+2ea0fdc6-74e4-4170-a6c4-6ee9a00decb8,Baseline,29-03-2025,843.0,UNKNOWN_DATE,False,1,enrich,,enrich_UNKNOWN_DATE_trial1_first_base,TN,PL,TK,,1,0,,,,,,,,
+c4a5f22d-85d4-4858-a281-511e32433379,Baseline,29-03-2025,845.0,UNKNOWN_DATE,False,1,enrich,,enrich_UNKNOWN_DATE_trial1_first_base,TK,PL,TN,,1,0,,,,,,,,
+c4a5f22d-85d4-4858-a281-511e32433379,Baseline,29-03-2025,845.0,UNKNOWN_DATE,False,1,enrich,,enrich_UNKNOWN_DATE_trial1_first_base,TN,PL,TK,,1,0,,,,,,,,
+e73ad753-01ba-4052-8322-b7f74d6c7279,Baseline,29-03-2025,867.0,UNKNOWN_DATE,False,1,enrich,,enrich_UNKNOWN_DATE_trial1_first_base,TN,DS,,,0,1,,,,,,,,
+0d39491a-1766-4a17-8fbc-818724952943,Baseline,29-03-2025,875.0,UNKNOWN_DATE,False,1,enrich,,enrich_UNKNOWN_DATE_trial1_first_base,SR,PL,TN,,1,0,,,,,,,,
+0d39491a-1766-4a17-8fbc-818724952943,Baseline,29-03-2025,875.0,UNKNOWN_DATE,False,1,enrich,,enrich_UNKNOWN_DATE_trial1_first_base,TN,PL,SR,,1,0,,,,,,,,
+7f70c8d4-a73f-4f7f-b31c-b522ead432f7,Baseline,29-03-2025,877.0,UNKNOWN_DATE,False,1,enrich,,enrich_UNKNOWN_DATE_trial1_first_base,SR,PL,TN,,1,0,,,,,,,,
+af57c942-7a14-4acf-8eaa-2cadf9c71b63,Baseline,29-03-2025,881.0,UNKNOWN_DATE,False,1,enrich,,enrich_UNKNOWN_DATE_trial1_first_base,SR,PL,TN,,1,0,,,,,,,,
+af57c942-7a14-4acf-8eaa-2cadf9c71b63,Baseline,29-03-2025,881.0,UNKNOWN_DATE,False,1,enrich,,enrich_UNKNOWN_DATE_trial1_first_base,TN,PL,SR,,1,0,,,,,,,,
+df013093-da6e-420a-9d5f-633e53c348fd,Playback,03-04-2025,608.0,3,False,3,morn1,,morn1_3_trial3_first_play,TK,PL,TN,,1,0,,,,,,,,
+df013093-da6e-420a-9d5f-633e53c348fd,Playback,03-04-2025,608.0,3,False,3,morn1,,morn1_3_trial3_first_play,TN,PL,TK,,1,0,,,,,,,,
+f8c3d5bf-037b-4848-af31-560169e851da,Playback,03-04-2025,610.0,3,False,3,morn1,,morn1_3_trial3_first_play,TK,PL,TN,,1,0,,,,,,,,
+f8c3d5bf-037b-4848-af31-560169e851da,Playback,03-04-2025,610.0,3,False,3,morn1,,morn1_3_trial3_first_play,TN,PL,TK,,1,0,,,,,,,,
+599544a3-3dc6-42ce-89bd-b5380485d904,Playback,03-04-2025,612.0,3,False,3,morn1,,morn1_3_trial3_first_play,TK,PL,TN,,1,0,,,,,,,,
+599544a3-3dc6-42ce-89bd-b5380485d904,Playback,03-04-2025,612.0,3,False,3,morn1,,morn1_3_trial3_first_play,TN,PL,TK,,1,0,,,,,,,,
+d56e28f2-a45b-4066-b1fd-1d04275e21f4,Playback,04-04-2025,590.0,3,False,3,morn1,,morn1_3_trial3_sec_play,SR,PL,TK,,1,0,,,,,,,,
+d56e28f2-a45b-4066-b1fd-1d04275e21f4,Playback,04-04-2025,590.0,3,False,3,morn1,,morn1_3_trial3_sec_play,TK,PL,SR,,1,0,,,,,,,,
+b7c41847-810a-49b0-b2c3-e2ae647947be,Playback,04-04-2025,679.0,3,False,3,morn2,,morn2_3_trial3_sec_play,TK,PL,TN,,1,0,,,,,,,,
+b7c41847-810a-49b0-b2c3-e2ae647947be,Playback,04-04-2025,679.0,3,False,3,morn2,,morn2_3_trial3_sec_play,TN,PL,TK,,1,0,,,,,,,,
+91a812c1-1da7-426d-b252-94b330870db0,Crow,16-04-2025,663.0,3,False,4,morn2,,morn2_3_trial4_first_cont,TK,PL,TN,,1,0,,,,,,,,
+91a812c1-1da7-426d-b252-94b330870db0,Crow,16-04-2025,663.0,3,False,4,morn2,,morn2_3_trial4_first_cont,TN,PL,TK,,1,0,,,,,,,,
+f67aebed-7af6-4f03-8901-dc0abdab00b1,Crow,16-04-2025,665.0,3,False,4,morn2,,morn2_3_trial4_first_cont,TK,PL,TN,,1,0,,,,,,,,
+f67aebed-7af6-4f03-8901-dc0abdab00b1,Crow,16-04-2025,665.0,3,False,4,morn2,,morn2_3_trial4_first_cont,TN,PL,TK,,1,0,,,,,,,,
+7900c6f8-0d37-4681-851d-f7b60699494a,Crow,16-04-2025,673.0,3,False,4,morn2,,morn2_3_trial4_first_cont,ST,PL,TK,,1,0,,,,,,,,
+7900c6f8-0d37-4681-851d-f7b60699494a,Crow,16-04-2025,673.0,3,False,4,morn2,,morn2_3_trial4_first_cont,TK,PL,ST,,1,0,,,,,,,,
+68b314da-154c-4f78-8548-c152548ffc7b,Crow,16-04-2025,679.0,3,False,4,morn2,,morn2_3_trial4_first_cont,ST,PL,TN,,1,0,,,,,,,,
+68b314da-154c-4f78-8548-c152548ffc7b,Crow,16-04-2025,679.0,3,False,4,morn2,,morn2_3_trial4_first_cont,TN,PL,ST,,1,0,,,,,,,,
+db16f276-1e26-41ec-87fe-56294eb6a584,Crow,16-04-2025,681.0,3,False,4,morn2,,morn2_3_trial4_first_cont,ST,PL,TN,,1,0,,,,,,,,
+db16f276-1e26-41ec-87fe-56294eb6a584,Crow,16-04-2025,681.0,3,False,4,morn2,,morn2_3_trial4_first_cont,TN,PL,ST,,1,0,,,,,,,,
+0a3589c9-ca66-46e2-92cc-1dcb2bbae112,Crow,17-04-2025,598.0,3,False,4,morn1,,morn1_3_trial4_sec_cont,ST,PL,TN,,1,0,,,,,,,,
+0a3589c9-ca66-46e2-92cc-1dcb2bbae112,Crow,17-04-2025,598.0,3,False,4,morn1,,morn1_3_trial4_sec_cont,TN,PL,ST,,1,0,,,,,,,,
+c6a2d498-1ede-4aa6-92c1-3f09625cba78,Crow,17-04-2025,600.0,3,False,4,morn1,,morn1_3_trial4_sec_cont,ST,PL,TN,,1,0,,,,,,,,
+c6a2d498-1ede-4aa6-92c1-3f09625cba78,Crow,17-04-2025,600.0,3,False,4,morn1,,morn1_3_trial4_sec_cont,TN,PL,ST,,1,0,,,,,,,,
+85c8b1b5-34f4-4456-8ff6-8a10083dcf57,Crow,17-04-2025,653.0,3,False,4,morn2,,morn2_3_trial4_sec_cont,TK,PL,TN,,1,0,,,,,,,,
+85c8b1b5-34f4-4456-8ff6-8a10083dcf57,Crow,17-04-2025,653.0,3,False,4,morn2,,morn2_3_trial4_sec_cont,TN,PL,TK,,1,0,,,,,,,,
+99ccdc6c-f77b-4b7b-b738-5ecdb1f84ac6,Crow,17-04-2025,655.0,3,False,4,morn2,,morn2_3_trial4_sec_cont,TK,PL,TN,,1,0,,,,,,,,
+99ccdc6c-f77b-4b7b-b738-5ecdb1f84ac6,Crow,17-04-2025,655.0,3,False,4,morn2,,morn2_3_trial4_sec_cont,TN,PL,TK,,1,0,,,,,,,,
+ce11039b-ce0b-4955-b137-dbb12c8e3e22,Crow,17-04-2025,657.0,3,False,4,morn2,,morn2_3_trial4_sec_cont,TK,PL,TN,,1,0,,,,,,,,
+ce11039b-ce0b-4955-b137-dbb12c8e3e22,Crow,17-04-2025,657.0,3,False,4,morn2,,morn2_3_trial4_sec_cont,TN,PL,TK,,1,0,,,,,,,,
+eb5730de-912e-4f29-abe6-d43bf80c0e59,Crow,17-04-2025,659.0,3,False,4,morn2,,morn2_3_trial4_sec_cont,TK,PL,TN,,1,0,,,,,,,,
+eb5730de-912e-4f29-abe6-d43bf80c0e59,Crow,17-04-2025,659.0,3,False,4,morn2,,morn2_3_trial4_sec_cont,TN,PL,TK,,1,0,,,,,,,,
+db8c3b06-48f5-491c-a88d-9e43b41e5cb8,Crow,17-04-2025,703.0,3,False,4,morn2,,morn2_3_trial4_sec_cont,TK,PL,TN,,1,0,,,,,,,,
+db8c3b06-48f5-491c-a88d-9e43b41e5cb8,Crow,17-04-2025,703.0,3,False,4,morn2,,morn2_3_trial4_sec_cont,TN,PL,TK,,1,0,,,,,,,,
+203be663-5bf0-4ca4-84e5-424ea83613c3,Crow,17-04-2025,859.0,3,False,4,enrich,,enrich_3_trial4_sec_cont,TK,PL,TN,,1,0,,,,,,,,
+203be663-5bf0-4ca4-84e5-424ea83613c3,Crow,17-04-2025,859.0,3,False,4,enrich,,enrich_3_trial4_sec_cont,TN,PL,TK,,1,0,,,,,,,,
+7b56fc5c-1858-4ea0-b7fb-821477398687,Crow,17-04-2025,861.0,3,False,4,enrich,,enrich_3_trial4_sec_cont,TK,PL,TN,,1,0,,,,,,,,
+7b56fc5c-1858-4ea0-b7fb-821477398687,Crow,17-04-2025,861.0,3,False,4,enrich,,enrich_3_trial4_sec_cont,TN,PL,TK,,1,0,,,,,,,,
+f305706c-4e75-485a-9613-c2094b3c8954,Crow,17-04-2025,865.0,3,False,4,enrich,,enrich_3_trial4_sec_cont,TK,PL,TN,,1,0,,,,,,,,
+f305706c-4e75-485a-9613-c2094b3c8954,Crow,17-04-2025,865.0,3,False,4,enrich,,enrich_3_trial4_sec_cont,TN,PL,TK,,1,0,,,,,,,,
+e942d930-7adf-4e34-8d05-e365b1c106d1,Crow,30-04-2025,592.0,3,False,5,morn1,,morn1_3_trial5_first_cont,TK,PL,TN,,1,0,,,,,,,,
+e942d930-7adf-4e34-8d05-e365b1c106d1,Crow,30-04-2025,592.0,3,False,5,morn1,,morn1_3_trial5_first_cont,TN,PL,TK,,1,0,,,,,,,,
+4c327c4e-76a4-498f-9c0a-7b8baf91a203,Crow,30-04-2025,598.0,3,False,5,morn1,,morn1_3_trial5_first_cont,TK,PL,TN,,1,0,,,,,,,,
+4c327c4e-76a4-498f-9c0a-7b8baf91a203,Crow,30-04-2025,598.0,3,False,5,morn1,,morn1_3_trial5_first_cont,TN,PL,TK,,1,0,,,,,,,,
+fdc7597a-3f81-4e87-85ec-d590b68fa3a5,Crow,30-04-2025,600.0,3,False,5,morn1,,morn1_3_trial5_first_cont,TK,PL,TN,,1,0,,,,,,,,
+fdc7597a-3f81-4e87-85ec-d590b68fa3a5,Crow,30-04-2025,600.0,3,False,5,morn1,,morn1_3_trial5_first_cont,TN,PL,TK,,1,0,,,,,,,,
+44183687-aacd-4226-bf8a-7b73e678a907,Crow,01-05-2025,608.0,3,False,5,morn1,,morn1_3_trial5_sec_cont,SR,PL,TN,,1,0,,,,,,,,
+44183687-aacd-4226-bf8a-7b73e678a907,Crow,01-05-2025,608.0,3,False,5,morn1,,morn1_3_trial5_sec_cont,TN,PL,SR,,1,0,,,,,,,,
+546c68fb-5c11-4ac7-8d44-aeff08a3d55a,Crow,01-05-2025,805.0,3,False,5,enrich,,enrich_3_trial5_sec_cont,ST,PL,TK,,1,0,,,,,,,,
+546c68fb-5c11-4ac7-8d44-aeff08a3d55a,Crow,01-05-2025,805.0,3,False,5,enrich,,enrich_3_trial5_sec_cont,TK,PL,ST,,1,0,,,,,,,,
+5c83fe4e-8344-429a-af30-8f1e92505e90,Crow,01-05-2025,825.0,3,False,5,enrich,,enrich_3_trial5_sec_cont,TK,PL,TN,,1,0,,,,,,,,
+5c83fe4e-8344-429a-af30-8f1e92505e90,Crow,01-05-2025,825.0,3,False,5,enrich,,enrich_3_trial5_sec_cont,TN,PL,TK,,1,0,,,,,,,,
+d5e09816-0ea4-48d4-a825-2efc43ab4237,Crow,01-05-2025,849.0,3,False,5,enrich,,enrich_3_trial5_sec_cont,TK,PL,TN,,1,0,,,,,,,,
+d5e09816-0ea4-48d4-a825-2efc43ab4237,Crow,01-05-2025,849.0,3,False,5,enrich,,enrich_3_trial5_sec_cont,TN,PL,TK,,1,0,,,,,,,,
+dc1c999c-d616-46c0-a3f7-29e63cbbc218,Playback,14-05-2025,578.0,3,False,6,morn1,,morn1_3_trial6_first_play,TK,PL,TN,,1,0,,,,,,,,
+dc1c999c-d616-46c0-a3f7-29e63cbbc218,Playback,14-05-2025,578.0,3,False,6,morn1,,morn1_3_trial6_first_play,TN,PL,TK,,1,0,,,,,,,,
+da82f217-04ab-492b-b5d9-1f1ae0ce5387,Playback,14-05-2025,598.0,3,False,6,morn1,,morn1_3_trial6_first_play,TK,PL,TN,,1,0,,,,,,,,
+da82f217-04ab-492b-b5d9-1f1ae0ce5387,Playback,14-05-2025,598.0,3,False,6,morn1,,morn1_3_trial6_first_play,TN,PL,TK,,1,0,,,,,,,,
+f0f64ff3-2ba6-4db4-bce6-67ad553a3239,Playback,14-05-2025,600.0,3,False,6,morn1,,morn1_3_trial6_first_play,TK,PL,TN,,1,0,,,,,,,,
+f0f64ff3-2ba6-4db4-bce6-67ad553a3239,Playback,14-05-2025,600.0,3,False,6,morn1,,morn1_3_trial6_first_play,TN,PL,TK,,1,0,,,,,,,,
+6f7a7889-3fb4-4564-a0d6-45f32a57c0ed,Playback,14-05-2025,606.0,3,False,6,morn1,,morn1_3_trial6_first_play,TK,PL,TN,,1,0,,,,,,,,
+6f7a7889-3fb4-4564-a0d6-45f32a57c0ed,Playback,14-05-2025,606.0,3,False,6,morn1,,morn1_3_trial6_first_play,TN,PL,TK,,1,0,,,,,,,,
+60c12472-5071-4219-a36d-8e02dd23dec2,Playback,14-05-2025,608.0,3,False,6,morn1,,morn1_3_trial6_first_play,TK,PL,TN,,1,0,,,,,,,,
+60c12472-5071-4219-a36d-8e02dd23dec2,Playback,14-05-2025,608.0,3,False,6,morn1,,morn1_3_trial6_first_play,TN,PL,TK,,1,0,,,,,,,,
+4c74cf56-b878-4e1e-86dc-c6d3c1cbba86,Playback,14-05-2025,610.0,3,False,6,morn1,,morn1_3_trial6_first_play,TK,PL,TN,,1,0,,,,,,,,
+4c74cf56-b878-4e1e-86dc-c6d3c1cbba86,Playback,14-05-2025,610.0,3,False,6,morn1,,morn1_3_trial6_first_play,TN,PL,TK,,1,0,,,,,,,,
+1811fb50-72aa-4569-840f-65602e036d85,Playback,14-05-2025,667.0,3,False,6,morn2,,morn2_3_trial6_first_play,ST,PL,TK,,1,0,,,,,,,,
+1811fb50-72aa-4569-840f-65602e036d85,Playback,14-05-2025,667.0,3,False,6,morn2,,morn2_3_trial6_first_play,TK,PL,ST,,1,0,,,,,,,,
+17ee7d4c-67c6-44ef-b7eb-889b19e1a6b8,Playback,14-05-2025,669.0,3,False,6,morn2,,morn2_3_trial6_first_play,ST,PL,TK,,1,0,,,,,,,,
+17ee7d4c-67c6-44ef-b7eb-889b19e1a6b8,Playback,14-05-2025,669.0,3,False,6,morn2,,morn2_3_trial6_first_play,TK,PL,ST,,1,0,,,,,,,,
+d6232eea-aafe-4f86-bdb2-46ae6fb66911,Playback,14-05-2025,671.0,3,False,6,morn2,,morn2_3_trial6_first_play,ST,PL,TK,,1,0,,,,,,,,
+d6232eea-aafe-4f86-bdb2-46ae6fb66911,Playback,14-05-2025,671.0,3,False,6,morn2,,morn2_3_trial6_first_play,TK,PL,ST,,1,0,,,,,,,,
+3a246a85-88ea-4894-82fc-390550718c1e,Playback,15-05-2025,606.0,3,False,6,morn1,,morn1_3_trial6_sec_play,ST,PL,TK,,1,0,,,,,,,,
+3a246a85-88ea-4894-82fc-390550718c1e,Playback,15-05-2025,606.0,3,False,6,morn1,,morn1_3_trial6_sec_play,TK,PL,ST,,1,0,,,,,,,,
+e18fd1a9-c6cb-4c2f-9e72-27af173bcaef,Playback,15-05-2025,683.0,3,False,6,morn2,,morn2_3_trial6_sec_play,TK,PL,TN,,1,0,,,,,,,,
+e18fd1a9-c6cb-4c2f-9e72-27af173bcaef,Playback,15-05-2025,683.0,3,False,6,morn2,,morn2_3_trial6_sec_play,TN,PL,TK,,1,0,,,,,,,,
+9a9ca8da-b265-4ec5-ab04-da29ec2e5ef1,Playback,15-05-2025,687.0,3,False,6,morn2,,morn2_3_trial6_sec_play,TK,PL,TN,,1,0,,,,,,,,
+9a9ca8da-b265-4ec5-ab04-da29ec2e5ef1,Playback,15-05-2025,687.0,3,False,6,morn2,,morn2_3_trial6_sec_play,TN,PL,TK,,1,0,,,,,,,,
+c2021bc8-d46f-47e4-8a32-24726700a0b6,Playback,12-03-2025,843.0,1,False,1,enrich,,enrich_1_trial1_sec_play,NH,DS,,,0,1,,,,,,,,
+7e373872-3d0f-4779-889f-01102d52128e,Playback,12-03-2025,845.0,1,False,1,enrich,,enrich_1_trial1_sec_play,NH,DS,,,0,1,,,,,,,,
+ecfc7357-f1d3-4a3e-9c03-68040660035b,Playback,12-03-2025,847.0,1,False,1,enrich,,enrich_1_trial1_sec_play,ST,DS,NH,,0,1,,,,,,,,
+ecfc7357-f1d3-4a3e-9c03-68040660035b,Playback,12-03-2025,847.0,1,False,1,enrich,,enrich_1_trial1_sec_play,NH,DS,ST,,0,1,,,,,,,,
+9de25b42-d6c4-4733-b67e-5080ea954b05,Playback,12-03-2025,849.0,1,False,1,enrich,,enrich_1_trial1_sec_play,ST,DS,NH,,0,1,,,,,,,,
+9de25b42-d6c4-4733-b67e-5080ea954b05,Playback,12-03-2025,849.0,1,False,1,enrich,,enrich_1_trial1_sec_play,NH,DS,ST,,0,1,,,,,,,,
+7042277d-2331-47be-9021-80a990a01672,Playback,12-03-2025,861.0,1,False,1,enrich,,enrich_1_trial1_sec_play,NH,DS,,,0,1,,,,,,,,
+eb57ce1a-0fc2-4b11-bece-1a215981a5a6,Playback,12-03-2025,867.0,1,False,1,enrich,,enrich_1_trial1_sec_play,MS,PL,NH,,1,0,,,,,,,,
+eb57ce1a-0fc2-4b11-bece-1a215981a5a6,Playback,12-03-2025,867.0,1,False,1,enrich,,enrich_1_trial1_sec_play,NH,PL,MS,,1,0,,,,,,,,
+8990c4d8-5028-4750-bd62-d9a5a9c7316e,Playback,12-03-2025,869.0,1,False,1,enrich,,enrich_1_trial1_sec_play,MS,PL,"ST, NH",,1,0,,,,,,,,
+8990c4d8-5028-4750-bd62-d9a5a9c7316e,Playback,12-03-2025,869.0,1,False,1,enrich,,enrich_1_trial1_sec_play,ST,PL,"MS, NH",,1,0,,,,,,,,
+8990c4d8-5028-4750-bd62-d9a5a9c7316e,Playback,12-03-2025,869.0,1,False,1,enrich,,enrich_1_trial1_sec_play,NH,PL,"MS, ST",,1,0,,,,,,,,
+dc3aec7b-e4dd-4d84-a00e-141b3b5bf6d7,Playback,12-03-2025,871.0,1,False,1,enrich,,enrich_1_trial1_sec_play,ST,PL,NH,,1,0,,,,,,,,
+dc3aec7b-e4dd-4d84-a00e-141b3b5bf6d7,Playback,12-03-2025,871.0,1,False,1,enrich,,enrich_1_trial1_sec_play,NH,PL,ST,,1,0,,,,,,,,
+22280968-7cb0-46e1-b88a-e0a56934f328,Playback,12-03-2025,875.0,1,False,1,enrich,,enrich_1_trial1_sec_play,MS,PL,ST,,1,0,,,,,,,,
+22280968-7cb0-46e1-b88a-e0a56934f328,Playback,12-03-2025,875.0,1,False,1,enrich,,enrich_1_trial1_sec_play,ST,PL,MS,,1,0,,,,,,,,
+2798817d-708f-48c2-8a1b-c57dcac4b1e2,Playback,12-03-2025,877.0,1,False,1,enrich,,enrich_1_trial1_sec_play,MS,PL,ST,,1,0,,,,,,,,
+2798817d-708f-48c2-8a1b-c57dcac4b1e2,Playback,12-03-2025,877.0,1,False,1,enrich,,enrich_1_trial1_sec_play,ST,PL,MS,,1,0,,,,,,,,
+e374d507-c698-46b2-ac5d-3d12fd2b12cd,Playback,12-03-2025,879.0,1,False,1,enrich,,enrich_1_trial1_sec_play,MS,PL,ST,,1,0,,,,,,,,
+e374d507-c698-46b2-ac5d-3d12fd2b12cd,Playback,12-03-2025,879.0,1,False,1,enrich,,enrich_1_trial1_sec_play,ST,PL,MS,,1,0,,,,,,,,
+7814adef-1d0d-45b6-b431-04d4ddee7b74,Playback,12-03-2025,881.0,1,False,1,enrich,,enrich_1_trial1_sec_play,MS,PL,ST,,1,0,,,,,,,,
+7814adef-1d0d-45b6-b431-04d4ddee7b74,Playback,12-03-2025,881.0,1,False,1,enrich,,enrich_1_trial1_sec_play,ST,PL,MS,,1,0,,,,,,,,
+18d2059f-0ab6-4768-9201-af2906e3e05a,Playback,12-03-2025,883.0,1,False,1,enrich,,enrich_1_trial1_sec_play,MS,PL,ST,,1,0,,,,,,,,
+18d2059f-0ab6-4768-9201-af2906e3e05a,Playback,12-03-2025,883.0,1,False,1,enrich,,enrich_1_trial1_sec_play,ST,PL,MS,,1,0,,,,,,,,
+db2628fe-4b78-44c8-a4e7-5dfcb547086e,Playback,12-03-2025,885.0,1,False,1,enrich,,enrich_1_trial1_sec_play,MS,PL,ST,,1,0,,,,,,,,
+db2628fe-4b78-44c8-a4e7-5dfcb547086e,Playback,12-03-2025,885.0,1,False,1,enrich,,enrich_1_trial1_sec_play,ST,PL,MS,,1,0,,,,,,,,
+0b46980a-50be-4517-a860-de91146c6d06,Crow,08-04-2025,823.0,1,False,3,enrich,,enrich_1_trial3_first_cont,ST,DS,,,0,1,,,,,,,,
+483f107a-e0b2-437f-8a16-7e5521a46444,Crow,09-04-2025,618.0,1,False,3,morn1,,morn1_1_trial3_sec_cont,ST,DS,,,0,1,,,,,,,,
+7e2a7aa5-a01a-4d9b-836f-ae97f9933f55,Crow,09-04-2025,620.0,1,False,3,morn1,,morn1_1_trial3_sec_cont,ST,DS,,,0,1,,,,,,,,
+324aa967-b85a-47d9-9ed9-eb3d4cb48b2d,Crow,09-04-2025,689.0,1,False,3,morn2,,morn2_1_trial3_sec_cont,ST,DS,,,0,1,,,,,,,,
+c37905c2-6c4d-47a0-9da3-795807124ee6,Crow,09-04-2025,699.0,1,False,3,morn2,,morn2_1_trial3_sec_cont,ST,DS,,,0,1,,,,,,,,
+190a107d-1c26-44a5-9847-164e62fa1498,Playback,21-04-2025,574.0,1,False,4,morn1,,morn1_1_trial4_first_play,ST,PL,NH,,1,0,,,,,,,,
+190a107d-1c26-44a5-9847-164e62fa1498,Playback,21-04-2025,574.0,1,False,4,morn1,,morn1_1_trial4_first_play,NH,PL,ST,,1,0,,,,,,,,
+7f0b37c9-2590-4cf6-a37c-1259d323149b,Playback,21-04-2025,576.0,1,False,4,morn1,,morn1_1_trial4_first_play,ST,PL,NH,,1,0,,,,,,,,
+7f0b37c9-2590-4cf6-a37c-1259d323149b,Playback,21-04-2025,576.0,1,False,4,morn1,,morn1_1_trial4_first_play,NH,PL,ST,,1,0,,,,,,,,
+dbf5b039-2c5d-48ff-b460-0e3a927b52d7,Playback,21-04-2025,687.0,1,False,4,morn2,,morn2_1_trial4_first_play,MS,PL,ST,,1,0,,,,,,,,
+dbf5b039-2c5d-48ff-b460-0e3a927b52d7,Playback,21-04-2025,687.0,1,False,4,morn2,,morn2_1_trial4_first_play,ST,PL,MS,,1,0,,,,,,,,
+4da64fa8-ade7-4dca-b0f6-819321c82cc6,Playback,21-04-2025,689.0,1,False,4,morn2,,morn2_1_trial4_first_play,MS,PL,ST,,1,0,,,,,,,,
+4da64fa8-ade7-4dca-b0f6-819321c82cc6,Playback,21-04-2025,689.0,1,False,4,morn2,,morn2_1_trial4_first_play,ST,PL,MS,,1,0,,,,,,,,
+47650b7a-1bd6-4121-a718-28cc46d567a0,Playback,22-04-2025,582.0,1,False,4,morn1,,morn1_1_trial4_sec_play,NH,DS,,,0,1,,,,,,,,
+9bbaa949-29a8-4976-9454-51d568aa569b,Playback,22-04-2025,677.0,1,False,4,morn2,,morn2_1_trial4_sec_play,ST,DS,,,0,1,,,,,,,,
+680a543f-5e61-4d08-bf2e-f4a7134bda73,Playback,22-04-2025,679.0,1,False,4,morn2,,morn2_1_trial4_sec_play,ST,DS,,,0,1,,,,,,,,
+48f3b3f1-15d0-4b50-b6e9-e18dd9de4fe8,Playback,22-04-2025,683.0,1,False,4,morn2,,morn2_1_trial4_sec_play,ST,PL,NH,,1,0,,,,,,,,
+48f3b3f1-15d0-4b50-b6e9-e18dd9de4fe8,Playback,22-04-2025,683.0,1,False,4,morn2,,morn2_1_trial4_sec_play,NH,PL,ST,,1,0,,,,,,,,
+427e1132-5a8d-4e21-8340-ef0e2138ed8d,Playback,22-04-2025,685.0,1,False,4,morn2,,morn2_1_trial4_sec_play,ST,PL,NH,,1,0,,,,,,,,
+427e1132-5a8d-4e21-8340-ef0e2138ed8d,Playback,22-04-2025,685.0,1,False,4,morn2,,morn2_1_trial4_sec_play,NH,PL,ST,,1,0,,,,,,,,
+2f92f495-8d14-450e-8e16-d7a8cdda0fc0,Playback,22-04-2025,687.0,1,False,4,morn2,,morn2_1_trial4_sec_play,ST,PL,NH,,1,0,,,,,,,,
+2f92f495-8d14-450e-8e16-d7a8cdda0fc0,Playback,22-04-2025,687.0,1,False,4,morn2,,morn2_1_trial4_sec_play,NH,PL,ST,,1,0,,,,,,,,
+823e0128-be98-43ef-a7de-48e44bd08c3c,Playback,22-04-2025,689.0,1,False,4,morn2,,morn2_1_trial4_sec_play,ST,PL,NH,,1,0,,,,,,,,
+823e0128-be98-43ef-a7de-48e44bd08c3c,Playback,22-04-2025,689.0,1,False,4,morn2,,morn2_1_trial4_sec_play,NH,PL,ST,,1,0,,,,,,,,
+589acbf7-d2bd-475d-819f-8be323479fef,Crow,14-03-2025,584.0,UNKNOWN_DATE,False,1,morn1,,morn1_UNKNOWN_DATE_trial1_first_cont,NR,PL,MN,,1,0,,,,,,,,
+7ee79de3-115d-40ac-9cd0-bd881b5cca62,Crow,14-03-2025,586.0,UNKNOWN_DATE,False,1,morn1,,morn1_UNKNOWN_DATE_trial1_first_cont,NR,PL,MN,,1,0,,,,,,,,
+a34e9985-10cd-4907-a518-00e9e716ca09,Crow,14-03-2025,588.0,UNKNOWN_DATE,False,1,morn1,,morn1_UNKNOWN_DATE_trial1_first_cont,MN,PL,NR,,1,0,,,,,,,,
+a34e9985-10cd-4907-a518-00e9e716ca09,Crow,14-03-2025,588.0,UNKNOWN_DATE,False,1,morn1,,morn1_UNKNOWN_DATE_trial1_first_cont,NR,PL,MN,,1,0,,,,,,,,
+895c7f1b-5c49-4cfb-b3d5-a444c759daa8,Crow,14-03-2025,608.0,UNKNOWN_DATE,False,1,morn1,,morn1_UNKNOWN_DATE_trial1_first_cont,MN,PL,,,1,0,,,,,,,,
+37389303-c253-4154-8ec0-1c684fed8e49,Crow,14-03-2025,616.0,UNKNOWN_DATE,False,1,morn1,,morn1_UNKNOWN_DATE_trial1_first_cont,MN,DS,,,0,1,,,,,,,,
+37389303-c253-4154-8ec0-1c684fed8e49,Crow,14-03-2025,616.0,UNKNOWN_DATE,False,1,morn1,,morn1_UNKNOWN_DATE_trial1_first_cont,NH,DS,,,0,1,,,,,,,,
+6a4d8dc6-a506-499a-a5e1-166ce4b80004,Crow,14-03-2025,618.0,UNKNOWN_DATE,False,1,morn1,,morn1_UNKNOWN_DATE_trial1_first_cont,MN,DS,,,0,1,,,,,,,,
+f428a201-e59b-4cac-990e-47787fb66aa9,Crow,14-03-2025,626.0,UNKNOWN_DATE,False,1,morn1,,morn1_UNKNOWN_DATE_trial1_first_cont,NR,DS,,,0,1,,,,,,,,
+4cf78534-4969-468f-8e3f-46817c70d734,Crow,14-03-2025,628.0,UNKNOWN_DATE,False,1,morn1,,morn1_UNKNOWN_DATE_trial1_first_cont,NR,PL,,,1,0,,,,,,,,
+c934b92c-f194-4b67-8425-0174a72af684,Crow,14-03-2025,630.0,UNKNOWN_DATE,False,1,morn1,,morn1_UNKNOWN_DATE_trial1_first_cont,MN,PL,,,1,0,,,,,,,,
+c934b92c-f194-4b67-8425-0174a72af684,Crow,14-03-2025,630.0,UNKNOWN_DATE,False,1,morn1,,morn1_UNKNOWN_DATE_trial1_first_cont,NR,PL,,,1,0,,,,,,,,
+0a61340a-660d-4d6a-97e5-f469015cc92c,Crow,14-03-2025,827.0,UNKNOWN_DATE,False,1,enrich,,enrich_UNKNOWN_DATE_trial1_first_cont,NH,PL,NR,,1,0,,,,,,,,
+0a61340a-660d-4d6a-97e5-f469015cc92c,Crow,14-03-2025,827.0,UNKNOWN_DATE,False,1,enrich,,enrich_UNKNOWN_DATE_trial1_first_cont,NR,PL,NH,,1,0,,,,,,,,
+56d5bda0-86ba-4562-9964-c203e238bbd0,Crow,14-03-2025,829.0,UNKNOWN_DATE,False,1,enrich,,enrich_UNKNOWN_DATE_trial1_first_cont,NH,PL,NR,,1,0,,,,,,,,
+56d5bda0-86ba-4562-9964-c203e238bbd0,Crow,14-03-2025,829.0,UNKNOWN_DATE,False,1,enrich,,enrich_UNKNOWN_DATE_trial1_first_cont,NR,PL,NH,,1,0,,,,,,,,
+6ef88271-c776-4cc2-83c0-d5f118d717df,Crow,14-03-2025,831.0,UNKNOWN_DATE,False,1,enrich,,enrich_UNKNOWN_DATE_trial1_first_cont,NH,PL,NR,,1,0,,,,,,,,
+6ef88271-c776-4cc2-83c0-d5f118d717df,Crow,14-03-2025,831.0,UNKNOWN_DATE,False,1,enrich,,enrich_UNKNOWN_DATE_trial1_first_cont,NR,PL,NH,,1,0,,,,,,,,
+67efdec0-419d-42dd-a9c3-013cdf30371c,Crow,14-03-2025,833.0,UNKNOWN_DATE,False,1,enrich,,enrich_UNKNOWN_DATE_trial1_first_cont,NH,PL,NR,,1,0,,,,,,,,
+67efdec0-419d-42dd-a9c3-013cdf30371c,Crow,14-03-2025,833.0,UNKNOWN_DATE,False,1,enrich,,enrich_UNKNOWN_DATE_trial1_first_cont,NR,PL,NH,,1,0,,,,,,,,
+243bf831-38a3-4c94-8e21-fd54b999084f,Crow,14-03-2025,843.0,UNKNOWN_DATE,False,1,enrich,,enrich_UNKNOWN_DATE_trial1_first_cont,MN,DS,,,0,1,,,,,,,,
+19aeb07d-44b1-494a-82a5-e69e125c1002,Playback,23-03-2025,590.0,2,False,2,morn1,,morn1_2_trial2_first_play,MN,PL,NR,,1,0,,,,,,,,
+19aeb07d-44b1-494a-82a5-e69e125c1002,Playback,23-03-2025,590.0,2,False,2,morn1,,morn1_2_trial2_first_play,NR,PL,MN,,1,0,,,,,,,,
+fcd3521a-0d39-4c28-b305-49996f48a378,Playback,23-03-2025,813.0,2,False,2,enrich,,enrich_2_trial2_first_play,NH,PL,NR,,1,0,,,,,,,,
+fcd3521a-0d39-4c28-b305-49996f48a378,Playback,23-03-2025,813.0,2,False,2,enrich,,enrich_2_trial2_first_play,NR,PL,NH,,1,0,,,,,,,,
+976dcfe0-0817-43da-aa5d-00a9c9ea7d52,Playback,23-03-2025,815.0,2,False,2,enrich,,enrich_2_trial2_first_play,NH,PL,NR,,1,0,,,,,,,,
+976dcfe0-0817-43da-aa5d-00a9c9ea7d52,Playback,23-03-2025,815.0,2,False,2,enrich,,enrich_2_trial2_first_play,NR,PL,NH,,1,0,,,,,,,,
+251f372c-f46d-48b2-af1a-1e875d3e8577,Playback,24-03-2025,588.0,2,False,2,morn1,,morn1_2_trial2_sec_play,MN,PL,NR,,1,0,,,,,,,,
+251f372c-f46d-48b2-af1a-1e875d3e8577,Playback,24-03-2025,588.0,2,False,2,morn1,,morn1_2_trial2_sec_play,NR,PL,MN,,1,0,,,,,,,,
+222b219a-f5ff-43d5-88c6-cc15d0be156e,Playback,24-03-2025,624.0,2,False,2,morn1,,morn1_2_trial2_sec_play,MN,PL,NR,,1,0,,,,,,,,
+222b219a-f5ff-43d5-88c6-cc15d0be156e,Playback,24-03-2025,624.0,2,False,2,morn1,,morn1_2_trial2_sec_play,NR,PL,MN,,1,0,,,,,,,,
+3939f477-0d62-4b91-b651-436b5452a7d7,Playback,24-03-2025,626.0,2,False,2,morn1,,morn1_2_trial2_sec_play,MN,PL,NR,,1,0,,,,,,,,
+3939f477-0d62-4b91-b651-436b5452a7d7,Playback,24-03-2025,626.0,2,False,2,morn1,,morn1_2_trial2_sec_play,NR,PL,MN,,1,0,,,,,,,,
+cb0e0c90-c1b7-4a39-824d-ce4ca3932c78,Playback,24-03-2025,628.0,2,False,2,morn1,,morn1_2_trial2_sec_play,MN,PL,NR,,1,0,,,,,,,,
+cb0e0c90-c1b7-4a39-824d-ce4ca3932c78,Playback,24-03-2025,628.0,2,False,2,morn1,,morn1_2_trial2_sec_play,NR,PL,MN,,1,0,,,,,,,,
+3287e783-21b1-47e3-8222-70a568353ee6,Playback,24-03-2025,841.0,2,False,2,enrich,,enrich_2_trial2_sec_play,NH,PL,NR,,1,0,,,,,,,,
+3287e783-21b1-47e3-8222-70a568353ee6,Playback,24-03-2025,841.0,2,False,2,enrich,,enrich_2_trial2_sec_play,NR,PL,NH,,1,0,,,,,,,,
+b445b66c-d5be-4213-a185-f9b1adacffb9,Playback,24-03-2025,847.0,2,False,2,enrich,,enrich_2_trial2_sec_play,NH,PL,NR,,1,0,,,,,,,,
+b445b66c-d5be-4213-a185-f9b1adacffb9,Playback,24-03-2025,847.0,2,False,2,enrich,,enrich_2_trial2_sec_play,NR,PL,NH,,1,0,,,,,,,,
+d101bd1d-553a-4e75-8cff-7eaf0336c31b,Playback,24-03-2025,849.0,2,False,2,enrich,,enrich_2_trial2_sec_play,NH,DS,,,0,1,,,,,,,,
+08e9142c-8e54-4ce6-a49b-8046567ab424,Playback,24-03-2025,851.0,2,False,2,enrich,,enrich_2_trial2_sec_play,NH,PL,NR,,1,0,,,,,,,,
+08e9142c-8e54-4ce6-a49b-8046567ab424,Playback,24-03-2025,851.0,2,False,2,enrich,,enrich_2_trial2_sec_play,NR,PL,NH,,1,0,,,,,,,,
+5f4b277d-bbf3-461b-abe7-f4efa11ffa49,Playback,26-04-2025,588.0,2,False,5,morn1,,morn1_2_trial5_first_play,MN,DS,,,0,1,,,,,,,,
+4a308e05-a0fd-4dad-941f-46c3c7947ee8,Playback,26-04-2025,590.0,2,False,5,morn1,,morn1_2_trial5_first_play,MN,DS,,,0,1,,,,,,,,
+79775ab3-2b39-42ae-8515-0669aa358a8d,Playback,26-04-2025,594.0,2,False,5,morn1,,morn1_2_trial5_first_play,LN,PL,MN,,1,0,,,,,,,,
+79775ab3-2b39-42ae-8515-0669aa358a8d,Playback,26-04-2025,594.0,2,False,5,morn1,,morn1_2_trial5_first_play,MN,PL,LN,,1,0,,,,,,,,
+79775ab3-2b39-42ae-8515-0669aa358a8d,Playback,26-04-2025,594.0,2,False,5,morn1,,morn1_2_trial5_first_play,NH,DS,,,0,1,,,,,,,,
+db90d2af-6f38-4952-970c-d8f98f8fa937,Playback,26-04-2025,596.0,2,False,5,morn1,,morn1_2_trial5_first_play,LN,PL,NR,,1,0,,,,,,,,
+db90d2af-6f38-4952-970c-d8f98f8fa937,Playback,26-04-2025,596.0,2,False,5,morn1,,morn1_2_trial5_first_play,MN,PL,NH,,1,0,,,,,,,,
+db90d2af-6f38-4952-970c-d8f98f8fa937,Playback,26-04-2025,596.0,2,False,5,morn1,,morn1_2_trial5_first_play,NH,PL,MN,,1,0,,,,,,,,
+db90d2af-6f38-4952-970c-d8f98f8fa937,Playback,26-04-2025,596.0,2,False,5,morn1,,morn1_2_trial5_first_play,NR,PL,LN,,1,0,,,,,,,,
+8a8b74a5-a11b-428b-a922-dc1ff677620a,Playback,26-04-2025,598.0,2,False,5,morn1,,morn1_2_trial5_first_play,MN,PL,"NH, NR",,1,0,,,,,,,,
+8a8b74a5-a11b-428b-a922-dc1ff677620a,Playback,26-04-2025,598.0,2,False,5,morn1,,morn1_2_trial5_first_play,NH,PL,"NR, MN",,1,0,,,,,,,,
+8a8b74a5-a11b-428b-a922-dc1ff677620a,Playback,26-04-2025,598.0,2,False,5,morn1,,morn1_2_trial5_first_play,NR,PL,,,1,0,,,,,,,,
+d6984ed7-4480-4de7-95c9-130112c831a6,Playback,26-04-2025,645.0,2,False,5,morn2,,morn2_2_trial5_first_play,NH,DS,,,0,1,,,,,,,,
+4f23296d-bcc4-4caa-b766-5b25dee59847,Playback,27-04-2025,576.0,2,False,5,morn1,,morn1_2_trial5_sec_play,NH,DS,,,0,1,,,,,,,,
+8bb2fd62-3af7-47c6-9c76-44bc7101754a,Playback,27-04-2025,853.0,2,False,5,enrich,,enrich_2_trial5_sec_play,MN,PL,"NR, NH",,1,0,,,,,,,,
+8bb2fd62-3af7-47c6-9c76-44bc7101754a,Playback,27-04-2025,853.0,2,False,5,enrich,,enrich_2_trial5_sec_play,NH,PL,"MN, NR",,1,0,,,,,,,,
+8bb2fd62-3af7-47c6-9c76-44bc7101754a,Playback,27-04-2025,853.0,2,False,5,enrich,,enrich_2_trial5_sec_play,NR,PL,"NH, MN",,1,0,,,,,,,,
+098aae89-c70f-44b9-8687-e838842cbed2,Crow,04-05-2025,610.0,2,False,6,morn1,,morn1_2_trial6_first_cont,MN,DS,,,0,1,,,,,,,,
+e3a360e3-900c-485c-bfff-79027a3003e7,Crow,04-05-2025,612.0,2,False,6,morn1,,morn1_2_trial6_first_cont,MN,DS,,,0,1,,,,,,,,
+e3a360e3-900c-485c-bfff-79027a3003e7,Crow,04-05-2025,612.0,2,False,6,morn1,,morn1_2_trial6_first_cont,NH,DS,,,0,1,,,,,,,,
+585dc681-7739-4fc3-82c7-a68e7496891d,Crow,04-05-2025,857.0,2,False,6,enrich,,enrich_2_trial6_first_cont,LN,PL,NR,,1,0,,,,,,,,
+585dc681-7739-4fc3-82c7-a68e7496891d,Crow,04-05-2025,857.0,2,False,6,enrich,,enrich_2_trial6_first_cont,NR,PL,LN,,1,0,,,,,,,,
+7b8ab5eb-1b1b-4ff7-b3a0-eef6674d8999,Crow,04-05-2025,859.0,2,False,6,enrich,,enrich_2_trial6_first_cont,LN,PL,NR,,1,0,,,,,,,,
+7b8ab5eb-1b1b-4ff7-b3a0-eef6674d8999,Crow,04-05-2025,859.0,2,False,6,enrich,,enrich_2_trial6_first_cont,NR,PL,LN,,1,0,,,,,,,,
+b3f0c857-dfdb-438e-9741-a0ec88087513,Crow,04-05-2025,861.0,2,False,6,enrich,,enrich_2_trial6_first_cont,LN,PL,NR,,1,0,,,,,,,,
+b3f0c857-dfdb-438e-9741-a0ec88087513,Crow,04-05-2025,861.0,2,False,6,enrich,,enrich_2_trial6_first_cont,NR,PL,LN,,1,0,,,,,,,,
+5535abe4-1b81-4110-b794-648c87d66f9f,Crow,04-05-2025,865.0,2,False,6,enrich,,enrich_2_trial6_first_cont,NH,PL,NR,,1,0,,,,,,,,
+5535abe4-1b81-4110-b794-648c87d66f9f,Crow,04-05-2025,865.0,2,False,6,enrich,,enrich_2_trial6_first_cont,NR,PL,NH,,1,0,,,,,,,,
+9769d5f1-5b35-4775-a0f9-940939268bfc,Crow,04-05-2025,867.0,2,False,6,enrich,,enrich_2_trial6_first_cont,NH,PL,NR,,1,0,,,,,,,,
+9769d5f1-5b35-4775-a0f9-940939268bfc,Crow,04-05-2025,867.0,2,False,6,enrich,,enrich_2_trial6_first_cont,NR,PL,NH,,1,0,,,,,,,,
+f5fdc5a1-1499-4128-a155-cff1d8a18017,Crow,19-05-2025,616.0,2,False,7,morn1,,morn1_2_trial7_first_cont,MN,DS,,,0,1,,,,,,,,
+84b6eb6b-8259-40cc-a8b7-41ef420b46f9,Crow,19-05-2025,618.0,2,False,7,morn1,,morn1_2_trial7_first_cont,MN,DS,,,0,1,,,,,,,,
+0ca64fd8-4b09-4dc3-9d63-86a8ae0339f8,Crow,19-05-2025,620.0,2,False,7,morn1,,morn1_2_trial7_first_cont,MN,DS,,,0,1,,,,,,,,
+0ca64fd8-4b09-4dc3-9d63-86a8ae0339f8,Crow,19-05-2025,620.0,2,False,7,morn1,,morn1_2_trial7_first_cont,NH,DS,,,0,1,,,,,,,,
+d0479311-f0f4-4c78-a8a7-a141ac5cd3bb,Crow,20-05-2025,689.0,2,False,7,morn2,,morn2_2_trial7_sec_cont,MN,DS,,,0,1,,,,,,,,
+a2b04628-495d-4a6d-aa06-afbedb5b9bea,Crow,16-04-2025,578.0,3,False,4,morn1,,morn1_3_trial4_first_cont,MN,DS,,,0,1,,,,,,,,
+f3e5dfea-8396-4bf4-b44a-8a3d62935e7e,Crow,16-04-2025,582.0,3,False,4,morn1,,morn1_3_trial4_first_cont,NH,DS,,,0,1,,,,,,,,
+7f3cc488-c2ac-4339-8f94-37c56247900d,Crow,16-04-2025,628.0,3,False,4,morn1,,morn1_3_trial4_first_cont,MN,DS,,,0,1,,,,,,,,
+9e7f4adf-46b9-4050-90ff-ad45ab1c7ff0,Crow,16-04-2025,653.0,3,False,4,morn2,,morn2_3_trial4_first_cont,NH,AG,"MN, NY",,0,1,,,,,,,,
+9e7f4adf-46b9-4050-90ff-ad45ab1c7ff0,Crow,16-04-2025,653.0,3,False,4,morn2,,morn2_3_trial4_first_cont,MN,AG,"NH, NY",,0,1,,,,,,,,
+9e7f4adf-46b9-4050-90ff-ad45ab1c7ff0,Crow,16-04-2025,653.0,3,False,4,morn2,,morn2_3_trial4_first_cont,NY,AG,"NH, MN",,0,1,,,,,,,,
+96b5bc45-609a-4e46-942d-899748f2e30b,Crow,16-04-2025,657.0,3,False,4,morn2,,morn2_3_trial4_first_cont,MS,DS,,,0,1,,,,,,,,
+96b5bc45-609a-4e46-942d-899748f2e30b,Crow,16-04-2025,657.0,3,False,4,morn2,,morn2_3_trial4_first_cont,NH,DS,,,0,1,,,,,,,,
+96b5bc45-609a-4e46-942d-899748f2e30b,Crow,16-04-2025,657.0,3,False,4,morn2,,morn2_3_trial4_first_cont,MN,DS,,,0,1,,,,,,,,
+96b5bc45-609a-4e46-942d-899748f2e30b,Crow,16-04-2025,657.0,3,False,4,morn2,,morn2_3_trial4_first_cont,NY,DS,,,0,1,,,,,,,,
+f01b9606-a535-4c4a-834f-f7659f6475b8,Crow,17-04-2025,881.0,3,False,4,enrich,,enrich_3_trial4_sec_cont,MS,PL,NY,,1,0,,,,,,,,
+f01b9606-a535-4c4a-834f-f7659f6475b8,Crow,17-04-2025,881.0,3,False,4,enrich,,enrich_3_trial4_sec_cont,NY,PL,MS,,1,0,,,,,,,,
+58fdb113-e1c0-46b2-9524-83bac0a49ced,Crow,17-04-2025,883.0,3,False,4,enrich,,enrich_3_trial4_sec_cont,MS,PL,NY,,1,0,,,,,,,,
+58fdb113-e1c0-46b2-9524-83bac0a49ced,Crow,17-04-2025,883.0,3,False,4,enrich,,enrich_3_trial4_sec_cont,NY,PL,MS,,1,0,,,,,,,,
+03dcc078-50d5-46be-81f2-e4dc74f0001e,Crow,17-04-2025,885.0,3,False,4,enrich,,enrich_3_trial4_sec_cont,MS,PL,NY,,1,0,,,,,,,,
+03dcc078-50d5-46be-81f2-e4dc74f0001e,Crow,17-04-2025,885.0,3,False,4,enrich,,enrich_3_trial4_sec_cont,NY,PL,MS,,1,0,,,,,,,,
+1633cc6d-7444-45df-bae9-a1296ff55643,Crow,30-04-2025,608.0,3,False,5,morn1,,morn1_3_trial5_first_cont,MN,DS,,,0,1,,,,,,,,
+7c5f2bdd-596a-40b6-a8c0-50fb1a5ea65d,Crow,30-04-2025,620.0,3,False,5,morn1,,morn1_3_trial5_first_cont,MS,PL,NY,,1,0,,,,,,,,
+7c5f2bdd-596a-40b6-a8c0-50fb1a5ea65d,Crow,30-04-2025,620.0,3,False,5,morn1,,morn1_3_trial5_first_cont,NY,PL,MS,,1,0,,,,,,,,
+c4e4ddc5-7b29-4cae-a6b3-f9fdad537e26,Crow,30-04-2025,622.0,3,False,5,morn1,,morn1_3_trial5_first_cont,MS,PL,NY,,1,0,,,,,,,,
+c4e4ddc5-7b29-4cae-a6b3-f9fdad537e26,Crow,30-04-2025,622.0,3,False,5,morn1,,morn1_3_trial5_first_cont,NY,PL,MS,,1,0,,,,,,,,
+7d19fe0a-98e5-4f45-bfff-aab5eff828ea,Crow,30-04-2025,624.0,3,False,5,morn1,,morn1_3_trial5_first_cont,MS,PL,NY,,1,0,,,,,,,,
+7d19fe0a-98e5-4f45-bfff-aab5eff828ea,Crow,30-04-2025,624.0,3,False,5,morn1,,morn1_3_trial5_first_cont,NY,PL,MS,,1,0,,,,,,,,
+14b4f314-6807-4296-a002-f7864aa0cdb3,Crow,30-04-2025,797.0,3,False,5,enrich,,enrich_3_trial5_first_cont,NY,AG,MS,,0,1,,,,,,,,
+e49d37a8-6aad-444a-a0d9-ed75f9aaad62,Crow,30-04-2025,805.0,3,False,5,enrich,,enrich_3_trial5_first_cont,MN,AG,,,0,1,,,,,,,,
+4baaa44a-79e9-4ac4-993d-c49de25958d3,Crow,30-04-2025,807.0,3,False,5,enrich,,enrich_3_trial5_first_cont,MN,AG,,,0,1,,,,,,,,
+ef6cfab1-3700-4470-82dc-f7b09cada5bf,Crow,01-05-2025,612.0,3,False,5,morn1,,morn1_3_trial5_sec_cont,MN,AG,,,0,1,,,,,,,,
+a194f187-e0dc-4fb7-8f90-089c5f5bbba1,Crow,01-05-2025,614.0,3,False,5,morn1,,morn1_3_trial5_sec_cont,NH,DS,,,0,1,,,,,,,,
+a194f187-e0dc-4fb7-8f90-089c5f5bbba1,Crow,01-05-2025,614.0,3,False,5,morn1,,morn1_3_trial5_sec_cont,MN,DS,,,0,1,,,,,,,,
+77597533-b63b-4103-87b8-57279ab1e9da,Crow,01-05-2025,616.0,3,False,5,morn1,,morn1_3_trial5_sec_cont,NH,AG,,,0,1,,,,,,,,
+77f63139-8051-4f35-b7f8-2a4c6685c15d,Crow,01-05-2025,663.0,3,False,5,morn2,,morn2_3_trial5_sec_cont,MS,PL,NY,,1,0,,,,,,,,
+77f63139-8051-4f35-b7f8-2a4c6685c15d,Crow,01-05-2025,663.0,3,False,5,morn2,,morn2_3_trial5_sec_cont,NY,PL,MS,,1,0,,,,,,,,
+1a21849d-25b2-4991-acbc-5cdb128e8799,Crow,01-05-2025,665.0,3,False,5,morn2,,morn2_3_trial5_sec_cont,MS,PL,NY,,1,0,,,,,,,,
+1a21849d-25b2-4991-acbc-5cdb128e8799,Crow,01-05-2025,665.0,3,False,5,morn2,,morn2_3_trial5_sec_cont,NY,PL,MS,,1,0,,,,,,,,
+47002f4d-a318-43c5-a2a9-282be2496a20,Crow,01-05-2025,667.0,3,False,5,morn2,,morn2_3_trial5_sec_cont,MS,PL,NY,,1,0,,,,,,,,
+47002f4d-a318-43c5-a2a9-282be2496a20,Crow,01-05-2025,667.0,3,False,5,morn2,,morn2_3_trial5_sec_cont,NY,PL,MS,,1,0,,,,,,,,
+116b0769-9c10-4d37-a141-6b15c6eefb8a,Crow,01-05-2025,669.0,3,False,5,morn2,,morn2_3_trial5_sec_cont,MS,PL,NY,,1,0,,,,,,,,
+116b0769-9c10-4d37-a141-6b15c6eefb8a,Crow,01-05-2025,669.0,3,False,5,morn2,,morn2_3_trial5_sec_cont,NY,PL,MS,,1,0,,,,,,,,
+a7d514f9-4d2d-4aca-b9c4-bc869fc0c352,Crow,01-05-2025,671.0,3,False,5,morn2,,morn2_3_trial5_sec_cont,MS,PL,NY,,1,0,,,,,,,,
+a7d514f9-4d2d-4aca-b9c4-bc869fc0c352,Crow,01-05-2025,671.0,3,False,5,morn2,,morn2_3_trial5_sec_cont,NY,PL,MS,,1,0,,,,,,,,
+5cf73e78-6a0f-45e8-9314-796f62e0078b,Crow,01-05-2025,673.0,3,False,5,morn2,,morn2_3_trial5_sec_cont,MS,PL,NY,,1,0,,,,,,,,
+5cf73e78-6a0f-45e8-9314-796f62e0078b,Crow,01-05-2025,673.0,3,False,5,morn2,,morn2_3_trial5_sec_cont,NY,PL,MS,,1,0,,,,,,,,
+16b23895-d4fb-4b5a-b0ad-369f97db1ba7,Crow,01-05-2025,675.0,3,False,5,morn2,,morn2_3_trial5_sec_cont,MS,PL,NY,,1,0,,,,,,,,
+16b23895-d4fb-4b5a-b0ad-369f97db1ba7,Crow,01-05-2025,675.0,3,False,5,morn2,,morn2_3_trial5_sec_cont,NY,PL,MS,,1,0,,,,,,,,
+1ffbee03-6fe3-4bc5-a6f3-2025976c5e65,Crow,01-05-2025,677.0,3,False,5,morn2,,morn2_3_trial5_sec_cont,MS,PL,NY,,1,0,,,,,,,,
+1ffbee03-6fe3-4bc5-a6f3-2025976c5e65,Crow,01-05-2025,677.0,3,False,5,morn2,,morn2_3_trial5_sec_cont,NY,PL,MS,,1,0,,,,,,,,
+1092dc1a-9a09-4cf1-935b-611de6db5403,Crow,01-05-2025,815.0,3,False,5,enrich,,enrich_3_trial5_sec_cont,NY,DS,,,0,1,,,,,,,,
+12a5383b-eacc-477c-895f-b31373242f98,Crow,01-05-2025,817.0,3,False,5,enrich,,enrich_3_trial5_sec_cont,MS,PL,NY,,1,0,,,,,,,,
+12a5383b-eacc-477c-895f-b31373242f98,Crow,01-05-2025,817.0,3,False,5,enrich,,enrich_3_trial5_sec_cont,NY,PL,MS,,1,0,,,,,,,,
+3d03a54d-cec2-4479-8d8e-6bec75deb0eb,Playback,15-05-2025,871.0,3,False,6,enrich,,enrich_3_trial6_sec_play,MS,DS,,,0,1,,,,,,,,
+c2021bc8-d46f-47e4-8a32-24726700a0b6,Playback,12-03-2025,843.0,1,False,1,enrich,,enrich_1_trial1_sec_play,NH,DS,,,0,1,,,,,,,,
+c2021bc8-d46f-47e4-8a32-24726700a0b6,Playback,12-03-2025,,1,False,1,,,_1_trial1_sec_play,NH,DS,,,0,1,,,,,,,,
+7e373872-3d0f-4779-889f-01102d52128e,Playback,12-03-2025,845.0,1,False,1,enrich,,enrich_1_trial1_sec_play,NH,DS,,,0,1,,,,,,,,
+ecfc7357-f1d3-4a3e-9c03-68040660035b,Playback,12-03-2025,847.0,1,False,1,enrich,,enrich_1_trial1_sec_play,ST,DS,NH,,0,1,,,,,,,,
+ecfc7357-f1d3-4a3e-9c03-68040660035b,Playback,12-03-2025,847.0,1,False,1,enrich,,enrich_1_trial1_sec_play,NH,DS,ST,,0,1,,,,,,,,
+ecfc7357-f1d3-4a3e-9c03-68040660035b,Playback,12-03-2025,,1,False,1,,,_1_trial1_sec_play,ST,DS,NH,,0,1,,,,,,,,
+ecfc7357-f1d3-4a3e-9c03-68040660035b,Playback,12-03-2025,,1,False,1,,,_1_trial1_sec_play,NH,DS,ST,,0,1,,,,,,,,
+9de25b42-d6c4-4733-b67e-5080ea954b05,Playback,12-03-2025,849.0,1,False,1,enrich,,enrich_1_trial1_sec_play,ST,DS,NH,,0,1,,,,,,,,
+9de25b42-d6c4-4733-b67e-5080ea954b05,Playback,12-03-2025,849.0,1,False,1,enrich,,enrich_1_trial1_sec_play,NH,DS,ST,,0,1,,,,,,,,
+7042277d-2331-47be-9021-80a990a01672,Playback,12-03-2025,861.0,1,False,1,enrich,,enrich_1_trial1_sec_play,NH,DS,,,0,1,,,,,,,,
+eb57ce1a-0fc2-4b11-bece-1a215981a5a6,Playback,12-03-2025,867.0,1,False,1,enrich,,enrich_1_trial1_sec_play,MS,PL,NH,,1,0,,,,,,,,
+eb57ce1a-0fc2-4b11-bece-1a215981a5a6,Playback,12-03-2025,867.0,1,False,1,enrich,,enrich_1_trial1_sec_play,NH,PL,MS,,1,0,,,,,,,,
+eb57ce1a-0fc2-4b11-bece-1a215981a5a6,Playback,12-03-2025,,1,False,1,,,_1_trial1_sec_play,MS,PL,NH,,1,0,,,,,,,,
+eb57ce1a-0fc2-4b11-bece-1a215981a5a6,Playback,12-03-2025,,1,False,1,,,_1_trial1_sec_play,NH,PL,MS,,1,0,,,,,,,,
+8990c4d8-5028-4750-bd62-d9a5a9c7316e,Playback,12-03-2025,869.0,1,False,1,enrich,,enrich_1_trial1_sec_play,MS,PL,"ST, NH",,1,0,,,,,,,,
+8990c4d8-5028-4750-bd62-d9a5a9c7316e,Playback,12-03-2025,869.0,1,False,1,enrich,,enrich_1_trial1_sec_play,ST,PL,"MS, NH",,1,0,,,,,,,,
+8990c4d8-5028-4750-bd62-d9a5a9c7316e,Playback,12-03-2025,869.0,1,False,1,enrich,,enrich_1_trial1_sec_play,NH,PL,"MS, ST",,1,0,,,,,,,,
+8990c4d8-5028-4750-bd62-d9a5a9c7316e,Playback,12-03-2025,,1,False,1,,,_1_trial1_sec_play,MS,PL,"ST, NH",,1,0,,,,,,,,
+8990c4d8-5028-4750-bd62-d9a5a9c7316e,Playback,12-03-2025,,1,False,1,,,_1_trial1_sec_play,ST,PL,"MS, NH",,1,0,,,,,,,,
+8990c4d8-5028-4750-bd62-d9a5a9c7316e,Playback,12-03-2025,,1,False,1,,,_1_trial1_sec_play,NH,PL,"MS, ST",,1,0,,,,,,,,
+22280968-7cb0-46e1-b88a-e0a56934f328,Playback,12-03-2025,875.0,1,False,1,enrich,,enrich_1_trial1_sec_play,MS,PL,ST,,1,0,,,,,,,,
+22280968-7cb0-46e1-b88a-e0a56934f328,Playback,12-03-2025,875.0,1,False,1,enrich,,enrich_1_trial1_sec_play,ST,PL,MS,,1,0,,,,,,,,
+22280968-7cb0-46e1-b88a-e0a56934f328,Playback,12-03-2025,,1,False,1,,,_1_trial1_sec_play,MS,PL,ST,,1,0,,,,,,,,
+22280968-7cb0-46e1-b88a-e0a56934f328,Playback,12-03-2025,,1,False,1,,,_1_trial1_sec_play,ST,PL,MS,,1,0,,,,,,,,
+2798817d-708f-48c2-8a1b-c57dcac4b1e2,Playback,12-03-2025,877.0,1,False,1,enrich,,enrich_1_trial1_sec_play,MS,PL,ST,,1,0,,,,,,,,
+2798817d-708f-48c2-8a1b-c57dcac4b1e2,Playback,12-03-2025,877.0,1,False,1,enrich,,enrich_1_trial1_sec_play,ST,PL,MS,,1,0,,,,,,,,
+2798817d-708f-48c2-8a1b-c57dcac4b1e2,Playback,12-03-2025,,1,False,1,,,_1_trial1_sec_play,MS,PL,ST,,1,0,,,,,,,,
+2798817d-708f-48c2-8a1b-c57dcac4b1e2,Playback,12-03-2025,,1,False,1,,,_1_trial1_sec_play,ST,PL,MS,,1,0,,,,,,,,
+e374d507-c698-46b2-ac5d-3d12fd2b12cd,Playback,12-03-2025,879.0,1,False,1,enrich,,enrich_1_trial1_sec_play,MS,PL,ST,,1,0,,,,,,,,
+e374d507-c698-46b2-ac5d-3d12fd2b12cd,Playback,12-03-2025,879.0,1,False,1,enrich,,enrich_1_trial1_sec_play,ST,PL,MS,,1,0,,,,,,,,
+e374d507-c698-46b2-ac5d-3d12fd2b12cd,Playback,12-03-2025,,1,False,1,,,_1_trial1_sec_play,MS,PL,ST,,1,0,,,,,,,,
+e374d507-c698-46b2-ac5d-3d12fd2b12cd,Playback,12-03-2025,,1,False,1,,,_1_trial1_sec_play,ST,PL,MS,,1,0,,,,,,,,
+7814adef-1d0d-45b6-b431-04d4ddee7b74,Playback,12-03-2025,881.0,1,False,1,enrich,,enrich_1_trial1_sec_play,MS,PL,ST,,1,0,,,,,,,,
+7814adef-1d0d-45b6-b431-04d4ddee7b74,Playback,12-03-2025,881.0,1,False,1,enrich,,enrich_1_trial1_sec_play,ST,PL,MS,,1,0,,,,,,,,
+7814adef-1d0d-45b6-b431-04d4ddee7b74,Playback,12-03-2025,,1,False,1,,,_1_trial1_sec_play,MS,PL,ST,,1,0,,,,,,,,
+7814adef-1d0d-45b6-b431-04d4ddee7b74,Playback,12-03-2025,,1,False,1,,,_1_trial1_sec_play,ST,PL,MS,,1,0,,,,,,,,
+18d2059f-0ab6-4768-9201-af2906e3e05a,Playback,12-03-2025,883.0,1,False,1,enrich,,enrich_1_trial1_sec_play,MS,PL,ST,,1,0,,,,,,,,
+18d2059f-0ab6-4768-9201-af2906e3e05a,Playback,12-03-2025,883.0,1,False,1,enrich,,enrich_1_trial1_sec_play,ST,PL,MS,,1,0,,,,,,,,
+18d2059f-0ab6-4768-9201-af2906e3e05a,Playback,12-03-2025,,1,False,1,,,_1_trial1_sec_play,MS,PL,ST,,1,0,,,,,,,,
+18d2059f-0ab6-4768-9201-af2906e3e05a,Playback,12-03-2025,,1,False,1,,,_1_trial1_sec_play,ST,PL,MS,,1,0,,,,,,,,
+db2628fe-4b78-44c8-a4e7-5dfcb547086e,Playback,12-03-2025,885.0,1,False,1,enrich,,enrich_1_trial1_sec_play,MS,PL,ST,,1,0,,,,,,,,
+db2628fe-4b78-44c8-a4e7-5dfcb547086e,Playback,12-03-2025,885.0,1,False,1,enrich,,enrich_1_trial1_sec_play,ST,PL,MS,,1,0,,,,,,,,
+db2628fe-4b78-44c8-a4e7-5dfcb547086e,Playback,12-03-2025,,1,False,1,,,_1_trial1_sec_play,MS,PL,ST,,1,0,,,,,,,,
+db2628fe-4b78-44c8-a4e7-5dfcb547086e,Playback,12-03-2025,,1,False,1,,,_1_trial1_sec_play,ST,PL,MS,,1,0,,,,,,,,
+589acbf7-d2bd-475d-819f-8be323479fef,Crow,14-03-2025,584.0,UNKNOWN_DATE,False,1,morn1,,morn1_UNKNOWN_DATE_trial1_first_cont,NR,PL,MN,,1,0,,,,,,,,
+7ee79de3-115d-40ac-9cd0-bd881b5cca62,Crow,14-03-2025,586.0,UNKNOWN_DATE,False,1,morn1,,morn1_UNKNOWN_DATE_trial1_first_cont,NR,PL,MN,,1,0,,,,,,,,
+a34e9985-10cd-4907-a518-00e9e716ca09,Crow,14-03-2025,588.0,UNKNOWN_DATE,False,1,morn1,,morn1_UNKNOWN_DATE_trial1_first_cont,NR,PL,MN,,1,0,,,,,,,,
+a34e9985-10cd-4907-a518-00e9e716ca09,Crow,14-03-2025,588.0,UNKNOWN_DATE,False,1,morn1,,morn1_UNKNOWN_DATE_trial1_first_cont,MN,PL,NR,,1,0,,,,,,,,
+895c7f1b-5c49-4cfb-b3d5-a444c759daa8,Crow,14-03-2025,608.0,UNKNOWN_DATE,False,1,morn1,,morn1_UNKNOWN_DATE_trial1_first_cont,MN,PL,,,1,0,,,,,,,,
+37389303-c253-4154-8ec0-1c684fed8e49,Crow,14-03-2025,616.0,UNKNOWN_DATE,False,1,morn1,,morn1_UNKNOWN_DATE_trial1_first_cont,NH,DS,,,0,1,,,,,,,,
+37389303-c253-4154-8ec0-1c684fed8e49,Crow,14-03-2025,616.0,UNKNOWN_DATE,False,1,morn1,,morn1_UNKNOWN_DATE_trial1_first_cont,MN,DS,,,0,1,,,,,,,,
+4cf78534-4969-468f-8e3f-46817c70d734,Crow,14-03-2025,628.0,UNKNOWN_DATE,False,1,morn1,,morn1_UNKNOWN_DATE_trial1_first_cont,NR,PL,,,1,0,,,,,,,,
+c934b92c-f194-4b67-8425-0174a72af684,Crow,14-03-2025,630.0,UNKNOWN_DATE,False,1,morn1,,morn1_UNKNOWN_DATE_trial1_first_cont,NR,PL,,,1,0,,,,,,,,
+c934b92c-f194-4b67-8425-0174a72af684,Crow,14-03-2025,630.0,UNKNOWN_DATE,False,1,morn1,,morn1_UNKNOWN_DATE_trial1_first_cont,MN,PL,,,1,0,,,,,,,,
+0a61340a-660d-4d6a-97e5-f469015cc92c,Crow,14-03-2025,827.0,UNKNOWN_DATE,False,1,enrich,,enrich_UNKNOWN_DATE_trial1_first_cont,NH,PL,NR,,1,0,,,,,,,,
+0a61340a-660d-4d6a-97e5-f469015cc92c,Crow,14-03-2025,827.0,UNKNOWN_DATE,False,1,enrich,,enrich_UNKNOWN_DATE_trial1_first_cont,NR,PL,NH,,1,0,,,,,,,,
+56d5bda0-86ba-4562-9964-c203e238bbd0,Crow,14-03-2025,829.0,UNKNOWN_DATE,False,1,enrich,,enrich_UNKNOWN_DATE_trial1_first_cont,NH,PL,NR,,1,0,,,,,,,,
+56d5bda0-86ba-4562-9964-c203e238bbd0,Crow,14-03-2025,829.0,UNKNOWN_DATE,False,1,enrich,,enrich_UNKNOWN_DATE_trial1_first_cont,NR,PL,NH,,1,0,,,,,,,,
+6ef88271-c776-4cc2-83c0-d5f118d717df,Crow,14-03-2025,831.0,UNKNOWN_DATE,False,1,enrich,,enrich_UNKNOWN_DATE_trial1_first_cont,NH,PL,NR,,1,0,,,,,,,,
+6ef88271-c776-4cc2-83c0-d5f118d717df,Crow,14-03-2025,831.0,UNKNOWN_DATE,False,1,enrich,,enrich_UNKNOWN_DATE_trial1_first_cont,NR,PL,NH,,1,0,,,,,,,,
+67efdec0-419d-42dd-a9c3-013cdf30371c,Crow,14-03-2025,833.0,UNKNOWN_DATE,False,1,enrich,,enrich_UNKNOWN_DATE_trial1_first_cont,NH,PL,NR,,1,0,,,,,,,,
+67efdec0-419d-42dd-a9c3-013cdf30371c,Crow,14-03-2025,833.0,UNKNOWN_DATE,False,1,enrich,,enrich_UNKNOWN_DATE_trial1_first_cont,NR,PL,NH,,1,0,,,,,,,,
+19aeb07d-44b1-494a-82a5-e69e125c1002,Playback,23-03-2025,590.0,2,False,2,morn1,,morn1_2_trial2_first_play,NR,PL,MN,,1,0,,,,,,,,
+19aeb07d-44b1-494a-82a5-e69e125c1002,Playback,23-03-2025,590.0,2,False,2,morn1,,morn1_2_trial2_first_play,MN,PL,NR,,1,0,,,,,,,,
+fcd3521a-0d39-4c28-b305-49996f48a378,Playback,23-03-2025,813.0,2,False,2,enrich,,enrich_2_trial2_first_play,NH,PL,NR,,1,0,,,,,,,,
+fcd3521a-0d39-4c28-b305-49996f48a378,Playback,23-03-2025,813.0,2,False,2,enrich,,enrich_2_trial2_first_play,NR,PL,NH,,1,0,,,,,,,,
+976dcfe0-0817-43da-aa5d-00a9c9ea7d52,Playback,23-03-2025,815.0,2,False,2,enrich,,enrich_2_trial2_first_play,NH,PL,NR,,1,0,,,,,,,,
+976dcfe0-0817-43da-aa5d-00a9c9ea7d52,Playback,23-03-2025,815.0,2,False,2,enrich,,enrich_2_trial2_first_play,NR,PL,NH,,1,0,,,,,,,,
+251f372c-f46d-48b2-af1a-1e875d3e8577,Playback,24-03-2025,588.0,2,False,2,morn1,,morn1_2_trial2_sec_play,NR,PL,MN,,1,0,,,,,,,,
+251f372c-f46d-48b2-af1a-1e875d3e8577,Playback,24-03-2025,588.0,2,False,2,morn1,,morn1_2_trial2_sec_play,MN,PL,NR,,1,0,,,,,,,,
+222b219a-f5ff-43d5-88c6-cc15d0be156e,Playback,24-03-2025,624.0,2,False,2,morn1,,morn1_2_trial2_sec_play,NR,PL,MN,,1,0,,,,,,,,
+222b219a-f5ff-43d5-88c6-cc15d0be156e,Playback,24-03-2025,624.0,2,False,2,morn1,,morn1_2_trial2_sec_play,MN,PL,NR,,1,0,,,,,,,,
+3939f477-0d62-4b91-b651-436b5452a7d7,Playback,24-03-2025,626.0,2,False,2,morn1,,morn1_2_trial2_sec_play,NR,PL,MN,,1,0,,,,,,,,
+3939f477-0d62-4b91-b651-436b5452a7d7,Playback,24-03-2025,626.0,2,False,2,morn1,,morn1_2_trial2_sec_play,MN,PL,NR,,1,0,,,,,,,,
+cb0e0c90-c1b7-4a39-824d-ce4ca3932c78,Playback,24-03-2025,628.0,2,False,2,morn1,,morn1_2_trial2_sec_play,NR,PL,MN,,1,0,,,,,,,,
+cb0e0c90-c1b7-4a39-824d-ce4ca3932c78,Playback,24-03-2025,628.0,2,False,2,morn1,,morn1_2_trial2_sec_play,MN,PL,NR,,1,0,,,,,,,,
+3287e783-21b1-47e3-8222-70a568353ee6,Playback,24-03-2025,841.0,2,False,2,enrich,,enrich_2_trial2_sec_play,NH,PL,NR,,1,0,,,,,,,,
+3287e783-21b1-47e3-8222-70a568353ee6,Playback,24-03-2025,841.0,2,False,2,enrich,,enrich_2_trial2_sec_play,NR,PL,NH,,1,0,,,,,,,,
+b445b66c-d5be-4213-a185-f9b1adacffb9,Playback,24-03-2025,847.0,2,False,2,enrich,,enrich_2_trial2_sec_play,NH,PL,NR,,1,0,,,,,,,,
+b445b66c-d5be-4213-a185-f9b1adacffb9,Playback,24-03-2025,847.0,2,False,2,enrich,,enrich_2_trial2_sec_play,NR,PL,NH,,1,0,,,,,,,,
+08e9142c-8e54-4ce6-a49b-8046567ab424,Playback,24-03-2025,851.0,2,False,2,enrich,,enrich_2_trial2_sec_play,NH,PL,NR,,1,0,,,,,,,,
+08e9142c-8e54-4ce6-a49b-8046567ab424,Playback,24-03-2025,851.0,2,False,2,enrich,,enrich_2_trial2_sec_play,NR,PL,NH,,1,0,,,,,,,,
+f6a68a06-652d-473b-bd08-4c8d4ae64ae0,Crow,08-04-2025,819.0,1,False,3,enrich,,enrich_1_trial3_first_cont,ST,DS,,,0,1,,,,,,,,
+eb5879d6-a1cb-4427-b504-bf898f0b36fb,Crow,09-04-2025,580.0,1,False,3,morn1,,morn1_1_trial3_sec_cont,NH,DS,,,0,1,,,,,,,,
+0ce95d64-9caa-4392-bd9a-ea5f9f9e9e1b,Crow,09-04-2025,614.0,1,False,3,morn1,,morn1_1_trial3_sec_cont,ST,DS,,,0,1,,,,,,,,
+0ce95d64-9caa-4392-bd9a-ea5f9f9e9e1b,Crow,09-04-2025,616.0,1,False,3,morn1,,morn1_1_trial3_sec_cont,ST,DS,,,0,1,,,,,,,,
+483f107a-e0b2-437f-8a16-7e5521a46444,Crow,09-04-2025,618.0,1,False,3,morn1,,morn1_1_trial3_sec_cont,ST,DS,,,0,1,,,,,,,,
+483f107a-e0b2-437f-8a16-7e5521a46444,Crow,09-04-2025,,1,False,3,,,_1_trial3_sec_cont,ST,DS,,,0,1,,,,,,,,
+324aa967-b85a-47d9-9ed9-eb3d4cb48b2d,Crow,09-04-2025,689.0,1,False,3,morn2,,morn2_1_trial3_sec_cont,ST,DS,,,0,1,,,,,,,,
+e6721147-29ff-47ac-b3de-86134a581577,Crow,09-04-2025,695.0,1,False,3,morn2,,morn2_1_trial3_sec_cont,ST,DS,,,0,1,,,,,,,,
+c37905c2-6c4d-47a0-9da3-795807124ee6,Crow,09-04-2025,699.0,1,False,3,morn2,,morn2_1_trial3_sec_cont,ST,DS,,,0,1,,,,,,,,
+a2b04628-495d-4a6d-aa06-afbedb5b9bea,Crow,16-04-2025,578.0,3,False,4,morn1,,morn1_3_trial4_first_cont,MN,DS,,,0,1,,,,,,,,
+f3e5dfea-8396-4bf4-b44a-8a3d62935e7e,Crow,16-04-2025,582.0,3,False,4,morn1,,morn1_3_trial4_first_cont,NH,DS,,,0,1,,,,,,,,
+f3e5dfea-8396-4bf4-b44a-8a3d62935e7e,Crow,16-04-2025,584.0,3,False,4,morn1,,morn1_3_trial4_first_cont,NH,DS,,,0,1,,,,,,,,
+f3e5dfea-8396-4bf4-b44a-8a3d62935e7e,Crow,16-04-2025,584.0,3,False,4,morn1,,morn1_3_trial4_first_cont,MN,DS,,,0,1,,,,,,,,
+9e7f4adf-46b9-4050-90ff-ad45ab1c7ff0,Crow,16-04-2025,653.0,3,False,4,morn2,,morn2_3_trial4_first_cont,NH,AG,"MN, NY",,0,1,,,,,,,,
+9e7f4adf-46b9-4050-90ff-ad45ab1c7ff0,Crow,16-04-2025,653.0,3,False,4,morn2,,morn2_3_trial4_first_cont,MN,AG,"NH, NY",,0,1,,,,,,,,
+9e7f4adf-46b9-4050-90ff-ad45ab1c7ff0,Crow,16-04-2025,653.0,3,False,4,morn2,,morn2_3_trial4_first_cont,NY,AG,"NH, MN",,0,1,,,,,,,,
+1c807d5f-f6ee-4f99-8262-7093058d0410,Crow,16-04-2025,,3,False,4,,,_3_trial4_first_cont,MS,DS,,,0,1,,,,,,,,
+1c807d5f-f6ee-4f99-8262-7093058d0410,Crow,16-04-2025,,3,False,4,,,_3_trial4_first_cont,NH,DS,,,0,1,,,,,,,,
+1c807d5f-f6ee-4f99-8262-7093058d0410,Crow,16-04-2025,,3,False,4,,,_3_trial4_first_cont,MN,DS,,,0,1,,,,,,,,
+1c807d5f-f6ee-4f99-8262-7093058d0410,Crow,16-04-2025,,3,False,4,,,_3_trial4_first_cont,NY,DS,,,0,1,,,,,,,,
+96b5bc45-609a-4e46-942d-899748f2e30b,Crow,16-04-2025,657.0,3,False,4,morn2,,morn2_3_trial4_first_cont,MS,DS,,,0,1,,,,,,,,
+96b5bc45-609a-4e46-942d-899748f2e30b,Crow,16-04-2025,657.0,3,False,4,morn2,,morn2_3_trial4_first_cont,NH,DS,,,0,1,,,,,,,,
+96b5bc45-609a-4e46-942d-899748f2e30b,Crow,16-04-2025,657.0,3,False,4,morn2,,morn2_3_trial4_first_cont,MN,DS,,,0,1,,,,,,,,
+96b5bc45-609a-4e46-942d-899748f2e30b,Crow,16-04-2025,657.0,3,False,4,morn2,,morn2_3_trial4_first_cont,NY,DS,,,0,1,,,,,,,,
+f01b9606-a535-4c4a-834f-f7659f6475b8,Crow,17-04-2025,881.0,3,False,4,enrich,,enrich_3_trial4_sec_cont,MS,PL,NY,,1,0,,,,,,,,
+f01b9606-a535-4c4a-834f-f7659f6475b8,Crow,17-04-2025,881.0,3,False,4,enrich,,enrich_3_trial4_sec_cont,NY,PL,MS,,1,0,,,,,,,,
+190a107d-1c26-44a5-9847-164e62fa1498,Playback,21-04-2025,574.0,1,False,4,morn1,,morn1_1_trial4_first_play,ST,PL,NH,,1,0,,,,,,,,
+190a107d-1c26-44a5-9847-164e62fa1498,Playback,21-04-2025,574.0,1,False,4,morn1,,morn1_1_trial4_first_play,NH,PL,ST,,1,0,,,,,,,,
+dbf5b039-2c5d-48ff-b460-0e3a927b52d7,Playback,21-04-2025,687.0,1,False,4,morn2,,morn2_1_trial4_first_play,MS,PL,ST,,1,0,,,,,,,,
+dbf5b039-2c5d-48ff-b460-0e3a927b52d7,Playback,21-04-2025,687.0,1,False,4,morn2,,morn2_1_trial4_first_play,ST,PL,MS,,1,0,,,,,,,,
+dbf5b039-2c5d-48ff-b460-0e3a927b52d7,Playback,21-04-2025,,1,False,4,,,_1_trial4_first_play,MS,PL,ST,,1,0,,,,,,,,
+dbf5b039-2c5d-48ff-b460-0e3a927b52d7,Playback,21-04-2025,,1,False,4,,,_1_trial4_first_play,ST,PL,MS,,1,0,,,,,,,,
+47650b7a-1bd6-4121-a718-28cc46d567a0,Playback,22-04-2025,582.0,1,False,4,morn1,,morn1_1_trial4_sec_play,NH,DS,,,0,1,,,,,,,,
+9bbaa949-29a8-4976-9454-51d568aa569b,Playback,22-04-2025,677.0,1,False,4,morn2,,morn2_1_trial4_sec_play,ST,DS,,,0,1,,,,,,,,
+680a543f-5e61-4d08-bf2e-f4a7134bda73,Playback,22-04-2025,679.0,1,False,4,morn2,,morn2_1_trial4_sec_play,ST,DS,,,0,1,,,,,,,,
+d6a23649-62b4-4809-bfcc-5f5516cd5ddc,Playback,22-04-2025,681.0,1,False,4,morn2,,morn2_1_trial4_sec_play,NH,DS,,,0,1,,,,,,,,
+48f3b3f1-15d0-4b50-b6e9-e18dd9de4fe8,Playback,22-04-2025,683.0,1,False,4,morn2,,morn2_1_trial4_sec_play,ST,PL,NH,,1,0,,,,,,,,
+48f3b3f1-15d0-4b50-b6e9-e18dd9de4fe8,Playback,22-04-2025,683.0,1,False,4,morn2,,morn2_1_trial4_sec_play,NH,PL,ST,,1,0,,,,,,,,
+427e1132-5a8d-4e21-8340-ef0e2138ed8d,Playback,22-04-2025,685.0,1,False,4,morn2,,morn2_1_trial4_sec_play,ST,PL,NH,,1,0,,,,,,,,
+427e1132-5a8d-4e21-8340-ef0e2138ed8d,Playback,22-04-2025,685.0,1,False,4,morn2,,morn2_1_trial4_sec_play,NH,PL,ST,,1,0,,,,,,,,
+2f92f495-8d14-450e-8e16-d7a8cdda0fc0,Playback,22-04-2025,687.0,1,False,4,morn2,,morn2_1_trial4_sec_play,ST,PL,NH,,1,0,,,,,,,,
+2f92f495-8d14-450e-8e16-d7a8cdda0fc0,Playback,22-04-2025,687.0,1,False,4,morn2,,morn2_1_trial4_sec_play,NH,PL,ST,,1,0,,,,,,,,
+823e0128-be98-43ef-a7de-48e44bd08c3c,Playback,22-04-2025,689.0,1,False,4,morn2,,morn2_1_trial4_sec_play,ST,PL,NH,,1,0,,,,,,,,
+823e0128-be98-43ef-a7de-48e44bd08c3c,Playback,22-04-2025,689.0,1,False,4,morn2,,morn2_1_trial4_sec_play,NH,PL,ST,,1,0,,,,,,,,
+5f4b277d-bbf3-461b-abe7-f4efa11ffa49,Playback,26-04-2025,588.0,2,False,5,morn1,,morn1_2_trial5_first_play,MN,DS,,,0,1,,,,,,,,
+4a308e05-a0fd-4dad-941f-46c3c7947ee8,Playback,26-04-2025,590.0,2,False,5,morn1,,morn1_2_trial5_first_play,MN,DS,,,0,1,,,,,,,,
+79775ab3-2b39-42ae-8515-0669aa358a8d,Playback,26-04-2025,594.0,2,False,5,morn1,,morn1_2_trial5_first_play,NH,DS,,,0,1,,,,,,,,
+79775ab3-2b39-42ae-8515-0669aa358a8d,Playback,26-04-2025,594.0,2,False,5,morn1,,morn1_2_trial5_first_play,LN,PL,MN,,1,0,,,,,,,,
+79775ab3-2b39-42ae-8515-0669aa358a8d,Playback,26-04-2025,594.0,2,False,5,morn1,,morn1_2_trial5_first_play,MN,PL,LN,,1,0,,,,,,,,
+db90d2af-6f38-4952-970c-d8f98f8fa937,Playback,26-04-2025,596.0,2,False,5,morn1,,morn1_2_trial5_first_play,NH,PL,MN,,1,0,,,,,,,,
+db90d2af-6f38-4952-970c-d8f98f8fa937,Playback,26-04-2025,596.0,2,False,5,morn1,,morn1_2_trial5_first_play,LN,PL,NR,,1,0,,,,,,,,
+db90d2af-6f38-4952-970c-d8f98f8fa937,Playback,26-04-2025,596.0,2,False,5,morn1,,morn1_2_trial5_first_play,NR,PL,LN,,1,0,,,,,,,,
+db90d2af-6f38-4952-970c-d8f98f8fa937,Playback,26-04-2025,596.0,2,False,5,morn1,,morn1_2_trial5_first_play,MN,PL,NH,,1,0,,,,,,,,
+8a8b74a5-a11b-428b-a922-dc1ff677620a,Playback,26-04-2025,598.0,2,False,5,morn1,,morn1_2_trial5_first_play,NH,PL,"NR, MN",,1,0,,,,,,,,
+8a8b74a5-a11b-428b-a922-dc1ff677620a,Playback,26-04-2025,598.0,2,False,5,morn1,,morn1_2_trial5_first_play,NR,PL,,,1,0,,,,,,,,
+8a8b74a5-a11b-428b-a922-dc1ff677620a,Playback,26-04-2025,598.0,2,False,5,morn1,,morn1_2_trial5_first_play,MN,PL,"NH, NR",,1,0,,,,,,,,
+d6984ed7-4480-4de7-95c9-130112c831a6,Playback,26-04-2025,645.0,2,False,5,morn2,,morn2_2_trial5_first_play,NH,DS,,,0,1,,,,,,,,
+4f23296d-bcc4-4caa-b766-5b25dee59847,Playback,27-04-2025,574.0,2,False,5,morn1,,morn1_2_trial5_sec_play,NH,DS,,,0,1,,,,,,,,
+4f23296d-bcc4-4caa-b766-5b25dee59847,Playback,27-04-2025,574.0,2,False,5,morn1,,morn1_2_trial5_sec_play,NR,DS,,,0,1,,,,,,,,
+4f23296d-bcc4-4caa-b766-5b25dee59847,Playback,27-04-2025,574.0,2,False,5,morn1,,morn1_2_trial5_sec_play,MN,AG,,,0,1,,,,,,,,
+4f23296d-bcc4-4caa-b766-5b25dee59847,Playback,27-04-2025,576.0,2,False,5,morn1,,morn1_2_trial5_sec_play,NH,DS,,,0,1,,,,,,,,
+8bb2fd62-3af7-47c6-9c76-44bc7101754a,Playback,27-04-2025,853.0,2,False,5,enrich,,enrich_2_trial5_sec_play,NH,PL,"MN, NR",,1,0,,,,,,,,
+8bb2fd62-3af7-47c6-9c76-44bc7101754a,Playback,27-04-2025,853.0,2,False,5,enrich,,enrich_2_trial5_sec_play,NR,PL,"NH, MN",,1,0,,,,,,,,
+8bb2fd62-3af7-47c6-9c76-44bc7101754a,Playback,27-04-2025,853.0,2,False,5,enrich,,enrich_2_trial5_sec_play,MN,PL,"NR, NH",,1,0,,,,,,,,
+1633cc6d-7444-45df-bae9-a1296ff55643,Crow,30-04-2025,608.0,3,False,5,morn1,,morn1_3_trial5_first_cont,MN,AG,,,0,1,,,,,,,,
+1633cc6d-7444-45df-bae9-a1296ff55643,Crow,30-04-2025,,3,False,5,,,_3_trial5_first_cont,MN,DS,,,0,1,,,,,,,,
+7c5f2bdd-596a-40b6-a8c0-50fb1a5ea65d,Crow,30-04-2025,620.0,3,False,5,morn1,,morn1_3_trial5_first_cont,MS,PL,NY,,1,0,,,,,,,,
+7c5f2bdd-596a-40b6-a8c0-50fb1a5ea65d,Crow,30-04-2025,620.0,3,False,5,morn1,,morn1_3_trial5_first_cont,NY,PL,MS,,1,0,,,,,,,,
+c4e4ddc5-7b29-4cae-a6b3-f9fdad537e26,Crow,30-04-2025,622.0,3,False,5,morn1,,morn1_3_trial5_first_cont,MS,PL,NY,,1,0,,,,,,,,
+c4e4ddc5-7b29-4cae-a6b3-f9fdad537e26,Crow,30-04-2025,622.0,3,False,5,morn1,,morn1_3_trial5_first_cont,NY,PL,MS,,1,0,,,,,,,,
+7d19fe0a-98e5-4f45-bfff-aab5eff828ea,Crow,30-04-2025,624.0,3,False,5,morn1,,morn1_3_trial5_first_cont,MS,PL,NY,,1,0,,,,,,,,
+7d19fe0a-98e5-4f45-bfff-aab5eff828ea,Crow,30-04-2025,624.0,3,False,5,morn1,,morn1_3_trial5_first_cont,NY,PL,MS,,1,0,,,,,,,,
+14b4f314-6807-4296-a002-f7864aa0cdb3,Crow,30-04-2025,797.0,3,False,5,enrich,,enrich_3_trial5_first_cont,NY,AG,MS,,0,1,,,,,,,,
+e49d37a8-6aad-444a-a0d9-ed75f9aaad62,Crow,30-04-2025,805.0,3,False,5,enrich,,enrich_3_trial5_first_cont,MN,AG,,,0,1,,,,,,,,
+1a889edf-4872-4e2e-9289-4627e9e5145c,Crow,30-04-2025,837.0,3,False,5,enrich,,enrich_3_trial5_first_cont,MS,AG,,,0,1,,,,,,,,
+ef6cfab1-3700-4470-82dc-f7b09cada5bf,Crow,01-05-2025,610.0,3,False,5,morn1,,morn1_3_trial5_sec_cont,MN,AG,,,0,1,,,,,,,,
+a194f187-e0dc-4fb7-8f90-089c5f5bbba1,Crow,01-05-2025,612.0,3,False,5,morn1,,morn1_3_trial5_sec_cont,NH,DS,,,0,1,,,,,,,,
+a194f187-e0dc-4fb7-8f90-089c5f5bbba1,Crow,01-05-2025,612.0,3,False,5,morn1,,morn1_3_trial5_sec_cont,MN,DS,,,0,1,,,,,,,,
+77597533-b63b-4103-87b8-57279ab1e9da,Crow,01-05-2025,614.0,3,False,5,morn1,,morn1_3_trial5_sec_cont,NH,AG,,,0,1,,,,,,,,
+77f63139-8051-4f35-b7f8-2a4c6685c15d,Crow,01-05-2025,663.0,3,False,5,morn2,,morn2_3_trial5_sec_cont,MS,PL,NY,,1,0,,,,,,,,
+77f63139-8051-4f35-b7f8-2a4c6685c15d,Crow,01-05-2025,663.0,3,False,5,morn2,,morn2_3_trial5_sec_cont,NY,PL,MS,,1,0,,,,,,,,
+1a21849d-25b2-4991-acbc-5cdb128e8799,Crow,01-05-2025,665.0,3,False,5,morn2,,morn2_3_trial5_sec_cont,MS,PL,NY,,1,0,,,,,,,,
+1a21849d-25b2-4991-acbc-5cdb128e8799,Crow,01-05-2025,665.0,3,False,5,morn2,,morn2_3_trial5_sec_cont,NY,PL,MS,,1,0,,,,,,,,
+47002f4d-a318-43c5-a2a9-282be2496a20,Crow,01-05-2025,667.0,3,False,5,morn2,,morn2_3_trial5_sec_cont,MS,PL,NY,,1,0,,,,,,,,
+47002f4d-a318-43c5-a2a9-282be2496a20,Crow,01-05-2025,667.0,3,False,5,morn2,,morn2_3_trial5_sec_cont,NY,PL,MS,,1,0,,,,,,,,
+116b0769-9c10-4d37-a141-6b15c6eefb8a,Crow,01-05-2025,669.0,3,False,5,morn2,,morn2_3_trial5_sec_cont,MS,PL,NY,,1,0,,,,,,,,
+116b0769-9c10-4d37-a141-6b15c6eefb8a,Crow,01-05-2025,669.0,3,False,5,morn2,,morn2_3_trial5_sec_cont,NY,PL,MS,,1,0,,,,,,,,
+a7d514f9-4d2d-4aca-b9c4-bc869fc0c352,Crow,01-05-2025,671.0,3,False,5,morn2,,morn2_3_trial5_sec_cont,MS,PL,NY,,1,0,,,,,,,,
+a7d514f9-4d2d-4aca-b9c4-bc869fc0c352,Crow,01-05-2025,671.0,3,False,5,morn2,,morn2_3_trial5_sec_cont,NY,PL,MS,,1,0,,,,,,,,
+5cf73e78-6a0f-45e8-9314-796f62e0078b,Crow,01-05-2025,673.0,3,False,5,morn2,,morn2_3_trial5_sec_cont,MS,PL,NY,,1,0,,,,,,,,
+5cf73e78-6a0f-45e8-9314-796f62e0078b,Crow,01-05-2025,673.0,3,False,5,morn2,,morn2_3_trial5_sec_cont,NY,PL,MS,,1,0,,,,,,,,
+16b23895-d4fb-4b5a-b0ad-369f97db1ba7,Crow,01-05-2025,675.0,3,False,5,morn2,,morn2_3_trial5_sec_cont,MS,PL,NY,,1,0,,,,,,,,
+16b23895-d4fb-4b5a-b0ad-369f97db1ba7,Crow,01-05-2025,675.0,3,False,5,morn2,,morn2_3_trial5_sec_cont,NY,PL,MS,,1,0,,,,,,,,
+1ffbee03-6fe3-4bc5-a6f3-2025976c5e65,Crow,01-05-2025,677.0,3,False,5,morn2,,morn2_3_trial5_sec_cont,MS,PL,NY,,1,0,,,,,,,,
+1ffbee03-6fe3-4bc5-a6f3-2025976c5e65,Crow,01-05-2025,677.0,3,False,5,morn2,,morn2_3_trial5_sec_cont,NY,PL,MS,,1,0,,,,,,,,
+12a5383b-eacc-477c-895f-b31373242f98,Crow,01-05-2025,817.0,3,False,5,enrich,,enrich_3_trial5_sec_cont,MS,PL,NY,,1,0,,,,,,,,
+12a5383b-eacc-477c-895f-b31373242f98,Crow,01-05-2025,817.0,3,False,5,enrich,,enrich_3_trial5_sec_cont,NY,PL,MS,,1,0,,,,,,,,
+098aae89-c70f-44b9-8687-e838842cbed2,Crow,04-05-2025,610.0,2,False,6,morn1,,morn1_2_trial6_first_cont,MN,DS,,,0,1,,,,,,,,
+e3a360e3-900c-485c-bfff-79027a3003e7,Crow,04-05-2025,612.0,2,False,6,morn1,,morn1_2_trial6_first_cont,NH,DS,,,0,1,,,,,,,,
+e3a360e3-900c-485c-bfff-79027a3003e7,Crow,04-05-2025,612.0,2,False,6,morn1,,morn1_2_trial6_first_cont,MN,DS,,,0,1,,,,,,,,
+585dc681-7739-4fc3-82c7-a68e7496891d,Crow,04-05-2025,855.0,2,False,6,enrich,,enrich_2_trial6_first_cont,LN,PL,NR,,1,0,,,,,,,,
+585dc681-7739-4fc3-82c7-a68e7496891d,Crow,04-05-2025,855.0,2,False,6,enrich,,enrich_2_trial6_first_cont,NR,PL,LN,,1,0,,,,,,,,
+7b8ab5eb-1b1b-4ff7-b3a0-eef6674d8999,Crow,04-05-2025,859.0,2,False,6,enrich,,enrich_2_trial6_first_cont,LN,PL,NR,,1,0,,,,,,,,
+7b8ab5eb-1b1b-4ff7-b3a0-eef6674d8999,Crow,04-05-2025,859.0,2,False,6,enrich,,enrich_2_trial6_first_cont,NR,PL,LN,,1,0,,,,,,,,
+b3f0c857-dfdb-438e-9741-a0ec88087513,Crow,04-05-2025,861.0,2,False,6,enrich,,enrich_2_trial6_first_cont,LN,PL,NR,,1,0,,,,,,,,
+b3f0c857-dfdb-438e-9741-a0ec88087513,Crow,04-05-2025,861.0,2,False,6,enrich,,enrich_2_trial6_first_cont,NR,PL,LN,,1,0,,,,,,,,
+5535abe4-1b81-4110-b794-648c87d66f9f,Crow,04-05-2025,863.0,2,False,6,enrich,,enrich_2_trial6_first_cont,NH,PL,NR,,1,0,,,,,,,,
+5535abe4-1b81-4110-b794-648c87d66f9f,Crow,04-05-2025,863.0,2,False,6,enrich,,enrich_2_trial6_first_cont,NR,PL,NH,,1,0,,,,,,,,
+9769d5f1-5b35-4775-a0f9-940939268bfc,Crow,04-05-2025,867.0,2,False,6,enrich,,enrich_2_trial6_first_cont,NH,PL,NR,,1,0,,,,,,,,
+9769d5f1-5b35-4775-a0f9-940939268bfc,Crow,04-05-2025,867.0,2,False,6,enrich,,enrich_2_trial6_first_cont,NR,PL,NH,,1,0,,,,,,,,
+4e7dfab7-6087-44f6-aa87-05eb126bb2d9,Playback,15-05-2025,630.0,3,False,6,morn1,,morn1_3_trial6_sec_play,MN,DS,,,0,1,,,,,,,,
+d9b1b2fa-cea3-42e0-9951-c94b94984aca,Playback,15-05-2025,645.0,3,False,6,morn2,,morn2_3_trial6_sec_play,NY,AG,,,0,1,,,,,,,,
+3d03a54d-cec2-4479-8d8e-6bec75deb0eb,Playback,15-05-2025,871.0,3,False,6,enrich,,enrich_3_trial6_sec_play,MS,DS,,,0,1,,,,,,,,
+f5fdc5a1-1499-4128-a155-cff1d8a18017,Crow,19-05-2025,616.0,2,False,7,morn1,,morn1_2_trial7_first_cont,MN,DS,,,0,1,,,,,,,,
+84b6eb6b-8259-40cc-a8b7-41ef420b46f9,Crow,19-05-2025,618.0,2,False,7,morn1,,morn1_2_trial7_first_cont,MN,DS,,,0,1,,,,,,,,
+0ca64fd8-4b09-4dc3-9d63-86a8ae0339f8,Crow,19-05-2025,620.0,2,False,7,morn1,,morn1_2_trial7_first_cont,NH,DS,,,0,1,,,,,,,,
+0ca64fd8-4b09-4dc3-9d63-86a8ae0339f8,Crow,19-05-2025,620.0,2,False,7,morn1,,morn1_2_trial7_first_cont,MN,DS,,,0,1,,,,,,,,
+d0479311-f0f4-4c78-a8a7-a141ac5cd3bb,Crow,20-05-2025,689.0,2,False,7,morn2,,morn2_2_trial7_sec_cont,MN,DS,,,0,1,,,,,,,,
+fa1173c5-fdae-4a79-a07b-615427603b70,Playback,30-05-2025,867.0,2,False,7,enrich,,enrich_2_trial7_first_play,NR,PL,,,1,0,,,,,,,,
+fa1173c5-fdae-4a79-a07b-615427603b70,Playback,30-05-2025,867.0,2,False,7,enrich,,enrich_2_trial7_first_play,MN,PL,,,1,0,,,,,,,,
+f341e77c-c1ff-4de0-90fa-2723120e335b,Playback,30-05-2025,869.0,2,False,7,enrich,,enrich_2_trial7_first_play,NR,PL,,,1,0,,,,,,,,
+f341e77c-c1ff-4de0-90fa-2723120e335b,Playback,30-05-2025,869.0,2,False,7,enrich,,enrich_2_trial7_first_play,MN,PL,,,1,0,,,,,,,,
+e7aa0734-8663-41c9-aed0-b5cba8f4cfbe,Playback,31-05-2025,,2,False,7,,,_2_trial7_sec_play,NR,PL,,,1,0,,,,,,,,
+e7aa0734-8663-41c9-aed0-b5cba8f4cfbe,Playback,31-05-2025,,2,False,7,,,_2_trial7_sec_play,MN,PL,,,1,0,,,,,,,,
+d233dd38-e546-4d3f-a7a5-5ed500477ba0,Playback,31-05-2025,847.0,2,False,7,enrich,,enrich_2_trial7_sec_play,NR,PL,,,1,0,,,,,,,,
+d233dd38-e546-4d3f-a7a5-5ed500477ba0,Playback,31-05-2025,847.0,2,False,7,enrich,,enrich_2_trial7_sec_play,MN,PL,,,1,0,,,,,,,,
+d97395a8-f967-45bf-ad22-6c3f2b76f04a,Playback,31-05-2025,859.0,2,False,7,enrich,,enrich_2_trial7_sec_play,NR,PL,,,1,0,,,,,,,,
+d97395a8-f967-45bf-ad22-6c3f2b76f04a,Playback,31-05-2025,859.0,2,False,7,enrich,,enrich_2_trial7_sec_play,MN,PL,,,1,0,,,,,,,,
+3233dd12-2ab1-48e6-856f-84a5b71673da,Playback,11-03-2025,614.0,1,False,1,morn1,,morn1_1_trial1_first_play,MZ,PL,TN,,1,0,,,,,,,,
+3233dd12-2ab1-48e6-856f-84a5b71673da,Playback,11-03-2025,614.0,1,False,1,morn1,,morn1_1_trial1_first_play,SB,PL,TN,,1,0,,,,,,,,
+3233dd12-2ab1-48e6-856f-84a5b71673da,Playback,11-03-2025,614.0,1,False,1,morn1,,morn1_1_trial1_first_play,TN,PL,"MZ, SB",,1,0,,,,,,,,
+2bc283b4-0227-48ef-afe9-6c7233554c9b,Playback,11-03-2025,,1,False,1,,,_1_trial1_first_play,MZ,AG,,,0,1,,,,,,,,
+2bc283b4-0227-48ef-afe9-6c7233554c9b,Playback,11-03-2025,,1,False,1,,,_1_trial1_first_play,SB,AG,TN,,0,1,,,,,,,,
+2bc283b4-0227-48ef-afe9-6c7233554c9b,Playback,11-03-2025,,1,False,1,,,_1_trial1_first_play,TN,AG,SB,,0,1,,,,,,,,
+aa864ac8-071a-410c-b032-8729ed9d9a57,Playback,11-03-2025,,1,False,1,,,_1_trial1_first_play,MZ,AG,,,0,1,,,,,,,,
+aa864ac8-071a-410c-b032-8729ed9d9a57,Playback,11-03-2025,,1,False,1,,,_1_trial1_first_play,SB,AG,,,0,1,,,,,,,,
+aa864ac8-071a-410c-b032-8729ed9d9a57,Playback,11-03-2025,,1,False,1,,,_1_trial1_first_play,TN,AG,,,0,1,,,,,,,,
+0b68fb3c-6ac1-429c-9fe9-2ef77190314c,Playback,11-03-2025,,1,False,1,,,_1_trial1_first_play,MZ,AG,,,0,1,,,,,,,,
+0b68fb3c-6ac1-429c-9fe9-2ef77190314c,Playback,11-03-2025,,1,False,1,,,_1_trial1_first_play,SB,AG,,,0,1,,,,,,,,
+0b68fb3c-6ac1-429c-9fe9-2ef77190314c,Playback,11-03-2025,,1,False,1,,,_1_trial1_first_play,TN,AG,,,0,1,,,,,,,,
+e3b6d2a0-aa0e-4b82-b1d3-0598182ecd4d,Playback,11-03-2025,,1,False,1,,,_1_trial1_first_play,MZ,AG,,,0,1,,,,,,,,
+e3b6d2a0-aa0e-4b82-b1d3-0598182ecd4d,Playback,11-03-2025,,1,False,1,,,_1_trial1_first_play,SB,AG,,,0,1,,,,,,,,
+e3b6d2a0-aa0e-4b82-b1d3-0598182ecd4d,Playback,11-03-2025,,1,False,1,,,_1_trial1_first_play,TN,AG,,,0,1,,,,,,,,
+3938ecfa-b67c-4259-9f92-2a92e4df70bf,Playback,11-03-2025,645.0,1,False,1,morn2,,morn2_1_trial1_first_play,TN,AG,,,0,1,,,,,,,,
+f84ecfb6-7d78-4587-bca2-2469de48e65d,Playback,12-03-2025,845.0,1,False,1,enrich,,enrich_1_trial1_sec_play,MZ,PL,TN,,1,0,,,,,,,,
+f84ecfb6-7d78-4587-bca2-2469de48e65d,Playback,12-03-2025,845.0,1,False,1,enrich,,enrich_1_trial1_sec_play,TN,PL,MZ,,1,0,,,,,,,,
+e97b3a39-799b-456f-a9df-939e8b192040,Playback,12-03-2025,847.0,1,False,1,enrich,,enrich_1_trial1_sec_play,TN,DS,,,0,1,,,,,,,,
+0f619341-62c2-4140-b1f4-8b1ca9278430,Playback,12-03-2025,849.0,1,False,1,enrich,,enrich_1_trial1_sec_play,TN,DS,,,0,1,,,,,,,,
+35022fa6-c473-4db0-9517-b115fa0eefba,Playback,12-03-2025,851.0,1,False,1,enrich,,enrich_1_trial1_sec_play,TN,DS,,,0,1,,,,,,,,
+f2843aaf-ddd3-49d6-8224-2dd9667dcfa8,Playback,12-03-2025,853.0,1,False,1,enrich,,enrich_1_trial1_sec_play,TN,DS,,,0,1,,,,,,,,
+69d128b7-1b21-410a-93c3-051eb5b1fe7a,Playback,12-03-2025,855.0,1,False,1,enrich,,enrich_1_trial1_sec_play,SB,AG,,,0,1,,,,,,,,
+69d128b7-1b21-410a-93c3-051eb5b1fe7a,Playback,12-03-2025,855.0,1,False,1,enrich,,enrich_1_trial1_sec_play,TN,DS,,,0,1,,,,,,,,
+1daa4067-72f7-498f-8863-18d37a10fef5,Playback,12-03-2025,859.0,1,False,1,enrich,,enrich_1_trial1_sec_play,SB,AG,,,0,1,,,,,,,,
+1daa4067-72f7-498f-8863-18d37a10fef5,Playback,12-03-2025,859.0,1,False,1,enrich,,enrich_1_trial1_sec_play,TN,AG,SR,,0,1,,,,,,,,
+a34fccf2-05c1-4883-95f9-5bd5a3009d5b,Playback,12-03-2025,863.0,1,False,1,enrich,,enrich_1_trial1_sec_play,MZ,DS,,,0,1,,,,,,,,
+f325971d-0c57-413e-bf57-1638e62597ed,Playback,12-03-2025,865.0,1,False,1,enrich,,enrich_1_trial1_sec_play,MZ,DS,,,0,1,,,,,,,,
+730d20b2-9e03-4eb9-8721-b023196919df,Playback,12-03-2025,867.0,1,False,1,enrich,,enrich_1_trial1_sec_play,MZ,PL,SB,,1,0,,,,,,,,
+730d20b2-9e03-4eb9-8721-b023196919df,Playback,12-03-2025,867.0,1,False,1,enrich,,enrich_1_trial1_sec_play,SB,PL,MZ,,1,0,,,,,,,,
+a235cf08-588f-4147-99b5-b3982aad37c6,Crow,20-03-2025,865.0,1,False,2,enrich,,enrich_1_trial2_sec_cont,SB,DS,,,0,1,,,,,,,,
+99fd8b18-f036-4bcd-b95c-4ee75985d01b,Crow,08-04-2025,580.0,1,False,3,morn1,,morn1_1_trial3_first_cont,TN,DS,,,0,1,,,,,,,,
+c781f065-9265-4dc3-928c-274af8f023a7,Crow,08-04-2025,590.0,1,False,3,morn1,,morn1_1_trial3_first_cont,GG,PL,TN,,1,0,,,,,,,,
+c781f065-9265-4dc3-928c-274af8f023a7,Crow,08-04-2025,590.0,1,False,3,morn1,,morn1_1_trial3_first_cont,TN,PL,GG,,1,0,,,,,,,,
+365668fa-e527-416e-be9e-ae8735932f81,Crow,08-04-2025,592.0,1,False,3,morn1,,morn1_1_trial3_first_cont,GG,PL,TN,,1,0,,,,,,,,
+365668fa-e527-416e-be9e-ae8735932f81,Crow,08-04-2025,592.0,1,False,3,morn1,,morn1_1_trial3_first_cont,TN,PL,GG,,1,0,,,,,,,,
+9d0a9dc5-75a5-41a9-899a-13906ea89b35,Crow,08-04-2025,675.0,1,False,3,morn2,,morn2_1_trial3_first_cont,GG,PL,TN,,1,0,,,,,,,,
+9d0a9dc5-75a5-41a9-899a-13906ea89b35,Crow,08-04-2025,675.0,1,False,3,morn2,,morn2_1_trial3_first_cont,TN,PL,GG,,1,0,,,,,,,,
+66b2dd33-9c03-4a77-9b51-7b2e0a5ae440,Crow,08-04-2025,677.0,1,False,3,morn2,,morn2_1_trial3_first_cont,GG,PL,TN,,1,0,,,,,,,,
+66b2dd33-9c03-4a77-9b51-7b2e0a5ae440,Crow,08-04-2025,677.0,1,False,3,morn2,,morn2_1_trial3_first_cont,TN,PL,GG,,1,0,,,,,,,,
+13d0325e-78e8-4742-9fb2-a1142da878ff,Crow,08-04-2025,679.0,1,False,3,morn2,,morn2_1_trial3_first_cont,GG,PL,TN,,1,0,,,,,,,,
+13d0325e-78e8-4742-9fb2-a1142da878ff,Crow,08-04-2025,679.0,1,False,3,morn2,,morn2_1_trial3_first_cont,TN,PL,GG,,1,0,,,,,,,,
+4a2f18bd-cb04-4729-af9c-5bbb96da03fe,Crow,08-04-2025,681.0,1,False,3,morn2,,morn2_1_trial3_first_cont,SB,PL,"TN, GG",,1,0,,,,,,,,
+4a2f18bd-cb04-4729-af9c-5bbb96da03fe,Crow,08-04-2025,681.0,1,False,3,morn2,,morn2_1_trial3_first_cont,GG,PL,"TN, SB",,1,0,,,,,,,,
+4a2f18bd-cb04-4729-af9c-5bbb96da03fe,Crow,08-04-2025,681.0,1,False,3,morn2,,morn2_1_trial3_first_cont,TN,PL,"GG, SB",,1,0,,,,,,,,
+e57570bb-91f8-415e-888b-09fc944e5d86,Crow,08-04-2025,685.0,1,False,3,morn2,,morn2_1_trial3_first_cont,GG,PL,TN,,1,0,,,,,,,,
+e57570bb-91f8-415e-888b-09fc944e5d86,Crow,08-04-2025,685.0,1,False,3,morn2,,morn2_1_trial3_first_cont,TN,PL,GG,,1,0,,,,,,,,
+0b36b048-7f07-42a4-97a2-30c60c3b1fa7,Crow,09-04-2025,580.0,1,False,3,morn1,,morn1_1_trial3_sec_cont,MZ,PL,TN,,1,0,,,,,,,,
+0b36b048-7f07-42a4-97a2-30c60c3b1fa7,Crow,09-04-2025,580.0,1,False,3,morn1,,morn1_1_trial3_sec_cont,TN,PL,MZ,,1,0,,,,,,,,
+665e9710-6902-4c51-96af-37e42cb60eaa,Crow,09-04-2025,582.0,1,False,3,morn1,,morn1_1_trial3_sec_cont,MZ,PL,"TN, GG",,1,0,,,,,,,,
+665e9710-6902-4c51-96af-37e42cb60eaa,Crow,09-04-2025,582.0,1,False,3,morn1,,morn1_1_trial3_sec_cont,GG,PL,"TN, MZ",,1,0,,,,,,,,
+665e9710-6902-4c51-96af-37e42cb60eaa,Crow,09-04-2025,582.0,1,False,3,morn1,,morn1_1_trial3_sec_cont,TN,PL,"MZ, GG",,1,0,,,,,,,,
+e108a976-40cd-47c4-a283-cf8e30d07095,Crow,09-04-2025,584.0,1,False,3,morn1,,morn1_1_trial3_sec_cont,MZ,PL,TN,,1,0,,,,,,,,
+e108a976-40cd-47c4-a283-cf8e30d07095,Crow,09-04-2025,584.0,1,False,3,morn1,,morn1_1_trial3_sec_cont,TN,PL,MZ,,1,0,,,,,,,,
+fb051c6f-da7c-47ae-945a-5144b46cb86b,Crow,09-04-2025,849.0,1,False,3,enrich,,enrich_1_trial3_sec_cont,MZ,PL,TN,,1,0,,,,,,,,
+fb051c6f-da7c-47ae-945a-5144b46cb86b,Crow,09-04-2025,849.0,1,False,3,enrich,,enrich_1_trial3_sec_cont,TN,PL,MZ,,1,0,,,,,,,,
+4228a5d9-70ab-4e3f-9189-04ad6e6784f6,Crow,09-04-2025,851.0,1,False,3,enrich,,enrich_1_trial3_sec_cont,MZ,PL,TN,,1,0,,,,,,,,
+4228a5d9-70ab-4e3f-9189-04ad6e6784f6,Crow,09-04-2025,851.0,1,False,3,enrich,,enrich_1_trial3_sec_cont,TN,PL,MZ,,1,0,,,,,,,,
+637257d2-fe38-479b-9229-bc1d81e76dd7,Playback,21-04-2025,574.0,1,False,4,morn1,,morn1_1_trial4_first_play,MZ,PL,SB,,1,0,,,,,,,,
+637257d2-fe38-479b-9229-bc1d81e76dd7,Playback,21-04-2025,574.0,1,False,4,morn1,,morn1_1_trial4_first_play,SB,PL,MZ,,1,0,,,,,,,,
+847e28c4-31a8-455f-ab16-bb4eeb67f56a,Playback,21-04-2025,600.0,1,False,4,morn1,,morn1_1_trial4_first_play,MZ,PL,"SB, TN",,1,0,,,,,,,,
+847e28c4-31a8-455f-ab16-bb4eeb67f56a,Playback,21-04-2025,600.0,1,False,4,morn1,,morn1_1_trial4_first_play,SB,PL,"TN, MZ",,1,0,,,,,,,,
+847e28c4-31a8-455f-ab16-bb4eeb67f56a,Playback,21-04-2025,600.0,1,False,4,morn1,,morn1_1_trial4_first_play,TN,PL,"SB, MZ",,1,0,,,,,,,,
+6caa008a-bb94-4e1b-868c-32d94d5d32db,Playback,23-03-2025,649.0,2,False,2,morn2,,morn2_2_trial2_first_play,GG,DS,,,0,1,,,,,,,,
+6fa3e575-58fb-485b-8709-5e39f0204dc4,Playback,23-03-2025,703.0,2,False,2,morn2,,morn2_2_trial2_first_play,GG,PL,MS,,1,0,,,,,,,,
+6fa3e575-58fb-485b-8709-5e39f0204dc4,Playback,23-03-2025,703.0,2,False,2,morn2,,morn2_2_trial2_first_play,MS,PL,GG,,1,0,,,,,,,,
+7c703e74-ec66-451a-a02e-b0a3bfbfc669,Playback,24-03-2025,683.0,2,False,2,morn2,,morn2_2_trial2_sec_play,SB,PL,GG,,1,0,,,,,,,,
+7c703e74-ec66-451a-a02e-b0a3bfbfc669,Playback,24-03-2025,683.0,2,False,2,morn2,,morn2_2_trial2_sec_play,GG,PL,SB,,1,0,,,,,,,,
+f948c7bf-92bc-4c15-a085-e508a873a5e0,Playback,24-03-2025,685.0,2,False,2,morn2,,morn2_2_trial2_sec_play,SB,PL,GG,,1,0,,,,,,,,
+f948c7bf-92bc-4c15-a085-e508a873a5e0,Playback,24-03-2025,685.0,2,False,2,morn2,,morn2_2_trial2_sec_play,GG,PL,,,1,0,,,,,,,,
+3cd2a7df-7b2f-4011-a33d-f073cb7c9b0c,Playback,26-04-2025,645.0,2,False,5,morn2,,morn2_2_trial5_first_play,MZ,DS,,,0,1,,,,,,,,
+e6c34a83-e146-4cc1-8eda-853d884ec624,Playback,26-04-2025,647.0,2,False,5,morn2,,morn2_2_trial5_first_play,GG,PL,MS,,1,0,,,,,,,,
+e6c34a83-e146-4cc1-8eda-853d884ec624,Playback,26-04-2025,647.0,2,False,5,morn2,,morn2_2_trial5_first_play,MS,PL,GG,,1,0,,,,,,,,
+7ded9e5a-b68a-4649-87bc-32a078b57cfb,Playback,26-04-2025,699.0,2,False,5,morn2,,morn2_2_trial5_first_play,SB,PL,GG,,1,0,,,,,,,,
+7ded9e5a-b68a-4649-87bc-32a078b57cfb,Playback,26-04-2025,699.0,2,False,5,morn2,,morn2_2_trial5_first_play,GG,PL,SB,,1,0,,,,,,,,
+5750a994-1df4-42d6-838b-8c0c108b23b3,Playback,26-04-2025,701.0,2,False,5,morn2,,morn2_2_trial5_first_play,SB,PL,GG,,1,0,,,,,,,,
+5750a994-1df4-42d6-838b-8c0c108b23b3,Playback,26-04-2025,701.0,2,False,5,morn2,,morn2_2_trial5_first_play,GG,PL,SB,,1,0,,,,,,,,
+ad2a02d9-f72c-495f-ab61-b2a76f864ba4,Playback,26-04-2025,703.0,2,False,5,morn2,,morn2_2_trial5_first_play,SB,PL,GG,,1,0,,,,,,,,
+ad2a02d9-f72c-495f-ab61-b2a76f864ba4,Playback,26-04-2025,703.0,2,False,5,morn2,,morn2_2_trial5_first_play,GG,PL,SB,,1,0,,,,,,,,
+21260339-37ed-4648-98e0-47e49c6f80f7,Playback,26-04-2025,879.0,2,False,5,enrich,,enrich_2_trial5_first_play,SB,PL,GG,,1,0,,,,,,,,
+21260339-37ed-4648-98e0-47e49c6f80f7,Playback,26-04-2025,879.0,2,False,5,enrich,,enrich_2_trial5_first_play,GG,PL,,,1,0,,,,,,,,
+152ab73d-fcf6-4eac-bcd7-dfd5b9ce8a01,Playback,27-04-2025,576.0,2,False,5,morn1,,morn1_2_trial5_sec_play,MZ,DS,,,0,1,,,,,,,,
+152ab73d-fcf6-4eac-bcd7-dfd5b9ce8a01,Playback,27-04-2025,576.0,2,False,5,morn1,,morn1_2_trial5_sec_play,MS,DS,,,0,1,,,,,,,,
+ee29a5db-50dc-4f13-aa86-e41d51bf8f2d,Playback,27-04-2025,578.0,2,False,5,morn1,,morn1_2_trial5_sec_play,MZ,DS,,,0,1,,,,,,,,
+0b935c83-d859-439d-9525-d259ea8cd8e8,Playback,27-04-2025,657.0,2,False,5,morn2,,morn2_2_trial5_sec_play,SB,PL,GG,,1,0,,,,,,,,
+0b935c83-d859-439d-9525-d259ea8cd8e8,Playback,27-04-2025,657.0,2,False,5,morn2,,morn2_2_trial5_sec_play,GG,PL,SB,,1,0,,,,,,,,
+74f5924f-fc71-4b23-991e-6bf58f3564ed,Playback,27-04-2025,659.0,2,False,5,morn2,,morn2_2_trial5_sec_play,SB,PL,"MS, GG",,1,0,,,,,,,,
+74f5924f-fc71-4b23-991e-6bf58f3564ed,Playback,27-04-2025,659.0,2,False,5,morn2,,morn2_2_trial5_sec_play,GG,PL,"SB, MS",,1,0,,,,,,,,
+74f5924f-fc71-4b23-991e-6bf58f3564ed,Playback,27-04-2025,659.0,2,False,5,morn2,,morn2_2_trial5_sec_play,MS,PL,"SB, GG",,1,0,,,,,,,,
+89014dab-f7cb-45c9-997b-74f6366a5f44,Playback,27-04-2025,667.0,2,False,5,morn2,,morn2_2_trial5_sec_play,SB,PL,"GG, MS",,1,0,,,,,,,,
+89014dab-f7cb-45c9-997b-74f6366a5f44,Playback,27-04-2025,667.0,2,False,5,morn2,,morn2_2_trial5_sec_play,GG,PL,"MS, SB",,1,0,,,,,,,,
+89014dab-f7cb-45c9-997b-74f6366a5f44,Playback,27-04-2025,667.0,2,False,5,morn2,,morn2_2_trial5_sec_play,MS,PL,"SB, GG",,1,0,,,,,,,,
+81f5842f-1d2a-4883-a72c-11b0a9ddcf56,Playback,27-04-2025,851.0,2,False,5,enrich,,enrich_2_trial5_sec_play,SB,DS,,,0,1,,,,,,,,
+96b1e94f-8428-428c-9e18-bded75de6d8b,Playback,27-04-2025,853.0,2,False,5,enrich,,enrich_2_trial5_sec_play,MZ,PL,"MS, SB",,1,0,,,,,,,,
+96b1e94f-8428-428c-9e18-bded75de6d8b,Playback,27-04-2025,853.0,2,False,5,enrich,,enrich_2_trial5_sec_play,SB,PL,"MS, MZ",,1,0,,,,,,,,
+96b1e94f-8428-428c-9e18-bded75de6d8b,Playback,27-04-2025,853.0,2,False,5,enrich,,enrich_2_trial5_sec_play,MS,PL,"SB, MZ",,1,0,,,,,,,,
+5a7779a4-fcb8-4a3f-ad12-e928c6244186,Playback,27-04-2025,855.0,2,False,5,enrich,,enrich_2_trial5_sec_play,GG,PL,MS,,1,0,,,,,,,,
+5a7779a4-fcb8-4a3f-ad12-e928c6244186,Playback,27-04-2025,855.0,2,False,5,enrich,,enrich_2_trial5_sec_play,MS,PL,GG,,1,0,,,,,,,,
+01a842f9-610f-4244-a52e-65c315c0aa32,Crow,04-05-2025,612.0,2,False,6,morn1,,morn1_2_trial6_first_cont,SB,DS,,,0,1,,,,,,,,
+01a842f9-610f-4244-a52e-65c315c0aa32,Crow,04-05-2025,612.0,2,False,6,morn1,,morn1_2_trial6_first_cont,MS,DS,,,0,1,,,,,,,,
+aa98046b-75c2-48b3-9d6b-073878224025,Crow,04-05-2025,614.0,2,False,6,morn1,,morn1_2_trial6_first_cont,MZ,DS,,,0,1,,,,,,,,
+aa98046b-75c2-48b3-9d6b-073878224025,Crow,04-05-2025,614.0,2,False,6,morn1,,morn1_2_trial6_first_cont,SB,DS,,,0,1,,,,,,,,
+aa98046b-75c2-48b3-9d6b-073878224025,Crow,04-05-2025,614.0,2,False,6,morn1,,morn1_2_trial6_first_cont,MS,DS,,,0,1,,,,,,,,
+82c428ac-3aec-4dd8-9e7a-1dd6c99a5220,Crow,04-05-2025,616.0,2,False,6,morn1,,morn1_2_trial6_first_cont,MZ,DS,,,0,1,,,,,,,,
+63b5c45c-ef13-4e13-a5a3-b63efe838599,Crow,04-05-2025,618.0,2,False,6,morn1,,morn1_2_trial6_first_cont,MZ,DS,,,0,1,,,,,,,,
+5bced421-6160-4960-81a9-b1d778ff2d0b,Crow,04-05-2025,679.0,2,False,6,morn2,,morn2_2_trial6_first_cont,MZ,DS,,,0,1,,,,,,,,
+7e886875-96d7-4091-9384-080e747cb3b5,Crow,04-05-2025,681.0,2,False,6,morn2,,morn2_2_trial6_first_cont,SB,DS,,,0,1,,,,,,,,
+081ad108-2cfe-4967-8e72-e9c1d600359e,Crow,04-05-2025,683.0,2,False,6,morn2,,morn2_2_trial6_first_cont,MZ,DS,,,0,1,,,,,,,,
+a7d1eb65-5285-4967-87cb-e898b8fc0e75,Crow,04-05-2025,687.0,2,False,6,morn2,,morn2_2_trial6_first_cont,MZ,DS,,,0,1,,,,,,,,
+3f52455f-4071-4955-8fe3-3d602b869fe0,Crow,04-05-2025,705.0,2,False,6,morn2,,morn2_2_trial6_first_cont,MZ,DS,,,0,1,,,,,,,,
+3c7be75c-fb7b-47a8-aa59-5616c5152381,Crow,05-05-2025,675.0,2,False,6,morn2,,morn2_2_trial6_sec_cont,SB,PL,"GG, MS",,1,0,,,,,,,,
+3c7be75c-fb7b-47a8-aa59-5616c5152381,Crow,05-05-2025,675.0,2,False,6,morn2,,morn2_2_trial6_sec_cont,GG,PL,"SB, MS",,1,0,,,,,,,,
+3c7be75c-fb7b-47a8-aa59-5616c5152381,Crow,05-05-2025,675.0,2,False,6,morn2,,morn2_2_trial6_sec_cont,MS,PL,"GG, SB",,1,0,,,,,,,,
+d9985426-f139-4521-b489-6ea3c5bb5ed7,Crow,05-05-2025,845.0,2,False,6,enrich,,enrich_2_trial6_sec_cont,MZ,DS,,,0,1,,,,,,,,
+d775ed85-a7e5-44c5-87f4-aa9678c29a6f,Playback,03-04-2025,647.0,3,False,3,morn2,,morn2_3_trial3_first_play,MZ,DS,,,0,1,,,,,,,,
+9580308d-59fb-41a3-80c1-995a62e44b74,Playback,03-04-2025,649.0,3,False,3,morn2,,morn2_3_trial3_first_play,SB,AG,"LN, GG",,0,1,,,,,,,,
+9580308d-59fb-41a3-80c1-995a62e44b74,Playback,03-04-2025,649.0,3,False,3,morn2,,morn2_3_trial3_first_play,NR,AG,,,0,1,,,,,,,,
+ef374882-19ec-44b1-b561-53f312e60554,Playback,03-04-2025,825.0,3,False,3,enrich,,enrich_3_trial3_first_play,NR,DS,,,0,1,,,,,,,,
+19deb70a-432e-437e-af56-25c438d1e63f,Playback,04-04-2025,879.0,3,False,3,enrich,,enrich_3_trial3_sec_play,MZ,PL,NR,,1,0,,,,,,,,
+19deb70a-432e-437e-af56-25c438d1e63f,Playback,04-04-2025,879.0,3,False,3,enrich,,enrich_3_trial3_sec_play,NR,PL,,,1,0,,,,,,,,
+51231596-dfb1-423f-ab35-f640822ddd00,Playback,04-04-2025,881.0,3,False,3,enrich,,enrich_3_trial3_sec_play,MZ,PL,"GG, SB, NR",,1,0,,,,,,,,
+51231596-dfb1-423f-ab35-f640822ddd00,Playback,04-04-2025,881.0,3,False,3,enrich,,enrich_3_trial3_sec_play,SB,PL,"GG, MZ, NR",,1,0,,,,,,,,
+51231596-dfb1-423f-ab35-f640822ddd00,Playback,04-04-2025,881.0,3,False,3,enrich,,enrich_3_trial3_sec_play,GG,PL,"MZ, SB, NR",,1,0,,,,,,,,
+51231596-dfb1-423f-ab35-f640822ddd00,Playback,04-04-2025,881.0,3,False,3,enrich,,enrich_3_trial3_sec_play,NR,PL,"MZ, SB, GG",,1,0,,,,,,,,
+08315f4f-0411-467a-8ac9-acec3a4e65be,Playback,04-04-2025,883.0,3,False,3,enrich,,enrich_3_trial3_sec_play,MZ,PL,"GG, SB, NR",,1,0,,,,,,,,
+08315f4f-0411-467a-8ac9-acec3a4e65be,Playback,04-04-2025,883.0,3,False,3,enrich,,enrich_3_trial3_sec_play,SB,PL,"GG, MZ, NR",,1,0,,,,,,,,
+08315f4f-0411-467a-8ac9-acec3a4e65be,Playback,04-04-2025,883.0,3,False,3,enrich,,enrich_3_trial3_sec_play,GG,PL,"MZ, SB, NR",,1,0,,,,,,,,
+08315f4f-0411-467a-8ac9-acec3a4e65be,Playback,04-04-2025,883.0,3,False,3,enrich,,enrich_3_trial3_sec_play,NR,PL,"MZ, SB, GG",,1,0,,,,,,,,
+46aa059f-8dc8-43f8-9320-6e93e516b659,Playback,04-04-2025,885.0,3,False,3,enrich,,enrich_3_trial3_sec_play,MZ,PL,"GG, SB, NR",,1,0,,,,,,,,
+46aa059f-8dc8-43f8-9320-6e93e516b659,Playback,04-04-2025,885.0,3,False,3,enrich,,enrich_3_trial3_sec_play,SB,PL,"GG, MZ, NR",,1,0,,,,,,,,
+46aa059f-8dc8-43f8-9320-6e93e516b659,Playback,04-04-2025,885.0,3,False,3,enrich,,enrich_3_trial3_sec_play,GG,PL,"MZ, SB, NR",,1,0,,,,,,,,
+46aa059f-8dc8-43f8-9320-6e93e516b659,Playback,04-04-2025,885.0,3,False,3,enrich,,enrich_3_trial3_sec_play,NR,PL,"MZ, SB, GG",,1,0,,,,,,,,
+1153239d-c054-4dbc-ae89-80f9c56d9811,Crow,16-04-2025,574.0,3,False,4,morn1,,morn1_3_trial4_first_cont,SB,DS,,,0,1,,,,,,,,
+53893950-20d4-4fd0-aa2b-d4dfb93b1470,Crow,16-04-2025,598.0,3,False,4,morn1,,morn1_3_trial4_first_cont,SB,PL,NR,,1,0,,,,,,,,
+53893950-20d4-4fd0-aa2b-d4dfb93b1470,Crow,16-04-2025,598.0,3,False,4,morn1,,morn1_3_trial4_first_cont,NR,PL,SB,,1,0,,,,,,,,
+0251fb6e-ddcf-4a9c-af53-189ed22e8980,Crow,16-04-2025,606.0,3,False,4,morn1,,morn1_3_trial4_first_cont,SB,DS,,,0,1,,,,,,,,
+7ed783dc-9b49-4cb9-9fde-a64ff4a231a2,Crow,16-04-2025,610.0,3,False,4,morn1,,morn1_3_trial4_first_cont,SB,PL,NR,,1,0,,,,,,,,
+7ed783dc-9b49-4cb9-9fde-a64ff4a231a2,Crow,16-04-2025,610.0,3,False,4,morn1,,morn1_3_trial4_first_cont,NR,PL,SB,,1,0,,,,,,,,
+721bba2d-095c-435e-9a3f-369912de5540,Crow,16-04-2025,628.0,3,False,4,morn1,,morn1_3_trial4_first_cont,MZ,DS,,,0,1,,,,,,,,
+26cfa82a-ddf8-4fc1-b040-1a2f4a02f74e,Crow,16-04-2025,653.0,3,False,4,morn2,,morn2_3_trial4_first_cont,MZ,AG,,,0,1,,,,,,,,
+26cfa82a-ddf8-4fc1-b040-1a2f4a02f74e,Crow,16-04-2025,653.0,3,False,4,morn2,,morn2_3_trial4_first_cont,SB,AG,,,0,1,,,,,,,,
+26cfa82a-ddf8-4fc1-b040-1a2f4a02f74e,Crow,16-04-2025,653.0,3,False,4,morn2,,morn2_3_trial4_first_cont,LN,AG,,,0,1,,,,,,,,
+26cfa82a-ddf8-4fc1-b040-1a2f4a02f74e,Crow,16-04-2025,653.0,3,False,4,morn2,,morn2_3_trial4_first_cont,NR,AG,,,0,1,,,,,,,,
+eb35670e-ac5e-4c7a-b9a9-3a24b907491a,Crow,16-04-2025,657.0,3,False,4,morn2,,morn2_3_trial4_first_cont,MZ,AG,,,0,1,,,,,,,,
+eb35670e-ac5e-4c7a-b9a9-3a24b907491a,Crow,16-04-2025,657.0,3,False,4,morn2,,morn2_3_trial4_first_cont,SB,AG,,,0,1,,,,,,,,
+eb35670e-ac5e-4c7a-b9a9-3a24b907491a,Crow,16-04-2025,657.0,3,False,4,morn2,,morn2_3_trial4_first_cont,GG,AG,,,0,1,,,,,,,,
+eb35670e-ac5e-4c7a-b9a9-3a24b907491a,Crow,16-04-2025,657.0,3,False,4,morn2,,morn2_3_trial4_first_cont,LN,AG,,,0,1,,,,,,,,
+eb35670e-ac5e-4c7a-b9a9-3a24b907491a,Crow,16-04-2025,657.0,3,False,4,morn2,,morn2_3_trial4_first_cont,NR,AG,,,0,1,,,,,,,,
+f4984157-48cd-4299-b726-93c5feec2a74,Crow,16-04-2025,663.0,3,False,4,morn2,,morn2_3_trial4_first_cont,SB,PL,"MZ, NR",,1,0,,,,,,,,
+f4984157-48cd-4299-b726-93c5feec2a74,Crow,16-04-2025,663.0,3,False,4,morn2,,morn2_3_trial4_first_cont,GG,PL,"SB, NR",,1,0,,,,,,,,
+f4984157-48cd-4299-b726-93c5feec2a74,Crow,16-04-2025,663.0,3,False,4,morn2,,morn2_3_trial4_first_cont,NR,PL,"GG, SB",,1,0,,,,,,,,
+f2319a74-93d1-470d-95f8-739d7200b0d7,Crow,16-04-2025,665.0,3,False,4,morn2,,morn2_3_trial4_first_cont,SB,PL,NR,,1,0,,,,,,,,
+f2319a74-93d1-470d-95f8-739d7200b0d7,Crow,16-04-2025,665.0,3,False,4,morn2,,morn2_3_trial4_first_cont,NR,PL,SB,,1,0,,,,,,,,
+febc6035-b801-4709-bf8a-f179a4bfa44d,Crow,16-04-2025,667.0,3,False,4,morn2,,morn2_3_trial4_first_cont,SB,PL,NR,,1,0,,,,,,,,
+febc6035-b801-4709-bf8a-f179a4bfa44d,Crow,16-04-2025,667.0,3,False,4,morn2,,morn2_3_trial4_first_cont,NR,PL,SB,,1,0,,,,,,,,
+663ac26d-c2ff-4dfc-ad9e-8163989db05f,Crow,16-04-2025,677.0,3,False,4,morn2,,morn2_3_trial4_first_cont,SB,PL,NR,,1,0,,,,,,,,
+663ac26d-c2ff-4dfc-ad9e-8163989db05f,Crow,16-04-2025,677.0,3,False,4,morn2,,morn2_3_trial4_first_cont,NR,PL,SB,,1,0,,,,,,,,
+c281d57b-0f2c-47da-b8f9-428f101f2813,Crow,16-04-2025,679.0,3,False,4,morn2,,morn2_3_trial4_first_cont,SB,PL,NR,,1,0,,,,,,,,
+c281d57b-0f2c-47da-b8f9-428f101f2813,Crow,16-04-2025,679.0,3,False,4,morn2,,morn2_3_trial4_first_cont,NR,PL,SB,,1,0,,,,,,,,
+e3bb935d-6330-42c2-bda5-45347daa45ab,Crow,16-04-2025,689.0,3,False,4,morn2,,morn2_3_trial4_first_cont,SB,PL,NR,,1,0,,,,,,,,
+e3bb935d-6330-42c2-bda5-45347daa45ab,Crow,16-04-2025,689.0,3,False,4,morn2,,morn2_3_trial4_first_cont,NR,PL,SB,,1,0,,,,,,,,
+2c555886-fc15-4dda-9f27-06cdea5376ae,Crow,16-04-2025,691.0,3,False,4,morn2,,morn2_3_trial4_first_cont,SB,PL,NR,,1,0,,,,,,,,
+2c555886-fc15-4dda-9f27-06cdea5376ae,Crow,16-04-2025,691.0,3,False,4,morn2,,morn2_3_trial4_first_cont,NR,PL,SB,,1,0,,,,,,,,
+dee8aa80-13c1-4980-91b2-0129641326cd,Crow,16-04-2025,699.0,3,False,4,morn2,,morn2_3_trial4_first_cont,SB,PL,NR,,1,0,,,,,,,,
+dee8aa80-13c1-4980-91b2-0129641326cd,Crow,16-04-2025,699.0,3,False,4,morn2,,morn2_3_trial4_first_cont,NR,PL,SB,,1,0,,,,,,,,
+ca28fd7f-3cfd-4902-b1f3-427fafedbb6f,Crow,16-04-2025,841.0,3,False,4,enrich,,enrich_3_trial4_first_cont,SB,PL,NR,,1,0,,,,,,,,
+ca28fd7f-3cfd-4902-b1f3-427fafedbb6f,Crow,16-04-2025,841.0,3,False,4,enrich,,enrich_3_trial4_first_cont,NR,PL,SB,,1,0,,,,,,,,
+ea923a30-8586-4d4f-8196-21a933b33ae3,Crow,16-04-2025,865.0,3,False,4,enrich,,enrich_3_trial4_first_cont,SB,PL,NR,,1,0,,,,,,,,
+ea923a30-8586-4d4f-8196-21a933b33ae3,Crow,16-04-2025,865.0,3,False,4,enrich,,enrich_3_trial4_first_cont,NR,PL,SB,,1,0,,,,,,,,
+f674f022-ddaa-4ce5-93ac-28cf593f9f69,Crow,16-04-2025,869.0,3,False,4,enrich,,enrich_3_trial4_first_cont,SB,PL,NR,,1,0,,,,,,,,
+f674f022-ddaa-4ce5-93ac-28cf593f9f69,Crow,16-04-2025,869.0,3,False,4,enrich,,enrich_3_trial4_first_cont,NR,PL,SB,,1,0,,,,,,,,
+37e1a06a-c99f-4c0e-a823-88b47ce1dd22,Crow,16-04-2025,873.0,3,False,4,enrich,,enrich_3_trial4_first_cont,SB,PL,NR,,1,0,,,,,,,,
+37e1a06a-c99f-4c0e-a823-88b47ce1dd22,Crow,16-04-2025,873.0,3,False,4,enrich,,enrich_3_trial4_first_cont,NR,PL,SB,,1,0,,,,,,,,
+5643bdf2-1f37-4b22-b002-77f733a05d5e,Crow,16-04-2025,875.0,3,False,4,enrich,,enrich_3_trial4_first_cont,MZ,PL,"SB, NR",,1,0,,,,,,,,
+5643bdf2-1f37-4b22-b002-77f733a05d5e,Crow,16-04-2025,875.0,3,False,4,enrich,,enrich_3_trial4_first_cont,SB,PL,"NR, MZ",,1,0,,,,,,,,
+5643bdf2-1f37-4b22-b002-77f733a05d5e,Crow,16-04-2025,875.0,3,False,4,enrich,,enrich_3_trial4_first_cont,NR,PL,"SB, MZ",,1,0,,,,,,,,
+8cbb0620-68f7-44e5-827a-aa39d26425a7,Crow,16-04-2025,879.0,3,False,4,enrich,,enrich_3_trial4_first_cont,MZ,PL,NR,,1,0,,,,,,,,
+8cbb0620-68f7-44e5-827a-aa39d26425a7,Crow,16-04-2025,879.0,3,False,4,enrich,,enrich_3_trial4_first_cont,SB,PL,LN,,1,0,,,,,,,,
+8cbb0620-68f7-44e5-827a-aa39d26425a7,Crow,16-04-2025,879.0,3,False,4,enrich,,enrich_3_trial4_first_cont,LN,PL,SB,,1,0,,,,,,,,
+8cbb0620-68f7-44e5-827a-aa39d26425a7,Crow,16-04-2025,879.0,3,False,4,enrich,,enrich_3_trial4_first_cont,NR,PL,MZ,,1,0,,,,,,,,
+5118df9b-b612-427a-be0f-d3e002a87e4b,Crow,16-04-2025,881.0,3,False,4,enrich,,enrich_3_trial4_first_cont,MZ,PL,NR,,1,0,,,,,,,,
+5118df9b-b612-427a-be0f-d3e002a87e4b,Crow,16-04-2025,881.0,3,False,4,enrich,,enrich_3_trial4_first_cont,SB,PL,LN,,1,0,,,,,,,,
+5118df9b-b612-427a-be0f-d3e002a87e4b,Crow,16-04-2025,881.0,3,False,4,enrich,,enrich_3_trial4_first_cont,LN,PL,SB,,1,0,,,,,,,,
+5118df9b-b612-427a-be0f-d3e002a87e4b,Crow,16-04-2025,881.0,3,False,4,enrich,,enrich_3_trial4_first_cont,NR,PL,MZ,,1,0,,,,,,,,
+bdd0324d-f2dc-470d-b7b4-a95d95db830d,Crow,16-04-2025,883.0,3,False,4,enrich,,enrich_3_trial4_first_cont,SB,PL,LN,,1,0,,,,,,,,
+bdd0324d-f2dc-470d-b7b4-a95d95db830d,Crow,16-04-2025,883.0,3,False,4,enrich,,enrich_3_trial4_first_cont,LN,PL,SB,,1,0,,,,,,,,
+95645be2-a8bf-4af7-a6f1-a5543faab401,Crow,16-04-2025,885.0,3,False,4,enrich,,enrich_3_trial4_first_cont,SB,PL,LN,,1,0,,,,,,,,
+95645be2-a8bf-4af7-a6f1-a5543faab401,Crow,16-04-2025,885.0,3,False,4,enrich,,enrich_3_trial4_first_cont,LN,PL,SB,,1,0,,,,,,,,
+ba9e16f8-9f80-489b-9500-b908c0b1e23a,Crow,17-04-2025,701.0,3,False,4,morn2,,morn2_3_trial4_sec_cont,MZ,PL,"GG, SB",,1,0,,,,,,,,
+ba9e16f8-9f80-489b-9500-b908c0b1e23a,Crow,17-04-2025,701.0,3,False,4,morn2,,morn2_3_trial4_sec_cont,SB,PL,"MZ, GG",,1,0,,,,,,,,
+ba9e16f8-9f80-489b-9500-b908c0b1e23a,Crow,17-04-2025,701.0,3,False,4,morn2,,morn2_3_trial4_sec_cont,GG,PL,"SB, MZ",,1,0,,,,,,,,
+aae2ee24-bcdf-4670-b6bb-43e1903140a5,Crow,17-04-2025,881.0,3,False,4,enrich,,enrich_3_trial4_sec_cont,SB,PL,NR,,1,0,,,,,,,,
+aae2ee24-bcdf-4670-b6bb-43e1903140a5,Crow,17-04-2025,881.0,3,False,4,enrich,,enrich_3_trial4_sec_cont,NR,PL,SB,,1,0,,,,,,,,
+a7d080ad-221b-4a24-9729-f21728adf16f,Crow,17-04-2025,883.0,3,False,4,enrich,,enrich_3_trial4_sec_cont,SB,PL,NR,,1,0,,,,,,,,
+a7d080ad-221b-4a24-9729-f21728adf16f,Crow,17-04-2025,883.0,3,False,4,enrich,,enrich_3_trial4_sec_cont,NR,PL,SB,,1,0,,,,,,,,
+1347d64a-30f7-4939-a0eb-75ad31e99013,Crow,17-04-2025,885.0,3,False,4,enrich,,enrich_3_trial4_sec_cont,SB,PL,NR,,1,0,,,,,,,,
+1347d64a-30f7-4939-a0eb-75ad31e99013,Crow,17-04-2025,885.0,3,False,4,enrich,,enrich_3_trial4_sec_cont,NR,PL,SB,,1,0,,,,,,,,
+dd32b829-7524-4ea0-aa3d-d2e62a028d7a,Crow,30-04-2025,582.0,3,False,5,morn1,,morn1_3_trial5_first_cont,SB,PL,NR,,1,0,,,,,,,,
+dd32b829-7524-4ea0-aa3d-d2e62a028d7a,Crow,30-04-2025,582.0,3,False,5,morn1,,morn1_3_trial5_first_cont,NR,PL,SB,,1,0,,,,,,,,
+840620d4-2ace-488a-add8-7192634bde30,Crow,30-04-2025,596.0,3,False,5,morn1,,morn1_3_trial5_first_cont,SB,PL,NR,,1,0,,,,,,,,
+840620d4-2ace-488a-add8-7192634bde30,Crow,30-04-2025,596.0,3,False,5,morn1,,morn1_3_trial5_first_cont,NR,PL,SB,,1,0,,,,,,,,
+02706ebc-a05e-4701-a608-72f983114d27,Crow,30-04-2025,598.0,3,False,5,morn1,,morn1_3_trial5_first_cont,SB,PL,NR,,1,0,,,,,,,,
+02706ebc-a05e-4701-a608-72f983114d27,Crow,30-04-2025,598.0,3,False,5,morn1,,morn1_3_trial5_first_cont,NR,PL,SB,,1,0,,,,,,,,
+b19e0c1f-1136-48d7-b05e-b477996e0d97,Crow,30-04-2025,602.0,3,False,5,morn1,,morn1_3_trial5_first_cont,MZ,PL,SB,,1,0,,,,,,,,
+b19e0c1f-1136-48d7-b05e-b477996e0d97,Crow,30-04-2025,602.0,3,False,5,morn1,,morn1_3_trial5_first_cont,SB,PL,MZ,,1,0,,,,,,,,
+bb22bdbf-6119-4573-87ab-04d1bf209ec6,Crow,30-04-2025,645.0,3,False,5,morn2,,morn2_3_trial5_first_cont,SB,PL,GG,,1,0,,,,,,,,
+bb22bdbf-6119-4573-87ab-04d1bf209ec6,Crow,30-04-2025,645.0,3,False,5,morn2,,morn2_3_trial5_first_cont,GG,PL,SB,,1,0,,,,,,,,
+1a12b818-86f6-4358-b5b4-0f017ee18ae1,Crow,30-04-2025,647.0,3,False,5,morn2,,morn2_3_trial5_first_cont,SB,PL,GG,,1,0,,,,,,,,
+1a12b818-86f6-4358-b5b4-0f017ee18ae1,Crow,30-04-2025,647.0,3,False,5,morn2,,morn2_3_trial5_first_cont,GG,PL,,,1,0,,,,,,,,
+bc96cc96-e0ce-4bda-a184-b62b9c2bfab5,Crow,30-04-2025,649.0,3,False,5,morn2,,morn2_3_trial5_first_cont,SB,PL,"NR, LN, GG",,1,0,,,,,,,,
+bc96cc96-e0ce-4bda-a184-b62b9c2bfab5,Crow,30-04-2025,649.0,3,False,5,morn2,,morn2_3_trial5_first_cont,GG,PL,"NR, SB, LN",,1,0,,,,,,,,
+bc96cc96-e0ce-4bda-a184-b62b9c2bfab5,Crow,30-04-2025,649.0,3,False,5,morn2,,morn2_3_trial5_first_cont,LN,PL,"NR, GG, SB",,1,0,,,,,,,,
+bc96cc96-e0ce-4bda-a184-b62b9c2bfab5,Crow,30-04-2025,649.0,3,False,5,morn2,,morn2_3_trial5_first_cont,NR,PL,"LN, GG, SB",,1,0,,,,,,,,
+80057694-615c-4903-8267-5d38548d19ff,Crow,30-04-2025,651.0,3,False,5,morn2,,morn2_3_trial5_first_cont,GG,PL,LN,,1,0,,,,,,,,
+80057694-615c-4903-8267-5d38548d19ff,Crow,30-04-2025,651.0,3,False,5,morn2,,morn2_3_trial5_first_cont,LN,PL,GG,,1,0,,,,,,,,
+dc1d46c9-5cd7-4c3b-a161-7e1c80be8b7b,Crow,30-04-2025,653.0,3,False,5,morn2,,morn2_3_trial5_first_cont,GG,PL,LN,,1,0,,,,,,,,
+dc1d46c9-5cd7-4c3b-a161-7e1c80be8b7b,Crow,30-04-2025,653.0,3,False,5,morn2,,morn2_3_trial5_first_cont,LN,PL,GG,,1,0,,,,,,,,
+43aa72c0-f947-46d0-b8cd-d37a9a0a59b1,Crow,30-04-2025,661.0,3,False,5,morn2,,morn2_3_trial5_first_cont,MZ,DS,,,0,1,,,,,,,,
+43aa72c0-f947-46d0-b8cd-d37a9a0a59b1,Crow,30-04-2025,661.0,3,False,5,morn2,,morn2_3_trial5_first_cont,GG,PL,NR,,1,0,,,,,,,,
+43aa72c0-f947-46d0-b8cd-d37a9a0a59b1,Crow,30-04-2025,661.0,3,False,5,morn2,,morn2_3_trial5_first_cont,NR,PL,GG,,1,0,,,,,,,,
+f8f2cc6d-dde9-4050-a519-6413af33bb93,Crow,30-04-2025,679.0,3,False,5,morn2,,morn2_3_trial5_first_cont,SB,PL,NR,,1,0,,,,,,,,
+f8f2cc6d-dde9-4050-a519-6413af33bb93,Crow,30-04-2025,679.0,3,False,5,morn2,,morn2_3_trial5_first_cont,NR,PL,SB,,1,0,,,,,,,,
+378f2434-331f-42ed-b983-1cf2fed17c72,Crow,30-04-2025,807.0,3,False,5,enrich,,enrich_3_trial5_first_cont,SB,DS,,,0,1,,,,,,,,
+9c8b93bf-bbf1-4ac2-8d32-7de800c39012,Crow,30-04-2025,833.0,3,False,5,enrich,,enrich_3_trial5_first_cont,MZ,PL,LN,,1,0,,,,,,,,
+9c8b93bf-bbf1-4ac2-8d32-7de800c39012,Crow,30-04-2025,833.0,3,False,5,enrich,,enrich_3_trial5_first_cont,LN,PL,MZ,,1,0,,,,,,,,
+a9e5c8e2-b2e5-4d8a-9b29-90f1e060d414,Crow,30-04-2025,841.0,3,False,5,enrich,,enrich_3_trial5_first_cont,SB,DS,,,0,1,,,,,,,,
+584208de-ae9f-40ed-91c6-79b2262d1dd7,Crow,30-04-2025,873.0,3,False,5,enrich,,enrich_3_trial5_first_cont,SB,PL,NR,,1,0,,,,,,,,
+584208de-ae9f-40ed-91c6-79b2262d1dd7,Crow,30-04-2025,873.0,3,False,5,enrich,,enrich_3_trial5_first_cont,NR,PL,SB,,1,0,,,,,,,,
+ddcbc91e-d405-4da2-b7cf-c9ce3241b815,Crow,01-05-2025,574.0,3,False,5,morn1,,morn1_3_trial5_sec_cont,MZ,PL,NR,,1,0,,,,,,,,
+ddcbc91e-d405-4da2-b7cf-c9ce3241b815,Crow,01-05-2025,574.0,3,False,5,morn1,,morn1_3_trial5_sec_cont,NR,PL,MZ,,1,0,,,,,,,,
+ff429a11-7a8d-4637-bec9-5dd4f1c13ac5,Crow,01-05-2025,596.0,3,False,5,morn1,,morn1_3_trial5_sec_cont,SB,PL,NR,,1,0,,,,,,,,
+ff429a11-7a8d-4637-bec9-5dd4f1c13ac5,Crow,01-05-2025,596.0,3,False,5,morn1,,morn1_3_trial5_sec_cont,NR,PL,SB,,1,0,,,,,,,,
+3b30d759-47c6-47bd-ae72-4f2b4037fafa,Crow,01-05-2025,606.0,3,False,5,morn1,,morn1_3_trial5_sec_cont,SB,PL,NR,,1,0,,,,,,,,
+3b30d759-47c6-47bd-ae72-4f2b4037fafa,Crow,01-05-2025,606.0,3,False,5,morn1,,morn1_3_trial5_sec_cont,NR,PL,SB,,1,0,,,,,,,,
+8cc8fee1-6801-49dc-a859-5f039d1014ee,Crow,01-05-2025,608.0,3,False,5,morn1,,morn1_3_trial5_sec_cont,SB,PL,NR,,1,0,,,,,,,,
+8cc8fee1-6801-49dc-a859-5f039d1014ee,Crow,01-05-2025,608.0,3,False,5,morn1,,morn1_3_trial5_sec_cont,NR,PL,SB,,1,0,,,,,,,,
+86dda5ca-d65a-41fb-b49a-f26d8997d245,Crow,01-05-2025,610.0,3,False,5,morn1,,morn1_3_trial5_sec_cont,SB,DS,,,0,1,,,,,,,,
+a35848db-2ae4-494c-90dd-c37ff729d02c,Crow,01-05-2025,612.0,3,False,5,morn1,,morn1_3_trial5_sec_cont,SB,DS,,,0,1,,,,,,,,
+6e6db7a4-e78c-45f6-964c-9f222718c01f,Crow,01-05-2025,681.0,3,False,5,morn2,,morn2_3_trial5_sec_cont,MZ,DS,,,0,1,,,,,,,,
+ccc94b5f-113f-4b97-a19e-abe2c21d6fc4,Crow,01-05-2025,685.0,3,False,5,morn2,,morn2_3_trial5_sec_cont,MZ,DS,,,0,1,,,,,,,,
+81a7fe4b-a545-4667-8d74-8617db7d4cdb,Crow,01-05-2025,687.0,3,False,5,morn2,,morn2_3_trial5_sec_cont,MZ,DS,,,0,1,,,,,,,,
+94913815-783d-481b-9344-98f4a3badf21,Crow,01-05-2025,841.0,3,False,5,enrich,,enrich_3_trial5_sec_cont,SB,PL,LN,,1,0,,,,,,,,
+94913815-783d-481b-9344-98f4a3badf21,Crow,01-05-2025,841.0,3,False,5,enrich,,enrich_3_trial5_sec_cont,LN,PL,SB,,1,0,,,,,,,,
+311a7e87-f57f-4095-9b10-4e2f39b19a8f,Crow,01-05-2025,843.0,3,False,5,enrich,,enrich_3_trial5_sec_cont,SB,PL,LN,,1,0,,,,,,,,
+311a7e87-f57f-4095-9b10-4e2f39b19a8f,Crow,01-05-2025,843.0,3,False,5,enrich,,enrich_3_trial5_sec_cont,LN,PL,SB,,1,0,,,,,,,,
+7160e0df-95e6-4227-9617-44078ea2f428,Crow,01-05-2025,845.0,3,False,5,enrich,,enrich_3_trial5_sec_cont,SB,PL,LN,,1,0,,,,,,,,
+7160e0df-95e6-4227-9617-44078ea2f428,Crow,01-05-2025,845.0,3,False,5,enrich,,enrich_3_trial5_sec_cont,LN,PL,SB,,1,0,,,,,,,,
+bcdbcf78-8af9-442a-bf0b-90f9aa872ba8,Crow,01-05-2025,847.0,3,False,5,enrich,,enrich_3_trial5_sec_cont,MZ,PL,NR,,1,0,,,,,,,,
+bcdbcf78-8af9-442a-bf0b-90f9aa872ba8,Crow,01-05-2025,847.0,3,False,5,enrich,,enrich_3_trial5_sec_cont,SB,PL,LN,,1,0,,,,,,,,
+bcdbcf78-8af9-442a-bf0b-90f9aa872ba8,Crow,01-05-2025,847.0,3,False,5,enrich,,enrich_3_trial5_sec_cont,LN,PL,SB,,1,0,,,,,,,,
+bcdbcf78-8af9-442a-bf0b-90f9aa872ba8,Crow,01-05-2025,847.0,3,False,5,enrich,,enrich_3_trial5_sec_cont,NR,PL,MZ,,1,0,,,,,,,,
+b96c76a0-f2c2-4069-9df0-d0251a73a149,Crow,01-05-2025,851.0,3,False,5,enrich,,enrich_3_trial5_sec_cont,SB,PL,NR,,1,0,,,,,,,,
+b96c76a0-f2c2-4069-9df0-d0251a73a149,Crow,01-05-2025,851.0,3,False,5,enrich,,enrich_3_trial5_sec_cont,NR,PL,SB,,1,0,,,,,,,,
+05650785-e550-4ae7-9aab-aec8f3575f63,Crow,01-05-2025,853.0,3,False,5,enrich,,enrich_3_trial5_sec_cont,SB,PL,NR,,1,0,,,,,,,,
+05650785-e550-4ae7-9aab-aec8f3575f63,Crow,01-05-2025,853.0,3,False,5,enrich,,enrich_3_trial5_sec_cont,NR,PL,SB,,1,0,,,,,,,,
+0d1b424d-1f15-46b9-94f7-a45626e0a1b1,Playback,14-05-2025,618.0,3,False,6,morn1,,morn1_3_trial6_first_play,SB,PL,NR,,1,0,,,,,,,,
+0d1b424d-1f15-46b9-94f7-a45626e0a1b1,Playback,14-05-2025,618.0,3,False,6,morn1,,morn1_3_trial6_first_play,NR,PL,SB,,1,0,,,,,,,,
+f6a33e71-c19b-46f2-a8a6-a494c4d388f8,Playback,14-05-2025,626.0,3,False,6,morn1,,morn1_3_trial6_first_play,SB,PL,NR,,1,0,,,,,,,,
+f6a33e71-c19b-46f2-a8a6-a494c4d388f8,Playback,14-05-2025,626.0,3,False,6,morn1,,morn1_3_trial6_first_play,NR,PL,SB,,1,0,,,,,,,,
+8f058e24-cebb-40d9-b085-8b85526ce90b,Playback,14-05-2025,630.0,3,False,6,morn1,,morn1_3_trial6_first_play,MZ,PL,SB,,1,0,,,,,,,,
+8f058e24-cebb-40d9-b085-8b85526ce90b,Playback,14-05-2025,630.0,3,False,6,morn1,,morn1_3_trial6_first_play,SB,PL,,,1,0,,,,,,,,
+73126f71-023f-4da6-8446-d12694518443,Playback,14-05-2025,645.0,3,False,6,morn2,,morn2_3_trial6_first_play,MZ,DS,,,0,1,,,,,,,,
+d3341bf2-de36-455a-a8b0-ff0c7f97b647,Playback,14-05-2025,649.0,3,False,6,morn2,,morn2_3_trial6_first_play,SB,PL,LN,,1,0,,,,,,,,
+d3341bf2-de36-455a-a8b0-ff0c7f97b647,Playback,14-05-2025,649.0,3,False,6,morn2,,morn2_3_trial6_first_play,LN,PL,SB,,1,0,,,,,,,,
+83d0ccf3-75b8-4cc6-af97-8512c6782d52,Playback,14-05-2025,653.0,3,False,6,morn2,,morn2_3_trial6_first_play,SB,PL,NR,,1,0,,,,,,,,
+83d0ccf3-75b8-4cc6-af97-8512c6782d52,Playback,14-05-2025,653.0,3,False,6,morn2,,morn2_3_trial6_first_play,NR,PL,SB,,1,0,,,,,,,,
+b36174bd-2b23-401e-9a64-f72709cfab48,Playback,14-05-2025,663.0,3,False,6,morn2,,morn2_3_trial6_first_play,SB,PL,NR,,1,0,,,,,,,,
+b36174bd-2b23-401e-9a64-f72709cfab48,Playback,14-05-2025,663.0,3,False,6,morn2,,morn2_3_trial6_first_play,NR,PL,SB,,1,0,,,,,,,,
+716bff94-a000-4b1f-9564-908752b54198,Playback,14-05-2025,863.0,3,False,6,enrich,,enrich_3_trial6_first_play,SB,PL,GG,,1,0,,,,,,,,
+716bff94-a000-4b1f-9564-908752b54198,Playback,14-05-2025,863.0,3,False,6,enrich,,enrich_3_trial6_first_play,GG,PL,SB,,1,0,,,,,,,,
+f3cde643-4d0d-4b98-af7e-55b86ed15ff8,Playback,14-05-2025,,3,False,6,,,_3_trial6_first_play,SB,PL,NR,,1,0,,,,,,,,
+f3cde643-4d0d-4b98-af7e-55b86ed15ff8,Playback,14-05-2025,,3,False,6,,,_3_trial6_first_play,NR,PL,SB,,1,0,,,,,,,,
+5df8ce77-e27a-48c0-b68a-4c266165ba42,Playback,15-05-2025,590.0,3,False,6,morn1,,morn1_3_trial6_sec_play,GG,PL,NR,,1,0,,,,,,,,
+5df8ce77-e27a-48c0-b68a-4c266165ba42,Playback,15-05-2025,590.0,3,False,6,morn1,,morn1_3_trial6_sec_play,NR,PL,GG,,1,0,,,,,,,,
+33c3b347-bc69-42cc-b5d2-33e52ace4c44,Playback,15-05-2025,628.0,3,False,6,morn1,,morn1_3_trial6_sec_play,SB,PL,NR,,1,0,,,,,,,,
+33c3b347-bc69-42cc-b5d2-33e52ace4c44,Playback,15-05-2025,628.0,3,False,6,morn1,,morn1_3_trial6_sec_play,NR,PL,SB,,1,0,,,,,,,,
+ca3d9dd5-474e-4c89-b7e2-a16f6e7131db,Playback,15-05-2025,645.0,3,False,6,morn2,,morn2_3_trial6_sec_play,MZ,DS,,,0,1,,,,,,,,
+2b7c8570-d2b6-4ebd-a72b-d3af038ee73e,Playback,15-05-2025,647.0,3,False,6,morn2,,morn2_3_trial6_sec_play,MZ,DS,,,0,1,,,,,,,,
+f201d22b-9cda-4604-827b-ac77297ce260,Playback,15-05-2025,659.0,3,False,6,morn2,,morn2_3_trial6_sec_play,SB,PL,NR,,1,0,,,,,,,,
+f201d22b-9cda-4604-827b-ac77297ce260,Playback,15-05-2025,659.0,3,False,6,morn2,,morn2_3_trial6_sec_play,NR,PL,SB,,1,0,,,,,,,,
+b4c87654-859b-47cf-88d4-e41cfd056d3f,Playback,15-05-2025,663.0,3,False,6,morn2,,morn2_3_trial6_sec_play,SB,PL,LN,,1,0,,,,,,,,
+b4c87654-859b-47cf-88d4-e41cfd056d3f,Playback,15-05-2025,663.0,3,False,6,morn2,,morn2_3_trial6_sec_play,LN,PL,SB,,1,0,,,,,,,,
+b427a618-57bd-4cbd-95b3-932957929b6d,Playback,15-05-2025,665.0,3,False,6,morn2,,morn2_3_trial6_sec_play,SB,PL,LN,,1,0,,,,,,,,
+b427a618-57bd-4cbd-95b3-932957929b6d,Playback,15-05-2025,665.0,3,False,6,morn2,,morn2_3_trial6_sec_play,LN,PL,SB,,1,0,,,,,,,,
+90b48497-d45c-4c20-976b-0316826e4142,Playback,15-05-2025,683.0,3,False,6,morn2,,morn2_3_trial6_sec_play,SB,PL,GG,,1,0,,,,,,,,
+90b48497-d45c-4c20-976b-0316826e4142,Playback,15-05-2025,683.0,3,False,6,morn2,,morn2_3_trial6_sec_play,GG,PL,,,1,0,,,,,,,,
+18b33a7c-4172-4759-9a5f-7e7eca2a55f2,Playback,15-05-2025,873.0,3,False,6,enrich,,enrich_3_trial6_sec_play,MZ,DS,,,0,1,,,,,,,,
+c32286a0-530e-490f-9a4b-e4615fce487c,Playback,15-05-2025,875.0,3,False,6,enrich,,enrich_3_trial6_sec_play,MZ,DS,,,0,1,,,,,,,,
+76abf923-c4aa-4772-b638-dfb9b14059e2,Playback,15-05-2025,877.0,3,False,6,enrich,,enrich_3_trial6_sec_play,MZ,PL,LN,,1,0,,,,,,,,
+76abf923-c4aa-4772-b638-dfb9b14059e2,Playback,15-05-2025,877.0,3,False,6,enrich,,enrich_3_trial6_sec_play,LN,PL,MZ,,1,0,,,,,,,,
+6156eb64-15de-48d6-acb4-3390b46fc8c0,Playback,15-05-2025,879.0,3,False,6,enrich,,enrich_3_trial6_sec_play,MZ,PL,LN,,1,0,,,,,,,,
+6156eb64-15de-48d6-acb4-3390b46fc8c0,Playback,15-05-2025,879.0,3,False,6,enrich,,enrich_3_trial6_sec_play,LN,PL,MZ,,1,0,,,,,,,,
+46fd3d3d-0ea9-497d-9641-abb35bf3de95,Playback,15-05-2025,881.0,3,False,6,enrich,,enrich_3_trial6_sec_play,MZ,PL,LN,,1,0,,,,,,,,
+46fd3d3d-0ea9-497d-9641-abb35bf3de95,Playback,15-05-2025,881.0,3,False,6,enrich,,enrich_3_trial6_sec_play,LN,PL,MZ,,1,0,,,,,,,,
+fb1d61c4-3fe6-4a51-ace4-50a7c0a068c7,Playback,15-05-2025,883.0,3,False,6,enrich,,enrich_3_trial6_sec_play,SB,DS,,,0,1,,,,,,,,
+1daa4067-72f7-498f-8863-18d37a10fef5,Playback,12-03-2025,857.0,1,False,1,enrich,,enrich_1_trial1_sec_play,MZ,AG,SR,,0,1,,,,,,,,
+954492ca-1553-45ea-a109-50c9adce65aa,Playback,04-04-2025,685.0,3,False,3,morn2,,morn2_3_trial3_sec_play,MZ,DS,,,0,1,,,,,,,,
+954492ca-1553-45ea-a109-50c9adce65aa,Playback,04-04-2025,687.0,3,False,3,morn2,,morn2_3_trial3_sec_play,NR,DS,,,0,1,,,,,,,,
+5281e1ee-e9be-4c12-8de1-245179b0bafd,Playback,04-04-2025,689.0,3,False,3,morn2,,morn2_3_trial3_sec_play,MZ,DS,,,0,1,,,,,,,,
+5281e1ee-e9be-4c12-8de1-245179b0bafd,Playback,04-04-2025,,3,False,3,,,_3_trial3_sec_play,NR,DS,,,0,1,,,,,,,,
+2231b58b-fb10-4a89-9c06-c9cd31e78c93,Playback,04-04-2025,691.0,3,False,3,morn2,,morn2_3_trial3_sec_play,MZ,DS,,,0,1,,,,,,,,
+2231b58b-fb10-4a89-9c06-c9cd31e78c93,Playback,04-04-2025,,3,False,3,,,_3_trial3_sec_play,NR,DS,,,0,1,,,,,,,,
+d3991c58-5c27-46e9-97c7-f21353189ebe,Playback,04-04-2025,693.0,3,False,3,morn2,,morn2_3_trial3_sec_play,NR,DS,,,0,1,,,,,,,,
+1b38d355-7448-485a-b1ee-80b9faffe9cc,Playback,04-04-2025,695.0,3,False,3,morn2,,morn2_3_trial3_sec_play,NR,DS,,,0,1,,,,,,,,
+963f9db0-45f6-44ad-8c3b-16958d610ac6,Playback,04-04-2025,697.0,3,False,3,morn2,,morn2_3_trial3_sec_play,NR,DS,,,0,1,,,,,,,,
+df28a9af-e70b-4104-9dca-67cd82570f0c,Playback,04-04-2025,699.0,3,False,3,morn2,,morn2_3_trial3_sec_play,NR,DS,,,0,1,,,,,,,,
+005113c1-9628-41ed-add0-0b2f0bf383b8,Playback,04-04-2025,701.0,3,False,3,morn2,,morn2_3_trial3_sec_play,NR,DS,,,0,1,,,,,,,,
+dc528e35-37e0-450f-a271-31be3c0b4913,Playback,04-04-2025,703.0,3,False,3,morn2,,morn2_3_trial3_sec_play,NR,DS,,,0,1,,,,,,,,
+11a22ea1-6708-4eba-807a-1b2d6e4642c1,Playback,04-04-2025,705.0,3,False,3,morn2,,morn2_3_trial3_sec_play,MZ,PL,NR,,1,0,,,,,,,,
+11a22ea1-6708-4eba-807a-1b2d6e4642c1,Playback,04-04-2025,,3,False,3,,,_3_trial3_sec_play,NR,PL,MZ,,1,0,,,,,,,,
+d39a1d58-f5df-4baa-bd70-2ee5b1ee1c92,Playback,04-04-2025,851.0,3,False,3,enrich,,enrich_3_trial3_sec_play,MZ,DS,,,0,1,,,,,,,,
+b47b6642-3664-49ec-9577-91a85d38226a,Playback,04-04-2025,853.0,3,False,3,enrich,,enrich_3_trial3_sec_play,MZ,DS,,,0,1,,,,,,,,
+e64681dd-f356-48d1-9b8b-98e47d1d3fb8,Crow,08-04-2025,572.0,1,False,3,morn1,,morn1_1_trial3_first_cont,MZ,PL,SB,,1,0,,,,,,,,
+571d3a81-56f3-46d4-aa4d-756ac5d19863,Crow,08-04-2025,592.0,1,False,3,morn1,,morn1_1_trial3_first_cont,GG,PL,TN,,1,0,,,,,,,,
+82586364-51b8-4129-ab25-3ccbeae05674,Crow,08-04-2025,630.0,1,False,3,morn1,,morn1_1_trial3_first_cont,SB,DS,,,0,1,,,,,,,,
+6a98a52c-70d1-4eaf-bdeb-312fc1571d76,Crow,08-04-2025,651.0,1,False,3,morn2,,morn2_1_trial3_first_cont,MZ,DS,,,0,1,,,,,,,,
+427779be-676f-4400-bc92-19d0a9d0d8e2,Crow,08-04-2025,663.0,1,False,3,morn2,,morn2_1_trial3_first_cont,SB,DS,,,0,1,,,,,,,,
+4a2f18bd-cb04-4729-af9c-5bbb96da03fe,Crow,08-04-2025,679.0,1,False,3,morn2,,morn2_1_trial3_first_cont,SB,DS,,,0,1,,,,,,,,
+a45a5c6f-3170-40bd-8c83-e8c4d5f91a82,Crow,09-04-2025,821.0,1,False,3,enrich,,enrich_1_trial3_sec_cont,TN,AG,SR,,0,1,,,,,,,,
+ca734bb9-3429-45e9-b6bb-a52b45d120d0,Crow,09-04-2025,859.0,1,False,3,enrich,,enrich_1_trial3_sec_cont,TN,PL,"GG, SB",,1,0,,,,,,,,
+5eab034d-ae7a-4d4f-ac1c-c2f1876c7467,Crow,16-04-2025,576.0,3,False,4,morn1,,morn1_3_trial4_first_cont,MZ,DS,,,0,1,,,,,,,,
+f1624119-c99f-4050-86ec-b4c6dc3278a1,Crow,16-04-2025,582.0,3,False,4,morn1,,morn1_3_trial4_first_cont,MZ,DS,,,0,1,,,,,,,,
+d86a036f-bc1d-4ee5-8a69-cb4138aba374,Crow,16-04-2025,600.0,3,False,4,morn1,,morn1_3_trial4_first_cont,SB,DS,,,0,1,,,,,,,,
+78b7a1eb-0ebe-4d35-a0d1-2eeb5ca0743f,Crow,16-04-2025,602.0,3,False,4,morn1,,morn1_3_trial4_first_cont,SB,DS,,,0,1,,,,,,,,
+eb35670e-ac5e-4c7a-b9a9-3a24b907491a,Crow,16-04-2025,655.0,3,False,4,morn2,,morn2_3_trial4_first_cont,SB,AG,,,0,1,,,,,,,,
+43c913ef-438b-4741-8bff-a1cb6c41a537,Crow,17-04-2025,857.0,3,False,4,enrich,,enrich_3_trial4_sec_cont,GG,PL,NR,,1,0,,,,,,,,
+883a792e-795c-49da-acf3-e5cec96a12fb,Playback,21-04-2025,645.0,1,False,4,morn2,,morn2_1_trial4_first_play,TN,AG,SR,,0,1,,,,,,,,
+67457d92-ba94-45b1-9937-edb7760636e5,Playback,21-04-2025,647.0,1,False,4,morn2,,morn2_1_trial4_first_play,TN,AG,SR,,0,1,,,,,,,,
+47c34299-5539-4871-9ea9-de5aa4eb3e20,Playback,21-04-2025,649.0,1,False,4,morn2,,morn2_1_trial4_first_play,TN,AG,SR,,0,1,,,,,,,,
+fbb4625f-326e-498d-a0d4-abbe82ba36a0,Playback,21-04-2025,651.0,1,False,4,morn2,,morn2_1_trial4_first_play,SB,DS,,,0,1,,,,,,,,
+fbb4625f-326e-498d-a0d4-abbe82ba36a0,Playback,21-04-2025,651.0,1,False,4,morn2,,morn2_1_trial4_first_play,GG,DS,,,0,1,,,,,,,,
+fbb4625f-326e-498d-a0d4-abbe82ba36a0,Playback,21-04-2025,,1,False,4,,,_1_trial4_first_play,GG,DS,,,0,1,,,,,,,,
+eb74e5f8-c4c5-47f0-a393-f1f36659ec96,Playback,21-04-2025,653.0,1,False,4,morn2,,morn2_1_trial4_first_play,SB,DS,,,0,1,,,,,,,,
+eb74e5f8-c4c5-47f0-a393-f1f36659ec96,Playback,21-04-2025,655.0,1,False,4,morn2,,morn2_1_trial4_first_play,TN,DS,,,0,1,,,,,,,,
+694f7a78-d7f2-43af-afce-a3a11e5dac1f,Crow,30-04-2025,574.0,3,False,5,morn1,,morn1_3_trial5_first_cont,SB,PL,NR,,1,0,,,,,,,,
+dd32b829-7524-4ea0-aa3d-d2e62a028d7a,Crow,30-04-2025,580.0,3,False,5,morn1,,morn1_3_trial5_first_cont,MZ,PL,NR,,1,0,,,,,,,,
+43aa72c0-f947-46d0-b8cd-d37a9a0a59b1,Crow,30-04-2025,661.0,3,False,5,morn2,,morn2_3_trial5_first_cont,SB,PL,NR,,1,0,,,,,,,,
+a4c0131e-f028-4e20-9c39-a26e87519b32,Crow,01-05-2025,602.0,3,False,5,morn1,,morn1_3_trial5_sec_cont,SB,PL,NR,,1,0,,,,,,,,
+895776ab-9022-4867-9b31-72e7c96cd452,Crow,01-05-2025,847.0,3,False,5,enrich,,enrich_3_trial5_sec_cont,SB,PL,NR,,1,0,,,,,,,,
+8f72c075-15c6-4027-a7e9-469cdbe689ab,Crow,04-05-2025,624.0,2,False,6,morn1,,morn1_2_trial6_first_cont,GG,PL,MS,,1,0,,,,,,,,
+3446153b-21f5-48e6-acb0-1dadbe269d96,Crow,04-05-2025,667.0,2,False,6,morn2,,morn2_2_trial6_first_cont,SB,PL,MS,,1,0,,,,,,,,
+d3341bf2-de36-455a-a8b0-ff0c7f97b647,Playback,14-05-2025,649.0,3,False,6,morn2,,morn2_3_trial6_first_play,MZ,PL,LN,,1,0,,,,,,,,
+3b8cba56-db76-4f95-ad89-491bf5ddcc89,Playback,14-05-2025,655.0,3,False,6,morn2,,morn2_3_trial6_first_play,MZ,DS,,,0,1,,,,,,,,
+d9048aef-ae84-4883-a76d-34f39e438c03,Playback,15-05-2025,883.0,3,False,6,enrich,,enrich_3_trial6_sec_play,SB,PL,LN,,1,0,,,,,,,,

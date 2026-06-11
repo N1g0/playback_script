@@ -35,7 +35,7 @@ schedule_dict = {
     ('Crow', '7'): ('19.05.2025', '20.05.2025'),
 
     # Baseline
-    ('Baseline', '1'): ('29.03.2025',),
+    ('Baseline', '1'): ('28.03.2025', '29.03.2025'),
     ('Baseline', '2'): ('06.03.2025',)
 }
 
@@ -59,9 +59,10 @@ Cage_Compositions = {
 
 Cage_Comp_Dates = {
     '1': ['11.03', '12.03', '19.03', '20.03', '08.04', '09.04', '21.04', '22.04'],
-    '2': ['23.03', '24.03', '26.04', '27.04', '04.05', '05.05', '19.05', '20.05', '30.05', '31.05'],
-    '3': ['03.04', '04.04', '16.04', '17.04', '30.04', '01.05', '14.05', '15.05'],
+    '2': ['06.03', '14.03', '15.03', '23.03', '24.03', '26.04', '27.04', '04.05', '05.05', '19.05', '20.05', '30.05', '31.05'],
+    '3': ['28.03', '29.03', '03.04', '04.04', '16.04', '17.04', '30.04', '01.05', '14.05', '15.05'],
 }
+
 
 ########################################################################################################################
 # Adjusting Timestamps and finding data gaps
@@ -940,7 +941,7 @@ def standardize_dataframe_dates(df):
 
     return df
 
-# TODO: vershcieben in pipeline und intermediate step schaffen!!!
+# TODO: verschieben in pipeline und intermediate step schaffen!!!
 def apply_schedule_and_phase(df, schedule_dict, get_phase_from_time_func):
     """
     Integrates trial, condition, first_day, and phase into the working DataFrame.
@@ -951,7 +952,7 @@ def apply_schedule_and_phase(df, schedule_dict, get_phase_from_time_func):
         for i, d in enumerate(dates):
             # Standardizing date format to match your df['date_str'] or 'date'
             # Assuming your schedule_dict uses "04.04.2025" and df uses "04 April 2025"
-            # We convert both to a standard datetime for the merge
+            # convert both to a standard datetime for the merge
             schedule_rows.append({
                 'merge_date': pd.to_datetime(d, dayfirst=True),
                 'condition': cond,
@@ -971,10 +972,10 @@ def apply_schedule_and_phase(df, schedule_dict, get_phase_from_time_func):
     # Clean up merge column
     df.drop(columns=['merge_date'], inplace=True)
 
-    # 4. Apply Phase mapping based on '1_TIme'
-    if '1_TIme' in df.columns:
-        # result looks like: 'Morning', 'Afternoon', etc.
-        df['phase'] = df['1_TIme'].apply(get_phase_from_time_func)
+    ## 4. Apply Phase mapping based on '1_TIme'
+    #if '1_TIme' in df.columns:
+    #    # result looks like: 'Morning', 'Afternoon', etc.
+    #    df['phase'] = df['1_TIme'].apply(get_phase_from_time_func)
 
     return df
 
@@ -989,10 +990,15 @@ def process_all_occurrence(df, file_type):
     # Get Trial, Condition, and First_Day info
     df = apply_schedule_and_phase(df, schedule_dict, get_phase_from_time)
 
+    # Apply Phase mapping based on '1_TIme'
+    if '1_TIme' in df.columns:
+        # result looks like: 'Morning', 'Afternoon', etc.
+        df['phase'] = df['1_TIme'].apply(get_phase_from_time)
+
+
     # Pre-calculate Cages (Pass the Series, not a string)
     df['group'] = get_group(df['date_dt'], Cage_Comp_Dates, behave_dict, file_type)
     df['is_all_occasions'] = True
-    #TODO: mark all-occation entrie!
 
     # Generate the unique Block Identifier
     df['block_ID'] = generate_block_ID(df)

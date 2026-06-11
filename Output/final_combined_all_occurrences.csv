@@ -1,0 +1,422 @@
+date,Ind1,phase,condition,group,trial,first_day,block_ID,partner,playing,aggression,agg_morn1,play_morn1,agg_morn2,play_morn2,agg_enrich,play_enrich,agg_extra,play_extra,play_amount,agg_amount
+2025-03-12 00:00:00,MS,enrich,Playback,1,1,False,enrich_1_trial1_sec_play,"NH, ST, NH, ST",1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,16,0
+2025-03-12 00:00:00,MZ,enrich,Playback,1,1,False,enrich_1_trial1_sec_play,SR,0,1,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0,1
+2025-03-12 00:00:00,NH,enrich,Playback,1,1,False,enrich_1_trial1_sec_play,"ST, MS, MS, ST",0,1,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,4,7
+2025-03-12 00:00:00,ST,enrich,Playback,1,1,False,enrich_1_trial1_sec_play,"NH, MS, NH, MS",0,1,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,14,3
+2025-03-14 00:00:00,MN,morn1,Crow,UNKNOWN_DATE,1,True,morn1_UNKNOWN_DATE_trial1_first_cont,NR,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,3,1
+2025-03-14 00:00:00,NH,enrich,Crow,UNKNOWN_DATE,1,True,enrich_UNKNOWN_DATE_trial1_first_cont,NR,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,4,0
+2025-03-14 00:00:00,NH,morn1,Crow,UNKNOWN_DATE,1,True,morn1_UNKNOWN_DATE_trial1_first_cont,None,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,1
+2025-03-14 00:00:00,NR,enrich,Crow,UNKNOWN_DATE,1,True,enrich_UNKNOWN_DATE_trial1_first_cont,NH,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,4,0
+2025-03-14 00:00:00,NR,morn1,Crow,UNKNOWN_DATE,1,True,morn1_UNKNOWN_DATE_trial1_first_cont,MN,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,5,0
+2025-03-23 00:00:00,MN,morn1,Playback,2,2,True,morn1_2_trial2_first_play,NR,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1,0
+2025-03-23 00:00:00,NH,enrich,Playback,2,2,True,enrich_2_trial2_first_play,NR,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,2,0
+2025-03-23 00:00:00,NR,enrich,Playback,2,2,True,enrich_2_trial2_first_play,NH,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,2,0
+2025-03-23 00:00:00,NR,morn1,Playback,2,2,True,morn1_2_trial2_first_play,MN,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1,0
+2025-03-24 00:00:00,MN,morn1,Playback,2,2,False,morn1_2_trial2_sec_play,NR,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,4,0
+2025-03-24 00:00:00,NH,enrich,Playback,2,2,False,enrich_2_trial2_sec_play,NR,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,3,0
+2025-03-24 00:00:00,NR,enrich,Playback,2,2,False,enrich_2_trial2_sec_play,NH,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,3,0
+2025-03-24 00:00:00,NR,morn1,Playback,2,2,False,morn1_2_trial2_sec_play,MN,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,4,0
+2025-04-04 00:00:00,MZ,enrich,Playback,3,3,False,enrich_3_trial3_sec_play,None,0,1,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0,2
+2025-04-04 00:00:00,MZ,morn2,Playback,3,3,False,morn2_3_trial3_sec_play,NR,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,1,3
+2025-04-04 00:00:00,NR,morn2,Playback,3,3,False,morn2_3_trial3_sec_play,MZ,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,1,9
+2025-04-04 00:00:00,SR,enrich,Playback,3,3,False,enrich_3_trial3_sec_play,None,0,1,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0,1
+2025-04-04 00:00:00,SR,morn1,Playback,3,3,False,morn1_3_trial3_sec_play,None,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,2
+2025-04-04 00:00:00,SR,morn2,Playback,3,3,False,morn2_3_trial3_sec_play,None,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0,1
+2025-04-04 00:00:00,ST,enrich,Playback,3,3,False,enrich_3_trial3_sec_play,TK,0,1,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1,4
+2025-04-04 00:00:00,ST,extra,Playback,3,3,False,extra_3_trial3_sec_play,None,0,1,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0,1
+2025-04-04 00:00:00,ST,morn1,Playback,3,3,False,morn1_3_trial3_sec_play,None,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,8
+2025-04-04 00:00:00,ST,morn2,Playback,3,3,False,morn2_3_trial3_sec_play,"TK, TN",0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,6,5
+2025-04-04 00:00:00,TK,enrich,Playback,3,3,False,enrich_3_trial3_sec_play,None,0,1,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0,1
+2025-04-04 00:00:00,TK,morn1,Playback,3,3,False,morn1_3_trial3_sec_play,"ST, SR",0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,5,3
+2025-04-04 00:00:00,TK,morn2,Playback,3,3,False,morn2_3_trial3_sec_play,TN,1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1,0
+2025-04-08 00:00:00,GG,morn1,Crow,1,3,True,morn1_1_trial3_first_cont,TN,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1,0
+2025-04-08 00:00:00,MT,morn1,Crow,1,3,True,morn1_1_trial3_first_cont,None,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,1
+2025-04-08 00:00:00,MT,morn2,Crow,1,3,True,morn2_1_trial3_first_cont,None,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0,1
+2025-04-08 00:00:00,MZ,morn1,Crow,1,3,True,morn1_1_trial3_first_cont,SB,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1,0
+2025-04-08 00:00:00,MZ,morn2,Crow,1,3,True,morn2_1_trial3_first_cont,None,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0,1
+2025-04-08 00:00:00,NR,enrich,Crow,1,3,True,enrich_1_trial3_first_cont,TK,0,1,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,12,2
+2025-04-08 00:00:00,NR,morn1,Crow,1,3,True,morn1_1_trial3_first_cont,TK,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,2,2
+2025-04-08 00:00:00,NR,morn2,Crow,1,3,True,morn2_1_trial3_first_cont,None,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0,1
+2025-04-08 00:00:00,SB,morn1,Crow,1,3,True,morn1_1_trial3_first_cont,None,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,1
+2025-04-08 00:00:00,SB,morn2,Crow,1,3,True,morn2_1_trial3_first_cont,None,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0,2
+2025-04-08 00:00:00,ST,enrich,Crow,1,3,True,enrich_1_trial3_first_cont,None,0,1,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0,1
+2025-04-08 00:00:00,TK,enrich,Crow,1,3,True,enrich_1_trial3_first_cont,NR,0,1,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,7,2
+2025-04-08 00:00:00,TK,morn1,Crow,1,3,True,morn1_1_trial3_first_cont,NR,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,6,0
+2025-04-09 00:00:00,MT,enrich,Crow,1,3,False,enrich_1_trial3_sec_cont,None,0,1,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0,5
+2025-04-09 00:00:00,MT,morn1,Crow,1,3,False,morn1_1_trial3_sec_cont,NR,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,2,1
+2025-04-09 00:00:00,NH,morn1,Crow,1,3,False,morn1_1_trial3_sec_cont,None,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,1
+2025-04-09 00:00:00,NR,enrich,Crow,1,3,False,enrich_1_trial3_sec_cont,None,0,1,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0,1
+2025-04-09 00:00:00,NR,morn1,Crow,1,3,False,morn1_1_trial3_sec_cont,None,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,2
+2025-04-09 00:00:00,NY,morn1,Crow,1,3,False,morn1_1_trial3_sec_cont,None,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,1
+2025-04-09 00:00:00,NY,morn2,Crow,1,3,False,morn2_1_trial3_sec_cont,None,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0,1
+2025-04-09 00:00:00,ST,morn1,Crow,1,3,False,morn1_1_trial3_sec_cont,None,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,4
+2025-04-09 00:00:00,ST,morn2,Crow,1,3,False,morn2_1_trial3_sec_cont,None,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0,3
+2025-04-09 00:00:00,TK,enrich,Crow,1,3,False,enrich_1_trial3_sec_cont,TN,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,9,1
+2025-04-09 00:00:00,TK,extra,Crow,1,3,False,extra_1_trial3_sec_cont,None,0,1,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0,1
+2025-04-09 00:00:00,TK,morn1,Crow,1,3,False,morn1_1_trial3_sec_cont,TN,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,7,6
+2025-04-09 00:00:00,TK,morn2,Crow,1,3,False,morn2_1_trial3_sec_cont,TN,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,14,5
+2025-04-09 00:00:00,TN,enrich,Crow,1,3,False,enrich_1_trial3_sec_cont,"GG, SB, SR",1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1,1
+2025-04-16 00:00:00,MN,morn1,Crow,3,4,True,morn1_3_trial4_first_cont,None,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,2
+2025-04-16 00:00:00,MN,morn2,Crow,3,4,True,morn2_3_trial4_first_cont,"NH, NY",0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0,3
+2025-04-16 00:00:00,MS,morn2,Crow,3,4,True,morn2_3_trial4_first_cont,None,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0,2
+2025-04-16 00:00:00,MZ,morn1,Crow,3,4,True,morn1_3_trial4_first_cont,None,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,2
+2025-04-16 00:00:00,NH,morn1,Crow,3,4,True,morn1_3_trial4_first_cont,None,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,2
+2025-04-16 00:00:00,NH,morn2,Crow,3,4,True,morn2_3_trial4_first_cont,"MN, NY",0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0,3
+2025-04-16 00:00:00,NY,morn2,Crow,3,4,True,morn2_3_trial4_first_cont,"NH, MN",0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0,3
+2025-04-16 00:00:00,SB,morn1,Crow,3,4,True,morn1_3_trial4_first_cont,None,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,2
+2025-04-16 00:00:00,SB,morn2,Crow,3,4,True,morn2_3_trial4_first_cont,None,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0,1
+2025-04-17 00:00:00,GG,enrich,Crow,3,4,False,enrich_3_trial4_sec_cont,NR,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1,0
+2025-04-17 00:00:00,MS,enrich,Crow,3,4,False,enrich_3_trial4_sec_cont,NY,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1,0
+2025-04-17 00:00:00,NY,enrich,Crow,3,4,False,enrich_3_trial4_sec_cont,MS,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1,0
+2025-04-21 00:00:00,GG,morn2,Playback,1,4,True,morn2_1_trial4_first_play,None,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0,2
+2025-04-21 00:00:00,MS,morn2,Playback,1,4,True,morn2_1_trial4_first_play,ST,1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,2,0
+2025-04-21 00:00:00,NH,morn1,Playback,1,4,True,morn1_1_trial4_first_play,ST,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1,0
+2025-04-21 00:00:00,SB,morn2,Playback,1,4,True,morn2_1_trial4_first_play,None,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0,2
+2025-04-21 00:00:00,ST,morn1,Playback,1,4,True,morn1_1_trial4_first_play,NH,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1,0
+2025-04-21 00:00:00,ST,morn2,Playback,1,4,True,morn2_1_trial4_first_play,MS,1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,2,0
+2025-04-21 00:00:00,TN,morn2,Playback,1,4,True,morn2_1_trial4_first_play,SR,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0,4
+2025-04-22 00:00:00,NH,morn1,Playback,1,4,False,morn1_1_trial4_sec_play,None,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,1
+2025-04-22 00:00:00,NH,morn2,Playback,1,4,False,morn2_1_trial4_sec_play,ST,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,4,1
+2025-04-22 00:00:00,ST,morn2,Playback,1,4,False,morn2_1_trial4_sec_play,NH,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,4,2
+2025-04-26 00:00:00,LN,morn1,Playback,2,5,True,morn1_2_trial5_first_play,"MN, NR",1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,2,0
+2025-04-26 00:00:00,MN,morn1,Playback,2,5,True,morn1_2_trial5_first_play,"LN, NH, NH, NR",0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,3,2
+2025-04-26 00:00:00,NH,morn1,Playback,2,5,True,morn1_2_trial5_first_play,"MN, NR, MN",0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,2,1
+2025-04-26 00:00:00,NH,morn2,Playback,2,5,True,morn2_2_trial5_first_play,None,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0,1
+2025-04-26 00:00:00,NR,morn1,Playback,2,5,True,morn1_2_trial5_first_play,LN,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,2,0
+2025-04-27 00:00:00,MN,enrich,Playback,2,5,False,enrich_2_trial5_sec_play,"NR, NH",1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1,0
+2025-04-27 00:00:00,MN,morn1,Playback,2,5,False,morn1_2_trial5_sec_play,None,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,1
+2025-04-27 00:00:00,NH,enrich,Playback,2,5,False,enrich_2_trial5_sec_play,"MN, NR",1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1,0
+2025-04-27 00:00:00,NH,morn1,Playback,2,5,False,morn1_2_trial5_sec_play,None,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,2
+2025-04-27 00:00:00,NR,enrich,Playback,2,5,False,enrich_2_trial5_sec_play,"NH, MN",1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1,0
+2025-04-27 00:00:00,NR,morn1,Playback,2,5,False,morn1_2_trial5_sec_play,None,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,1
+2025-04-30 00:00:00,MN,enrich,Crow,3,5,True,enrich_3_trial5_first_cont,None,0,1,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0,1
+2025-04-30 00:00:00,MN,morn1,Crow,3,5,True,morn1_3_trial5_first_cont,None,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,2
+2025-04-30 00:00:00,MS,enrich,Crow,3,5,True,enrich_3_trial5_first_cont,None,0,1,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0,1
+2025-04-30 00:00:00,MS,morn1,Crow,3,5,True,morn1_3_trial5_first_cont,NY,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,3,0
+2025-04-30 00:00:00,MZ,morn1,Crow,3,5,True,morn1_3_trial5_first_cont,NR,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1,0
+2025-04-30 00:00:00,NY,enrich,Crow,3,5,True,enrich_3_trial5_first_cont,MS,0,1,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0,1
+2025-04-30 00:00:00,NY,morn1,Crow,3,5,True,morn1_3_trial5_first_cont,MS,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,3,0
+2025-04-30 00:00:00,SB,morn1,Crow,3,5,True,morn1_3_trial5_first_cont,NR,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1,0
+2025-04-30 00:00:00,SB,morn2,Crow,3,5,True,morn2_3_trial5_first_cont,NR,1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1,0
+2025-05-01 00:00:00,MN,morn1,Crow,3,5,False,morn1_3_trial5_sec_cont,None,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,2
+2025-05-01 00:00:00,MS,enrich,Crow,3,5,False,enrich_3_trial5_sec_cont,NY,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1,0
+2025-05-01 00:00:00,MS,morn2,Crow,3,5,False,morn2_3_trial5_sec_cont,NY,1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,8,0
+2025-05-01 00:00:00,NH,morn1,Crow,3,5,False,morn1_3_trial5_sec_cont,None,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,2
+2025-05-01 00:00:00,NY,enrich,Crow,3,5,False,enrich_3_trial5_sec_cont,MS,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1,0
+2025-05-01 00:00:00,NY,morn2,Crow,3,5,False,morn2_3_trial5_sec_cont,MS,1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,8,0
+2025-05-01 00:00:00,SB,enrich,Crow,3,5,False,enrich_3_trial5_sec_cont,NR,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1,0
+2025-05-01 00:00:00,SB,morn1,Crow,3,5,False,morn1_3_trial5_sec_cont,NR,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1,0
+2025-05-01 00:00:00,SR,morn1,Crow,3,5,False,morn1_3_trial5_sec_cont,TN,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1,0
+2025-05-01 00:00:00,ST,enrich,Crow,3,5,False,enrich_3_trial5_sec_cont,TK,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1,0
+2025-05-01 00:00:00,ST,morn1,Crow,3,5,False,morn1_3_trial5_sec_cont,None,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,1
+2025-05-01 00:00:00,ST,morn2,Crow,3,5,False,morn2_3_trial5_sec_cont,None,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0,3
+2025-05-01 00:00:00,TK,enrich,Crow,3,5,False,enrich_3_trial5_sec_cont,TN,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,9,0
+2025-05-01 00:00:00,TK,morn2,Crow,3,5,False,morn2_3_trial5_sec_cont,None,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0,1
+2025-05-04 00:00:00,GG,morn1,Crow,2,6,True,morn1_2_trial6_first_cont,MS,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1,0
+2025-05-04 00:00:00,LN,enrich,Crow,2,6,True,enrich_2_trial6_first_cont,NR,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,3,0
+2025-05-04 00:00:00,MN,morn1,Crow,2,6,True,morn1_2_trial6_first_cont,None,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,2
+2025-05-04 00:00:00,NH,enrich,Crow,2,6,True,enrich_2_trial6_first_cont,NR,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,2,0
+2025-05-04 00:00:00,NH,morn1,Crow,2,6,True,morn1_2_trial6_first_cont,None,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,1
+2025-05-04 00:00:00,NR,enrich,Crow,2,6,True,enrich_2_trial6_first_cont,"LN, NH",1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,5,0
+2025-05-04 00:00:00,NY,enrich,Crow,2,6,True,enrich_2_trial6_first_cont,"TK, SR",1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,16,1
+2025-05-04 00:00:00,NY,morn2,Crow,2,6,True,morn2_2_trial6_first_cont,None,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0,4
+2025-05-04 00:00:00,SB,morn2,Crow,2,6,True,morn2_2_trial6_first_cont,MS,1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1,0
+2025-05-04 00:00:00,ST,morn2,Crow,2,6,True,morn2_2_trial6_first_cont,None,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0,2
+2025-05-04 00:00:00,TK,enrich,Crow,2,6,True,enrich_2_trial6_first_cont,TN,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1,0
+2025-05-04 00:00:00,TK,extra,Crow,2,6,True,extra_2_trial6_first_cont,TN,1,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1,0
+2025-05-04 00:00:00,TK,morn1,Crow,2,6,True,morn1_2_trial6_first_cont,TN,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,13,1
+2025-05-04 00:00:00,TK,morn2,Crow,2,6,True,morn2_2_trial6_first_cont,TN,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,4,3
+2025-05-04 00:00:00,TN,extra,Crow,2,6,True,extra_2_trial6_first_cont,None,0,1,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0,1
+2025-05-04 00:00:00,TN,morn1,Crow,2,6,True,morn1_2_trial6_first_cont,ST,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,6,2
+2025-05-04 00:00:00,TN,morn2,Crow,2,6,True,morn2_2_trial6_first_cont,None,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0,3
+2025-05-05 00:00:00,ST,enrich,Crow,2,6,False,enrich_2_trial6_sec_cont,NY,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,5,2
+2025-05-05 00:00:00,ST,morn1,Crow,2,6,False,morn1_2_trial6_sec_cont,TK,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,4,2
+2025-05-05 00:00:00,ST,morn2,Crow,2,6,False,morn2_2_trial6_sec_cont,"TK, SR",0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,20,1
+2025-05-14 00:00:00,MZ,morn2,Playback,3,6,True,morn2_3_trial6_first_play,LN,1,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1,1
+2025-05-15 00:00:00,MN,morn1,Playback,3,6,False,morn1_3_trial6_sec_play,None,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,1
+2025-05-15 00:00:00,MS,enrich,Playback,3,6,False,enrich_3_trial6_sec_play,None,0,1,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0,1
+2025-05-15 00:00:00,NY,morn2,Playback,3,6,False,morn2_3_trial6_sec_play,None,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0,1
+2025-05-15 00:00:00,SB,enrich,Playback,3,6,False,enrich_3_trial6_sec_play,LN,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1,0
+2025-05-19 00:00:00,MN,morn1,Crow,2,7,True,morn1_2_trial7_first_cont,None,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,3
+2025-05-19 00:00:00,NH,morn1,Crow,2,7,True,morn1_2_trial7_first_cont,None,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,1
+2025-05-20 00:00:00,MN,morn2,Crow,2,7,False,morn2_2_trial7_sec_cont,None,0,1,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0,1
+2025-05-20 00:00:00,NH,morn2,Crow,2,7,False,morn2_2_trial7_sec_cont,None,0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0
+2025-05-30 00:00:00,MN,enrich,Playback,2,7,True,enrich_2_trial7_first_play,None,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,2,0
+2025-05-30 00:00:00,NR,enrich,Playback,2,7,True,enrich_2_trial7_first_play,None,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,2,0
+2025-05-31 00:00:00,MN,enrich,Playback,2,7,False,enrich_2_trial7_sec_play,None,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,2,0
+2025-05-31 00:00:00,MN,morn1,Playback,2,7,False,morn1_2_trial7_sec_play,None,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1,0
+2025-05-31 00:00:00,NR,enrich,Playback,2,7,False,enrich_2_trial7_sec_play,None,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,2,0
+2025-05-31 00:00:00,NR,morn1,Playback,2,7,False,morn1_2_trial7_sec_play,None,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1,0
+01-05-2025,LN,enrich,Crow,3,5,,enrich_3_trial5_sec_cont,SB,1,0,,,,,,,,,4,0
+01-05-2025,MN,morn1,Crow,3,5,,morn1_3_trial5_sec_cont,None,0,1,,,,,,,,,0,4
+01-05-2025,MS,enrich,Crow,3,5,,enrich_3_trial5_sec_cont,NY,1,0,,,,,,,,,2,0
+01-05-2025,MS,morn2,Crow,3,5,,morn2_3_trial5_sec_cont,NY,1,0,,,,,,,,,16,0
+01-05-2025,MZ,enrich,Crow,3,5,,enrich_3_trial5_sec_cont,NR,1,0,,,,,,,,,1,0
+01-05-2025,MZ,morn1,Crow,3,5,,morn1_3_trial5_sec_cont,NR,1,0,,,,,,,,,1,0
+01-05-2025,MZ,morn2,Crow,3,5,,morn2_3_trial5_sec_cont,None,0,1,,,,,,,,,0,3
+01-05-2025,NH,morn1,Crow,3,5,,morn1_3_trial5_sec_cont,None,0,1,,,,,,,,,0,4
+01-05-2025,NR,enrich,Crow,3,5,,enrich_3_trial5_sec_cont,"MZ, SB",1,0,,,,,,,,,3,0
+01-05-2025,NR,morn1,Crow,3,5,,morn1_3_trial5_sec_cont,"MZ, SB",1,0,,,,,,,,,4,0
+01-05-2025,NY,enrich,Crow,3,5,,enrich_3_trial5_sec_cont,MS,0,1,,,,,,,,,2,1
+01-05-2025,NY,morn2,Crow,3,5,,morn2_3_trial5_sec_cont,MS,1,0,,,,,,,,,16,0
+01-05-2025,SB,enrich,Crow,3,5,,enrich_3_trial5_sec_cont,"LN, NR",1,0,,,,,,,,,7,0
+01-05-2025,SB,morn1,Crow,3,5,,morn1_3_trial5_sec_cont,NR,1,0,,,,,,,,,4,2
+01-05-2025,SR,morn1,Crow,3,5,,morn1_3_trial5_sec_cont,TN,1,0,,,,,,,,,1,0
+01-05-2025,ST,enrich,Crow,3,5,,enrich_3_trial5_sec_cont,TK,1,0,,,,,,,,,1,0
+01-05-2025,TK,enrich,Crow,3,5,,enrich_3_trial5_sec_cont,"ST, TN",1,0,,,,,,,,,3,0
+01-05-2025,TN,enrich,Crow,3,5,,enrich_3_trial5_sec_cont,TK,1,0,,,,,,,,,2,0
+01-05-2025,TN,morn1,Crow,3,5,,morn1_3_trial5_sec_cont,SR,1,0,,,,,,,,,1,0
+03-04-2025,MZ,morn2,Playback,3,3,,morn2_3_trial3_first_play,None,0,1,,,,,,,,,0,1
+03-04-2025,NR,enrich,Playback,3,3,,enrich_3_trial3_first_play,None,0,1,,,,,,,,,0,1
+03-04-2025,NR,morn2,Playback,3,3,,morn2_3_trial3_first_play,None,0,1,,,,,,,,,0,1
+03-04-2025,SB,morn2,Playback,3,3,,morn2_3_trial3_first_play,"LN, GG",0,1,,,,,,,,,0,1
+03-04-2025,TK,morn1,Playback,3,3,,morn1_3_trial3_first_play,TN,1,0,,,,,,,,,3,0
+03-04-2025,TN,morn1,Playback,3,3,,morn1_3_trial3_first_play,TK,1,0,,,,,,,,,3,0
+04-04-2025,GG,enrich,Playback,3,3,,enrich_3_trial3_sec_play,"MZ, SB, NR",1,0,,,,,,,,,3,0
+04-04-2025,MZ,enrich,Playback,3,3,,enrich_3_trial3_sec_play,"NR, GG, SB, NR",1,0,,,,,,,,,4,2
+04-04-2025,MZ,morn2,Playback,3,3,,morn2_3_trial3_sec_play,NR,0,1,,,,,,,,,1,3
+04-04-2025,NR,enrich,Playback,3,3,,enrich_3_trial3_sec_play,"MZ, SB, GG",1,0,,,,,,,,,4,0
+04-04-2025,NR,morn2,Playback,3,3,,morn2_3_trial3_sec_play,None,0,1,,,,,,,,,0,7
+04-04-2025,SB,enrich,Playback,3,3,,enrich_3_trial3_sec_play,"GG, MZ, NR",1,0,,,,,,,,,3,0
+04-04-2025,SR,morn1,Playback,3,3,,morn1_3_trial3_sec_play,TK,1,0,,,,,,,,,1,0
+04-04-2025,TK,morn1,Playback,3,3,,morn1_3_trial3_sec_play,SR,1,0,,,,,,,,,1,0
+04-04-2025,TK,morn2,Playback,3,3,,morn2_3_trial3_sec_play,TN,1,0,,,,,,,,,1,0
+04-04-2025,TN,morn2,Playback,3,3,,morn2_3_trial3_sec_play,TK,1,0,,,,,,,,,1,0
+04-05-2025,GG,morn1,Crow,2,6,,morn1_2_trial6_first_cont,MS,1,0,,,,,,,,,1,0
+04-05-2025,LN,enrich,Crow,2,6,,enrich_2_trial6_first_cont,NR,1,0,,,,,,,,,6,0
+04-05-2025,MN,morn1,Crow,2,6,,morn1_2_trial6_first_cont,None,0,1,,,,,,,,,0,4
+04-05-2025,MS,morn1,Crow,2,6,,morn1_2_trial6_first_cont,None,0,1,,,,,,,,,0,2
+04-05-2025,MZ,morn1,Crow,2,6,,morn1_2_trial6_first_cont,None,0,1,,,,,,,,,0,3
+04-05-2025,MZ,morn2,Crow,2,6,,morn2_2_trial6_first_cont,None,0,1,,,,,,,,,0,4
+04-05-2025,NH,enrich,Crow,2,6,,enrich_2_trial6_first_cont,NR,1,0,,,,,,,,,4,0
+04-05-2025,NH,morn1,Crow,2,6,,morn1_2_trial6_first_cont,None,0,1,,,,,,,,,0,2
+04-05-2025,NR,enrich,Crow,2,6,,enrich_2_trial6_first_cont,"LN, NH",1,0,,,,,,,,,10,0
+04-05-2025,NY,enrich,Crow,2,6,,enrich_2_trial6_first_cont,TK,1,0,,,,,,,,,7,0
+04-05-2025,SB,morn1,Crow,2,6,,morn1_2_trial6_first_cont,None,0,1,,,,,,,,,0,2
+04-05-2025,SB,morn2,Crow,2,6,,morn2_2_trial6_first_cont,MS,0,1,,,,,,,,,1,1
+04-05-2025,ST,morn2,Crow,2,6,,morn2_2_trial6_first_cont,None,0,1,,,,,,,,,0,1
+04-05-2025,TK,enrich,Crow,2,6,,enrich_2_trial6_first_cont,NY,1,0,,,,,,,,,7,0
+05-05-2025,GG,morn2,Crow,2,6,,morn2_2_trial6_sec_cont,"SB, MS",1,0,,,,,,,,,1,0
+05-05-2025,MS,morn2,Crow,2,6,,morn2_2_trial6_sec_cont,"GG, SB",1,0,,,,,,,,,1,0
+05-05-2025,MZ,enrich,Crow,2,6,,enrich_2_trial6_sec_cont,None,0,1,,,,,,,,,0,1
+05-05-2025,NY,enrich,Crow,2,6,,enrich_2_trial6_sec_cont,ST,1,0,,,,,,,,,2,0
+05-05-2025,SB,morn2,Crow,2,6,,morn2_2_trial6_sec_cont,"GG, MS",1,0,,,,,,,,,1,0
+05-05-2025,ST,enrich,Crow,2,6,,enrich_2_trial6_sec_cont,NY,1,0,,,,,,,,,2,0
+08-04-2025,GG,morn1,Crow,1,3,,morn1_1_trial3_first_cont,TN,1,0,,,,,,,,,3,0
+08-04-2025,GG,morn2,Crow,1,3,,morn2_1_trial3_first_cont,"TN, TN, SB",1,0,,,,,,,,,5,0
+08-04-2025,MZ,morn1,Crow,1,3,,morn1_1_trial3_first_cont,SB,1,0,,,,,,,,,1,0
+08-04-2025,MZ,morn2,Crow,1,3,,morn2_1_trial3_first_cont,None,0,1,,,,,,,,,0,1
+08-04-2025,SB,morn1,Crow,1,3,,morn1_1_trial3_first_cont,None,0,1,,,,,,,,,0,1
+08-04-2025,SB,morn2,Crow,1,3,,morn2_1_trial3_first_cont,"TN, GG",1,0,,,,,,,,,1,2
+08-04-2025,ST,enrich,Crow,1,3,,enrich_1_trial3_first_cont,None,0,1,,,,,,,,,0,2
+08-04-2025,TN,morn1,Crow,1,3,,morn1_1_trial3_first_cont,GG,0,1,,,,,,,,,2,1
+08-04-2025,TN,morn2,Crow,1,3,,morn2_1_trial3_first_cont,"GG, GG, SB",1,0,,,,,,,,,5,0
+09-04-2025,GG,morn1,Crow,1,3,,morn1_1_trial3_sec_cont,"TN, MZ",1,0,,,,,,,,,1,0
+09-04-2025,MZ,enrich,Crow,1,3,,enrich_1_trial3_sec_cont,TN,1,0,,,,,,,,,2,0
+09-04-2025,MZ,morn1,Crow,1,3,,morn1_1_trial3_sec_cont,"TN, TN, GG",1,0,,,,,,,,,3,0
+09-04-2025,NH,morn1,Crow,1,3,,morn1_1_trial3_sec_cont,None,0,1,,,,,,,,,0,1
+09-04-2025,NR,enrich,Crow,1,3,,enrich_1_trial3_sec_cont,TK,1,0,,,,,,,,,5,0
+09-04-2025,NR,morn1,Crow,1,3,,morn1_1_trial3_sec_cont,TK,1,0,,,,,,,,,3,0
+09-04-2025,ST,morn1,Crow,1,3,,morn1_1_trial3_sec_cont,None,0,1,,,,,,,,,0,5
+09-04-2025,ST,morn2,Crow,1,3,,morn2_1_trial3_sec_cont,None,0,1,,,,,,,,,0,5
+09-04-2025,TK,enrich,Crow,1,3,,enrich_1_trial3_sec_cont,NR,1,0,,,,,,,,,5,0
+09-04-2025,TK,morn1,Crow,1,3,,morn1_1_trial3_sec_cont,NR,1,0,,,,,,,,,3,0
+09-04-2025,TN,enrich,Crow,1,3,,enrich_1_trial3_sec_cont,"MZ, SR, GG, SB",1,0,,,,,,,,,3,1
+09-04-2025,TN,morn1,Crow,1,3,,morn1_1_trial3_sec_cont,"MZ, MZ, GG",1,0,,,,,,,,,3,0
+11-03-2025,MZ,morn1,Playback,1,1,,morn1_1_trial1_first_play,TN,1,0,,,,,,,,,1,0
+11-03-2025,SB,morn1,Playback,1,1,,morn1_1_trial1_first_play,TN,1,0,,,,,,,,,1,0
+11-03-2025,TN,morn1,Playback,1,1,,morn1_1_trial1_first_play,"MZ, SB",1,0,,,,,,,,,1,0
+11-03-2025,TN,morn2,Playback,1,1,,morn2_1_trial1_first_play,None,0,1,,,,,,,,,0,1
+12-03-2025,MN,enrich,Playback,1,1,,enrich_1_trial1_sec_play,"SR, SR, NY",1,0,,,,,,,,,5,0
+12-03-2025,MN,morn2,Playback,1,1,,morn2_1_trial1_sec_play,SR,1,0,,,,,,,,,3,0
+12-03-2025,MS,enrich,Playback,1,1,,enrich_1_trial1_sec_play,"NH, ST, NH, ST",1,0,,,,,,,,,16,0
+12-03-2025,MZ,enrich,Playback,1,1,,enrich_1_trial1_sec_play,"TN, SB, SR",1,0,,,,,,,,,2,3
+12-03-2025,NH,enrich,Playback,1,1,,enrich_1_trial1_sec_play,"ST, MS, MS, ST",0,1,,,,,,,,,5,10
+12-03-2025,NR,enrich,Playback,1,1,,enrich_1_trial1_sec_play,"ST, TK",1,0,,,,,,,,,11,0
+12-03-2025,NR,morn2,Playback,1,1,,morn2_1_trial1_sec_play,ST,1,0,,,,,,,,,3,0
+12-03-2025,NY,enrich,Playback,1,1,,enrich_1_trial1_sec_play,None,1,0,,,,,,,,,1,0
+12-03-2025,SB,enrich,Playback,1,1,,enrich_1_trial1_sec_play,MZ,0,1,,,,,,,,,1,2
+12-03-2025,ST,enrich,Playback,1,1,,enrich_1_trial1_sec_play,"NH, MS, NH, MS",0,1,,,,,,,,,15,4
+12-03-2025,TK,enrich,Playback,1,1,,enrich_1_trial1_sec_play,SR,1,0,,,,,,,,,7,0
+12-03-2025,TN,enrich,Playback,1,1,,enrich_1_trial1_sec_play,"MZ, SR",1,0,,,,,,,,,1,6
+14-03-2025,MN,enrich,Crow,UNKNOWN_DATE,1,,enrich_UNKNOWN_DATE_trial1_first_cont,None,0,1,,,,,,,,,0,1
+14-03-2025,MN,morn1,Crow,UNKNOWN_DATE,1,,morn1_UNKNOWN_DATE_trial1_first_cont,NR,1,0,,,,,,,,,6,3
+14-03-2025,NH,enrich,Crow,UNKNOWN_DATE,1,,enrich_UNKNOWN_DATE_trial1_first_cont,NR,1,0,,,,,,,,,8,0
+14-03-2025,NH,morn1,Crow,UNKNOWN_DATE,1,,morn1_UNKNOWN_DATE_trial1_first_cont,None,0,1,,,,,,,,,0,2
+14-03-2025,NR,enrich,Crow,UNKNOWN_DATE,1,,enrich_UNKNOWN_DATE_trial1_first_cont,NH,1,0,,,,,,,,,8,0
+14-03-2025,NR,morn1,Crow,UNKNOWN_DATE,1,,morn1_UNKNOWN_DATE_trial1_first_cont,MN,1,0,,,,,,,,,10,1
+14-03-2025,NY,enrich,Crow,UNKNOWN_DATE,1,,enrich_UNKNOWN_DATE_trial1_first_cont,TN,1,0,,,,,,,,,4,0
+14-03-2025,NY,morn1,Crow,UNKNOWN_DATE,1,,morn1_UNKNOWN_DATE_trial1_first_cont,SR,1,0,,,,,,,,,1,0
+14-03-2025,SR,enrich,Crow,UNKNOWN_DATE,1,,enrich_UNKNOWN_DATE_trial1_first_cont,None,0,1,,,,,,,,,0,2
+14-03-2025,SR,morn1,Crow,UNKNOWN_DATE,1,,morn1_UNKNOWN_DATE_trial1_first_cont,"NY, TK",1,0,,,,,,,,,2,1
+14-03-2025,ST,enrich,Crow,UNKNOWN_DATE,1,,enrich_UNKNOWN_DATE_trial1_first_cont,TK,1,0,,,,,,,,,2,0
+14-03-2025,TK,enrich,Crow,UNKNOWN_DATE,1,,enrich_UNKNOWN_DATE_trial1_first_cont,ST,1,0,,,,,,,,,2,0
+14-03-2025,TK,morn1,Crow,UNKNOWN_DATE,1,,morn1_UNKNOWN_DATE_trial1_first_cont,"SR, TN",1,0,,,,,,,,,3,0
+14-03-2025,TN,enrich,Crow,UNKNOWN_DATE,1,,enrich_UNKNOWN_DATE_trial1_first_cont,NY,1,0,,,,,,,,,4,0
+14-03-2025,TN,morn1,Crow,UNKNOWN_DATE,1,,morn1_UNKNOWN_DATE_trial1_first_cont,"SR, TK",0,1,,,,,,,,,2,1
+14-05-2025,GG,enrich,Playback,3,6,,enrich_3_trial6_first_play,SB,1,0,,,,,,,,,1,0
+14-05-2025,LN,morn2,Playback,3,6,,morn2_3_trial6_first_play,SB,1,0,,,,,,,,,1,0
+14-05-2025,MZ,morn1,Playback,3,6,,morn1_3_trial6_first_play,SB,1,0,,,,,,,,,1,0
+14-05-2025,MZ,morn2,Playback,3,6,,morn2_3_trial6_first_play,LN,0,1,,,,,,,,,1,2
+14-05-2025,NR,morn1,Playback,3,6,,morn1_3_trial6_first_play,SB,1,0,,,,,,,,,2,0
+14-05-2025,NR,morn2,Playback,3,6,,morn2_3_trial6_first_play,SB,1,0,,,,,,,,,2,0
+14-05-2025,SB,enrich,Playback,3,6,,enrich_3_trial6_first_play,GG,1,0,,,,,,,,,1,0
+14-05-2025,SB,morn1,Playback,3,6,,morn1_3_trial6_first_play,NR,1,0,,,,,,,,,3,0
+14-05-2025,SB,morn2,Playback,3,6,,morn2_3_trial6_first_play,"LN, NR",1,0,,,,,,,,,3,0
+14-05-2025,ST,morn2,Playback,3,6,,morn2_3_trial6_first_play,TK,1,0,,,,,,,,,3,0
+14-05-2025,TK,morn1,Playback,3,6,,morn1_3_trial6_first_play,TN,1,0,,,,,,,,,6,0
+14-05-2025,TK,morn2,Playback,3,6,,morn2_3_trial6_first_play,ST,1,0,,,,,,,,,3,0
+14-05-2025,TN,morn1,Playback,3,6,,morn1_3_trial6_first_play,TK,1,0,,,,,,,,,6,0
+15-05-2025,GG,morn1,Playback,3,6,,morn1_3_trial6_sec_play,NR,1,0,,,,,,,,,1,0
+15-05-2025,GG,morn2,Playback,3,6,,morn2_3_trial6_sec_play,None,1,0,,,,,,,,,1,0
+15-05-2025,LN,enrich,Playback,3,6,,enrich_3_trial6_sec_play,MZ,1,0,,,,,,,,,3,0
+15-05-2025,LN,morn2,Playback,3,6,,morn2_3_trial6_sec_play,SB,1,0,,,,,,,,,2,0
+15-05-2025,MN,morn1,Playback,3,6,,morn1_3_trial6_sec_play,None,0,1,,,,,,,,,0,1
+15-05-2025,MS,enrich,Playback,3,6,,enrich_3_trial6_sec_play,None,0,1,,,,,,,,,0,2
+15-05-2025,MZ,enrich,Playback,3,6,,enrich_3_trial6_sec_play,LN,0,1,,,,,,,,,3,2
+15-05-2025,MZ,morn2,Playback,3,6,,morn2_3_trial6_sec_play,None,0,1,,,,,,,,,0,2
+15-05-2025,NR,morn1,Playback,3,6,,morn1_3_trial6_sec_play,"GG, SB",1,0,,,,,,,,,2,0
+15-05-2025,NR,morn2,Playback,3,6,,morn2_3_trial6_sec_play,SB,1,0,,,,,,,,,1,0
+15-05-2025,NY,morn2,Playback,3,6,,morn2_3_trial6_sec_play,None,0,1,,,,,,,,,0,1
+15-05-2025,SB,enrich,Playback,3,6,,enrich_3_trial6_sec_play,LN,0,1,,,,,,,,,1,1
+15-05-2025,SB,morn1,Playback,3,6,,morn1_3_trial6_sec_play,NR,1,0,,,,,,,,,1,0
+15-05-2025,SB,morn2,Playback,3,6,,morn2_3_trial6_sec_play,"NR, LN, GG",1,0,,,,,,,,,4,0
+15-05-2025,ST,morn1,Playback,3,6,,morn1_3_trial6_sec_play,TK,1,0,,,,,,,,,1,0
+15-05-2025,TK,morn1,Playback,3,6,,morn1_3_trial6_sec_play,ST,1,0,,,,,,,,,1,0
+15-05-2025,TK,morn2,Playback,3,6,,morn2_3_trial6_sec_play,TN,1,0,,,,,,,,,2,0
+15-05-2025,TN,morn2,Playback,3,6,,morn2_3_trial6_sec_play,TK,1,0,,,,,,,,,2,0
+16-04-2025,GG,morn2,Crow,3,4,,morn2_3_trial4_first_cont,"SB, NR",0,1,,,,,,,,,1,1
+16-04-2025,LN,enrich,Crow,3,4,,enrich_3_trial4_first_cont,SB,1,0,,,,,,,,,4,0
+16-04-2025,LN,morn2,Crow,3,4,,morn2_3_trial4_first_cont,None,0,1,,,,,,,,,0,2
+16-04-2025,MN,morn1,Crow,3,4,,morn1_3_trial4_first_cont,None,0,1,,,,,,,,,0,4
+16-04-2025,MN,morn2,Crow,3,4,,morn2_3_trial4_first_cont,"NH, NY",0,1,,,,,,,,,0,4
+16-04-2025,MS,morn2,Crow,3,4,,morn2_3_trial4_first_cont,None,0,1,,,,,,,,,0,2
+16-04-2025,MZ,enrich,Crow,3,4,,enrich_3_trial4_first_cont,"SB, NR, NR",1,0,,,,,,,,,3,0
+16-04-2025,MZ,morn1,Crow,3,4,,morn1_3_trial4_first_cont,None,0,1,,,,,,,,,0,3
+16-04-2025,MZ,morn2,Crow,3,4,,morn2_3_trial4_first_cont,None,0,1,,,,,,,,,0,2
+16-04-2025,NH,morn1,Crow,3,4,,morn1_3_trial4_first_cont,None,0,1,,,,,,,,,0,3
+16-04-2025,NH,morn2,Crow,3,4,,morn2_3_trial4_first_cont,"MN, NY",0,1,,,,,,,,,0,4
+16-04-2025,NR,enrich,Crow,3,4,,enrich_3_trial4_first_cont,"SB, SB, MZ, MZ",1,0,,,,,,,,,7,0
+16-04-2025,NR,morn1,Crow,3,4,,morn1_3_trial4_first_cont,SB,1,0,,,,,,,,,2,0
+16-04-2025,NR,morn2,Crow,3,4,,morn2_3_trial4_first_cont,"GG, SB, SB",0,1,,,,,,,,,8,2
+16-04-2025,NY,morn2,Crow,3,4,,morn2_3_trial4_first_cont,"NH, MN",0,1,,,,,,,,,0,4
+16-04-2025,SB,enrich,Crow,3,4,,enrich_3_trial4_first_cont,"NR, NR, MZ, LN",1,0,,,,,,,,,9,0
+16-04-2025,SB,morn1,Crow,3,4,,morn1_3_trial4_first_cont,NR,0,1,,,,,,,,,2,4
+16-04-2025,SB,morn2,Crow,3,4,,morn2_3_trial4_first_cont,"MZ, NR, NR",0,1,,,,,,,,,8,3
+16-04-2025,ST,morn2,Crow,3,4,,morn2_3_trial4_first_cont,"TK, TN",1,0,,,,,,,,,3,0
+16-04-2025,TK,morn2,Crow,3,4,,morn2_3_trial4_first_cont,"TN, ST",1,0,,,,,,,,,3,0
+16-04-2025,TN,morn2,Crow,3,4,,morn2_3_trial4_first_cont,"TK, ST",1,0,,,,,,,,,4,0
+17-04-2025,GG,enrich,Crow,3,4,,enrich_3_trial4_sec_cont,NR,1,0,,,,,,,,,1,0
+17-04-2025,GG,morn2,Crow,3,4,,morn2_3_trial4_sec_cont,"SB, MZ",1,0,,,,,,,,,1,0
+17-04-2025,MS,enrich,Crow,3,4,,enrich_3_trial4_sec_cont,NY,1,0,,,,,,,,,4,0
+17-04-2025,MZ,morn2,Crow,3,4,,morn2_3_trial4_sec_cont,"GG, SB",1,0,,,,,,,,,1,0
+17-04-2025,NR,enrich,Crow,3,4,,enrich_3_trial4_sec_cont,SB,1,0,,,,,,,,,3,0
+17-04-2025,NY,enrich,Crow,3,4,,enrich_3_trial4_sec_cont,MS,1,0,,,,,,,,,4,0
+17-04-2025,SB,enrich,Crow,3,4,,enrich_3_trial4_sec_cont,NR,1,0,,,,,,,,,3,0
+17-04-2025,SB,morn2,Crow,3,4,,morn2_3_trial4_sec_cont,"MZ, GG",1,0,,,,,,,,,1,0
+17-04-2025,ST,morn1,Crow,3,4,,morn1_3_trial4_sec_cont,TN,1,0,,,,,,,,,2,0
+17-04-2025,TK,enrich,Crow,3,4,,enrich_3_trial4_sec_cont,TN,1,0,,,,,,,,,3,0
+17-04-2025,TK,morn2,Crow,3,4,,morn2_3_trial4_sec_cont,TN,1,0,,,,,,,,,5,0
+17-04-2025,TN,enrich,Crow,3,4,,enrich_3_trial4_sec_cont,TK,1,0,,,,,,,,,3,0
+17-04-2025,TN,morn1,Crow,3,4,,morn1_3_trial4_sec_cont,ST,1,0,,,,,,,,,2,0
+17-04-2025,TN,morn2,Crow,3,4,,morn2_3_trial4_sec_cont,TK,1,0,,,,,,,,,5,0
+19-05-2025,MN,morn1,Crow,2,7,,morn1_2_trial7_first_cont,None,0,1,,,,,,,,,0,6
+19-05-2025,NH,morn1,Crow,2,7,,morn1_2_trial7_first_cont,None,0,1,,,,,,,,,0,2
+20-03-2025,MN,enrich,Crow,1,2,,enrich_1_trial2_sec_cont,NR,1,0,,,,,,,,,2,0
+20-03-2025,NR,enrich,Crow,1,2,,enrich_1_trial2_sec_cont,MT,1,0,,,,,,,,,2,0
+20-03-2025,SB,enrich,Crow,1,2,,enrich_1_trial2_sec_cont,None,0,1,,,,,,,,,0,1
+20-05-2025,MN,morn2,Crow,2,7,,morn2_2_trial7_sec_cont,None,0,1,,,,,,,,,0,2
+21-04-2025,GG,morn2,Playback,1,4,,morn2_1_trial4_first_play,None,0,1,,,,,,,,,0,1
+21-04-2025,MS,morn2,Playback,1,4,,morn2_1_trial4_first_play,ST,1,0,,,,,,,,,3,0
+21-04-2025,MZ,morn1,Playback,1,4,,morn1_1_trial4_first_play,"SB, SB, TN",1,0,,,,,,,,,2,0
+21-04-2025,NH,morn1,Playback,1,4,,morn1_1_trial4_first_play,ST,1,0,,,,,,,,,3,0
+21-04-2025,SB,morn1,Playback,1,4,,morn1_1_trial4_first_play,"MZ, TN, MZ",1,0,,,,,,,,,2,0
+21-04-2025,SB,morn2,Playback,1,4,,morn2_1_trial4_first_play,None,0,1,,,,,,,,,0,2
+21-04-2025,ST,morn1,Playback,1,4,,morn1_1_trial4_first_play,NH,1,0,,,,,,,,,3,0
+21-04-2025,ST,morn2,Playback,1,4,,morn2_1_trial4_first_play,MS,1,0,,,,,,,,,3,0
+21-04-2025,TN,morn1,Playback,1,4,,morn1_1_trial4_first_play,"SB, MZ",1,0,,,,,,,,,1,0
+21-04-2025,TN,morn2,Playback,1,4,,morn2_1_trial4_first_play,SR,0,1,,,,,,,,,0,4
+22-04-2025,NH,morn1,Playback,1,4,,morn1_1_trial4_sec_play,None,0,1,,,,,,,,,0,2
+22-04-2025,NH,morn2,Playback,1,4,,morn2_1_trial4_sec_play,ST,1,0,,,,,,,,,8,1
+22-04-2025,ST,morn2,Playback,1,4,,morn2_1_trial4_sec_play,NH,0,1,,,,,,,,,8,4
+23-03-2025,GG,morn2,Playback,2,2,,morn2_2_trial2_first_play,MS,0,1,,,,,,,,,1,1
+23-03-2025,MN,morn1,Playback,2,2,,morn1_2_trial2_first_play,NR,1,0,,,,,,,,,2,0
+23-03-2025,MS,morn2,Playback,2,2,,morn2_2_trial2_first_play,GG,1,0,,,,,,,,,1,0
+23-03-2025,NH,enrich,Playback,2,2,,enrich_2_trial2_first_play,NR,1,0,,,,,,,,,4,0
+23-03-2025,NR,enrich,Playback,2,2,,enrich_2_trial2_first_play,NH,1,0,,,,,,,,,4,0
+23-03-2025,NR,morn1,Playback,2,2,,morn1_2_trial2_first_play,MN,1,0,,,,,,,,,2,0
+23-03-2025,SR,enrich,Playback,2,2,,enrich_2_trial2_first_play,"TN, ST",1,0,,,,,,,,,1,0
+23-03-2025,SR,morn2,Playback,2,2,,morn2_2_trial2_first_play,None,0,1,,,,,,,,,0,1
+23-03-2025,TK,morn1,Playback,2,2,,morn1_2_trial2_first_play,TN,1,0,,,,,,,,,3,0
+23-03-2025,TN,enrich,Playback,2,2,,enrich_2_trial2_first_play,"SR, ST",1,0,,,,,,,,,1,0
+23-03-2025,TN,morn1,Playback,2,2,,morn1_2_trial2_first_play,TK,1,0,,,,,,,,,3,0
+24-03-2025,GG,morn2,Playback,2,2,,morn2_2_trial2_sec_play,SB,1,0,,,,,,,,,2,0
+24-03-2025,MN,morn1,Playback,2,2,,morn1_2_trial2_sec_play,NR,1,0,,,,,,,,,8,0
+24-03-2025,NH,enrich,Playback,2,2,,enrich_2_trial2_sec_play,NR,1,0,,,,,,,,,6,1
+24-03-2025,NR,enrich,Playback,2,2,,enrich_2_trial2_sec_play,NH,1,0,,,,,,,,,6,0
+24-03-2025,NR,morn1,Playback,2,2,,morn1_2_trial2_sec_play,MN,1,0,,,,,,,,,8,0
+24-03-2025,NY,enrich,Playback,2,2,,enrich_2_trial2_sec_play,ST,1,0,,,,,,,,,1,0
+24-03-2025,SB,morn2,Playback,2,2,,morn2_2_trial2_sec_play,GG,1,0,,,,,,,,,2,0
+24-03-2025,ST,enrich,Playback,2,2,,enrich_2_trial2_sec_play,NY,1,0,,,,,,,,,1,1
+24-03-2025,TK,enrich,Playback,2,2,,enrich_2_trial2_sec_play,TN,1,0,,,,,,,,,1,0
+24-03-2025,TN,enrich,Playback,2,2,,enrich_2_trial2_sec_play,TK,0,1,,,,,,,,,1,2
+24-03-2025,TN,morn2,Playback,2,2,,morn2_2_trial2_sec_play,None,0,1,,,,,,,,,0,3
+26-04-2025,GG,enrich,Playback,2,5,,enrich_2_trial5_first_play,None,1,0,,,,,,,,,1,0
+26-04-2025,GG,morn2,Playback,2,5,,morn2_2_trial5_first_play,"MS, SB",1,0,,,,,,,,,4,0
+26-04-2025,LN,morn1,Playback,2,5,,morn1_2_trial5_first_play,"MN, NR",1,0,,,,,,,,,4,0
+26-04-2025,MN,morn1,Playback,2,5,,morn1_2_trial5_first_play,"LN, NH, NH, NR",0,1,,,,,,,,,6,4
+26-04-2025,MS,morn2,Playback,2,5,,morn2_2_trial5_first_play,GG,1,0,,,,,,,,,1,0
+26-04-2025,MZ,morn2,Playback,2,5,,morn2_2_trial5_first_play,None,0,1,,,,,,,,,0,1
+26-04-2025,NH,morn1,Playback,2,5,,morn1_2_trial5_first_play,"MN, NR, MN",0,1,,,,,,,,,4,2
+26-04-2025,NH,morn2,Playback,2,5,,morn2_2_trial5_first_play,None,0,1,,,,,,,,,0,2
+26-04-2025,NR,morn1,Playback,2,5,,morn1_2_trial5_first_play,LN,1,0,,,,,,,,,4,0
+26-04-2025,SB,enrich,Playback,2,5,,enrich_2_trial5_first_play,GG,1,0,,,,,,,,,1,0
+26-04-2025,SB,morn2,Playback,2,5,,morn2_2_trial5_first_play,GG,1,0,,,,,,,,,3,0
+27-04-2025,GG,enrich,Playback,2,5,,enrich_2_trial5_sec_play,MS,1,0,,,,,,,,,1,0
+27-04-2025,GG,morn2,Playback,2,5,,morn2_2_trial5_sec_play,"SB, SB, MS, MS, SB",1,0,,,,,,,,,3,0
+27-04-2025,MN,enrich,Playback,2,5,,enrich_2_trial5_sec_play,"NR, NH",1,0,,,,,,,,,2,0
+27-04-2025,MN,morn1,Playback,2,5,,morn1_2_trial5_sec_play,None,0,1,,,,,,,,,0,1
+27-04-2025,MS,enrich,Playback,2,5,,enrich_2_trial5_sec_play,"SB, MZ, GG",1,0,,,,,,,,,2,0
+27-04-2025,MS,morn1,Playback,2,5,,morn1_2_trial5_sec_play,None,0,1,,,,,,,,,0,1
+27-04-2025,MS,morn2,Playback,2,5,,morn2_2_trial5_sec_play,"SB, GG",1,0,,,,,,,,,2,0
+27-04-2025,MZ,enrich,Playback,2,5,,enrich_2_trial5_sec_play,"MS, SB",1,0,,,,,,,,,1,0
+27-04-2025,MZ,morn1,Playback,2,5,,morn1_2_trial5_sec_play,None,0,1,,,,,,,,,0,2
+27-04-2025,NH,enrich,Playback,2,5,,enrich_2_trial5_sec_play,"MN, NR",1,0,,,,,,,,,2,0
+27-04-2025,NH,morn1,Playback,2,5,,morn1_2_trial5_sec_play,None,0,1,,,,,,,,,0,3
+27-04-2025,NR,enrich,Playback,2,5,,enrich_2_trial5_sec_play,"NH, MN",1,0,,,,,,,,,2,0
+27-04-2025,NR,morn1,Playback,2,5,,morn1_2_trial5_sec_play,None,0,1,,,,,,,,,0,1
+27-04-2025,SB,enrich,Playback,2,5,,enrich_2_trial5_sec_play,"MS, MZ",0,1,,,,,,,,,1,1
+27-04-2025,SB,morn2,Playback,2,5,,morn2_2_trial5_sec_play,"GG, MS, GG, GG, MS",1,0,,,,,,,,,3,0
+27-04-2025,SR,morn2,Playback,2,5,,morn2_2_trial5_sec_play,ST,1,0,,,,,,,,,2,0
+27-04-2025,ST,enrich,Playback,2,5,,enrich_2_trial5_sec_play,TK,1,0,,,,,,,,,2,0
+27-04-2025,ST,morn2,Playback,2,5,,morn2_2_trial5_sec_play,SR,1,0,,,,,,,,,2,0
+27-04-2025,TK,enrich,Playback,2,5,,enrich_2_trial5_sec_play,ST,1,0,,,,,,,,,2,0
+27-04-2025,TK,morn2,Playback,2,5,,morn2_2_trial5_sec_play,TN,1,0,,,,,,,,,2,0
+27-04-2025,TN,morn2,Playback,2,5,,morn2_2_trial5_sec_play,TK,1,0,,,,,,,,,2,0
+29-03-2025,SR,enrich,Baseline,UNKNOWN_DATE,1,,enrich_UNKNOWN_DATE_trial1_first_base,"TK, TN",1,0,,,,,,,,,4,0
+29-03-2025,TK,enrich,Baseline,UNKNOWN_DATE,1,,enrich_UNKNOWN_DATE_trial1_first_base,"SR, TN",1,0,,,,,,,,,7,0
+29-03-2025,TN,enrich,Baseline,UNKNOWN_DATE,1,,enrich_UNKNOWN_DATE_trial1_first_base,"TK, SR",1,0,,,,,,,,,8,1
+30-04-2025,GG,morn2,Crow,3,5,,morn2_3_trial5_first_cont,"SB, NR, SB, LN, LN, NR",1,0,,,,,,,,,6,0
+30-04-2025,LN,enrich,Crow,3,5,,enrich_3_trial5_first_cont,MZ,1,0,,,,,,,,,1,0
+30-04-2025,LN,morn2,Crow,3,5,,morn2_3_trial5_first_cont,"NR, GG, SB, GG",1,0,,,,,,,,,3,0
+30-04-2025,MN,enrich,Crow,3,5,,enrich_3_trial5_first_cont,None,0,1,,,,,,,,,0,3
+30-04-2025,MN,morn1,Crow,3,5,,morn1_3_trial5_first_cont,None,0,1,,,,,,,,,0,2
+30-04-2025,MS,enrich,Crow,3,5,,enrich_3_trial5_first_cont,None,0,1,,,,,,,,,0,1
+30-04-2025,MS,morn1,Crow,3,5,,morn1_3_trial5_first_cont,NY,1,0,,,,,,,,,6,0
+30-04-2025,MZ,enrich,Crow,3,5,,enrich_3_trial5_first_cont,LN,1,0,,,,,,,,,1,0
+30-04-2025,MZ,morn1,Crow,3,5,,morn1_3_trial5_first_cont,"SB, NR",1,0,,,,,,,,,2,0
+30-04-2025,MZ,morn2,Crow,3,5,,morn2_3_trial5_first_cont,None,0,1,,,,,,,,,0,1
+30-04-2025,NR,enrich,Crow,3,5,,enrich_3_trial5_first_cont,SB,1,0,,,,,,,,,1,0
+30-04-2025,NR,morn1,Crow,3,5,,morn1_3_trial5_first_cont,SB,1,0,,,,,,,,,3,0
+30-04-2025,NR,morn2,Crow,3,5,,morn2_3_trial5_first_cont,"LN, GG, SB, GG, SB",1,0,,,,,,,,,3,0
+30-04-2025,NY,enrich,Crow,3,5,,enrich_3_trial5_first_cont,MS,0,1,,,,,,,,,0,2
+30-04-2025,NY,morn1,Crow,3,5,,morn1_3_trial5_first_cont,MS,1,0,,,,,,,,,6,0
+30-04-2025,SB,enrich,Crow,3,5,,enrich_3_trial5_first_cont,NR,0,1,,,,,,,,,1,2
+30-04-2025,SB,morn1,Crow,3,5,,morn1_3_trial5_first_cont,"NR, MZ",1,0,,,,,,,,,5,0
+30-04-2025,SB,morn2,Crow,3,5,,morn2_3_trial5_first_cont,"GG, NR, LN, GG, NR",1,0,,,,,,,,,5,0
+30-04-2025,TK,morn1,Crow,3,5,,morn1_3_trial5_first_cont,TN,1,0,,,,,,,,,3,0
+30-04-2025,TN,morn1,Crow,3,5,,morn1_3_trial5_first_cont,TK,1,0,,,,,,,,,3,0
+30-05-2025,MN,enrich,Playback,2,7,,enrich_2_trial7_first_play,None,1,0,,,,,,,,,2,0
+30-05-2025,NR,enrich,Playback,2,7,,enrich_2_trial7_first_play,None,1,0,,,,,,,,,2,0
+31-05-2025,MN,enrich,Playback,2,7,,enrich_2_trial7_sec_play,None,1,0,,,,,,,,,2,0
+31-05-2025,NR,enrich,Playback,2,7,,enrich_2_trial7_sec_play,None,1,0,,,,,,,,,2,0
