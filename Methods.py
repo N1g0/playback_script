@@ -6,7 +6,8 @@ import numpy as np
 import pandas as pd
 from scipy.optimize import linear_sum_assignment
 from typing import Dict, List, Tuple, Any, Match, Pattern, Optional
-from dateutil import parser
+import itertools
+from collections import Counter
 
 pd.set_option('display.max_columns', None)   # show all columns
 pd.set_option('display.width', None)         # don't wrap columns
@@ -36,7 +37,7 @@ schedule_dict = {
 
     # Baseline
     ('Baseline', '1'): ('28.03.2025', '29.03.2025'),
-    ('Baseline', '2'): ('06.03.2025',)
+    ('Baseline', '2'): ('06.03.2025',),
 }
 
 Cage_Compositions = {
@@ -57,13 +58,51 @@ Cage_Compositions = {
     }
 }
 
+#Cage_Comp_Dates = {
+#    '1': ['11.03', '12.03', '19.03', '20.03', '08.04', '09.04', '21.04', '22.04'],
+#    '2': ['06.03', '14.03', '15.03', '23.03', '24.03', '26.04', '27.04', '04.05', '05.05', '19.05', '20.05', '30.05', '31.05'],
+#    '3': ['28.03', '29.03', '03.04', '04.04', '16.04', '17.04', '30.04', '01.05', '14.05', '15.05'],
+#}
+
 Cage_Comp_Dates = {
-    '1': ['11.03', '12.03', '19.03', '20.03', '08.04', '09.04', '21.04', '22.04'],
-    '2': ['06.03', '14.03', '15.03', '23.03', '24.03', '26.04', '27.04', '04.05', '05.05', '19.05', '20.05', '30.05', '31.05'],
-    '3': ['28.03', '29.03', '03.04', '04.04', '16.04', '17.04', '30.04', '01.05', '14.05', '15.05'],
+    "1": [
+        "11.03.2025",
+        "12.03.2025",
+        "19.03.2025",
+        "20.03.2025",
+        "08.04.2025",
+        "09.04.2025",
+        "21.04.2025",
+        "22.04.2025",
+    ],
+    "2": [
+        "06.03.2025",
+        "14.03.2025",
+        "15.03.2025",
+        "23.03.2025",
+        "24.03.2025",
+        "26.04.2025",
+        "27.04.2025",
+        "04.05.2025",
+        "05.05.2025",
+        "19.05.2025",
+        "20.05.2025",
+        "30.05.2025",
+        "31.05.2025",
+    ],
+    "3": [
+        "28.03.2025",
+        "29.03.2025",
+        "03.04.2025",
+        "04.04.2025",
+        "16.04.2025",
+        "17.04.2025",
+        "30.04.2025",
+        "01.05.2025",
+        "14.05.2025",
+        "15.05.2025",
+    ],
 }
-
-
 ########################################################################################################################
 # Adjusting Timestamps and finding data gaps
 ########################################################################################################################
@@ -519,8 +558,9 @@ def get_group(
             clean_date_map[standard_d] = str(cage)
 
     temp_dates = pd.to_datetime(dates_series, dayfirst=True, errors='coerce')
-    short_dates = temp_dates.dt.strftime("%d.%m")
-    #TODO: Check UNKNOWN and if returned propperly!!!
+    #print('temp_dates: ', temp_dates)
+    #print('clean_date_map: ', clean_date_map)
+    short_dates = temp_dates.dt.strftime("%d.%m.%Y")
     matched_cages = short_dates.map(clean_date_map).fillna("UNKNOWN_DATE")
 
     return matched_cages
@@ -1127,151 +1167,141 @@ def file_name(input_file_path, df_raw, all_raw_list):
         return None
 
 
-def sanity_check_msm_coverage(df: pd.DataFrame, file_type: str) -> pd.DataFrame:
+def perform_sanity_check(df_beh, df_dist):
+    # Ensure inputs are single DataFrames if passed as lists
+    if isinstance(df_beh, list):
+        df_beh = pd.concat(df_beh, ignore_index=True)
+    if isinstance(df_dist, list):
+        df_dist = pd.concat(df_dist, ignore_index=True)
 
-    if df.empty:
-        print(f"⚠️ Empty dataframe for cage {file_type}")
-        return pd.DataFrame()
-
-    df = df.copy()
-
-    # ✅ Always define msm column
-    if 'corrected_msm' in df.columns:
-        df['msm'] = df['corrected_msm']
-    elif 'msm' not in df.columns:
-        print("⚠️ No msm column found!")
-        return pd.DataFrame()
-
-    # Ensure date is datetime
-    df['date'] = pd.to_datetime(df['date'], errors='coerce')
-
-    summary = (
-        df.groupby(['date', 'msm'])
-        .size()
-        .reset_index(name='n_observations')
+    # 2-minute MSM time intervals: 09:30-10:30, 10:45-11:45, 13:15-14:45
+    TIMEPOINTS = (
+            list(range(570, 632, 2)) +  # 09:30 - 10:30 (31 slots)
+            list(range(645, 707, 2)) +  # 10:45 - 11:45 (31 slots)
+            list(range(795, 887, 2))  # 13:15 - 14:45 (47 slots)
     )
 
-    summary['cage'] = file_type
+    # Standardize date formats to DD-MM-YYYY
+    df_beh['date_std'] = pd.to_datetime(df_beh['date'], dayfirst=True).dt.strftime('%d-%m-%Y')
+    df_dist['date_std'] = pd.to_datetime(df_dist['date'], dayfirst=True).dt.strftime('%d-%m-%Y')
 
-    return summary
+    # Build date -> composition lookup map
+    date_to_comp = {}
+    for comp_id, d_list in Cage_Comp_Dates.items():
+        for d in d_list:
+            dt_str = pd.to_datetime(d, dayfirst=True).strftime('%d-%m-%Y')
+            date_to_comp[dt_str] = comp_id
 
-
-def sanity_check_with_missing(all_sanity_df: pd.DataFrame) -> pd.DataFrame:
-
-    if all_sanity_df.empty:
-        print("⚠️ sanity_combined is empty!")
-        return pd.DataFrame()
-
-    required_cols = {'date', 'msm', 'cage'}
-    missing_cols = required_cols - set(all_sanity_df.columns)
-
-    if missing_cols:
-        raise ValueError(f"Missing required columns in sanity data: {missing_cols}")
-
-    expected = build_full_expected_grid()
-
-    merged = expected.merge(
-        all_sanity_df,
-        on=['date', 'msm', 'cage'],
-        how='left'
-    )
-
-    merged['n_observations'] = merged['n_observations'].fillna(0)
-
-    def classify(n):
-        if n == 1:
-            return "OK"
-        elif n == 0:
-            return "MISSING"
-        else:
-            return "DUPLICATE"
-
-    merged['status'] = merged['n_observations'].apply(classify)
-
-    return merged
-
-
-def build_full_expected_grid():
-    rows = []
-
-    timepoints = generate_timepoints()
-    cages = ['A', 'B', 'C']
-
-    for (condition, trial), dates in schedule_dict.items():
+    # Expand schedule entries
+    schedule_dates = []
+    for (cond, trial), dates in schedule_dict.items():
         for d in dates:
-            date_obj = pd.to_datetime(d, dayfirst=True)
+            dt_str = pd.to_datetime(d, dayfirst=True).strftime('%d-%m-%Y')
+            schedule_dates.append((dt_str, cond, trial))
 
-            for t in timepoints:
-                msm = time_to_msm(t)
+    beh_issues = []
+    dist_issues = []
 
-                for cage in cages:
-                    rows.append({
-                        "date": date_obj,
-                        "msm": msm,
-                        "cage": cage
-                    })
+    for dt_str, cond, trial in schedule_dates:
+        comp_id = date_to_comp.get(dt_str)
+        if not comp_id:
+            continue
 
-    return pd.DataFrame(rows)
+        df_b_day = df_beh[df_beh['date_std'] == dt_str]
+        df_d_day = df_dist[df_dist['date_std'] == dt_str]
 
+        for cage, comps in Cage_Compositions.items():
+            occupants = comps.get(comp_id, [])
+            if not occupants:
+                continue
 
-def classify_row(row):
-    if row['n_missing'] == 0 and row['n_duplicate'] == 0:
-        return "OK"
-    elif row['n_duplicate'] > 0:
-        return "DUPLICATE"
-    else:
-        return "MISSING"
+            # Generate unique dyad combinations: n * (n - 1) / 2 unique pairs
+            expected_dyads = ["-".join(sorted(p)) for p in itertools.combinations(sorted(occupants), 2)]
 
+            for msm in TIMEPOINTS:
+                # --------------------------------------------------
+                # 1. BEHAVIOUR CHECK (Individual Level)
+                # --------------------------------------------------
+                df_b_slot = df_b_day[df_b_day['msm'] == msm]
+                for ind in occupants:
+                    sub_b = df_b_slot[df_b_slot['Ind1'] == ind]
+                    cnt_b = len(sub_b)
+                    if cnt_b != 1:
+                        beh_issues.append({
+                            'check_type': 'BEHAVIOUR',
+                            'date': dt_str,
+                            'condition': cond,
+                            'trial': trial,
+                            'cage': cage,
+                            'comp_id': comp_id,
+                            'msm': msm,
+                            'individual': ind,
+                            'recorded_count': cnt_b,
+                            'status': 'MISSING' if cnt_b == 0 else 'DUPLICATE',
+                            'ec5_uuid': sub_b['ec5_uuid'].iloc[0] if cnt_b > 0 else None
+                        })
 
-def count_status(row):
-    values = [row['A'], row['B'], row['C']]
+                # --------------------------------------------------
+                # 2. DISTANCE CHECK (Dyad Level)
+                # --------------------------------------------------
+                df_d_slot = df_d_day[df_d_day['msm'] == msm]
+                rec_dyads = []
+                if not df_d_slot.empty:
+                    for _, r in df_d_slot.iterrows():
+                        i1, i2 = str(r['Ind1']), str(r['partner'])
+                        if i1 in occupants and i2 in occupants and i1 != i2:
+                            rec_dyads.append("-".join(sorted([i1, i2])))
 
-    n_ok = sum(1 for v in values if v == 1)
-    n_missing = sum(1 for v in values if v == 0)
-    n_duplicate = sum(1 for v in values if v > 1)
+                dyad_counts = Counter(rec_dyads)
+                for dyad in expected_dyads:
+                    cnt_d = dyad_counts[dyad]
+                    if cnt_d != 1:
+                        dist_issues.append({
+                            'check_type': 'DISTANCE',
+                            'date': dt_str,
+                            'condition': cond,
+                            'trial': trial,
+                            'cage': cage,
+                            'comp_id': comp_id,
+                            'msm': msm,
+                            'dyad': dyad,
+                            'recorded_count': cnt_d,
+                            'status': 'MISSING' if cnt_d == 0 else None,
+                            'ec5_uuid': df_d_slot['ec5_uuid'].iloc[0] if not df_d_slot.empty else None
+                        })
 
-    return pd.Series({
-        'n_ok': n_ok,
-        'n_missing': n_missing,
-        'n_duplicate': n_duplicate
-    })
+    df_b_issues = pd.DataFrame(beh_issues)
+    df_d_issues = pd.DataFrame(dist_issues)
 
+    # --------------------------------------------------
+    # 3. COMPARE MISSING / DUPLICATE LISTS
+    # --------------------------------------------------
+    comparison_records = []
+    if not df_b_issues.empty and not df_d_issues.empty:
+        b_keys = set(zip(df_b_issues['date'], df_b_issues['cage'], df_b_issues['msm'], df_b_issues['status']))
+        d_keys = set(zip(df_d_issues['date'], df_d_issues['cage'], df_d_issues['msm'], df_d_issues['status']))
 
-def sanity_check(all_sanity: list, output_dir: str) -> None:
-    sanity_combined = pd.concat(all_sanity, ignore_index=True)
+        all_keys = b_keys.union(d_keys)
+        for key in all_keys:
+            dt, c, m, st = key
+            in_b = key in b_keys
+            in_d = key in d_keys
 
-    sanity_full = sanity_check_with_missing(sanity_combined)
-    sanity_pivot = sanity_full.pivot_table(
-        index=['date', 'msm'],
-        columns='cage',
-        values='n_observations',
-        fill_value=0
-    ).reset_index()
-    sanity_pivot['total'] = sanity_pivot[['A', 'B', 'C']].sum(axis=1)
-    sanity_pivot[['n_ok', 'n_missing', 'n_duplicate']] = sanity_pivot.apply(
-        count_status, axis=1
-    )
-    sanity_pivot['row_status'] = sanity_pivot.apply(classify_row, axis=1)
+            # Only include discrepancies (where in_b != in_d)
+            if in_b != in_d:
+                comparison_records.append({
+                    'date': dt,
+                    'cage': c,
+                    'msm': m,
+                    'status': st,
+                    'missing_in_behaviour': in_b,
+                    'missing_in_distance': in_d,
+                    'both_match': False
+                })
 
-    daily_missing = (
-        sanity_pivot.assign(
-            A_missing=(sanity_pivot['A'] == 0),
-            B_missing=(sanity_pivot['B'] == 0),
-            C_missing=(sanity_pivot['C'] == 0),
-        )
-            .groupby('date')[['A_missing', 'B_missing', 'C_missing']]
-            .sum()
-            .reset_index()
-            .rename(columns={
-            'A_missing': 'A_missing_day',
-            'B_missing': 'B_missing_day',
-            'C_missing': 'C_missing_day'
-        })
-    )
-    sanity_pivot = sanity_pivot.merge(daily_missing, on='date', how='left', validate='m:1')
+    df_comp = pd.DataFrame(comparison_records)
 
-    # Save
-    sanity_pivot.to_csv(os.path.join(output_dir, "sanity_check.csv"), index=False)
+    return df_b_issues, df_d_issues, df_comp
 
 
 def compress_all_occ(all_occ: pd.DataFrame) -> pd.DataFrame:

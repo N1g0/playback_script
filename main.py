@@ -79,10 +79,7 @@ for file_type, list_of_raw_dfs in all_raw_dfs.items():
             # Save
             time_sorted_df_raw.to_csv(os.path.join(steps_dir, f"type{file_type}_file{idx}_step1_time.csv"), index=False)
 
-            print("\nRunning MSM sanity check...")
-
-            sanity_df = Methods.sanity_check_msm_coverage(time_sorted_df_raw, file_type)
-            all_sanity.append(sanity_df)
+            #print('time_sorted_df_raw: \n', time_sorted_df_raw)
 
             # Detection and Renaming (event_sorted_df)
             event_sorted_df = Methods.process_sort_event(time_sorted_df_raw, file_type)
@@ -106,7 +103,25 @@ for file_type, list_of_raw_dfs in all_raw_dfs.items():
         except Exception as e:
             print(f"🛑 Error processing Type {file_type} (file #{idx + 1}): {e}")
 
-Methods.sanity_check(all_sanity, output_dir)
+
+df_beh_missing, df_dist_missing, df_comparison = Methods.perform_sanity_check(
+    all_behave_data,
+    all_dist_data
+)
+
+# Export results to CSV files
+df_beh_missing.to_csv(
+    os.path.join(output_dir, 'behaviour_missing_duplicates.csv'), index=False
+)
+df_dist_missing.to_csv(
+    os.path.join(output_dir, 'distance_missing_duplicates.csv'), index=False
+)
+df_comparison.to_csv(
+    os.path.join(output_dir, 'missing_slots_comparison.csv'), index=False
+)
+
+print(f"\n📁 All reports successfully written to: '{output_dir}/'")
+
 
 # --- FINAL COMBINATION STEP ---
 print("\nCombining all files into final outputs...")

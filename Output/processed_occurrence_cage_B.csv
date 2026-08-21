@@ -70,24 +70,24 @@ d6a23649-62b4-4809-bfcc-5f5516cd5ddc,Playback,2025-04-22,681,1,True,4,morn2,Fals
 2f92f495-8d14-450e-8e16-d7a8cdda0fc0,Playback,2025-04-22,688,1,True,4,morn2,False,morn2_1_trial4_sec_play,NH,PL,ST,,1,0,0,0,0,1,0,0,0,0
 823e0128-be98-43ef-a7de-48e44bd08c3c,Playback,2025-04-22,690,1,True,4,morn2,False,morn2_1_trial4_sec_play,ST,PL,NH,,1,0,0,0,0,1,0,0,0,0
 823e0128-be98-43ef-a7de-48e44bd08c3c,Playback,2025-04-22,690,1,True,4,morn2,False,morn2_1_trial4_sec_play,NH,PL,ST,,1,0,0,0,0,1,0,0,0,0
-589acbf7-d2bd-475d-819f-8be323479fef,Crow,2025-03-14,584,UNKNOWN_DATE,True,1,morn1,True,morn1_UNKNOWN_DATE_trial1_first_cont,NR,PL,MN,,1,0,0,1,0,0,0,0,0,0
-7ee79de3-115d-40ac-9cd0-bd881b5cca62,Crow,2025-03-14,586,UNKNOWN_DATE,True,1,morn1,True,morn1_UNKNOWN_DATE_trial1_first_cont,NR,PL,MN,,1,0,0,1,0,0,0,0,0,0
-a34e9985-10cd-4907-a518-00e9e716ca09,Crow,2025-03-14,588,UNKNOWN_DATE,True,1,morn1,True,morn1_UNKNOWN_DATE_trial1_first_cont,NR,PL,MN,,1,0,0,1,0,0,0,0,0,0
-a34e9985-10cd-4907-a518-00e9e716ca09,Crow,2025-03-14,588,UNKNOWN_DATE,True,1,morn1,True,morn1_UNKNOWN_DATE_trial1_first_cont,MN,PL,NR,,1,0,0,1,0,0,0,0,0,0
-895c7f1b-5c49-4cfb-b3d5-a444c759daa8,Crow,2025-03-14,608,UNKNOWN_DATE,True,1,morn1,True,morn1_UNKNOWN_DATE_trial1_first_cont,MN,PL,,Playing with a bottle,1,0,0,1,0,0,0,0,0,0
-37389303-c253-4154-8ec0-1c684fed8e49,Crow,2025-03-14,616,UNKNOWN_DATE,True,1,morn1,True,morn1_UNKNOWN_DATE_trial1_first_cont,NH,DS,,Towards cage c,0,1,1,0,0,0,0,0,0,0
-37389303-c253-4154-8ec0-1c684fed8e49,Crow,2025-03-14,616,UNKNOWN_DATE,True,1,morn1,True,morn1_UNKNOWN_DATE_trial1_first_cont,MN,DS,,Towards cage c,0,1,1,0,0,0,0,0,0,0
-4cf78534-4969-468f-8e3f-46817c70d734,Crow,2025-03-14,628,UNKNOWN_DATE,True,1,morn1,True,morn1_UNKNOWN_DATE_trial1_first_cont,NR,PL,,Playing with a bottle,1,0,0,1,0,0,0,0,0,0
-c934b92c-f194-4b67-8425-0174a72af684,Crow,2025-03-14,630,UNKNOWN_DATE,True,1,morn1,True,morn1_UNKNOWN_DATE_trial1_first_cont,NR,PL,,,1,0,0,1,0,0,0,0,0,0
-c934b92c-f194-4b67-8425-0174a72af684,Crow,2025-03-14,630,UNKNOWN_DATE,True,1,morn1,True,morn1_UNKNOWN_DATE_trial1_first_cont,MN,PL,,,1,0,0,1,0,0,0,0,0,0
-0a61340a-660d-4d6a-97e5-f469015cc92c,Crow,2025-03-14,828,UNKNOWN_DATE,True,1,enrich,True,enrich_UNKNOWN_DATE_trial1_first_cont,NH,PL,NR,,1,0,0,0,0,0,0,1,0,0
-0a61340a-660d-4d6a-97e5-f469015cc92c,Crow,2025-03-14,828,UNKNOWN_DATE,True,1,enrich,True,enrich_UNKNOWN_DATE_trial1_first_cont,NR,PL,NH,,1,0,0,0,0,0,0,1,0,0
-56d5bda0-86ba-4562-9964-c203e238bbd0,Crow,2025-03-14,829,UNKNOWN_DATE,True,1,enrich,True,enrich_UNKNOWN_DATE_trial1_first_cont,NH,PL,NR,,1,0,0,0,0,0,0,1,0,0
-56d5bda0-86ba-4562-9964-c203e238bbd0,Crow,2025-03-14,829,UNKNOWN_DATE,True,1,enrich,True,enrich_UNKNOWN_DATE_trial1_first_cont,NR,PL,NH,,1,0,0,0,0,0,0,1,0,0
-6ef88271-c776-4cc2-83c0-d5f118d717df,Crow,2025-03-14,831,UNKNOWN_DATE,True,1,enrich,True,enrich_UNKNOWN_DATE_trial1_first_cont,NH,PL,NR,,1,0,0,0,0,0,0,1,0,0
-6ef88271-c776-4cc2-83c0-d5f118d717df,Crow,2025-03-14,831,UNKNOWN_DATE,True,1,enrich,True,enrich_UNKNOWN_DATE_trial1_first_cont,NR,PL,NH,,1,0,0,0,0,0,0,1,0,0
-67efdec0-419d-42dd-a9c3-013cdf30371c,Crow,2025-03-14,833,UNKNOWN_DATE,True,1,enrich,True,enrich_UNKNOWN_DATE_trial1_first_cont,NH,PL,NR,,1,0,0,0,0,0,0,1,0,0
-67efdec0-419d-42dd-a9c3-013cdf30371c,Crow,2025-03-14,833,UNKNOWN_DATE,True,1,enrich,True,enrich_UNKNOWN_DATE_trial1_first_cont,NR,PL,NH,,1,0,0,0,0,0,0,1,0,0
+589acbf7-d2bd-475d-819f-8be323479fef,Crow,2025-03-14,584,2,True,1,morn1,True,morn1_2_trial1_first_cont,NR,PL,MN,,1,0,0,1,0,0,0,0,0,0
+7ee79de3-115d-40ac-9cd0-bd881b5cca62,Crow,2025-03-14,586,2,True,1,morn1,True,morn1_2_trial1_first_cont,NR,PL,MN,,1,0,0,1,0,0,0,0,0,0
+a34e9985-10cd-4907-a518-00e9e716ca09,Crow,2025-03-14,588,2,True,1,morn1,True,morn1_2_trial1_first_cont,NR,PL,MN,,1,0,0,1,0,0,0,0,0,0
+a34e9985-10cd-4907-a518-00e9e716ca09,Crow,2025-03-14,588,2,True,1,morn1,True,morn1_2_trial1_first_cont,MN,PL,NR,,1,0,0,1,0,0,0,0,0,0
+895c7f1b-5c49-4cfb-b3d5-a444c759daa8,Crow,2025-03-14,608,2,True,1,morn1,True,morn1_2_trial1_first_cont,MN,PL,,Playing with a bottle,1,0,0,1,0,0,0,0,0,0
+37389303-c253-4154-8ec0-1c684fed8e49,Crow,2025-03-14,616,2,True,1,morn1,True,morn1_2_trial1_first_cont,NH,DS,,Towards cage c,0,1,1,0,0,0,0,0,0,0
+37389303-c253-4154-8ec0-1c684fed8e49,Crow,2025-03-14,616,2,True,1,morn1,True,morn1_2_trial1_first_cont,MN,DS,,Towards cage c,0,1,1,0,0,0,0,0,0,0
+4cf78534-4969-468f-8e3f-46817c70d734,Crow,2025-03-14,628,2,True,1,morn1,True,morn1_2_trial1_first_cont,NR,PL,,Playing with a bottle,1,0,0,1,0,0,0,0,0,0
+c934b92c-f194-4b67-8425-0174a72af684,Crow,2025-03-14,630,2,True,1,morn1,True,morn1_2_trial1_first_cont,NR,PL,,,1,0,0,1,0,0,0,0,0,0
+c934b92c-f194-4b67-8425-0174a72af684,Crow,2025-03-14,630,2,True,1,morn1,True,morn1_2_trial1_first_cont,MN,PL,,,1,0,0,1,0,0,0,0,0,0
+0a61340a-660d-4d6a-97e5-f469015cc92c,Crow,2025-03-14,828,2,True,1,enrich,True,enrich_2_trial1_first_cont,NH,PL,NR,,1,0,0,0,0,0,0,1,0,0
+0a61340a-660d-4d6a-97e5-f469015cc92c,Crow,2025-03-14,828,2,True,1,enrich,True,enrich_2_trial1_first_cont,NR,PL,NH,,1,0,0,0,0,0,0,1,0,0
+56d5bda0-86ba-4562-9964-c203e238bbd0,Crow,2025-03-14,829,2,True,1,enrich,True,enrich_2_trial1_first_cont,NH,PL,NR,,1,0,0,0,0,0,0,1,0,0
+56d5bda0-86ba-4562-9964-c203e238bbd0,Crow,2025-03-14,829,2,True,1,enrich,True,enrich_2_trial1_first_cont,NR,PL,NH,,1,0,0,0,0,0,0,1,0,0
+6ef88271-c776-4cc2-83c0-d5f118d717df,Crow,2025-03-14,831,2,True,1,enrich,True,enrich_2_trial1_first_cont,NH,PL,NR,,1,0,0,0,0,0,0,1,0,0
+6ef88271-c776-4cc2-83c0-d5f118d717df,Crow,2025-03-14,831,2,True,1,enrich,True,enrich_2_trial1_first_cont,NR,PL,NH,,1,0,0,0,0,0,0,1,0,0
+67efdec0-419d-42dd-a9c3-013cdf30371c,Crow,2025-03-14,833,2,True,1,enrich,True,enrich_2_trial1_first_cont,NH,PL,NR,,1,0,0,0,0,0,0,1,0,0
+67efdec0-419d-42dd-a9c3-013cdf30371c,Crow,2025-03-14,833,2,True,1,enrich,True,enrich_2_trial1_first_cont,NR,PL,NH,,1,0,0,0,0,0,0,1,0,0
 19aeb07d-44b1-494a-82a5-e69e125c1002,Playback,2025-03-23,591,2,True,2,morn1,True,morn1_2_trial2_first_play,NR,PL,MN,,1,0,0,1,0,0,0,0,0,0
 19aeb07d-44b1-494a-82a5-e69e125c1002,Playback,2025-03-23,591,2,True,2,morn1,True,morn1_2_trial2_first_play,MN,PL,NR,,1,0,0,1,0,0,0,0,0,0
 fcd3521a-0d39-4c28-b305-49996f48a378,Playback,2025-03-23,813,2,True,2,enrich,True,enrich_2_trial2_first_play,NH,PL,NR,,1,0,0,0,0,0,0,1,0,0

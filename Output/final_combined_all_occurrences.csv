@@ -3,11 +3,11 @@ date,Ind1,phase,condition,group,trial,first_day,block_ID,partner,playing,aggress
 2025-03-12 00:00:00,MZ,enrich,Playback,1,1,False,enrich_1_trial1_sec_play,SR,0,1,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0,1
 2025-03-12 00:00:00,NH,enrich,Playback,1,1,False,enrich_1_trial1_sec_play,"ST, MS, MS, ST",0,1,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,4,7
 2025-03-12 00:00:00,ST,enrich,Playback,1,1,False,enrich_1_trial1_sec_play,"NH, MS, NH, MS",0,1,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,14,3
-2025-03-14 00:00:00,MN,morn1,Crow,UNKNOWN_DATE,1,True,morn1_UNKNOWN_DATE_trial1_first_cont,NR,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,3,1
-2025-03-14 00:00:00,NH,enrich,Crow,UNKNOWN_DATE,1,True,enrich_UNKNOWN_DATE_trial1_first_cont,NR,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,4,0
-2025-03-14 00:00:00,NH,morn1,Crow,UNKNOWN_DATE,1,True,morn1_UNKNOWN_DATE_trial1_first_cont,None,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,1
-2025-03-14 00:00:00,NR,enrich,Crow,UNKNOWN_DATE,1,True,enrich_UNKNOWN_DATE_trial1_first_cont,NH,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,4,0
-2025-03-14 00:00:00,NR,morn1,Crow,UNKNOWN_DATE,1,True,morn1_UNKNOWN_DATE_trial1_first_cont,MN,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,5,0
+2025-03-14 00:00:00,MN,morn1,Crow,2,1,True,morn1_2_trial1_first_cont,NR,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,3,1
+2025-03-14 00:00:00,NH,enrich,Crow,2,1,True,enrich_2_trial1_first_cont,NR,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,4,0
+2025-03-14 00:00:00,NH,morn1,Crow,2,1,True,morn1_2_trial1_first_cont,None,0,1,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,1
+2025-03-14 00:00:00,NR,enrich,Crow,2,1,True,enrich_2_trial1_first_cont,NH,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,4,0
+2025-03-14 00:00:00,NR,morn1,Crow,2,1,True,morn1_2_trial1_first_cont,MN,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,5,0
 2025-03-23 00:00:00,MN,morn1,Playback,2,2,True,morn1_2_trial2_first_play,NR,1,0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1,0
 2025-03-23 00:00:00,NH,enrich,Playback,2,2,True,enrich_2_trial2_first_play,NR,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,2,0
 2025-03-23 00:00:00,NR,enrich,Playback,2,2,True,enrich_2_trial2_first_play,NH,1,0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,2,0
@@ -239,21 +239,21 @@ date,Ind1,phase,condition,group,trial,first_day,block_ID,partner,playing,aggress
 12-03-2025,ST,enrich,Playback,1,1,,enrich_1_trial1_sec_play,"NH, MS, NH, MS",0,1,,,,,,,,,15,4
 12-03-2025,TK,enrich,Playback,1,1,,enrich_1_trial1_sec_play,SR,1,0,,,,,,,,,7,0
 12-03-2025,TN,enrich,Playback,1,1,,enrich_1_trial1_sec_play,"MZ, SR",1,0,,,,,,,,,1,6
-14-03-2025,MN,enrich,Crow,UNKNOWN_DATE,1,,enrich_UNKNOWN_DATE_trial1_first_cont,None,0,1,,,,,,,,,0,1
-14-03-2025,MN,morn1,Crow,UNKNOWN_DATE,1,,morn1_UNKNOWN_DATE_trial1_first_cont,NR,1,0,,,,,,,,,6,3
-14-03-2025,NH,enrich,Crow,UNKNOWN_DATE,1,,enrich_UNKNOWN_DATE_trial1_first_cont,NR,1,0,,,,,,,,,8,0
-14-03-2025,NH,morn1,Crow,UNKNOWN_DATE,1,,morn1_UNKNOWN_DATE_trial1_first_cont,None,0,1,,,,,,,,,0,2
-14-03-2025,NR,enrich,Crow,UNKNOWN_DATE,1,,enrich_UNKNOWN_DATE_trial1_first_cont,NH,1,0,,,,,,,,,8,0
-14-03-2025,NR,morn1,Crow,UNKNOWN_DATE,1,,morn1_UNKNOWN_DATE_trial1_first_cont,MN,1,0,,,,,,,,,10,1
-14-03-2025,NY,enrich,Crow,UNKNOWN_DATE,1,,enrich_UNKNOWN_DATE_trial1_first_cont,TN,1,0,,,,,,,,,4,0
-14-03-2025,NY,morn1,Crow,UNKNOWN_DATE,1,,morn1_UNKNOWN_DATE_trial1_first_cont,SR,1,0,,,,,,,,,1,0
-14-03-2025,SR,enrich,Crow,UNKNOWN_DATE,1,,enrich_UNKNOWN_DATE_trial1_first_cont,None,0,1,,,,,,,,,0,2
-14-03-2025,SR,morn1,Crow,UNKNOWN_DATE,1,,morn1_UNKNOWN_DATE_trial1_first_cont,"NY, TK",1,0,,,,,,,,,2,1
-14-03-2025,ST,enrich,Crow,UNKNOWN_DATE,1,,enrich_UNKNOWN_DATE_trial1_first_cont,TK,1,0,,,,,,,,,2,0
-14-03-2025,TK,enrich,Crow,UNKNOWN_DATE,1,,enrich_UNKNOWN_DATE_trial1_first_cont,ST,1,0,,,,,,,,,2,0
-14-03-2025,TK,morn1,Crow,UNKNOWN_DATE,1,,morn1_UNKNOWN_DATE_trial1_first_cont,"SR, TN",1,0,,,,,,,,,3,0
-14-03-2025,TN,enrich,Crow,UNKNOWN_DATE,1,,enrich_UNKNOWN_DATE_trial1_first_cont,NY,1,0,,,,,,,,,4,0
-14-03-2025,TN,morn1,Crow,UNKNOWN_DATE,1,,morn1_UNKNOWN_DATE_trial1_first_cont,"SR, TK",0,1,,,,,,,,,2,1
+14-03-2025,MN,enrich,Crow,2,1,,enrich_2_trial1_first_cont,None,0,1,,,,,,,,,0,1
+14-03-2025,MN,morn1,Crow,2,1,,morn1_2_trial1_first_cont,NR,1,0,,,,,,,,,6,3
+14-03-2025,NH,enrich,Crow,2,1,,enrich_2_trial1_first_cont,NR,1,0,,,,,,,,,8,0
+14-03-2025,NH,morn1,Crow,2,1,,morn1_2_trial1_first_cont,None,0,1,,,,,,,,,0,2
+14-03-2025,NR,enrich,Crow,2,1,,enrich_2_trial1_first_cont,NH,1,0,,,,,,,,,8,0
+14-03-2025,NR,morn1,Crow,2,1,,morn1_2_trial1_first_cont,MN,1,0,,,,,,,,,10,1
+14-03-2025,NY,enrich,Crow,2,1,,enrich_2_trial1_first_cont,TN,1,0,,,,,,,,,4,0
+14-03-2025,NY,morn1,Crow,2,1,,morn1_2_trial1_first_cont,SR,1,0,,,,,,,,,1,0
+14-03-2025,SR,enrich,Crow,2,1,,enrich_2_trial1_first_cont,None,0,1,,,,,,,,,0,2
+14-03-2025,SR,morn1,Crow,2,1,,morn1_2_trial1_first_cont,"NY, TK",1,0,,,,,,,,,2,1
+14-03-2025,ST,enrich,Crow,2,1,,enrich_2_trial1_first_cont,TK,1,0,,,,,,,,,2,0
+14-03-2025,TK,enrich,Crow,2,1,,enrich_2_trial1_first_cont,ST,1,0,,,,,,,,,2,0
+14-03-2025,TK,morn1,Crow,2,1,,morn1_2_trial1_first_cont,"SR, TN",1,0,,,,,,,,,3,0
+14-03-2025,TN,enrich,Crow,2,1,,enrich_2_trial1_first_cont,NY,1,0,,,,,,,,,4,0
+14-03-2025,TN,morn1,Crow,2,1,,morn1_2_trial1_first_cont,"SR, TK",0,1,,,,,,,,,2,1
 14-05-2025,GG,enrich,Playback,3,6,,enrich_3_trial6_first_play,SB,1,0,,,,,,,,,1,0
 14-05-2025,LN,morn2,Playback,3,6,,morn2_3_trial6_first_play,SB,1,0,,,,,,,,,1,0
 14-05-2025,MZ,morn1,Playback,3,6,,morn1_3_trial6_first_play,SB,1,0,,,,,,,,,1,0
@@ -393,9 +393,9 @@ date,Ind1,phase,condition,group,trial,first_day,block_ID,partner,playing,aggress
 27-04-2025,TK,enrich,Playback,2,5,,enrich_2_trial5_sec_play,ST,1,0,,,,,,,,,2,0
 27-04-2025,TK,morn2,Playback,2,5,,morn2_2_trial5_sec_play,TN,1,0,,,,,,,,,2,0
 27-04-2025,TN,morn2,Playback,2,5,,morn2_2_trial5_sec_play,TK,1,0,,,,,,,,,2,0
-29-03-2025,SR,enrich,Baseline,UNKNOWN_DATE,1,,enrich_UNKNOWN_DATE_trial1_first_base,"TK, TN",1,0,,,,,,,,,4,0
-29-03-2025,TK,enrich,Baseline,UNKNOWN_DATE,1,,enrich_UNKNOWN_DATE_trial1_first_base,"SR, TN",1,0,,,,,,,,,7,0
-29-03-2025,TN,enrich,Baseline,UNKNOWN_DATE,1,,enrich_UNKNOWN_DATE_trial1_first_base,"TK, SR",1,0,,,,,,,,,8,1
+29-03-2025,SR,enrich,Baseline,3,1,,enrich_3_trial1_sec_base,"TK, TN",1,0,,,,,,,,,4,0
+29-03-2025,TK,enrich,Baseline,3,1,,enrich_3_trial1_sec_base,"SR, TN",1,0,,,,,,,,,7,0
+29-03-2025,TN,enrich,Baseline,3,1,,enrich_3_trial1_sec_base,"TK, SR",1,0,,,,,,,,,8,1
 30-04-2025,GG,morn2,Crow,3,5,,morn2_3_trial5_first_cont,"SB, NR, SB, LN, LN, NR",1,0,,,,,,,,,6,0
 30-04-2025,LN,enrich,Crow,3,5,,enrich_3_trial5_first_cont,MZ,1,0,,,,,,,,,1,0
 30-04-2025,LN,morn2,Crow,3,5,,morn2_3_trial5_first_cont,"NR, GG, SB, GG",1,0,,,,,,,,,3,0
